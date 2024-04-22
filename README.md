@@ -1,2 +1,2 @@
-# -medical-codex-backend
+# medical-codex-backend
 Medical codex backend
