@@ -1,0 +1,5 @@
+- Date: 2023-04-10
+- Source: https://www.pharmgkb.org/downloads
+- Original Format: ZIP
+- Transformed Format: Folders with TSV files
+- Tool: Unzip

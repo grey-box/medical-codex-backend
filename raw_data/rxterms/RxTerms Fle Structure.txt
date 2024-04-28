@@ -1,0 +1,25 @@
+These are the fields and their description:
+
+RXCUI - the RxNorm unique identifier for the clinical drug, which can be one of the following term types:
+Semantic Clinical Drug (SCD) e.g. azithromycin 250 MG Oral Capsule.
+Semantic Branded Drug (SBD) e.g. azithromycin 250 MG Oral Capsule [Zithromax].
+Generic Pack (GPCK) e.g. {6 (azithromycin 250 MG Oral Tablet) } Pack
+Branded Pack (BPCK) e.g. {6 (azithromycin 250 MG Oral Tablet [Zithromax]) } Pack [Z-PAKS].
+GENERIC_RXCUI - this is the corresponding generic clinical drug for SBD and BPCK (null for SCD).
+TTY - term type in RxNorm.
+FULL_NAME - the full RxNorm name of the clinical drug.
+RXN_DOSE_FORM - dose form and intended route information from RxNorm.
+FULL_GENERIC_NAME - the generic part of the full RxNorm name.
+BRAND_NAME - the brand name part of the full RxNorm name (null for SCD). Brand names are in all uppercase to distinguish them from generic names.
+DISPLAY_NAME - drug name (either generic or brand name) and intended route e.g. INDERAL (Oral-pill).
+ROUTE - intended route derived from RXN_DOSE_FORM.
+NEW_DOSE_FORM - dose form derived from RXN_DOSE_FORM.
+STRENGTH - strength information parsed from the RxNorm full name.
+SUPPRESS_FOR - to flag drug names deemed not likely to be useful for data entry. For example, long generic drug names with multiple ingredients (e.g. Bacitracin/Hydrocortisone/Neomycin/Polymyxin B) are suppressed because they are almost always prescribed by their brand names (e.g. CORTISPORIN OINTMENT). Any non-null value means that a row should be suppressed.
+DISPLAY_NAME_SYNONYM - commonly used synonyms or abbreviations for the drug e.g. MOM for Milk of Magnesia.
+IS_RETIRED - to flag records that existed in earlier versions but not in the latest version.
+SXDG_RXCUI - the RxNorm unique identifier for the entity represented by the DISPLAY_NAME (drug + intended route). The corresponding TTY (term type) in RxNorm is either SCDG (Semantic Clinical Doseform Group) or SBDG (Semantic Branded Doseform Group), as represented in the field SXDG_TTY.
+SXDG_TTY - the RxNorm TTY of the semantic doseform group
+SXDG_NAME - the RxNorm name of the semantic doseform group
+PSN - the RxNorm prescribable name
+The fields DISPLAY_NAME, DISPLAY_NAME_SYNONYM, NEW_DOSE_FORM and STRENGTH are probably the most useful. We advise you to exclude rows that are suppressed or retired (i.e. rows with non-null values in SUPPRESS_FOR or IS_RETIRED).

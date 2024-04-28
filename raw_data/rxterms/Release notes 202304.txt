@@ -1,0 +1,1101 @@
+RxTerms Release Notes
+=====================
+
+Changes in 202304 Version
+-------------------------
+
+RXCUI counts by TTY (excluding suppressed and retired concepts) : SBD: 7,788; SCD: 10,145; BPCK: 579; GPCK: 402
+
+Changes in 202303 Version
+-------------------------
+
+RXCUI counts by TTY (excluding suppressed and retired concepts) : SBD: 7,775; SCD: 10,118; BPCK: 562; GPCK: 386
+
+Changes in 202302 Version
+-------------------------
+
+RXCUI counts by TTY (excluding suppressed and retired concepts) : SBD: 7,754; SCD: 10,091; BPCK: 560; GPCK: 384
+
+Changes in 202301 Version
+-------------------------
+
+RXCUI counts by TTY (excluding suppressed and retired concepts) : SBD: 7,740; SCD: 10,079; BPCK: 513; GPCK: 338
+
+Changes in 202212 Version
+-------------------------
+
+RXCUI counts by TTY (excluding suppressed and retired concepts) : SBD: 7,743; SCD: 10,075; BPCK: 512; GPCK: 338
+
+Changes in 202211 Version
+-------------------------
+
+RXCUI counts by TTY (excluding suppressed and retired concepts) : SBD: 7,743; SCD: 10,061; BPCK: 512; GPCK: 339
+
+Changes in 202210 Version
+-------------------------
+
+RXCUI counts by TTY (excluding suppressed and retired concepts) : SBD: 7,734; SCD: 10,038; BPCK: 513; GPCK: 339
+
+Changes in 202209 Version
+-------------------------
+
+RXCUI counts by TTY (excluding suppressed and retired concepts) : SBD: 7,717; SCD: 10,017; BPCK: 513; GPCK: 339
+
+Changes in 202208 Version
+-------------------------
+
+RXCUI counts by TTY (excluding suppressed and retired concepts) : SBD: 7,709; SCD: 9,991; BPCK: 512; GPCK: 338
+
+Changes in 202207 Version
+-------------------------
+
+RXCUI counts by TTY (excluding suppressed and retired concepts) : SBD: 7,702; SCD: 9,988; BPCK: 509; GPCK: 334
+
+Changes in 202206 Version
+-------------------------
+
+RXCUI counts by TTY (excluding suppressed and retired concepts) : SBD: 7,688; SCD: 9,960; BPCK: 505; GPCK: 330
+
+Changes in 202205 Version
+-------------------------
+
+RXCUI counts by TTY (excluding suppressed and retired concepts) : SBD: 7,678; SCD: 9,977; BPCK: 505; GPCK: 328
+
+Changes in 202204 Version
+-------------------------
+
+RXCUI counts by TTY (excluding suppressed and retired concepts) : SBD: 7,682; SCD: 9,958; BPCK: 504; GPCK: 327
+
+Changes in 202203 Version
+-------------------------
+
+RXCUI counts by TTY (excluding suppressed and retired concepts) : SBD: 7,671; SCD: 9,942; BPCK: 496; GPCK: 320
+
+Changes in 202202 Version
+-------------------------
+
+RXCUI counts by TTY (excluding suppressed and retired concepts) : SBD: 7,656; SCD: 9,910; BPCK: 496; GPCK: 320
+
+Changes in 202201 Version
+-------------------------
+
+RXCUI counts by TTY (excluding suppressed and retired concepts) : SBD: 7,688; SCD: 9,933; BPCK: 498; GPCK: 321
+
+Changes in 202112 Version
+-------------------------
+
+RXCUI counts by TTY (excluding suppressed and retired concepts) : SBD: 7,664; SCD: 9,913; BPCK: 496; GPCK: 319
+
+Changes in 202111 Version
+-------------------------
+
+RXCUI counts by TTY (excluding suppressed and retired concepts) : SBD: 7,649; SCD: 9,899; BPCK: 496; GPCK: 319
+
+Changes in 202110 Version
+-------------------------
+
+RXCUI counts by TTY (excluding suppressed and retired concepts) : SBD: 7,643; SCD: 9,882; BPCK: 498; GPCK: 318
+
+Changes in 202109 Version
+-------------------------
+
+RXCUI counts by TTY (excluding suppressed and retired concepts) : SBD: 7,621; SCD: 9,843; BPCK: 498; GPCK: 318
+
+Changes in 202108 Version
+-------------------------
+
+RXCUI counts by TTY (excluding suppressed and retired concepts) : SBD: 7,613; SCD: 9,827; BPCK: 497; GPCK: 316
+
+Changes in 202107 Version
+-------------------------
+
+RXCUI counts by TTY (excluding suppressed and retired concepts) : SBD: 7,588; SCD: 9,795; BPCK: 498; GPCK: 315
+
+Changes in 202107 Version
+-------------------------
+
+RXCUI counts by TTY (excluding suppressed and retired concepts) : SBD: 7,588; SCD: 9,795; BPCK: 498; GPCK: 315
+
+Changes in 202107 Version
+-------------------------
+
+RXCUI counts by TTY (excluding suppressed and retired concepts) : SBD: 0; SCD: 0; BPCK: 0; GPCK: 0
+
+Changes in 202107 Version
+-------------------------
+
+RXCUI counts by TTY (excluding suppressed and retired concepts) : SBD: 0; SCD: 0; BPCK: 0; GPCK: 0
+
+Changes in 202106 Version
+-------------------------
+
+RXCUI counts by TTY (excluding suppressed and retired concepts) : SBD: 7,563; SCD: 9,755; BPCK: 494; GPCK: 310
+
+Changes in 202105 Version
+-------------------------
+
+RXCUI counts by TTY (excluding suppressed and retired concepts) : SBD: 7,573; SCD: 9,738; BPCK: 490; GPCK: 305
+
+Changes in 202105 Version
+-------------------------
+
+RXCUI counts by TTY (excluding suppressed and retired concepts) : SBD: 7,573; SCD: 9,738; BPCK: 490; GPCK: 305
+
+Changes in 202105 Version
+-------------------------
+
+RXCUI counts by TTY (excluding suppressed and retired concepts) : SBD: 7,573; SCD: 9,738; BPCK: 490; GPCK: 305
+
+Changes in 202105 Version
+-------------------------
+
+RXCUI counts by TTY (excluding suppressed and retired concepts) : SBD: 7,573; SCD: 9,738; BPCK: 490; GPCK: 305
+
+Changes in 202105 Version
+-------------------------
+
+RXCUI counts by TTY (excluding suppressed and retired concepts) : SBD: 7,573; SCD: 9,738; BPCK: 490; GPCK: 305
+
+Changes in 202104 Version
+-------------------------
+
+RXCUI counts by TTY (excluding suppressed and retired concepts) : SBD: 7,562; SCD: 9,714; BPCK: 490; GPCK: 303
+
+Changes in 202103 Version
+-------------------------
+
+RXCUI counts by TTY (excluding suppressed and retired concepts) : SBD: 7,555; SCD: 9,703; BPCK: 488; GPCK: 302
+
+Changes in 202102 Version
+-------------------------
+
+RXCUI counts by TTY (excluding suppressed and retired concepts) : SBD: 7,545; SCD: 9,682; BPCK: 486; GPCK: 297
+
+Changes in 202102 Version
+-------------------------
+
+RXCUI counts by TTY (excluding suppressed and retired concepts) : SBD: 7,545; SCD: 9,682; BPCK: 486; GPCK: 297
+
+Changes in 202101 Version
+-------------------------
+
+RXCUI counts by TTY (excluding suppressed and retired concepts) : SBD: 7,530; SCD: 9,669; BPCK: 485; GPCK: 298
+
+Changes in 202012 Version
+-------------------------
+
+RXCUI counts by TTY (excluding suppressed and retired concepts) : SBD: 7,523; SCD: 9,660; BPCK: 484; GPCK: 298
+
+Changes in 202011 Version
+-------------------------
+
+RXCUI counts by TTY (excluding suppressed and retired concepts) : SBD: 7,528; SCD: 9,653; BPCK: 483; GPCK: 299
+
+Changes in 202010 Version
+-------------------------
+
+RXCUI counts by TTY (excluding suppressed and retired concepts) : SBD: 7,528; SCD: 9,638; BPCK: 482; GPCK: 276
+
+Changes in 202009 Version
+-------------------------
+
+1. RXCUI counts by TTY (excluding suppressed and retired concepts) : SBD: 7,511; SCD: 9,606; BPCK: 480; GPCK: 274
+
+
+Changes in 202008 Version
+-------------------------
+
+1. RXCUI counts by TTY (excluding suppressed and retired concepts) : SBD: 7,615; SCD: 9,587; BPCK: 480; GPCK: 272
+
+
+Changes in 202007 Version
+-------------------------
+
+1. RXCUI counts by TTY (excluding suppressed and retired concepts) : SBD: 7,591; SCD: 9,558; BPCK: 478; GPCK: 271
+
+
+Changes in 202006 Version
+-------------------------
+
+1. RXCUI counts by TTY (excluding suppressed and retired concepts) : SBD: 7,731; SCD: 9,640; BPCK: 476; GPCK: 270
+
+
+Changes in 202005 Version
+-------------------------
+
+1. RXCUI counts by TTY (excluding suppressed and retired concepts) : SBD: 7,732; SCD: 9,624; BPCK: 475; GPCK: 270
+
+
+Changes in 202004 Version
+-------------------------
+
+1. RXCUI counts by TTY (excluding suppressed and retired concepts) : SBD: 7,723; SCD: 9,611; BPCK: 475; GPCK: 298
+
+
+Changes in 202003 Version
+-------------------------
+
+1. RXCUI counts by TTY (excluding suppressed and retired concepts) : SBD: 7,758; SCD: 9,631; BPCK: 470; GPCK: 292
+
+
+Changes in 202002 Version
+-------------------------
+
+1. RXCUI counts by TTY (excluding suppressed and retired concepts) : SBD: 7,804; SCD: 9,956; BPCK: 457; GPCK: 277
+
+
+Changes in 202001 Version
+-------------------------
+
+1. RXCUI counts by TTY (excluding suppressed and retired concepts) : SBD: 7,836; SCD: 10,032; BPCK: 455; GPCK: 273
+
+
+Changes in 201912 Version
+-------------------------
+
+1. RXCUI counts by TTY (excluding suppressed and retired concepts) : SBD: 7,857; SCD: 10,197; BPCK: 460; GPCK: 276
+
+
+Changes in 201911 Version
+-------------------------
+
+1. RXCUI counts by TTY (excluding suppressed and retired concepts) : SBD: 7,884; SCD: 10,240; BPCK: 464; GPCK: 279
+
+
+Changes in 201910 Version
+-------------------------
+
+1. RXCUI counts by TTY (excluding suppressed and retired concepts) : SBD: 7,879; SCD: 10,267; BPCK: 464; GPCK: 277
+
+
+Changes in 201909 Version
+-------------------------
+
+1. RXCUI counts by TTY (excluding suppressed and retired concepts) : SBD: 7,926; SCD: 10,341; BPCK: 471; GPCK: 281
+
+
+Changes in 201908 Version
+-------------------------
+
+1. RXCUI counts by TTY (excluding suppressed and retired concepts) : SBD: 7,922; SCD: 10,315; BPCK: 472; GPCK: 281
+
+
+Changes in 201907 Version
+-------------------------
+
+1. RXCUI counts by TTY (excluding suppressed and retired concepts) : SBD: 7,984; SCD: 10,303; BPCK: 475; GPCK: 279
+
+
+Changes in 201906 Version
+-------------------------
+
+1. RXCUI counts by TTY (excluding suppressed and retired concepts) : SBD: 8,004; SCD: 10,282; BPCK: 449; GPCK: 253
+
+
+Changes in 201905 Version
+-------------------------
+
+1. RXCUI counts by TTY (excluding suppressed and retired concepts) : SBD: 7,991; SCD: 10,262; BPCK: 445; GPCK: 249
+
+
+Changes in 201904 Version
+-------------------------
+
+1. RXCUI counts by TTY (excluding suppressed and retired concepts) : SBD: 7,989; SCD: 10,235; BPCK: 435; GPCK: 239
+
+
+Changes in 201903 Version
+-------------------------
+
+1. RXCUI counts by TTY (excluding suppressed and retired concepts) : SBD: 7,991; SCD: 10,235; BPCK: 431; GPCK: 234
+
+
+Changes in 201902 Version
+-------------------------
+
+1. RXCUI counts by TTY (excluding suppressed and retired concepts) : SBD: 8,050; SCD: 10,453; BPCK: 435; GPCK: 235
+
+
+Changes in 201901 Version
+-------------------------
+
+1. RXCUI counts by TTY (excluding suppressed and retired concepts) : SBD: 8,157; SCD: 10,584; BPCK: 436; GPCK: 235
+
+
+Changes in 201812 Version
+-------------------------
+
+1. RXCUI counts by TTY (excluding suppressed and retired concepts) : SBD: 8,168; SCD: 10,589; BPCK: 436; GPCK: 236
+
+
+Changes in 201811 Version
+-------------------------
+
+1. RXCUI counts by TTY (excluding suppressed and retired concepts) : SBD: 8,136; SCD: 10,552; BPCK: 433; GPCK: 235
+
+
+Changes in 201810 Version
+-------------------------
+
+1. RXCUI counts by TTY (excluding suppressed and retired concepts) : SBD: 8,103; SCD: 10,511; BPCK: 432; GPCK: 235
+
+
+Changes in 201809 Version
+-------------------------
+
+1. RXCUI counts by TTY (excluding suppressed and retired concepts) : SBD: 8,078; SCD: 10,539; BPCK: 431; GPCK: 236
+
+
+Changes in 201808 Version
+-------------------------
+
+1. RXCUI counts by TTY (excluding suppressed and retired concepts) : SBD: 8,061; SCD: 10,517; BPCK: 422; GPCK: 229
+
+
+Changes in 201807 Version
+-------------------------
+
+1. RXCUI counts by TTY (excluding suppressed and retired concepts) : SBD: 8,061; SCD: 10,495; BPCK: 422; GPCK: 230
+
+
+Changes in 201806 Version
+-------------------------
+
+1. RXCUI counts by TTY (excluding suppressed and retired concepts) : SBD: 8,061; SCD: 10,482; BPCK: 419; GPCK: 228
+
+
+Changes in 201805 Version
+-------------------------
+
+1. RXCUI counts by TTY (excluding suppressed and retired concepts) : SBD: 8,056; SCD: 10,435; BPCK: 413; GPCK: 225
+
+
+Changes in 201804 Version
+-------------------------
+
+1. RXCUI counts by TTY (excluding suppressed and retired concepts) : SBD: 8,065; SCD: 10,354; BPCK: 410; GPCK: 226
+
+
+Changes in 201803 Version
+-------------------------
+
+1. RXCUI counts by TTY (excluding suppressed and retired concepts) : SBD: 8,039; SCD: 10,300; BPCK: 407; GPCK: 226
+
+
+Changes in 201802 Version
+-------------------------
+
+1. RXCUI counts by TTY (excluding suppressed and retired concepts) : SBD: 8,038; SCD: 10,280; BPCK: 402; GPCK: 225
+
+
+Changes in 201801 Version
+-------------------------
+
+1. RXCUI counts by TTY (excluding suppressed and retired concepts) : SBD: 8,018; SCD: 10,247; BPCK: 400; GPCK: 225
+
+
+Changes in 201712 Version
+-------------------------
+
+1. RXCUI counts by TTY (excluding suppressed and retired concepts) : SBD: 8,006; SCD: 10,214; BPCK: 396; GPCK: 222
+
+
+Changes in 201711 Version
+-------------------------
+
+1. RXCUI counts by TTY (excluding suppressed and retired concepts) : SBD: 8,002; SCD: 10,197; BPCK: 393; GPCK: 221
+
+
+Changes in 201710 Version
+-------------------------
+
+1. RXCUI counts by TTY (excluding suppressed and retired concepts) : SBD: 7,978; SCD: 10,180; BPCK: 397; GPCK: 223
+2. Generic drug packs (GPCK) that are mostly cold remedies with three or more ingredients are made suppressible e.g. Acetaminophen/Dextromethorphan/Doxylamine/Phenylephrine (Pack). This is in line with how we currently handle similar generic clinical drugs (SCD).
+
+
+Changes in 201709 Version
+-------------------------
+
+1. RXCUI counts by TTY (excluding suppressed and retired concepts) : SBD: 7,969; SCD: 10,413; BPCK: 392; GPCK: 275
+2. Strengths of some drugs are changed to more prescriber-friendly format based on the prescribable name (PSN). For examples, see ADDERALL (Oral Pill), and Sodium Chloride (Inhalant)
+
+
+Changes in 201708 Version
+-------------------------
+
+1. RXCUI counts by TTY (excluding suppressed and retired concepts) : SBD: 7,915; SCD: 10,456; BPCK: 393; GPCK: 272
+
+
+Changes in 201707 Version
+-------------------------
+
+1. RXCUI counts by TTY (excluding suppressed and retired concepts) : SBD: 7,879; SCD: 10,486; BPCK: 389; GPCK: 272
+
+
+Changes in 201706 Version
+-------------------------
+
+1. RXCUI counts by TTY (excluding suppressed and retired concepts) : SBD: 7,866; SCD: 10,497; BPCK: 389; GPCK: 272
+
+
+Changes in 201705 Version
+-------------------------
+
+1. RXCUI counts by TTY (excluding suppressed and retired concepts) : SBD: 7,804; SCD: 10,696; BPCK: 382; GPCK: 268
+
+
+Changes in 201704 Version
+-------------------------
+
+1. RXCUI counts by TTY (excluding suppressed and retired concepts) : SBD: 7,778; SCD: 10,673; BPCK: 378; GPCK: 267
+
+
+Changes in 201703 Version
+-------------------------
+
+1. RXCUI counts by TTY (excluding suppressed and retired concepts) : SBD: 7,780; SCD: 10,672; BPCK: 370; GPCK: 261
+
+
+Changes in 201702 Version
+-------------------------
+
+1. RXCUI counts by TTY (excluding suppressed and retired concepts) : SBD: 7,748; SCD: 10,688; BPCK: 370; GPCK: 261
+
+
+Changes in 201701 Version
+-------------------------
+
+1. RXCUI counts by TTY (excluding suppressed and retired concepts) : SBD: 7,837; SCD: 10,771; BPCK: 371; GPCK: 267
+
+
+Changes in 201612 Version
+-------------------------
+
+1. RXCUI counts by TTY (excluding suppressed and retired concepts) : SBD: 7,903; SCD: 10,820; BPCK: 368; GPCK: 266
+
+
+Changes in 201611 Version
+-------------------------
+
+1. RXCUI counts by TTY (excluding suppressed and retired concepts) : SBD: 7,906; SCD: 10,838; BPCK: 364; GPCK: 266
+
+
+Changes in 201610 Version
+-------------------------
+
+1. RXCUI counts by TTY (excluding suppressed and retired concepts) : SBD: 7,905; SCD: 10,828; BPCK: 361; GPCK: 266
+
+
+Changes in 201609 Version
+-------------------------
+
+1. RXCUI counts by TTY (excluding suppressed and retired concepts) : SBD: 7,872; SCD: 10,761; BPCK: 358; GPCK: 264
+
+
+Changes in 201608 Version
+-------------------------
+
+1. RXCUI counts by TTY (excluding suppressed and retired concepts) : SBD: 8,028; SCD: 10,843; BPCK: 355; GPCK: 266
+
+
+Changes in 201607 Version
+-------------------------
+
+1. RXCUI counts by TTY (excluding suppressed and retired concepts) : SBD: 7,998; SCD: 10,861; BPCK: 352; GPCK: 263
+
+
+Changes in 201606 Version
+-------------------------
+
+1. RXCUI counts by TTY (excluding suppressed and retired concepts) : SBD: 8,015; SCD: 10,837; BPCK: 350; GPCK: 264
+
+
+Changes in 201605 Version
+-------------------------
+
+1. RXCUI counts by TTY (excluding suppressed and retired concepts) : SBD: 8,002; SCD: 10,870; BPCK: 350; GPCK: 263
+
+
+Changes in 201604 Version
+-------------------------
+
+1. RXCUI counts by TTY (excluding suppressed and retired concepts) : SBD: 8,002; SCD: 10,895; BPCK: 350; GPCK: 265
+
+
+Changes in 201603 Version
+-------------------------
+
+1. RXCUI counts by TTY (excluding suppressed and retired concepts) : SBD: 7,972; SCD: 10,871; BPCK: 347; GPCK: 263
+
+
+Changes in 201602 Version
+-------------------------
+
+1. RXCUI counts by TTY (excluding suppressed and retired concepts) : SBD: 7,957; SCD: 10,880; BPCK: 350; GPCK: 265
+
+
+Changes in 201602 Version
+-------------------------
+
+1. RXCUI counts by TTY (excluding suppressed and retired concepts) : SBD: 8,297; SCD: 10,965; BPCK: 358; GPCK: 264
+
+
+Changes in 201512 Version
+-------------------------
+
+1. RXCUI counts by TTY (excluding suppressed and retired concepts) : SBD: 8,297; SCD: 12,097; BPCK: 363; GPCK: 269
+
+
+Changes in 201511 Version
+-------------------------
+
+1. RXCUI counts by TTY (excluding suppressed and retired concepts) : SBD: 8,213; SCD: 12,067; BPCK: 355; GPCK: 263
+
+
+Changes in 201510 Version
+-------------------------
+
+1. RXCUI counts by TTY (excluding suppressed and retired concepts) : SBD: 8,204; SCD: 12,056; BPCK: 361; GPCK: 270
+
+
+Changes in 201509 Version
+-------------------------
+
+1. RXCUI counts by TTY (excluding suppressed and retired concepts) : SBD: 8,208; SCD: 12,099; BPCK: 361; GPCK: 271
+
+
+Changes in 201508 Version
+-------------------------
+
+1. Inclusion of GPCK (generic pack) that are in the Current Prescribable Content.
+2. Inclusion of the new PSN (prescribable name) TTY. Currently, not all drugs have PSNs.
+3. RXCUI counts by TTY (excluding suppressed and retired concepts) : SBD: 8,216; SCD: 12,377; BPCK: 358; GPCK: 282
+
+
+Changes in 201507 Version
+-------------------------
+
+1. RXCUI counts by TTY (excluding suppressed and retired concepts) : SBD: 8,269; SCD: 12,356; BPCK: 366
+
+
+Changes in 201506 Version
+-------------------------
+
+1. RXCUI counts by TTY (excluding suppressed and retired concepts) : SBD: 8,243; SCD: 12,449; BPCK: 366
+
+
+Changes in 201505 Version
+-------------------------
+
+1. Injectable extracts (e.g., red oak pollen extract) are made suppressible. These are mostly for sensitivity tests and not useful in prescribing. This caused a drop in the count of SCD.  
+2. RXCUI counts by TTY (excluding suppressed and retired concepts) : SBD: 8,255; SCD: 12,535; BPCK: 378
+
+
+Changes in 201504 Version
+-------------------------
+
+1. RXCUI counts by TTY (excluding suppressed and retired concepts) : SBD: 8,235; SCD: 13,258; BPCK: 378
+
+
+Changes in 201503 Version
+-------------------------
+
+1. RXCUI counts by TTY (excluding suppressed and retired concepts) : SBD: 8,221; SCD: 13,231; BPCK: 370
+
+
+Changes in 201502 Version
+-------------------------
+
+1. RXCUI counts by TTY (excluding suppressed and retired concepts) : SBD: 8,527; SCD: 13,206; BPCK: 385
+
+
+Changes in 201501 Version
+-------------------------
+
+1. RXCUI counts by TTY (excluding suppressed and retired concepts) : SBD: 8,505; SCD: 13,173; BPCK: 389
+
+
+Changes in 201412 Version
+-------------------------
+
+1. RXCUI counts by TTY (excluding suppressed and retired concepts) : SBD: 8,490; SCD: 13,144; BPCK: 389
+2. Ingredients file also covers RXCUIs that are suppressed
+3. "Tall Man" lettering also appears in multi-ingredient drugs
+
+
+Changes in 201411 Version
+-------------------------
+
+1. RXCUI counts by TTY (excluding suppressed and retired concepts) : SBD: 8,480; SCD: 13,109; BPCK: 388
+
+
+Changes in 201410 Version
+-------------------------
+
+1. RXCUI counts by TTY (excluding suppressed and retired concepts) : SBD: 8,463; SCD: 13,064; BPCK: 385
+
+
+Changes in 201409 Version
+-------------------------
+
+1. RXCUI counts by TTY (excluding suppressed and retired concepts) : SBD: 8,450; SCD: 13,050; BPCK: 370
+
+
+Changes in 201408 Version
+-------------------------
+
+1. RXCUI counts by TTY (excluding suppressed and retired concepts) : SBD: 8,420; SCD: 13,036; BPCK: 355
+
+
+Changes in 201407 Version
+-------------------------
+
+1. RXCUI counts by TTY (excluding suppressed and retired concepts) : SBD: 8,399; SCD: 13,005; BPCK: 354
+
+
+Changes in 201406 Version
+-------------------------
+
+1. Enteric Coated Tablet/Capsule are replaced by Delayed Release Tablet/Capsule, and the corresponding dose forms DR Tab/Cap. The abbreviation "EC" is no longer used.
+2. RXCUI counts by TTY (excluding suppressed and retired concepts) : SBD: 8,419; SCD: 13,050; BPCK: 361
+
+
+Changes in 201405 Version
+-------------------------
+
+1. RXCUI counts by TTY (excluding suppressed and retired concepts) : SBD: 8,404; SCD: 13,035; BPCK: 362
+
+
+Changes in 201404 Version
+-------------------------
+
+1. RXCUI counts by TTY (excluding suppressed and retired concepts) : SBD: 8,381; SCD: 13,042; BPCK: 360
+
+
+Changes in 201403 Version
+-------------------------
+
+1. RXCUI counts by TTY (excluding suppressed and retired concepts) : SBD: 8,588; SCD: 14,007; BPCK: 365
+
+
+Changes in 201402 Version
+-------------------------
+
+1. RXCUI counts by TTY (excluding suppressed and retired concepts) : SBD: 8,560; SCD: 13,987; BPCK: 361
+
+
+Changes in 201401 Version
+-------------------------
+
+1. RXCUI counts by TTY (excluding suppressed and retired concepts) : SBD: 8,567; SCD: 13,971; BPCK: 357
+
+
+Changes in 201312 Version
+-------------------------
+
+1. RXCUI counts by TTY (excluding suppressed and retired concepts) : SBD: 8,543; SCD: 13,948; BPCK: 357
+
+
+Changes in 201311 Version
+-------------------------
+
+1. RXCUI counts by TTY (excluding suppressed and retired concepts) : SBD: 8,522; SCD: 13,928; BPCK: 358
+
+
+Changes in 201310 Version
+-------------------------
+
+1. RXCUI counts by TTY (excluding suppressed and retired concepts) : SBD: 8,505; SCD: 13,886; BPCK: 353
+
+
+Changes in 201309 Version
+-------------------------
+
+1. RXCUI counts by TTY (excluding suppressed and retired concepts) : SBD: 9,087; SCD: 13,976; BPCK: 363
+
+
+Changes in 201308 Version
+-------------------------
+
+1. RXCUI counts by TTY (excluding suppressed and retired concepts) : SBD: 9,064; SCD: 13,964; BPCK: 358
+
+
+Changes in 201307 Version
+-------------------------
+
+1. RXCUI counts by TTY (excluding suppressed and retired concepts) : SBD: 9,059; SCD: 13,966; BPCK: 358
+
+
+Changes in 201306 Version
+-------------------------
+
+1. RXCUI counts by TTY (excluding suppressed and retired concepts) : SBD: 9,077; SCD: 13,952; BPCK: 355
+
+
+Changes in 201305 Version
+-------------------------
+
+1. The same drug (e.g. Atropine (Injectable)) will not have two different units due to the mcg/mg/g conversion
+2. The mg/mcg conversion also applies to sprays.
+3. RXCUI counts by TTY (excluding suppressed and retired concepts) : SBD: 9,065; SCD: 13,927; BPCK: 351
+
+
+Changes in 201304 Version
+-------------------------
+
+1. Addition of delimiter to all large numbers in the STRENGTH field
+2. RXCUI counts by TTY (excluding suppressed and retired concepts) : SBD: 9,081; SCD: 13,903; BPCK: 350
+
+
+Changes in 201303 Version
+-------------------------
+
+1. Size of prefilled applicator and syringe appended to NEW_DOSE_FORM (e.g. Prefilled Applicator 2 ml, Prefilled Syringe 1 ml)
+2. Number of actuations and days of use appended to NEW_DOSE_FORM (e.g. DPI 120 puff, (Vaginal) Ring 21 day) 
+3. Nicotine patch strength changed to /24 hr (e.g. 7.5 mg/24 hr)
+4. Enoxaparin prefilled syringe strength changed to reflect syringe size (e.g. 30 mg/0.3 ml)
+5. Large number mg changed to g (e.g. 3000 mg changed to 3 g)
+6. Small number mg changed to mcg (e.g. 0.002 mg changed to 2 mcg)
+7. Delimiter added to number with multiple zeros (e.g. 3,000,000 unt/ml)
+8. RXCUI counts by TTY (excluding suppressed and retired concepts) : SBD: 9,102; SCD: 13,899; BPCK: 352
+
+
+Changes in 201302 Version
+-------------------------
+
+1. RXCUI counts by TTY (excluding suppressed and retired concepts) : SBD: 9,106; SCD: 13,876; BPCK: 353
+
+
+Changes in 201301 Version
+-------------------------
+
+1. RXCUI counts by TTY (excluding suppressed and retired concepts) : SBD: 9,823; SCD: 14,263; BPCK: 378
+
+
+Changes in 201212 Version
+-------------------------
+
+1. RXCUI counts by TTY (excluding suppressed and retired concepts) : SBD: 9,858; SCD: 14,247; BPCK: 382
+
+
+Changes in 201211 Version
+-------------------------
+
+1. RXCUI counts by TTY (excluding suppressed and retired concepts) : SBD: 9,616; SCD: 13,958; BPCK: 379
+
+
+Changes in 201210 Version
+-------------------------
+
+1. RXCUI counts by TTY (excluding suppressed and retired concepts) : SBD: 9,613; SCD: 13,989; BPCK: 379
+
+
+Changes in 201209 Version
+-------------------------
+
+1. RXCUI counts by TTY (excluding suppressed and retired concepts) : SBD: 9,583; SCD: 13,966; BPCK: 375
+
+
+Changes in 201208 Version
+-------------------------
+
+1. RXCUI counts by TTY (excluding suppressed and retired concepts) : SBD: 9,524; SCD: 13,927; BPCK: 372
+
+
+Changes in 201207 Version
+-------------------------
+
+1. RXCUI counts by TTY (excluding suppressed and retired concepts) : SBD: 9,518; SCD: 13,864; BPCK: 369
+
+
+Changes in 201206 Version
+-------------------------
+
+1. Three new fields added in RxTerms file: SXDG_RXCUI, SXDG_TTY and SXDG_NAME. SXDG is the new RxNorm term type SCDG/SBDG (e.g. Warfarin Pill), which corresponds to the RxTerms display name: drug + intended route (e.g. Warfarin (Oral Pill)). The SXDG_RXCUI provides a standard identifier for such a combination.
+
+2. Previously, topical medications have strengths expressed in mg/mg, mg/ml and ml/ml. These are now converted to % which is more commonly seen in prescriptions.
+
+3. Inhalant strengths are converted to mcg/puff (instead of mg/puff).
+
+4. More complete coverage of the duration of extended release products and transdermal patches (e.g. 8 HR XR Tab). Previously, only 12 HR XR and 24 HR XR forms are available.
+
+5. RXCUI counts by TTY (excluding suppressed and retired concepts) : SBD: 9,515; SCD: 13,862; BPCK: 369
+
+
+Changes in 201205 Version
+-------------------------
+
+1. RXCUI counts by TTY (excluding suppressed and retired concepts) : SBD: 9,554; SCD: 13,838; BPCK: 368
+
+
+Changes in 201204 Version
+-------------------------
+
+1. RXCUI counts by TTY (excluding suppressed and retired concepts) : SBD: 9,565; SCD: 13,819; BPCK: 367
+
+
+Changes in 201203 Version
+-------------------------
+
+1. RXCUI counts by TTY (excluding suppressed and retired concepts) : SBD: 9,597; SCD: 13,810; BPCK: 366
+
+
+Changes in 201202 Version
+-------------------------
+
+1. RXCUI counts by TTY (excluding suppressed and retired concepts) : SBD: 9,567; SCD: 13,780; BPCK: 367
+
+2. Based on user demand, there is a new archive file (RxTermsArchive.txt) containing all drugs that appeared in previous RxTerms releases but not in the current release. Note that drugs in this file may or may not be active in RxNorm.
+
+
+Changes in 201201 Version
+-------------------------
+
+1. RXCUI counts by TTY (excluding suppressed and retired concepts) : SBD: 9,629; SCD: 13,756; BPCK: 361
+
+
+Changes in 201112 Version
+-------------------------
+
+1. Changes in the route information which affect the ROUTE and DISPLAY_NAME fields. The rationale is to avoid the use of 'Other' and 'Oral-other', and replace them with more informative and uniform names. This will also make RxTerms routes and dose forms better aligned with the new DFG (Dose Form Groups) term type in RxNorm.
+
+2. Strength unit 'actuat' changed to 'injection' for injectables, 'spray' for topical sprays and 'puff' for inhalants
+
+3. Extra 'EC' removed for display names already containing this information (e.g. VIDEX EC)
+
+4. RXCUI counts by TTY (excluding suppressed and retired concepts) : SBD: 9,655; SCD: 13,659; BPCK: 358
+
+
+Changes in 201111 Version
+-------------------------
+
+1. RXCUI counts by TTY (excluding suppressed and retired concepts) : SBD: 9,638; SCD: 13,511; BPCK: 358
+
+
+Changes in 201110 Version
+-------------------------
+
+1. RXCUI counts by TTY (excluding suppressed and retired concepts) : SBD: 9,688; SCD: 13,404; BPCK: 358
+
+
+Changes in 201109 Version
+-------------------------
+
+1. RXCUI counts by TTY (excluding suppressed and retired concepts) : SBD: 9,680; SCD: 13,366; BPCK: 355
+
+
+Changes in 201108 Version
+-------------------------
+
+1. RXCUI counts by TTY (excluding suppressed and retired concepts) : SBD: 9,524; SCD: 13,536; BPCK: 363
+
+
+Changes in 201107 Version
+-------------------------
+
+1. RXCUI counts by TTY (excluding suppressed and retired concepts) : SBD: 9,487; SCD: 13,460; BPCK: 360
+
+
+Changes in 201106 Version
+-------------------------
+
+1. RxNorm releases a new subset called Current Prescribable Content which is an approximation of all prescribable drugs marketed in the US. RxTerms will be generated based on this subset, applying the same filtering criteria which suppress certain classes of drugs and drug names (e.g. allergenic extracts, very long drug names, generic names for multiple ingredient pain and cold medications). As a result of this change, the number of SBD and BPCK is reduced and SCD is increased:
+
+RXCUI counts by TTY (excluding suppressed and retired concepts) : SBD: 9,494; SCD: 13,590; BPCK: 360
+
+2. The display names now also incorporate tall man lettering recommended by the Institute for Safe Medication Practices (ISMP)
+
+3. Some RxNorm brand names of multiple ingredient drugs contain information about the relative strength of the components (e.g. PERCOCET 10/325). The numeric portion is already represented in the STRENGTH field in RxTerms. In such cases, RxTerms converts the brand names to the base brand name (e.g. PERCOCET).
+
+4. Since retired drugs now account for almost half of the file content, from this version onwards, retired content will no longer be included. Whether there will be a separate archival file for obsolete content depends on user demand.
+
+5. There is a new file (RxTermsIngredients.txt) that lists the ingredients and their RXCUIs for every clinical drug in RxTerms that is not suppressed or retired.
+
+
+Changes in 201105 Version
+-------------------------
+
+1. RXCUI counts by TTY (excluding suppressed and retired concepts) : SBD: 11,768; SCD: 10,821; BPCK: 394
+
+
+Changes in 201104 Version
+-------------------------
+
+1. The coverage of NDC codes in RxNorm has expanded and obsolete NDC codes are more comprehensively flagged. The RxTerms algorithm has been modified to exclude drugs that are only associated with obsolete NDC codes. This results in a considerable drop in the number of active drugs in RxTerms, and a corresponding increase in retired drugs. The newly retired drugs are most likely to be drugs that are truly not available in the U.S.
+
+2. RXCUI counts by TTY (excluding suppressed and retired concepts) : SBD: 11,750; SCD: 10,720; BPCK: 389
+
+
+Changes in 201103 Version
+-------------------------
+
+1. RXCUI counts by TTY (excluding suppressed and retired concepts) : SBD: 15,432; SCD: 12,328; BPCK: 385
+
+
+Changes in 201102 Version
+-------------------------
+
+1. RXCUI counts by TTY (excluding suppressed and retired concepts) : SBD: 15,316; SCD: 12,239; BPCK: 386
+
+2. Plural dose forms such as 'Tabs' and 'Caps' changed to 'Tab' and 'Cap' in line with other dose forms.
+
+
+Changes in 201101 Version
+-------------------------
+
+1. RXCUI counts by TTY (excluding suppressed and retired concepts) : SBD: 15,110; SCD: 11,880; BPCK: 385
+
+
+Changes in 201012 Version
+-------------------------
+
+1. RXCUI counts by TTY (excluding suppressed and retired concepts) : SBD: 15,082; SCD: 11,816; BPCK: 383
+
+
+Changes in 201011 Version
+-------------------------
+
+1. RXCUI counts by TTY (excluding suppressed and retired concepts) : SBD: 14,718; SCD: 11,393; BPCK: 379
+
+
+Changes in 201010 Version
+-------------------------
+
+1. RXCUI counts by TTY (excluding suppressed and retired concepts) : SBD: 14,611; SCD: 11,202; BPCK: 372
+
+
+Changes in 201009 Version
+-------------------------
+
+1. RXCUI counts by TTY (excluding suppressed and retired concepts) : SBD: 14,674; SCD: 11,214; BPCK: 370
+
+
+Changes in 201008 Version
+-------------------------
+
+1. RXCUI counts by TTY (excluding suppressed and retired concepts) : SBD: 14,653; SCD: 11,171; BPCK: 366
+
+
+Changes in 201007 Version
+-------------------------
+
+1. RXCUI counts by TTY (excluding suppressed and retired concepts) : SBD: 14,635; SCD: 11,124; BPCK: 360
+
+
+Changes in 201006 Version
+-------------------------
+
+1. RXCUI counts by TTY (excluding suppressed and retired concepts) : SBD: 14,609; SCD: 11,085; BPCK: 356
+
+
+Changes in 201005 Version
+-------------------------
+
+1. RXCUI counts by TTY (excluding suppressed and retired concepts) : SBD: 14,561; SCD: 11,059; BPCK: 351
+
+
+Changes in 201004 Version
+-------------------------
+
+1. RXCUI counts by TTY (excluding suppressed and retired concepts) : SBD: 14,530; SCD: 10,961; BPCK: 347
+
+
+Changes in 201003 Version
+-------------------------
+
+1. RXCUI counts by TTY (excluding suppressed and retired concepts) : SBD: 14,515; SCD: 11,289; BPCK: 349
+
+
+Changes in 201002 Version
+-------------------------
+
+1. RXCUI counts by TTY (excluding suppressed and retired concepts) : SBD: 14,448; SCD: 10,918; BPCK: 347
+
+
+Changes in 201001 Version
+-------------------------
+
+1. RXCUI counts by TTY (excluding suppressed and retired concepts) : SBD: 14,376; SCD: 10,634; BPCK: 337
+
+
+Changes in 200912 Version
+-------------------------
+
+1. Changes in the way that some RxNorm doseforms are transformed to make them easier to find e.g. Lozenge is now grouped under Oral-other (previously under Other).
+
+RxNorm doseform			Old route	Old doseform		New route	New doseform
+---------------			-------------	----------------	---------	------------
+Buccal Film			Buccal		Film			Oral-other	Buccal Film
+Sustained Release Buccal Tablet	Buccal		Sustained Release Tabs	Oral-other	Sustained Release Buccal Tabs
+Buccal Tablet			Buccal		Tabs			Oral-other	Buccal Tabs
+Sublingual Tablet		Sublingual	Tabs			Oral-other	Sublingual Tabs
+Chewing Gum			Other		Chewing Gum		Oral-other	Chewing Gum
+Granules			Other		Granules		Oral-other	Granules
+Lozenge				Other		Lozenge			Oral-other	Lozenge
+Mouthwash			Other		Mouthwash		Oral-other	Mouthwash
+Toothpaste			Other		Toothpaste		Oral-other	Toothpaste
+Wafer				Other		Wafer			Oral-other	Wafer
+Gas for Inhalation		Other		Gas for Inhalation	Inhalant	Gas for Inhalation
+
+2. RXCUI counts by TTY (excluding suppressed and retired concepts) : SBD: 14,347; SCD: 10,567; BPCK: 335
+
+
+Changes in 200911 Version
+-------------------------
+
+1. RXCUI counts by TTY (excluding suppressed and retired concepts) : SBD: 14,437; SCD: 11,026; BPCK: 331
+
+
+Changes in 200910 Version
+-------------------------
+
+1. RXCUI counts by TTY (excluding suppressed and retired concepts) : SBD: 14,373; SCD: 10,879; BPCK: 329
+2. Strength unit 'gm' changed to 'g'
+
+
+Changes in 200909 Version
+-------------------------
+
+1. RXCUI counts by TTY (excluding suppressed and retired concepts) : SBD: 14,337; SCD: 10,894; BPCK: 328
+
+
+Changes in 200908 Version
+-------------------------
+
+1. RXCUI counts by TTY (excluding suppressed and retired concepts) : SBD: 14,264; SCD: 10,868; BPCK: 327
+
+
+Changes in 200907 Version
+-------------------------
+
+1. RXCUI counts by TTY (excluding suppressed and retired concepts) : SBD: 14,241; SCD: 10,838; BPCK: 324
+
+
+Changes in 200906 Version
+-------------------------
+
+1. RXCUI counts by TTY (excluding suppressed and retired concepts) : SBD: 13,989; SCD: 10,380; BPCK: 312
+
+
+Changes in 200905 Version
+-------------------------
+
+1. Suppression of less specific extended release (XR) doseforms in favor of more specific ones e.g. Metoprolol 25 mg XR Tabs is suppressed because Metoprolol 25 mg 24 Hrs XR Tabs is present
+
+2. Addition of dose size to 'Prefilled Syringe' and 'Prefilled Applicator' doseforms when available e.g. EPIPEN Prefilled Syringe 0.3 ml
+
+3. Doseform 'Metered Dose Inhaler' abbreviated to 'MDI'
+
+4. Strength unit 'actuat' changed to 'puff'
+
+5. Sample MySQL load script with data type specification now available
+
+6. RXCUI counts by TTY (excluding suppressed and retired concepts) : SBD: 14,067; SCD: 10,364; BPCK: 311
+
+
+Changes in 200904 Version
+-------------------------
+
+1. All units in Strength converted to lower case
+
+2. RXCUI counts by TTY (excluding suppressed and retired concepts) : SBD: 14,093; SCD: 10,508; BPCK: 302

@@ -1,0 +1,5 @@
+- Date: 2023-04-10
+- Source: https://utis.in.ua/
+- Original Format: Web Pages
+- Transformed Format: JSON
+- Tool: Scrapy

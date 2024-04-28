@@ -1,0 +1,5 @@
+- Date: 2023-01-04
+- Source: https://go.drugbank.com/releases/latest#open-data
+- Original Format: ZIP
+- Transformed Format: CSV file
+- Tool: Unzip

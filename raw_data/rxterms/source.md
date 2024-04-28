@@ -1,0 +1,5 @@
+- Date: 2023-03-29
+- Source: https://lhncbc.nlm.nih.gov/MOR/RxTerms/
+- Original Format: ZIP
+- Transformed Format: Folders with TXT files
+- Tool: Unzip
