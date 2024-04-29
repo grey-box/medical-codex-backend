@@ -163,3 +163,4 @@ cython_debug/
 /.idea/medical-codex-backend.iml
 /.idea/modules.xml
 /.idea/misc.xml
+/prepared_data/
