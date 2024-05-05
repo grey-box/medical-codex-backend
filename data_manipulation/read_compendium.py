@@ -21,9 +21,9 @@ def read_compendium_data(raw_data_path, source, language):
         lambda x: True if x[-1] == '*' else False)
     raw_data['title_latin_name'] = raw_data['title_latin_name'].apply(lambda x: x[:-1] if x[-1] == '*' else x)
     # Get part before parenthesis in title
-    raw_data['title_uk_name'] = raw_data['title'].apply(lambda x: x.split('(')[0].strip())
+    raw_data[f'title_{language}_name'] = raw_data['title'].apply(lambda x: x.split('(')[0].strip())
     # Remove asterisk at the end of the uk name
-    raw_data['title_uk_name'] = raw_data['title_uk_name'].apply(lambda x: x[:-1] if x[-1] == '*' else x)
+    raw_data[f'title_{language}_name'] = raw_data[f'title_{language}_name'].apply(lambda x: x[:-1] if x[-1] == '*' else x)
     return raw_data
 
 
@@ -67,8 +67,10 @@ compendium_ru.to_csv(pathlib.Path(os.getcwd()) /
 
 compendium_uk.to_json(pathlib.Path(os.getcwd()) /
                       "prepared_data" /
-                      "compendium_uk.json")
+                      "compendium_uk.json",
+                      orient='records')
 
 compendium_ru.to_json(pathlib.Path(os.getcwd()) /
                       "prepared_data" /
-                      "compendium_ru.json")
+                      "compendium_ru.json",
+                      orient='records')

@@ -1,4 +1,4 @@
-- Date: 2023-04-10
+- Date: 2024-04-29
 - Source: https://www.accessdata.fda.gov/premarket/ftparea/foiclass.zip
 - Original Format: ZIP
 - Transformed Format: TXT file
