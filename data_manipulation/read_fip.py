@@ -5,7 +5,7 @@ import re
 from transliterate import translit
 
 # %% Define path to raw data
-raw_data_path = (pathlib.Path(os.getcwd()) / "raw_data" / "fip" / "fip-equiv.csv")
+raw_data_path = (pathlib.Path(os.getcwd()) / "raw_data" / "fip" / "fip_equiv.csv")
 
 # %% Read raw data
 raw_data = pd.read_csv(raw_data_path, sep=',', dtype={'activeingredient': str})
@@ -68,10 +68,10 @@ raw_data2 = raw_data2.assign(brandname_uk_lat_merge=raw_data2['brandname_uk_lat'
                              .combine_first(raw_data2['brandname_uk_lat_translit']))
 
 # %% Save data to csv file
-raw_data2.to_csv(pathlib.Path(os.getcwd()) / "prepared_data" / "fip-equiv.csv",
+raw_data2.to_csv(pathlib.Path(os.getcwd()) / "prepared_data" / "fip_equiv.csv",
                  quoting=2,
                  index=False)
 
 # %% Save data to json file
-raw_data2.to_json(pathlib.Path(os.getcwd()) / "prepared_data" / "fip-equiv.json",
+raw_data2.to_json(pathlib.Path(os.getcwd()) / "prepared_data" / "fip_equiv.json",
                   orient='records')

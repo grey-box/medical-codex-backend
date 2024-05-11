@@ -17,10 +17,10 @@ raw_data2 = raw_data.fillna('')
 raw_data3 = raw_data2.rename(columns=lambda x: x.lower().replace(' ', '_'))
 
 # %% Save data to csv file
-raw_data3.to_csv(pathlib.Path(os.getcwd()) / "prepared_data" / "fda-product-code-classification.csv",
+raw_data3.to_csv(pathlib.Path(os.getcwd()) / "prepared_data" / "fda_product_code_classification.csv",
                  quoting=2,
                  index=False)
 
 # %% Save data to json file
-raw_data3.to_json(pathlib.Path(os.getcwd()) / "prepared_data" / "fda-product-code-classification.json",
+raw_data3.to_json(pathlib.Path(os.getcwd()) / "prepared_data" / "fda_product_code_classification.json",
                   orient='records')

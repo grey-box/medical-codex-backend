@@ -21,15 +21,15 @@ raw_terms.columns = raw_terms.columns.str.lower()
 raw_ingredients.columns = raw_ingredients.columns.str.lower()
 
 # %% save data to csv file
-raw_terms.to_csv(pathlib.Path(os.getcwd()) / "prepared_data" / "rxterms-terms.csv",
+raw_terms.to_csv(pathlib.Path(os.getcwd()) / "prepared_data" / "rxterms_terms.csv",
                  quoting=2,
                  index=False)
-raw_ingredients.to_csv(pathlib.Path(os.getcwd()) / "prepared_data" / "rxterms-ing.csv",
+raw_ingredients.to_csv(pathlib.Path(os.getcwd()) / "prepared_data" / "rxterms_ing.csv",
                        quoting=2,
                        index=False)
 
 # %% save data to json file
-raw_terms.to_json(pathlib.Path(os.getcwd()) / "prepared_data" / "rxterms-terms.json",
+raw_terms.to_json(pathlib.Path(os.getcwd()) / "prepared_data" / "rxterms_terms.json",
                   orient='records')
-raw_ingredients.to_json(pathlib.Path(os.getcwd()) / "prepared_data" / "rxterms-ing.json",
+raw_ingredients.to_json(pathlib.Path(os.getcwd()) / "prepared_data" / "rxterms_ing.json",
                         orient='records')

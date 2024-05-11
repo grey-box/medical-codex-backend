@@ -15,6 +15,11 @@ def read_compendium_data(raw_data_path, source, language):
     raw_data['page_name'] = raw_data['url'].apply(lambda x: x.split('/')[-2])
     # Extract latin name from the parenthesis part in the title
     raw_data['title_latin_name'] = raw_data['title'].apply(lambda x: x.split('(')[-1].split(')')[0].strip())
+    # Detect if there is an ampersand at the end of the latin name,
+    # create a boolean column indicating its presence and remove it
+    raw_data['title_latin_name_has_ampersand'] = raw_data['title_latin_name'].apply(
+        lambda x: True if x[-1] == '&' else False)
+    raw_data['title_latin_name'] = raw_data['title_latin_name'].apply(lambda x: x[:-1] if x[-1] == '&' else x)
     # Detect is there is an asterisk at the end of the latin name,
     # create a boolean column indicating its presence and remove it
     raw_data['title_latin_name_has_asterisk'] = raw_data['title_latin_name'].apply(
@@ -24,6 +29,9 @@ def read_compendium_data(raw_data_path, source, language):
     raw_data[f'title_{language}_name'] = raw_data['title'].apply(lambda x: x.split('(')[0].strip())
     # Remove asterisk at the end of the uk name
     raw_data[f'title_{language}_name'] = raw_data[f'title_{language}_name'].apply(lambda x: x[:-1] if x[-1] == '*' else x)
+    # Title to lowercase
+    raw_data['title_latin_name'] = raw_data['title_latin_name'].apply(lambda x: x.lower())
+    raw_data[f'title_{language}_name'] = raw_data[f'title_{language}_name'].apply(lambda x: x.lower())
     return raw_data
 
 

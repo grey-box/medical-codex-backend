@@ -22,10 +22,10 @@ raw_data = raw_data.assign(page_name_decoded=raw_data['page_name']
 del raw_data['page_name']
 
 # %% save data to csv file
-raw_data.to_csv(pathlib.Path(os.getcwd()) / "prepared_data" / "utis-in-ua.csv",
+raw_data.to_csv(pathlib.Path(os.getcwd()) / "prepared_data" / "utis_in_ua.csv",
                 quoting=2,
                 index=False)
 
 # %% save data to json file
-raw_data.to_json(pathlib.Path(os.getcwd()) / "prepared_data" / "utis-in-ua.json",
+raw_data.to_json(pathlib.Path(os.getcwd()) / "prepared_data" / "utis_in_ua.json",
                  orient='records')

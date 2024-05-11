@@ -15,11 +15,20 @@ raw_data = raw_data.assign(atc_classification=raw_data['ATC codes']
 # %% Delete ATC codes column
 del raw_data['ATC codes']
 
+# %% Columns to lowercase and replace spaces with underscores
+raw_data.columns = raw_data.columns.str.lower().str.replace(' ', '_')
+
+# %% Medicine name to lowercase
+raw_data['medicine_name'] = raw_data['medicine_name'].str.lower()
+
+# %% Add source information column
+raw_data['source'] = 'who.int'
+
 # %% save data to csv file
-raw_data.to_csv(pathlib.Path(os.getcwd()) / "prepared_data" / "who-essential.csv",
+raw_data.to_csv(pathlib.Path(os.getcwd()) / "prepared_data" / "who_essential.csv",
                 quoting=2,
                 index=False)
 
 # %% save data to json file
-raw_data.to_json(pathlib.Path(os.getcwd()) / "prepared_data" / "who-essential.json",
-                  orient='records')
+raw_data.to_json(pathlib.Path(os.getcwd()) / "prepared_data" / "who_essential.json",
+                 orient='records')
