@@ -17,7 +17,7 @@ prepared_data = {
     "rxterms_terms": pd.read_csv(prepared_data_path / "rxterms_terms.csv"),
     "utis_in_ua": pd.read_csv(prepared_data_path / "utis_in_ua.csv"),
     "who_essential": pd.read_csv(prepared_data_path / "who_essential.csv"),
-    "wikidata_names": pd.read_csv(prepared_data_path / "wikidata_names.csv")
+    "wikidata_names": pd.read_json(prepared_data_path / "wikidata_names.json")
 }
 
 # %% Assemble both languages translation for Compendium data
@@ -74,5 +74,61 @@ translation_data_who = translation_data_compendium.merge(
     suffixes=("_compendium", "_who")
 )
 
-# %% Wikidata Names
+# %% assign first non-empty value to medicine_name column
+translation_data_who['medicine_name_merge1_en'] = translation_data_who[['medicine_name_who_matches', 'medicine_name_who']].apply(
+    lambda x: x['medicine_name_who_matches'] if pd.isna(x['medicine_name_who']) else x['medicine_name_who'],
+    axis=1
+)
 
+# %% Wikidata Names
+wikidata_labels_aliases = pd.concat([
+    ## Labels only
+    prepared_data['wikidata_names'][['id', 'label_uk', 'label_ru', 'label_en']].rename(columns={'id': 'wikidata_id'}),
+    ## Exploded English alias list
+    prepared_data['wikidata_names'][['id', 'label_uk', 'label_ru', 'alias_list_en']]
+    .explode('alias_list_en')
+    .rename(columns={'alias_list_en': 'label_en', 'id': 'wikidata_id'}),
+    ## Exploded Russian alias list
+    prepared_data['wikidata_names'][['id', 'label_uk', 'alias_list_ru', 'label_en']]
+    .explode('alias_list_ru')
+    .rename(columns={'alias_list_ru': 'label_ru', 'id': 'wikidata_id'}),
+    ## Exploded Ukrainian alias list
+    prepared_data['wikidata_names'][['id', 'alias_list_uk', 'label_ru', 'label_en']]
+    .explode('alias_list_uk')
+    .rename(columns={'alias_list_uk': 'label_uk', 'id': 'wikidata_id'}),
+])
+# %% delete records with empty labels
+wikidata_labels_aliases = (wikidata_labels_aliases
+                           .dropna(subset=['label_uk', 'label_ru', 'label_en'])
+                           .reset_index(drop=True)
+                           )
+
+# %% merge wikidata names
+translation_data_wikidata = wikidata_labels_aliases[['wikidata_id', 'label_uk', 'label_ru', 'label_en']].merge(
+    translation_data_who,
+    how="outer",
+    left_on="label_en",
+    right_on="medicine_name_merge1_en",
+    suffixes=("_wikidata", "_who")
+)
+
+# %% assign first non-empty value to medicine_name column
+translation_data_wikidata['medicine_name_merge2_en'] = translation_data_wikidata[['medicine_name_merge1_en', 'label_en']].apply(
+    lambda x: x['label_en'] if pd.isna(x['medicine_name_merge1_en']) else x['medicine_name_merge1_en'],
+    axis=1
+)
+
+translation_data_wikidata['medicine_name_merge2_uk'] = translation_data_wikidata[['title_uk_name', 'label_uk']].apply(
+    lambda x: x['label_uk'] if pd.isna(x['title_uk_name']) else x['title_uk_name'],
+    axis=1
+)
+
+translation_data_wikidata['medicine_name_merge2_ru'] = translation_data_wikidata[['title_ru_name', 'label_ru']].apply(
+    lambda x: x['label_ru'] if pd.isna(x['title_ru_name']) else x['title_ru_name'],
+    axis=1
+)
+
+# %% Export what's done for today
+(translation_data_wikidata[(translation_data_wikidata['medicine_name_merge2_en'] != "") |
+                           (translation_data_wikidata['medicine_name_merge2_uk'] != "")]
+ .to_excel(pathlib.Path(os.getcwd()) / "merged_data" / "translation_data_wikidata_2024-05-11.xlsx", index=False))
