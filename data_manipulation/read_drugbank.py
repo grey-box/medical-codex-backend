@@ -39,6 +39,10 @@ raw_data4 = raw_data3.rename(columns=lambda x: x.lower().replace(' ', '_'))
 # %% replace all values in dataframe with empty string if NA
 raw_data5 = raw_data4.fillna('')
 
+# %% Lowercase all values in dataframe
+raw_data5['synonyms'] = raw_data5['synonyms'].apply(lambda x: x.lower())
+raw_data5['common_name'] = raw_data5['common_name'].apply(lambda x: x.lower())
+
 # %% Save data to csv file
 raw_data5.to_csv(pathlib.Path(os.getcwd()) / "prepared_data" / "drugbank_vocabulary.csv",
                  quoting=2,

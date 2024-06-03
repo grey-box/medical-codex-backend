@@ -1,0 +1,5 @@
+- Date: 2024-05-08
+- Source: https://wikidata.org/
+- Original Format: JSON
+- Transformed format: CSV
+- Software: Python
