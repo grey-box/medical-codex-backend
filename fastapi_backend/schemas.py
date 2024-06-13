@@ -3,25 +3,47 @@ from typing import List
 from pydantic import BaseModel
 
 
+class FuzzyResult(BaseModel):
+    matching_name: str
+    matching_source: str
+    matching_uid: int
+
+
+class TranslationResult(BaseModel):
+    translated_name: str
+    translated_source: str
+    translated_uid: int
+
+
+# 3 in the diagram
 class FuzzyMatching(BaseModel):
-    pass
+    results: List[FuzzyResult]
 
 
+# 2 in the diagram
 class FuzzyQuery(BaseModel):
-    pass
+    source_language: str
+    query: str
 
 
 class TranslationLanguagePair(BaseModel):
     source_language: str
-    destination_language: str
+    target_language: str
 
     class Config:
         orm_mode = True
 
 
+class TranslationLanguageResult(BaseModel):
+    translations: List[TranslationLanguagePair]
+
+
+# 6 in the diagram
 class Translation(BaseModel):
-    pass
+    results: List[TranslationResult]
 
 
+# 5 in the diagram
 class TranslationQuery(BaseModel):
-    pass
+    translation_query: FuzzyResult
+    target_language: str

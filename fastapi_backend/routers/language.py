@@ -13,6 +13,6 @@ router = APIRouter(prefix='/languages', tags=['languages'])
 logger = logging.getLogger(LOGGER_NAME)
 
 
-@router.get("/", response_model=List[schemas.TranslationLanguagePair])
+@router.get("/", response_model=schemas.TranslationLanguageResult)
 def get_languages(db: Session = Depends(dependancies.get_db)):
     return db.query(models.LanguagePairs).all()

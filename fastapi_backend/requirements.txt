@@ -5,3 +5,6 @@ starlette~=0.40.0
 pydantic~=2.7.2
 python-dotenv~=1.0.1
 pydantic_settings~=2.2.1
+Scrapy~=2.11.2
+pandas~=2.2.2
+transliterate~=1.10.2
