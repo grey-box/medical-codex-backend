@@ -1,0 +1,20 @@
+### test GET request for fuzzy matching
+GET http://0.0.0.0:8000/fuzzymatching/test
+
+{
+    "source_language": "uk",
+    "query": "sample_query"
+}
+
+### test GET request for translation
+GET http://0.0.0.0:8000/translate/test
+
+{
+    "source_language": "uk",
+    "target_language": "en",
+    "translation_query": {
+      "matching_name": "matching_name3",
+      "matching_source": "matching_source3",
+      "matching_uid": 3
+    }
+}
