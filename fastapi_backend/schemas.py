@@ -24,6 +24,8 @@ class FuzzyMatching(BaseModel):
 class FuzzyQuery(BaseModel):
     source_language: str
     query: str
+    threshold: int = 10
+    nb_max_results: int = 10
 
 
 class TranslationLanguagePair(BaseModel):
@@ -31,7 +33,7 @@ class TranslationLanguagePair(BaseModel):
     target_language: str
 
     class Config:
-        orm_mode = True
+        from_attributes = True
 
 
 class TranslationLanguageResult(BaseModel):
