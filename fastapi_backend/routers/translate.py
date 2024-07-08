@@ -1,12 +1,11 @@
 import logging
-from typing import List
 
 from fastapi import APIRouter, Depends
 from sqlalchemy.orm import Session
 
 import dependancies
 import schemas
-import translation
+from func import translation
 from config import LOGGER_NAME
 
 router = APIRouter(prefix='/translate', tags=['levels'])

@@ -17,7 +17,10 @@ COPY requirements.txt .
 RUN pip install -r requirements.txt
 
 # Copy the application code
+COPY database/wikidata_names.csv ./database/wikidata_names.csv
 COPY routers/*.py ./routers/
+COPY func/*.py ./func/
+COPY test/*.py ./test/
 COPY *.py ./
 
 # Expose the application port
