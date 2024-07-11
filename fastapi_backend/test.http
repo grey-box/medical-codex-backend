@@ -6,6 +6,16 @@ GET http://0.0.0.0:8000/fuzzymatching/test
     "query": "sample_query"
 }
 
+### test GET request for fuzzy matching
+GET http://0.0.0.0:8000/fuzzymatching/
+
+{
+    "source_language": "Ukrainian",
+    "query": "астмито",
+    "threshold": 5,
+    "nb_max_results": 5
+}
+
 ### test GET request for translation
 GET http://0.0.0.0:8000/translate/test
 
