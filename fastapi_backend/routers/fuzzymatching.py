@@ -3,7 +3,7 @@ import logging
 from fastapi import APIRouter, Depends
 from sqlalchemy.orm import Session
 
-from func import fuzzymatching
+from func import fuzzy_matching
 import schemas
 import dependancies
 from config import LOGGER_NAME
@@ -14,7 +14,7 @@ logger = logging.getLogger(LOGGER_NAME)
 
 @router.get('/', response_model=schemas.FuzzyMatching)
 def get_fuzzymatching(query: schemas.FuzzyQuery, db: Session = Depends(dependancies.get_db)):
-    results = fuzzymatching.fuzzy_matching(db, query)
+    results = fuzzy_matching.fuzzy_matching(db, query)
     logging.info(results)
     return results
 
