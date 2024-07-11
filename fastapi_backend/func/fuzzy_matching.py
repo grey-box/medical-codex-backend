@@ -1,13 +1,12 @@
 import logging
 
-import pandas as pd
-
 import schemas
 from func.base_levenshtein import fuzzy_levenshtein
 from func.fonetika_soundex import fonetika_soundex
 
 
 def fuzzy_matching(db: object, query: schemas.FuzzyQuery, matching_algorithm="Levenshtein") -> dict[str, list[dict[str, str | int]]]:
+    list_medicine = []
     if matching_algorithm == "Levenshtein":
         try:
             list_medicine = fuzzy_levenshtein(language=str(query.source_language),
