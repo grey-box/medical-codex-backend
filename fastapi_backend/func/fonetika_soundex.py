@@ -5,6 +5,8 @@ from fonetika.soundex import RussianSoundex
 from fonetika.soundex import EnglishSoundex
 from fonetika.distance import PhoneticsInnerLanguageDistance
 
+from func.read_prepared_wikidata_names import read_prepared_wikidata_names
+
 
 def fonetika_soundex(language,
                      input_string,
@@ -29,7 +31,7 @@ def fonetika_soundex(language,
 
     # Define the soundex algorithm for the language
     if language == "English":
-        soundex = RussianSoundex()
+        soundex = EnglishSoundex()
     elif language in ["Russian", "Ukrainian"]:  # Since we don't have Ukrainian Soundex, we'll use Russian one
         soundex = RussianSoundex()
     else:
