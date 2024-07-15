@@ -1,6 +1,7 @@
 import os
 import pathlib
 import pandas as pd
+import sqlite3
 
 # %% Define path to raw data
 raw_data_path = (pathlib.Path(os.getcwd()) / "raw_data" / "drugbank" / "drugbank_vocabulary.csv")
@@ -51,3 +52,11 @@ raw_data5.to_csv(pathlib.Path(os.getcwd()) / "prepared_data" / "drugbank_vocabul
 # %% Save data to json file
 raw_data5.to_json(pathlib.Path(os.getcwd()) / "prepared_data" / "drugbank_vocabulary.json",
                   orient='records')
+
+# %% Add table to SQLite database
+
+conn = sqlite3.connect('fastapi_backend/codex.db')
+
+raw_data5.to_sql('drugbank_vocabulary', conn, if_exists='replace', index=False)
+
+conn.close()

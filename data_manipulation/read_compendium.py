@@ -1,6 +1,7 @@
 import os
 import pathlib
 import pandas as pd
+import sqlite3
 
 
 # %%
@@ -28,7 +29,8 @@ def read_compendium_data(raw_data_path, source, language):
     # Get part before parenthesis in title
     raw_data[f'title_{language}_name'] = raw_data['title'].apply(lambda x: x.split('(')[0].strip())
     # Remove asterisk at the end of the uk name
-    raw_data[f'title_{language}_name'] = raw_data[f'title_{language}_name'].apply(lambda x: x[:-1] if x[-1] == '*' else x)
+    raw_data[f'title_{language}_name'] = raw_data[f'title_{language}_name'].apply(
+        lambda x: x[:-1] if x[-1] == '*' else x)
     # Title to lowercase
     raw_data['title_latin_name'] = raw_data['title_latin_name'].apply(lambda x: x.lower())
     raw_data[f'title_{language}_name'] = raw_data[f'title_{language}_name'].apply(lambda x: x.lower())
@@ -82,3 +84,12 @@ compendium_ru.to_json(pathlib.Path(os.getcwd()) /
                       "prepared_data" /
                       "compendium_ru.json",
                       orient='records')
+
+# %% Add table to SQLite database
+
+conn = sqlite3.connect('fastapi_backend/codex.db')
+
+compendium_uk.to_sql('compendium_uk', conn, if_exists='replace', index=False)
+compendium_ru.to_sql('compendium_ru', conn, if_exists='replace', index=False)
+
+conn.close()

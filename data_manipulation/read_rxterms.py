@@ -1,6 +1,7 @@
 import os
 import pathlib
 import pandas as pd
+import sqlite3
 
 # %% Define path to raw data
 raw_terms_path = (pathlib.Path(os.getcwd()) / "raw_data" / "rxterms" / "RxTerms202304.txt")
@@ -33,3 +34,13 @@ raw_terms.to_json(pathlib.Path(os.getcwd()) / "prepared_data" / "rxterms_terms.j
                   orient='records')
 raw_ingredients.to_json(pathlib.Path(os.getcwd()) / "prepared_data" / "rxterms_ing.json",
                         orient='records')
+
+# %% Add table to SQLite database
+
+
+conn = sqlite3.connect('fastapi_backend/codex.db')
+
+raw_terms.to_sql('rxterms_terms', conn, if_exists='replace', index=False)
+raw_ingredients.to_sql('rxterms_ing', conn, if_exists='replace', index=False)
+
+conn.close()
