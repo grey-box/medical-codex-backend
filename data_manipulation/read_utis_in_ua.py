@@ -4,6 +4,7 @@ from urllib.parse import unquote
 
 import pandas as pd
 from transliterate import translit
+import sqlite3
 
 # %% Define path to raw data
 raw_data_path = (pathlib.Path(os.getcwd()) / "raw_data" / "utis.in.ua" / "utis.in.ua.json")
@@ -29,3 +30,8 @@ raw_data.to_csv(pathlib.Path(os.getcwd()) / "prepared_data" / "utis_in_ua.csv",
 # %% save data to json file
 raw_data.to_json(pathlib.Path(os.getcwd()) / "prepared_data" / "utis_in_ua.json",
                  orient='records')
+
+# %% save data to SQLite database
+conn = sqlite3.connect('fastapi_backend/codex.db')
+raw_data.to_sql('utis_in_ua', conn, if_exists='replace', index=False)
+conn.close()

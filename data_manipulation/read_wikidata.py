@@ -1,6 +1,7 @@
 import os
 import pathlib
 import pandas as pd
+import sqlite3
 
 # %% Define path to raw data
 raw_data_path = (pathlib.Path(os.getcwd()) / "raw_data" / "wikidata" / "wikidata_names_2024-05-08.json")
@@ -25,3 +26,5 @@ raw_data.to_csv(pathlib.Path(os.getcwd()) / "prepared_data" / "wikidata_names.cs
 # %% save data to json file
 raw_data.to_json(pathlib.Path(os.getcwd()) / "prepared_data" / "wikidata_names.json",
                  orient='records')
+
+# %% save data to SQLite database

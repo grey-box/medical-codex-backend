@@ -3,9 +3,10 @@ import pathlib
 import pandas as pd
 import re
 from transliterate import translit
+import sqlite3
 
 # %% Define path to raw data
-raw_data_path = (pathlib.Path(os.getcwd()) / "raw_data" / "fip" / "fip_equiv.csv")
+raw_data_path = (pathlib.Path(os.getcwd()) / "raw_data" / "fip" / "fip-equiv.csv")
 
 # %% Read raw data
 raw_data = pd.read_csv(raw_data_path, sep=',', dtype={'activeingredient': str})
@@ -75,3 +76,6 @@ raw_data2.to_csv(pathlib.Path(os.getcwd()) / "prepared_data" / "fip_equiv.csv",
 # %% Save data to json file
 raw_data2.to_json(pathlib.Path(os.getcwd()) / "prepared_data" / "fip_equiv.json",
                   orient='records')
+
+# %% Add table to SQLite database
+

@@ -1,5 +1,7 @@
 import os
 import pathlib
+import sqlite3
+
 import pandas as pd
 
 from data_manipulation.close_match_substring import close_match_substring
@@ -155,9 +157,8 @@ translation_data_drugbank2['medicine_name_merge3_en'] = (
 # %% Export what's done for today
 if not os.path.exists(pathlib.Path(os.getcwd()) / "merged_data"):
     os.mkdir(pathlib.Path(os.getcwd()) / "merged_data")
-(translation_data_drugbank2[(translation_data_drugbank2['medicine_name_merge3_en'] != "") |
-                            (translation_data_drugbank2['medicine_name_merge2_uk'] != "")]
- [[
+single_table_data = (translation_data_drugbank2[(translation_data_drugbank2['medicine_name_merge3_en'] != "") |
+                                                (translation_data_drugbank2['medicine_name_merge2_uk'] != "")][[
     'medicine_name_merge3_en',
     'medicine_name_merge2_uk',
     'medicine_name_merge2_ru',
@@ -165,4 +166,22 @@ if not os.path.exists(pathlib.Path(os.getcwd()) / "merged_data"):
     'source_who',
     'source_compendium',
     'atc_classification']].drop_duplicates()
- .to_excel(pathlib.Path(os.getcwd()) / "merged_data" / "translation_data_wikidata_2024-06-02.xlsx", index=False))
+                     .sort_values(['source_who', 'medicine_name_merge3_en'])
+                     .rename(columns={'medicine_name_merge3_en': 'English Name',
+                                      'medicine_name_merge2_uk': 'Ukrainian Name',
+                                      'medicine_name_merge2_ru': 'Russian Name',
+                                      'source_who': 'WHO Source',
+                                      'source_compendium': 'Compendium Source',
+                                      'atc_classification': 'ATC Classification'}))
+
+# %% Export the merged data to an Excel file
+single_table_data.to_excel(pathlib.Path(os.getcwd()) /
+                           "merged_data" /
+                           "translation_data_wikidata_2024-07-14.xlsx", index=False)
+
+# %% Export the merged data to a SQLite database
+conn = sqlite3.connect('merged_data/codex.db')
+single_table_data.to_sql('translation_data', conn, if_exists='replace', index=False)
+conn.close()
+
+print("Data exported successfully!")
