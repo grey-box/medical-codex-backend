@@ -3,7 +3,7 @@ import pathlib
 import pandas as pd
 import re
 from transliterate import translit
-import sqlite3
+from conn import conn
 
 # %% Define path to raw data
 raw_data_path = (pathlib.Path(os.getcwd()) / "raw_data" / "fip" / "fip-equiv.csv")
@@ -83,8 +83,6 @@ for col in raw_data3.select_dtypes(include=['object']).columns:
     raw_data3[col] = raw_data3[col].apply(lambda x: '^'.join(x) if isinstance(x, list) else x)
 
 # %% Add table to SQLite database
-conn = sqlite3.connect('fastapi_backend/codex.db')
-
 raw_data3.to_sql('fip_equiv', conn, if_exists='replace', index=False)
 
 conn.close()

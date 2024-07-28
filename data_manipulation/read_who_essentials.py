@@ -1,7 +1,7 @@
 import os
 import pathlib
 import pandas as pd
-import sqlite3
+from conn import conn
 
 # %% Define path to raw data
 raw_data_path = (pathlib.Path(os.getcwd()) / "raw_data" / "who_essential" / "2024-04-27-who-eml.csv")
@@ -35,6 +35,5 @@ raw_data.to_json(pathlib.Path(os.getcwd()) / "prepared_data" / "who_essential.js
                  orient='records')
 
 # %% save data to SQLite database
-conn = sqlite3.connect('fastapi_backend/codex.db')
 raw_data.to_sql('who_essential', conn, if_exists='replace', index=False)
 conn.close()
