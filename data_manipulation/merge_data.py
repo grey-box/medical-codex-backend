@@ -1,6 +1,6 @@
 import os
 import pathlib
-import sqlite3
+from conn import conn
 
 import pandas as pd
 
@@ -180,7 +180,6 @@ single_table_data.to_excel(pathlib.Path(os.getcwd()) /
                            "translation_data_wikidata_2024-07-14.xlsx", index=False)
 
 # %% Export the merged data to a SQLite database
-conn = sqlite3.connect('merged_data/translation_data_wikidata_2024-07-14.db')
 single_table_data.to_sql('translation_data', conn, if_exists='replace', index=False)
 conn.close()
 

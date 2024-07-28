@@ -1,7 +1,7 @@
 import os
 import pathlib
 import pandas as pd
-import sqlite3
+from conn import conn
 
 # %% Define path to raw data
 raw_data_path = (pathlib.Path(os.getcwd()) / "raw_data" / "wikidata" / "wikidata_names_2024-05-08.json")
@@ -33,8 +33,6 @@ for col in raw_data3.select_dtypes(include=['object']).columns:
     raw_data3[col] = raw_data3[col].apply(lambda x: '^'.join(x) if isinstance(x, list) else x)
 
 # %% Add table to SQLite database
-conn = sqlite3.connect('fastapi_backend/codex.db')
-
 raw_data3.to_sql('wikidata_names', conn, if_exists='replace', index=False)
 
 conn.close()

@@ -1,7 +1,7 @@
 import os
 import pathlib
 import pandas as pd
-import sqlite3
+from conn import conn
 
 
 # %%
@@ -86,9 +86,6 @@ compendium_ru.to_json(pathlib.Path(os.getcwd()) /
                       orient='records')
 
 # %% Add table to SQLite database
-
-conn = sqlite3.connect('fastapi_backend/codex.db')
-
 compendium_uk.to_sql('compendium_uk', conn, if_exists='replace', index=False)
 compendium_ru.to_sql('compendium_ru', conn, if_exists='replace', index=False)
 
