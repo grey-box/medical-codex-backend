@@ -12,13 +12,13 @@ router = APIRouter(prefix='/translate', tags=['levels'])
 logger = logging.getLogger(LOGGER_NAME)
 
 
-@router.get("/", response_model=schemas.TranslationResult)
+@router.post("/", response_model=schemas.TranslationResult)
 def get_translation(query: schemas.TranslationQuery, db: Session = Depends(dependancies.get_db)):
     results = translation.translate(db, query)
     return results
 
 
-@router.get("/test", response_model=schemas.Translation)
+@router.post("/test", response_model=schemas.Translation)
 def get_translation_test(query: schemas.TranslationQuery, db: Session = Depends(dependancies.get_db)):
     logging.info(query)
     logging.info(db.info)
