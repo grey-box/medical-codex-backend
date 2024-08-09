@@ -1,5 +1,5 @@
 ### test POST request for fuzzy matching
-POST http://0.0.0.0:8000/fuzzymatching/test
+POST https://medicalcodexbackend.azurewebsites.net/fuzzymatching/test
 
 {
     "source_language": "uk",
@@ -7,7 +7,7 @@ POST http://0.0.0.0:8000/fuzzymatching/test
 }
 
 ### test POST request for fuzzy matching
-POST http://0.0.0.0:8000/fuzzymatching/
+POST https://medicalcodexbackend.azurewebsites.net/fuzzymatching/
 
 {
     "source_language": "Ukrainian",
@@ -17,7 +17,7 @@ POST http://0.0.0.0:8000/fuzzymatching/
 }
 
 ### test POST request for translation
-POST http://0.0.0.0:8000/translate/test
+POST https://medicalcodexbackend.azurewebsites.net/translate/test
 
 {
     "source_language": "uk",
