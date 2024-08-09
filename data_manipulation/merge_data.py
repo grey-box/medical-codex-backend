@@ -4,7 +4,7 @@ from conn import conn
 
 import pandas as pd
 
-from data_manipulation.close_match_substring import close_match_substring
+from close_match_substring import close_match_substring
 
 # %% Define path to prepared data
 prepared_data_path = (pathlib.Path(os.getcwd()) / "prepared_data")
