@@ -168,3 +168,5 @@ cython_debug/
 /.idea/inspectionProfiles/Project_Default.xml
 /raw_data/wikidata/json_wikidata_2024-05-08/
 /fastapi_backend/database/codex.db
+/.azure/
+/.idea/
