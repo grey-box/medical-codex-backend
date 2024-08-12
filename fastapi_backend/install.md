@@ -4,6 +4,8 @@
 
 Source: <https://learn.microsoft.com/en-us/cli/azure/install-azure-cli-macos>
 
+Install the Azure CLI if you don't already have it installed
+
 ```shell
 brew update && brew install azure-cli
 ```
@@ -13,16 +15,22 @@ brew update && brew install azure-cli
 ```shell
 az login --use-device-code
 export AZ_SUBSCRIPTION_ID=""
-az account set --subscription "{$AZ_SUBSCRIPTION_ID}"
+az account set --subscription "${AZ_SUBSCRIPTION_ID}"
 ```
 
 ## Create an App Service Plan
+
+Set the Service Plan variables
 
 ```shell
 export AZ_APPSERVICE_PLAN="MedicalCodexApp"
 export AZ_RESGRP="project_codex_dev"
 export AZ_APP_NAME="MedicalCodexBackend"
+```
 
+If you don't have already an App Service Plan, create one
+
+```shell
 az appservice plan create \
 --name "${AZ_APPSERVICE_PLAN}" \
 --resource-group "${AZ_RESGRP}" \
