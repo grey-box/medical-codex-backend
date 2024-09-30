@@ -171,5 +171,6 @@ cython_debug/
 /.azure/
 /.idea/
 
+codex.db
 # VSCode
 .vscode
