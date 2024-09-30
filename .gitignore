@@ -170,3 +170,5 @@ cython_debug/
 /fastapi_backend/database/codex.db
 /.azure/
 /.idea/
+
+codex.db
