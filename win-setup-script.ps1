@@ -23,7 +23,7 @@ $repo_root = & git rev-parse --show-toplevel
 
 
 # Check if the backend API requirements.txt file exists
-if (Test-Path $api_requirements) {
+if (Test-Path "$repo_root\$api_requirements") {
     Write-Output "Found requirements.txt file."
 }
 else {
@@ -35,7 +35,7 @@ else {
 # Install the API requirements
 Write-Output "Installing requirements..."
 try {
-    & $valid_pip_path install -r $api_requirements
+    & $valid_pip_path install -r "$repo_root\$api_requirements"
 }
 catch {
     Write-Output "Error occurred running: pip install -r $api_requirements"
