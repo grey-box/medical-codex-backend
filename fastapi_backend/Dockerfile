@@ -1,3 +1,7 @@
+# syntax=docker/dockerfile:1
+# escape=` 
+#Useful to set escape to backtick since \ is dir separator for windows.
+
 FROM python:3.11-slim
 LABEL authors="Grey-Box, François Pelletier"
 
@@ -27,5 +31,8 @@ COPY *.py ./
 # Expose the application port
 EXPOSE 8000
 
-# Run the application
-CMD ["uvicorn", "main:app", "--host", "0.0.0.0", "--port", "8000"]
+# Run the application 
+#CMD ["uvicorn", "main:app", "--host", "0.0.0.0", "--port", "8000"]
+
+# Run the Application for Development w/Auto-Reload
+CMD ["uvicorn", "main:app", "--host", "0.0.0.0", "--port", "8000", "--reload"]

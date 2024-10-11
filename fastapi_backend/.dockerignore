@@ -1,0 +1,13 @@
+# .git directories are ignored automatically
+
+#Files
+*.http
+*.md
+*.ps1
+build*.sh
+docker-*
+create_database*
+
+#Directories
+.azure
+
