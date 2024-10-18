@@ -1,0 +1,26 @@
+
+services:
+  #codex-frontend:
+  
+  fastapi_backend:
+    build:
+      context: ./fastapi_backend
+      dockerfile: Dockerfile
+    image: local/fastapi-backend
+    container_name: fastapi_backend
+    ports:
+      - 8000:8000
+    env_file: 
+      - ./fastapi_backend/.env
+    volumes: # docker_volumeName:app/containerPath 
+      - ./fastapi_backend/database:/app/database
+    network_mode: host
+    #secrets:  # How to import secrets to the app in the container
+    #  - database_url
+
+  
+# Add Sensitive information to secrets files to then be loaded
+#secrets:
+#  database_url: # Loads secret from external file
+#    external: true
+  
