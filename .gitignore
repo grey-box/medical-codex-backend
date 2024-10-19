@@ -167,10 +167,10 @@ cython_debug/
 /raw_data/wikidata/json_wikidata/
 /.idea/inspectionProfiles/Project_Default.xml
 /raw_data/wikidata/json_wikidata_2024-05-08/
-/fastapi_backend/database/codex.db
+/fastapi_backend/database/prepared_data.db
 /.azure/
 /.idea/
 
-codex.db
+prepared_data.db
 # VSCode
 .vscode
