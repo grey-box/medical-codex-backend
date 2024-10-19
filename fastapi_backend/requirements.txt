@@ -1,0 +1,14 @@
+uvicorn~=0.30.5
+fastapi~=0.115.2
+fonetika==1.4.9
+Levenshtein==0.25.1
+SQLAlchemy~=2.0.32
+starlette~=0.40.0
+pydantic==2.8.2
+python-dotenv~=1.0.1
+pydantic_settings~=2.4.0
+pydantic_core==2.20.1
+Scrapy~=2.11.2
+pandas~=2.2.2
+transliterate~=1.10.2
+editdistance==0.8.1

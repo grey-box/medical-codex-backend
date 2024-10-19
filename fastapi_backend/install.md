@@ -61,7 +61,7 @@ az webapp config appsettings set --name "${AZ_APP_NAME}" --resource-group "${AZ_
 
 az webapp config appsettings set --name "${AZ_APP_NAME}" --resource-group "${AZ_RESGRP}" --settings LOGGING_LEVEL='NOTSET'
 
-az webapp config appsettings set --name "${AZ_APP_NAME}" --resource-group "${AZ_RESGRP}" --settings DATABASE_URL='sqlite:///static/codex.db'
+az webapp config appsettings set --name "${AZ_APP_NAME}" --resource-group "${AZ_RESGRP}" --settings DATABASE_URL='sqlite:///static/prepared_data.db'
 
 az webapp config appsettings set --name "${AZ_APP_NAME}" --resource-group "${AZ_RESGRP}" --settings SCM_DO_BUILD_DURING_DEPLOYMENT=1
 ```

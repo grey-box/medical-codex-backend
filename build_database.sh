@@ -10,4 +10,4 @@ python data_manipulation/read_fip.py
 python data_manipulation/read_rxterms.py
 python data_manipulation/read_utis_in_ua.py
 
-# Database will now be available in fastapi_backend/codex.db
+# Database will now be available in fastapi_backend/prepared_data.db
