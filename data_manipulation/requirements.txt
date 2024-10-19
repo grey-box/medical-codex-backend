@@ -1,6 +1,6 @@
 pandas~=2.2.2
 Scrapy==2.11.2
 numpy~=1.26.4
-transliterate==1.10.2
+transliterate~=1.10.2
 openpyxl~=3.1.2
 chembl_webresource_client~=0.10.9
