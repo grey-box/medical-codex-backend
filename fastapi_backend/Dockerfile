@@ -17,8 +17,8 @@ COPY requirements.txt .
 RUN pip install -r requirements.txt
 
 # Copy the application code
-COPY database/wikidata_names.csv ./database/wikidata_names.csv
-COPY static/codex.db ./static/
+COPY database/wikidata_names.csv ./database/
+COPY static/prepared_data.db ./static/
 COPY routers/*.py ./routers/
 COPY func/*.py ./func/
 COPY test/*.py ./test/
