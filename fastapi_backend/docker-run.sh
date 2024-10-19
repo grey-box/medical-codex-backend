@@ -1,5 +1,3 @@
-#!/usr/bin/zsh
-
 # Stop and remove existing containers
 
 docker stop fastapi_backend
