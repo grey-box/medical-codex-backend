@@ -11,6 +11,7 @@ class Settings(BaseSettings):
     DATABASE_URL: str
     LOGGING_LEVEL: str
     LOGGING_FORMAT: str
+    GEMINI_API_KEY: str
 
     class Config:
         env_file = find_dotenv()
