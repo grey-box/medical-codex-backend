@@ -18,3 +18,26 @@ Medical codex backend
 10. Receive and log translations that need to be manually evaluated later.
 11. Implement available langauges API enpoints.
 12. Look for near matches using fuzzy-match algorithm.
+
+## Running the App with Docker
+
+### For Development
+**Run these scripts from the root of the repo where the `compose.yaml` file is located.**
+
+To start the app for development run:
+
+`docker compose up --build --watch`
+
+This will build the container according to the `Dockerfile` and then start the container. The `--watch` option watches the source code for changes and rebuilds/refreshes containers when files are updated. It doesn't seem to update files as described in the documentation without rebuilding the image first but you can see output from the FastAPI app without opening docker desktop.
+
+Alternatively, you can run the two commands separately to achieve the same result:
+
+`docker compose up --build -d`  
+`docker compose watch`
+
+The `-d` option starts the container in the background.
+
+<hr>
+
+
+

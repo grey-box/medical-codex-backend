@@ -1,7 +1,7 @@
 editdistance==0.8.1
 fastapi==0.112.0
 fonetika==1.4.9
-Levenshtein==0.25.1
+Levenshtein==0.26.0
 pydantic==2.8.2
 pydantic-settings==2.4.0
 pydantic_core==2.20.1
