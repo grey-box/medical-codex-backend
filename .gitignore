@@ -174,3 +174,4 @@ cython_debug/
 codex.db
 # VSCode
 .vscode
+.env.local

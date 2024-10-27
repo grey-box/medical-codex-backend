@@ -49,3 +49,10 @@ class Translation(BaseModel):
 class TranslationQuery(BaseModel):
     translation_query: FuzzyResult
     target_language: str
+
+class LastResortQuery(BaseModel):
+    medicine: str
+    target_language: str
+
+class LastResortResponse(BaseModel):
+    translated_medicine: str

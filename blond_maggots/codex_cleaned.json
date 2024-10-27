@@ -1,0 +1,6192 @@
+[
+  {
+    "label_uk": "Парацетамол",
+    "label_ru": "Парацетамол",
+    "label_gr": "Paracétamol",
+    "label_en": "Acetaminophen",
+    "alias_list_uk": ["Панадол", "Ефералган"],
+    "alias_list_ru": ["Панадол", "Эффералган"],
+    "alias_list_gr": ["Doliprane", "Efferalgan", "Dafalgan"],
+    "alias_list_en": ["Tylenol", "Panadol"]
+  },
+  {
+    "label_uk": "Ібупрофен",
+    "label_ru": "Ибупрофен",
+    "label_gr": "Ibuprofène",
+    "label_en": "Ibuprofen",
+    "alias_list_uk": ["Нурофен", "Бруфен"],
+    "alias_list_ru": ["Нурофен", "Бруфен"],
+    "alias_list_gr": ["Nurofen", "Advil", "Brufen"],
+    "alias_list_en": ["Advil", "Motrin", "Nurofen"]
+  },
+  {
+    "label_uk": "Аспірин",
+    "label_ru": "Аспирин",
+    "label_gr": "Aspirine",
+    "label_en": "Aspirin",
+    "alias_list_uk": ["Упсарин Упса"],
+    "alias_list_ru": ["Упсарин Упса"],
+    "alias_list_gr": ["Aspegic", "Kardegic"],
+    "alias_list_en": ["Bayer", "Bufferin", "Ecotrin"]
+  },
+  {
+    "label_uk": "Амоксицилін",
+    "label_ru": "Амоксициллин",
+    "label_gr": "Amoxicilline",
+    "label_en": "Amoxicillin",
+    "alias_list_uk": ["Амоксиклав"],
+    "alias_list_ru": ["Амоксиклав"],
+    "alias_list_gr": ["Clamoxyl"],
+    "alias_list_en": ["Amoxil", "Trimox", "Moxatag"]
+  },
+  {
+    "label_uk": "Метформін",
+    "label_ru": "Метформин",
+    "label_gr": "Metformine",
+    "label_en": "Metformin",
+    "alias_list_uk": ["Глюкофаж", "Сіофор"],
+    "alias_list_ru": ["Глюкофаж", "Сиофор"],
+    "alias_list_gr": ["Glucophage", "Stagid"],
+    "alias_list_en": ["Glucophage", "Fortamet"]
+  },
+  {
+    "label_uk": "Симвастатин",
+    "label_ru": "Симвастатин",
+    "label_gr": "Simvastatine",
+    "label_en": "Simvastatin",
+    "alias_list_uk": ["Зокор"],
+    "alias_list_ru": ["Зокор"],
+    "alias_list_gr": ["Lodales", "Zocor"],
+    "alias_list_en": ["Zocor"]
+  },
+  {
+    "label_uk": "Омепразол",
+    "label_ru": "Омепразол",
+    "label_gr": "Oméprazole",
+    "label_en": "Omeprazole",
+    "alias_list_uk": ["Омез", "Омеп"],
+    "alias_list_ru": ["Омез", "Ультоп"],
+    "alias_list_gr": ["Mopral"],
+    "alias_list_en": ["Prilosec", "Losec"]
+  },
+  {
+    "label_uk": "Лізиноприл",
+    "label_ru": "Лизиноприл",
+    "label_gr": "Lisinopril",
+    "label_en": "Lisinopril",
+    "alias_list_uk": ["Диротон"],
+    "alias_list_ru": ["Диротон"],
+    "alias_list_gr": ["Zestril"],
+    "alias_list_en": ["Prinivil", "Zestril"]
+  },
+  {
+    "label_uk": "Левотироксин",
+    "label_ru": "Левотироксин",
+    "label_gr": "Lévothyroxine",
+    "label_en": "Levothyroxine",
+    "alias_list_uk": ["Еутирокс"],
+    "alias_list_ru": ["Эутирокс"],
+    "alias_list_gr": ["Levothyrox"],
+    "alias_list_en": ["Synthroid", "Levoxyl"]
+  },
+  {
+    "label_uk": "Амлодипін",
+    "label_ru": "Амлодипин",
+    "label_gr": "Amlodipine",
+    "label_en": "Amlodipine",
+    "alias_list_uk": ["Нормодипін"],
+    "alias_list_ru": ["Нормодипин"],
+    "alias_list_gr": ["Amlor"],
+    "alias_list_en": ["Norvasc"]
+  },
+  {
+    "label_uk": "Атенолол",
+    "label_ru": "Атенолол",
+    "label_gr": "Aténolol",
+    "label_en": "Atenolol",
+    "alias_list_uk": ["Тенормін"],
+    "alias_list_ru": ["Тенормин"],
+    "alias_list_gr": ["Ténormine"],
+    "alias_list_en": ["Tenormin"]
+  },
+  {
+    "label_uk": "Метопролол",
+    "label_ru": "Метопролол",
+    "label_gr": "Métoprolol",
+    "label_en": "Metoprolol",
+    "alias_list_uk": ["Егілок", "Беталок"],
+    "alias_list_ru": ["Эгилок", "Беталок"],
+    "alias_list_gr": ["Lopressor", "Seloken"],
+    "alias_list_en": ["Lopressor", "Toprol-XL"]
+  },
+  {
+    "label_uk": "Сертралін",
+    "label_ru": "Сертралин",
+    "label_gr": "Sertraline",
+    "label_en": "Sertraline",
+    "alias_list_uk": ["Золофт"],
+    "alias_list_ru": ["Золофт"],
+    "alias_list_gr": ["Zoloft"],
+    "alias_list_en": ["Zoloft"]
+  },
+  {
+    "label_uk": "Флуоксетин",
+    "label_ru": "Флуоксетин",
+    "label_gr": "Fluoxétine",
+    "label_en": "Fluoxetine",
+    "alias_list_uk": ["Прозак"],
+    "alias_list_ru": ["Прозак"],
+    "alias_list_gr": ["Prozac"],
+    "alias_list_en": ["Prozac"]
+  },
+  {
+    "label_uk": "Диклофенак",
+    "label_ru": "Диклофенак",
+    "label_gr": "Diclofénac",
+    "label_en": "Diclofenac",
+    "alias_list_uk": ["Вольтарен"],
+    "alias_list_ru": ["Вольтарен"],
+    "alias_list_gr": ["Voltarène"],
+    "alias_list_en": ["Voltaren"]
+  },
+  {
+    "label_uk": "Каптоприл",
+    "label_ru": "Каптоприл",
+    "label_gr": "Captopril",
+    "label_en": "Captopril",
+    "alias_list_uk": ["Капотен"],
+    "alias_list_ru": ["Капотен"],
+    "alias_list_gr": ["Lopril"],
+    "alias_list_en": ["Capoten"]
+  },
+  {
+    "label_uk": "Еналаприл",
+    "label_ru": "Эналаприл",
+    "label_gr": "Énalapril",
+    "label_en": "Enalapril",
+    "alias_list_uk": ["Енап"],
+    "alias_list_ru": ["Энап"],
+    "alias_list_gr": ["Renitec"],
+    "alias_list_en": ["Vasotec", "Epaned"]
+  },
+  {
+    "label_uk": "Клопідогрель",
+    "label_ru": "Клопидогрел",
+    "label_gr": "Clopidogrel",
+    "label_en": "Clopidogrel",
+    "alias_list_uk": ["Плавікс"],
+    "alias_list_ru": ["Плавикс"],
+    "alias_list_gr": ["Plavix"],
+    "alias_list_en": ["Plavix"]
+  },
+  {
+    "label_uk": "Аторвастатин",
+    "label_ru": "Аторвастатин",
+    "label_gr": "Atorvastatine",
+    "label_en": "Atorvastatin",
+    "alias_list_uk": ["Ліпримар"],
+    "alias_list_ru": ["Липримар"],
+    "alias_list_gr": ["Tahor"],
+    "alias_list_en": ["Lipitor"]
+  },
+  {
+    "label_uk": "Розувастатин",
+    "label_ru": "Розувастатин",
+    "label_gr": "Rosuvastatine",
+    "label_en": "Rosuvastatin",
+    "alias_list_uk": ["Крестор"],
+    "alias_list_ru": ["Крестор"],
+    "alias_list_gr": ["Crestor"],
+    "alias_list_en": ["Crestor"]
+  },
+  {
+    "label_uk": "Фексофенадин",
+    "label_ru": "Фексофенадин",
+    "label_gr": "Fexofénadine",
+    "label_en": "Fexofenadine",
+    "alias_list_uk": ["Телфаст"],
+    "alias_list_ru": ["Телфаст"],
+    "alias_list_gr": ["Telfast"],
+    "alias_list_en": ["Allegra"]
+  },
+  {
+    "label_uk": "Левоцетиризин",
+    "label_ru": "Левоцетиризин",
+    "label_gr": "Lévocétirizine",
+    "label_en": "Levocetirizine",
+    "alias_list_uk": ["Ксизал"],
+    "alias_list_ru": ["Ксизал"],
+    "alias_list_gr": ["Xyzall"],
+    "alias_list_en": ["Xyzal"]
+  },
+  {
+    "label_uk": "Пантопразол",
+    "label_ru": "Пантопразол",
+    "label_gr": "Pantoprazole",
+    "label_en": "Pantoprazole",
+    "alias_list_uk": ["Контролок"],
+    "alias_list_ru": ["Контролок"],
+    "alias_list_gr": ["Eupantol"],
+    "alias_list_en": ["Protonix"]
+  },
+  {
+    "label_uk": "Ранітидин",
+    "label_ru": "Ранитидин",
+    "label_gr": "Ranitidine",
+    "label_en": "Ranitidine",
+    "alias_list_uk": ["Зантак"],
+    "alias_list_ru": ["Зантак"],
+    "alias_list_gr": ["Azantac"],
+    "alias_list_en": ["Zantac"]
+  },
+  {
+    "label_uk": "Ципрофлоксацин",
+    "label_ru": "Ципрофлоксацин",
+    "label_gr": "Ciprofloxacine",
+    "label_en": "Ciprofloxacin",
+    "alias_list_uk": ["Ципробай"],
+    "alias_list_ru": ["Ципробай"],
+    "alias_list_gr": ["Ciflox"],
+    "alias_list_en": ["Cipro", "Ciprobay"]
+  },
+  {
+    "label_uk": "Азитроміцин",
+    "label_ru": "Азитромицин",
+    "label_gr": "Azithromycine",
+    "label_en": "Azithromycin",
+    "alias_list_uk": ["Сумамед"],
+    "alias_list_ru": ["Сумамед"],
+    "alias_list_gr": ["Zithromax"],
+    "alias_list_en": ["Zithromax", "Z-Pak"]
+  },
+  {
+    "label_uk": "Доксіциклін",
+    "label_ru": "Доксициклин",
+    "label_gr": "Doxycycline",
+    "label_en": "Doxycycline",
+    "alias_list_uk": ["Вібраміцин"],
+    "alias_list_ru": ["Вибрамицин"],
+    "alias_list_gr": ["Vibramycine"],
+    "alias_list_en": ["Vibramycin", "Doryx"]
+  },
+  {
+    "label_uk": "Кларитроміцин",
+    "label_ru": "Кларитромицин",
+    "label_gr": "Clarithromycine",
+    "label_en": "Clarithromycin",
+    "alias_list_uk": ["Клацид"],
+    "alias_list_ru": ["Клацид"],
+    "alias_list_gr": ["Zeclar"],
+    "alias_list_en": ["Biaxin"]
+  },
+  {
+    "label_uk": "Сальбутамол",
+    "label_ru": "Сальбутамол",
+    "label_gr": "Salbutamol",
+    "label_en": "Salbutamol",
+    "alias_list_uk": ["Вентолін"],
+    "alias_list_ru": ["Вентолин"],
+    "alias_list_gr": ["Ventoline"],
+    "alias_list_en": ["Ventolin", "Proventil"]
+  },
+  {
+    "label_uk": "Будесонід",
+    "label_ru": "Будесонид",
+    "label_gr": "Budésonide",
+    "label_en": "Budesonide",
+    "alias_list_uk": ["Пульмікорт"],
+    "alias_list_ru": ["Пульмикорт"],
+    "alias_list_gr": ["Pulmicort"],
+    "alias_list_en": ["Pulmicort", "Entocort"]
+  },
+  {
+    "label_uk": "Монтелукаст",
+    "label_ru": "Монтелукаст",
+    "label_gr": "Montélukast",
+    "label_en": "Montelukast",
+    "alias_list_uk": ["Сінгулар"],
+    "alias_list_ru": ["Сингуляр"],
+    "alias_list_gr": ["Singulair"],
+    "alias_list_en": ["Singulair"]
+  },
+  {
+    "label_uk": "Габапентин",
+    "label_ru": "Габапентин",
+    "label_gr": "Gabapentine",
+    "label_en": "Gabapentin",
+    "alias_list_uk": ["Нейронтін"],
+    "alias_list_ru": ["Нейронтин"],
+    "alias_list_gr": ["Neurontin"],
+    "alias_list_en": ["Neurontin"]
+  },
+  {
+    "label_uk": "Прегабалін",
+    "label_ru": "Прегабалин",
+    "label_gr": "Prégabaline",
+    "label_en": "Pregabalin",
+    "alias_list_uk": ["Лірика"],
+    "alias_list_ru": ["Лирика"],
+    "alias_list_gr": ["Lyrica"],
+    "alias_list_en": ["Lyrica"]
+  },
+  {
+    "label_uk": "Дулоксетин",
+    "label_ru": "Дулоксетин",
+    "label_gr": "Duloxétine",
+    "label_en": "Duloxetine",
+    "alias_list_uk": ["Симбалта"],
+    "alias_list_ru": ["Симбалта"],
+    "alias_list_gr": ["Cymbalta"],
+    "alias_list_en": ["Cymbalta"]
+  },
+  {
+    "label_uk": "Венлафаксин",
+    "label_ru": "Венлафаксин",
+    "label_gr": "Venlafaxine",
+    "label_en": "Venlafaxine",
+    "alias_list_uk": ["Ефектин"],
+    "alias_list_ru": ["Эффексор"],
+    "alias_list_gr": ["Effexor"],
+    "alias_list_en": ["Effexor"]
+  },
+  {
+    "label_uk": "Кветіапін",
+    "label_ru": "Кветиапин",
+    "label_gr": "Quétiapine",
+    "label_en": "Quetiapine",
+    "alias_list_uk": ["Сероквель"],
+    "alias_list_ru": ["Сероквель"],
+    "alias_list_gr": ["Xeroquel"],
+    "alias_list_en": ["Seroquel"]
+  },
+  {
+    "label_uk": "Оланзапін",
+    "label_ru": "Оланзапин",
+    "label_gr": "Olanzapine",
+    "label_en": "Olanzapine",
+    "alias_list_uk": ["Зипрекса"],
+    "alias_list_ru": ["Зипрекса"],
+    "alias_list_gr": ["Zyprexa"],
+    "alias_list_en": ["Zyprexa"]
+  },
+  {
+    "label_uk": "Донепезил",
+    "label_ru": "Донепезил",
+    "label_gr": "Donépézil",
+    "label_en": "Donepezil",
+    "alias_list_uk": ["Арісепт"],
+    "alias_list_ru": ["Арицепт"],
+    "alias_list_gr": ["Aricept"],
+    "alias_list_en": ["Aricept"]
+  },
+  {
+    "label_uk": "Мемантин",
+    "label_ru": "Мемантин",
+    "label_gr": "Mémantine",
+    "label_en": "Memantine",
+    "alias_list_uk": ["Наменда"],
+    "alias_list_ru": ["Наменда"],
+    "alias_list_gr": ["Ebixa"],
+    "alias_list_en": ["Namenda"]
+  },
+  {
+    "label_uk": "Леводопа",
+    "label_ru": "Леводопа",
+    "label_gr": "Lévodopa",
+    "label_en": "Levodopa",
+    "alias_list_uk": ["Сінемет"],
+    "alias_list_ru": ["Синемет"],
+    "alias_list_gr": ["Modopar"],
+    "alias_list_en": ["Sinemet", "Stalevo"]
+  },
+  {
+    "label_uk": "Фуросемід",
+    "label_ru": "Фуросемид",
+    "label_gr": "Furosémide",
+    "label_en": "Furosemide",
+    "alias_list_uk": ["Лазикс"],
+    "alias_list_ru": ["Лазикс"],
+    "alias_list_gr": ["Lasilix"],
+    "alias_list_en": ["Lasix"]
+  },
+  {
+    "label_uk": "Спіронолактон",
+    "label_ru": "Спиронолактон",
+    "label_gr": "Spironolactone",
+    "label_en": "Spironolactone",
+    "alias_list_uk": ["Верошпірон"],
+    "alias_list_ru": ["Верошпирон"],
+    "alias_list_gr": ["Aldactone"],
+    "alias_list_en": ["Aldactone"]
+  },
+  {
+    "label_uk": "Гідрохлоротіазид",
+    "label_ru": "Гидрохлоротиазид",
+    "label_gr": "Hydrochlorothiazide",
+    "label_en": "Hydrochlorothiazide",
+    "alias_list_uk": ["Гіпотіазид"],
+    "alias_list_ru": ["Гипотиазид"],
+    "alias_list_gr": ["Esidrex"],
+    "alias_list_en": ["Microzide", "Hydrodiuril"]
+  },
+  {
+    "label_uk": "Преднізолон",
+    "label_ru": "Преднизолон",
+    "label_gr": "Prednisolone",
+    "label_en": "Prednisolone",
+    "alias_list_uk": ["Преднізон"],
+    "alias_list_ru": ["Преднизон"],
+    "alias_list_gr": ["Solupred"],
+    "alias_list_en": ["Orapred", "Millipred"]
+  },
+  {
+    "label_uk": "Дексаметазон",
+    "label_ru": "Дексаметазон",
+    "label_gr": "Dexaméthasone",
+    "label_en": "Dexamethasone",
+    "alias_list_uk": ["Дексазон"],
+    "alias_list_ru": ["Декадрон"],
+    "alias_list_gr": ["Dexazone"],
+    "alias_list_en": ["Decadron", "DexPak"]
+  },
+  {
+    "label_uk": "Трамадол",
+    "label_ru": "Трамадол",
+    "label_gr": "Tramadol",
+    "label_en": "Tramadol",
+    "alias_list_uk": ["Трамал"],
+    "alias_list_ru": ["Трамал"],
+    "alias_list_gr": ["Topalgic"],
+    "alias_list_en": ["Ultram", "ConZip"]
+  },
+  {
+    "label_uk": "Кодеїн",
+    "label_ru": "Кодеин",
+    "label_gr": "Codéine",
+    "label_en": "Codeine",
+    "alias_list_uk": ["Кодетерп"],
+    "alias_list_ru": ["Коделак"],
+    "alias_list_gr": ["Codoliprane"],
+    "alias_list_en": ["Tylenol with Codeine", "Promethazine VC with Codeine"]
+  },
+  {
+    "label_uk": "Декстрометорфан",
+    "label_ru": "Декстрометорфан",
+    "label_gr": "Dextrométhorphane",
+    "label_en": "Dextromethorphan",
+    "alias_list_uk": ["Туссін Плюс"],
+    "alias_list_ru": ["Туссин Плюс"],
+    "alias_list_gr": ["Tussidane"],
+    "alias_list_en": ["Robitussin", "Delsym"]
+  },
+  {
+    "label_uk": "Ацетилцистеїн",
+    "label_ru": "Ацетилцистеин",
+    "label_gr": "Acétylcystéine",
+    "label_en": "Acetylcysteine",
+    "alias_list_uk": ["АЦЦ"],
+    "alias_list_ru": ["АЦЦ"],
+    "alias_list_gr": ["Exomuc"],
+    "alias_list_en": ["Mucomyst", "Acetadote"]
+  },
+  {
+    "label_uk": "Прокаїнамід",
+    "label_ru": "Прокаинамид",
+    "label_gr": "Procaïnamide",
+    "label_en": "Procainamide",
+    "alias_list_uk": ["Пронестіл"],
+    "alias_list_ru": ["Пронестил"],
+    "alias_list_gr": ["Pronestyl"],
+    "alias_list_en": ["Procan", "Pronestyl"]
+  },
+  {
+    "label_uk": "Лідокаїн",
+    "label_ru": "Лидокаин",
+    "label_gr": "Lidocaïne",
+    "label_en": "Lidocaine",
+    "alias_list_uk": ["Ксілокаїн"],
+    "alias_list_ru": ["Ксилокаин"],
+    "alias_list_gr": ["Xylocaïne"],
+    "alias_list_en": ["Xylocaine"]
+  },
+  {
+    "label_uk": "Гепарин",
+    "label_ru": "Гепарин",
+    "label_gr": "Héparine",
+    "label_en": "Heparin",
+    "alias_list_uk": ["Гепарин"],
+    "alias_list_ru": ["Гепарин"],
+    "alias_list_gr": ["Héparine Choay"],
+    "alias_list_en": ["Hep-Lock", "Heparin Sodium"]
+  },
+  {
+    "label_uk": "Еноксапарин",
+    "label_ru": "Эноксапарин",
+    "label_gr": "Enoxaparine",
+    "label_en": "Enoxaparin",
+    "alias_list_uk": ["Клексан"],
+    "alias_list_ru": ["Клексан"],
+    "alias_list_gr": ["Lovenox"],
+    "alias_list_en": ["Lovenox"]
+  },
+  {
+    "label_uk": "Напроксен",
+    "label_ru": "Напроксен",
+    "label_gr": "Naproxène",
+    "label_en": "Naproxen",
+    "alias_list_uk": ["Налгезін"],
+    "alias_list_ru": ["Налгезин"],
+    "alias_list_gr": ["Naprosyne"],
+    "alias_list_en": ["Aleve", "Naprosyn"]
+  },
+  {
+    "label_uk": "Целекоксиб",
+    "label_ru": "Целекоксиб",
+    "label_gr": "Célécoxib",
+    "label_en": "Celecoxib",
+    "alias_list_uk": ["Целебрекс"],
+    "alias_list_ru": ["Целебрекс"],
+    "alias_list_gr": ["Celebrex"],
+    "alias_list_en": ["Celebrex"]
+  },
+  {
+    "label_uk": "Мелоксикам",
+    "label_ru": "Мелоксикам",
+    "label_gr": "Meloxicam",
+    "label_en": "Meloxicam",
+    "alias_list_uk": ["Моваліс"],
+    "alias_list_ru": ["Мовалис"],
+    "alias_list_gr": ["Mobic"],
+    "alias_list_en": ["Mobic"]
+  },
+  {
+    "label_uk": "Фінастерид",
+    "label_ru": "Финастерид",
+    "label_gr": "Finastéride",
+    "label_en": "Finasteride",
+    "alias_list_uk": ["Проскар"],
+    "alias_list_ru": ["Проскар"],
+    "alias_list_gr": ["Chibro-Proscar"],
+    "alias_list_en": ["Proscar", "Propecia"]
+  },
+  {
+    "label_uk": "Тамсулозин",
+    "label_ru": "Тамсулозин",
+    "label_gr": "Tamsulosine",
+    "label_en": "Tamsulosin",
+    "alias_list_uk": ["Омнік"],
+    "alias_list_ru": ["Омник"],
+    "alias_list_gr": ["Josir"],
+    "alias_list_en": ["Flomax"]
+  },
+  {
+    "label_uk": "Метронідазол",
+    "label_ru": "Метронидазол",
+    "label_gr": "Métronidazole",
+    "label_en": "Metronidazole",
+    "alias_list_uk": ["Трихопол"],
+    "alias_list_ru": ["Трихопол"],
+    "alias_list_gr": ["Flagyl"],
+    "alias_list_en": ["Flagyl"]
+  },
+  {
+    "label_uk": "Клотримазол",
+    "label_ru": "Клотримазол",
+    "label_gr": "Clotrimazole",
+    "label_en": "Clotrimazole",
+    "alias_list_uk": ["Канестен"],
+    "alias_list_ru": ["Канестен"],
+    "alias_list_gr": ["MycoHydralin"],
+    "alias_list_en": ["Lotrimin", "Canesten"]
+  },
+  {
+    "label_uk": "Амброксол",
+    "label_ru": "Амброксол",
+    "label_gr": "Ambroxol",
+    "label_en": "Ambroxol",
+    "alias_list_uk": ["Лазолван"],
+    "alias_list_ru": ["Лазолван"],
+    "alias_list_gr": ["Muxol"],
+    "alias_list_en": ["Mucosolvan"]
+  },
+  {
+    "label_uk": "Езомепразол",
+    "label_ru": "Эзомепразол",
+    "label_gr": "Ésoméprazole",
+    "label_en": "Esomeprazole",
+    "alias_list_uk": ["Нексиум"],
+    "alias_list_ru": ["Нексиум"],
+    "alias_list_gr": ["Inexium"],
+    "alias_list_en": ["Nexium"]
+  },
+  {
+    "label_uk": "Лансопразол",
+    "label_ru": "Лансопразол",
+    "label_gr": "Lansoprazole",
+    "label_en": "Lansoprazole",
+    "alias_list_uk": ["Ланзап", "Ланзоптол"],
+    "alias_list_ru": ["Ланзап", "Ланзоптол"],
+    "alias_list_gr": ["Lanzor"],
+    "alias_list_en": ["Prevacid"]
+  },
+  {
+    "label_uk": "Цетиризин",
+    "label_ru": "Цетиризин",
+    "label_gr": "Cétirizine",
+    "label_en": "Cetirizine",
+    "alias_list_uk": ["Зіртек"],
+    "alias_list_ru": ["Зиртек"],
+    "alias_list_gr": ["Zyrtec", "Virlix"],
+    "alias_list_en": ["Zyrtec"]
+  },
+  {
+    "label_uk": "Лоратадин",
+    "label_ru": "Лоратадин",
+    "label_gr": "Loratadine",
+    "label_en": "Loratadine",
+    "alias_list_uk": ["Кларитин"],
+    "alias_list_ru": ["Кларитин"],
+    "alias_list_gr": ["Clarityne"],
+    "alias_list_en": ["Claritin"]
+  },
+  {
+    "label_uk": "Силденафіл",
+    "label_ru": "Силденафил",
+    "label_gr": "Sildénafil",
+    "label_en": "Sildenafil",
+    "alias_list_uk": ["Віагра"],
+    "alias_list_ru": ["Виагра"],
+    "alias_list_gr": ["Viagra"],
+    "alias_list_en": ["Viagra", "Revatio"]
+  },
+  {
+    "label_uk": "Тадалафіл",
+    "label_ru": "Тадалафил",
+    "label_gr": "Tadalafil",
+    "label_en": "Tadalafil",
+    "alias_list_uk": ["Сіаліс"],
+    "alias_list_ru": ["Сиалис"],
+    "alias_list_gr": ["Cialis"],
+    "alias_list_en": ["Cialis", "Adcirca"]
+  },
+  {
+    "label_uk": "Варденафіл",
+    "label_ru": "Варденафил",
+    "label_gr": "Vardénafil",
+    "label_en": "Vardenafil",
+    "alias_list_uk": ["Левітра"],
+    "alias_list_ru": ["Левитра"],
+    "alias_list_gr": ["Levitra"],
+    "alias_list_en": ["Levitra", "Staxyn"]
+  },
+  {
+    "label_uk": "Метоклопрамід",
+    "label_ru": "Метоклопрамид",
+    "label_gr": "Métoclopramide",
+    "label_en": "Metoclopramide",
+    "alias_list_uk": ["Церукал"],
+    "alias_list_ru": ["Церукал"],
+    "alias_list_gr": ["Primpéran"],
+    "alias_list_en": ["Reglan", "Metozolv"]
+  },
+  {
+    "label_uk": "Ондансетрон",
+    "label_ru": "Ондансетрон",
+    "label_gr": "Ondansétron",
+    "label_en": "Ondansetron",
+    "alias_list_uk": ["Зофран"],
+    "alias_list_ru": ["Зофран"],
+    "alias_list_gr": ["Zophren"],
+    "alias_list_en": ["Zofran"]
+  },
+  {
+    "label_uk": "Бупропіон",
+    "label_ru": "Бупропион",
+    "label_gr": "Bupropion",
+    "label_en": "Bupropion",
+    "alias_list_uk": ["Велбутрин", "Зибан"],
+    "alias_list_ru": ["Велбутрин", "Зыбан"],
+    "alias_list_gr": ["Wellbutrin", "Zyban"],
+    "alias_list_en": ["Wellbutrin", "Zyban"]
+  },
+  {
+    "label_uk": "Міртазапін",
+    "label_ru": "Миртазапин",
+    "label_gr": "Mirtazapine",
+    "label_en": "Mirtazapine",
+    "alias_list_uk": ["Ремерон"],
+    "alias_list_ru": ["Ремерон"],
+    "alias_list_gr": ["Norset"],
+    "alias_list_en": ["Remeron"]
+  },
+  {
+    "label_uk": "Рисперидон",
+    "label_ru": "Рисперидон",
+    "label_gr": "Rispéridone",
+    "label_en": "Risperidone",
+    "alias_list_uk": ["Рисполепт"],
+    "alias_list_ru": ["Рисполепт"],
+    "alias_list_gr": ["Risperdal"],
+    "alias_list_en": ["Risperdal"]
+  },
+  {
+    "label_uk": "Варфарин",
+    "label_ru": "Варфарин",
+    "label_gr": "Warfarine",
+    "label_en": "Warfarin",
+    "alias_list_uk": ["Кумадін"],
+    "alias_list_ru": ["Кумадин"],
+    "alias_list_gr": ["Coumadine"],
+    "alias_list_en": ["Coumadin", "Jantoven"]
+  },
+  {
+    "label_uk": "Дабігатран",
+    "label_ru": "Дабигатран",
+    "label_gr": "Dabigatran",
+    "label_en": "Dabigatran",
+    "alias_list_uk": ["Прадакса"],
+    "alias_list_ru": ["Прадакса"],
+    "alias_list_gr": ["Pradaxa"],
+    "alias_list_en": ["Pradaxa"]
+  },
+  {
+    "label_uk": "Ривароксабан",
+    "label_ru": "Ривароксабан",
+    "label_gr": "Rivaroxaban",
+    "label_en": "Rivaroxaban",
+    "alias_list_uk": ["Ксарелто"],
+    "alias_list_ru": ["Ксарелто"],
+    "alias_list_gr": ["Xarelto"],
+    "alias_list_en": ["Xarelto"]
+  },
+  {
+    "label_uk": "Апіксабан",
+    "label_ru": "Апиксабан",
+    "label_gr": "Apixaban",
+    "label_en": "Apixaban",
+    "alias_list_uk": ["Еліптус"],
+    "alias_list_ru": ["Эликвис"],
+    "alias_list_gr": ["Eliquis"],
+    "alias_list_en": ["Eliquis"]
+  },
+  {
+    "label_uk": "Левофлоксацин",
+    "label_ru": "Левофлоксацин",
+    "label_gr": "Lévofloxacine",
+    "label_en": "Levofloxacin",
+    "alias_list_uk": ["Таванік"],
+    "alias_list_ru": ["Таваник"],
+    "alias_list_gr": ["Tavanic"],
+    "alias_list_en": ["Levaquin"]
+  },
+  {
+    "label_uk": "Моксифлоксацин",
+    "label_ru": "Моксифлоксацин",
+    "label_gr": "Moxifloxacine",
+    "label_en": "Moxifloxacin",
+    "alias_list_uk": ["Авелокс"],
+    "alias_list_ru": ["Авелокс"],
+    "alias_list_gr": ["Izilox"],
+    "alias_list_en": ["Avelox"]
+  },
+  {
+    "label_uk": "Ацикловір",
+    "label_ru": "Ацикловир",
+    "label_gr": "Aciclovir",
+    "label_en": "Acyclovir",
+    "alias_list_uk": ["Зовіракс"],
+    "alias_list_ru": ["Зовиракс"],
+    "alias_list_gr": ["Zovirax"],
+    "alias_list_en": ["Zovirax"]
+  },
+  {
+    "label_uk": "Валацикловір",
+    "label_ru": "Валацикловир",
+    "label_gr": "Valaciclovir",
+    "label_en": "Valacyclovir",
+    "alias_list_uk": ["Вальтрекс"],
+    "alias_list_ru": ["Валтрекс"],
+    "alias_list_gr": ["Valtrex"],
+    "alias_list_en": ["Valtrex"]
+  },
+  {
+    "label_uk": "Флуконазол",
+    "label_ru": "Флуконазол",
+    "label_gr": "Fluconazole",
+    "label_en": "Fluconazole",
+    "alias_list_uk": ["Дифлюкан"],
+    "alias_list_ru": ["Дифлюкан"],
+    "alias_list_gr": ["Triflucan"],
+    "alias_list_en": ["Diflucan"]
+  },
+  {
+    "label_uk": "Пароксетин",
+    "label_ru": "Пароксетин",
+    "label_gr": "Paroxétine",
+    "label_en": "Paroxetine",
+    "alias_list_uk": ["Паксил"],
+    "alias_list_ru": ["Паксил"],
+    "alias_list_gr": ["Deroxat"],
+    "alias_list_en": ["Paxil"]
+  },
+  {
+    "label_uk": "Циталопрам",
+    "label_ru": "Циталопрам",
+    "label_gr": "Citalopram",
+    "label_en": "Citalopram",
+    "alias_list_uk": ["Целекса"],
+    "alias_list_ru": ["Целекса"],
+    "alias_list_gr": ["Seropram"],
+    "alias_list_en": ["Celexa"]
+  },
+  {
+    "label_uk": "Есциталопрам",
+    "label_ru": "Эсциталопрам",
+    "label_gr": "Escitalopram",
+    "label_en": "Escitalopram",
+    "alias_list_uk": ["Ципралекс"],
+    "alias_list_ru": ["Ципралекс"],
+    "alias_list_gr": ["Seroplex"],
+    "alias_list_en": ["Lexapro"]
+  },
+  {
+    "label_uk": "Алентронат",
+    "label_ru": "Алендронат",
+    "label_gr": "Alendronate",
+    "label_en": "Alendronate",
+    "alias_list_uk": ["Фосамакс"],
+    "alias_list_ru": ["Фосамакс"],
+    "alias_list_gr": ["Fosamax"],
+    "alias_list_en": ["Fosamax"]
+  },
+  {
+    "label_uk": "Ризедронат",
+    "label_ru": "Ризедронат",
+    "label_gr": "Risédronate",
+    "label_en": "Risedronate",
+    "alias_list_uk": ["Актонель"],
+    "alias_list_ru": ["Актонел"],
+    "alias_list_gr": ["Actonel"],
+    "alias_list_en": ["Actonel"]
+  },
+  {
+    "label_uk": "Бісопролол",
+    "label_ru": "Бисопролол",
+    "label_gr": "Bisoprolol",
+    "label_en": "Bisoprolol",
+    "alias_list_uk": ["Конкор"],
+    "alias_list_ru": ["Конкор"],
+    "alias_list_gr": ["Detensiel"],
+    "alias_list_en": ["Zebeta"]
+  },
+  {
+    "label_uk": "Небіволол",
+    "label_ru": "Небиволол",
+    "label_gr": "Nébivolol",
+    "label_en": "Nebivolol",
+    "alias_list_uk": ["Небілет"],
+    "alias_list_ru": ["Небилет"],
+    "alias_list_gr": ["Temerit"],
+    "alias_list_en": ["Bystolic"]
+  },
+  {
+    "label_uk": "Карведилол",
+    "label_ru": "Карведилол",
+    "label_gr": "Carvédilol",
+    "label_en": "Carvedilol",
+    "alias_list_uk": ["Дилатренд"],
+    "alias_list_ru": ["Дилатренд"],
+    "alias_list_gr": ["Kredex"],
+    "alias_list_en": ["Coreg"]
+  },
+  {
+    "label_uk": "Лозартан",
+    "label_ru": "Лозартан",
+    "label_gr": "Losartan",
+    "label_en": "Losartan",
+    "alias_list_uk": ["Козаар"],
+    "alias_list_ru": ["Козаар"],
+    "alias_list_gr": ["Cozaar"],
+    "alias_list_en": ["Cozaar"]
+  },
+  {
+    "label_uk": "Валсартан",
+    "label_ru": "Валсартан",
+    "label_gr": "Valsartan",
+    "label_en": "Valsartan",
+    "alias_list_uk": ["Діован"],
+    "alias_list_ru": ["Диован"],
+    "alias_list_gr": ["Tareg"],
+    "alias_list_en": ["Diovan"]
+  },
+  {
+    "label_uk": "Телмісартан",
+    "label_ru": "Телмисартан",
+    "label_gr": "Télemisartan",
+    "label_en": "Telmisartan",
+    "alias_list_uk": ["Мікардис"],
+    "alias_list_ru": ["Микардис"],
+    "alias_list_gr": ["Pritor"],
+    "alias_list_en": ["Micardis"]
+  },
+  {
+    "label_uk": "Раміприл",
+    "label_ru": "Рамиприл",
+    "label_gr": "Ramipril",
+    "label_en": "Ramipril",
+    "alias_list_uk": ["Тритаце"],
+    "alias_list_ru": ["Тритаце"],
+    "alias_list_gr": ["Triatec"],
+    "alias_list_en": ["Altace"]
+  },
+  {
+    "label_uk": "Дилтіазем",
+    "label_ru": "Дилтиазем",
+    "label_gr": "Diltiazem",
+    "label_en": "Diltiazem",
+    "alias_list_uk": ["Кардил"],
+    "alias_list_ru": ["Кардил"],
+    "alias_list_gr": ["Tildiem"],
+    "alias_list_en": ["Cardizem"]
+  },
+  {
+    "label_uk": "Верапаміл",
+    "label_ru": "Верапамил",
+    "label_gr": "Vérapamil",
+    "label_en": "Verapamil",
+    "alias_list_uk": ["Ізоптин"],
+    "alias_list_ru": ["Изоптин"],
+    "alias_list_gr": ["Isoptine"],
+    "alias_list_en": ["Calan", "Isoptin"]
+  },
+  {
+    "label_uk": "Клонідин",
+    "label_ru": "Клонидин",
+    "label_gr": "Clonidine",
+    "label_en": "Clonidine",
+    "alias_list_uk": ["Клофелін"],
+    "alias_list_ru": ["Клофелин"],
+    "alias_list_gr": ["Catapressan"],
+    "alias_list_en": ["Catapres"]
+  },
+  {
+    "label_uk": "Гідроксизин",
+    "label_ru": "Гидроксизин",
+    "label_gr": "Hydroxyzine",
+    "label_en": "Hydroxyzine",
+    "alias_list_uk": ["Атаракс"],
+    "alias_list_ru": ["Атаракс"],
+    "alias_list_gr": ["Atarax"],
+    "alias_list_en": ["Atarax", "Vistaril"]
+  },
+  {
+    "label_uk": "Теофілін",
+    "label_ru": "Теофиллин",
+    "label_gr": "Théophylline",
+    "label_en": "Theophylline",
+    "alias_list_uk": ["Еуфілін"],
+    "alias_list_ru": ["Эуфиллин"],
+    "alias_list_gr": ["Theostat"],
+    "alias_list_en": ["Theo-24", "Elixophyllin"]
+  },
+  {
+    "label_uk": "Вальпроєва кислота",
+    "label_ru": "Вальпроевая кислота",
+    "label_gr": "Acide valproïque",
+    "label_en": "Valproic Acid",
+    "alias_list_uk": ["Депакін", "Вальпроєва кислота"],
+    "alias_list_ru": ["Депакот", "Вальпроевая кислота"],
+    "alias_list_gr": ["Depakine", "Acide valproïque"],
+    "alias_list_en": ["Depakene", "Depakote"]
+  },
+  {
+    "label_uk": "Глібупірид",
+    "label_ru": "Глибупирид",
+    "label_gr": "Glibpéridine",
+    "label_en": "Glyburide",
+    "alias_list_uk": ["Глібин", "Глібупірид"],
+    "alias_list_ru": ["Глибупирид", "Глибин"],
+    "alias_list_gr": ["Diabeta", "Glibpéridine"],
+    "alias_list_en": ["Diabeta", "Glynase"]
+  },
+  {
+    "label_uk": "Валацикловір",
+    "label_ru": "Валацикловир",
+    "label_gr": "Valacyclovir",
+    "label_en": "Valacyclovir",
+    "alias_list_uk": ["Валікс", "Валацикловір"],
+    "alias_list_ru": ["Валикс", "Валацикловир"],
+    "alias_list_gr": ["Valaciclovir", "Valtrex"],
+    "alias_list_en": ["Valtrex", "Valacyclovir"]
+  },
+  {
+    "label_uk": "Тетрациклін",
+    "label_ru": "Тетрациклин",
+    "label_gr": "Tétracycline",
+    "label_en": "Tetracycline",
+    "alias_list_uk": ["Тетрациклін"],
+    "alias_list_ru": ["Тетрациклин"],
+    "alias_list_gr": ["Tétracycline"],
+    "alias_list_en": ["Sumycin", "Achromycin"]
+  },
+  {
+    "label_uk": "Лоразепам",
+    "label_ru": "Лоразепам",
+    "label_gr": "Lorazépam",
+    "label_en": "Lorazepam",
+    "alias_list_uk": ["Ативан", "Лоразепам"],
+    "alias_list_ru": ["Ативан", "Лоразепам"],
+    "alias_list_gr": ["Ativan", "Lorazépam"],
+    "alias_list_en": ["Ativan", "Lorazepam"]
+  },
+  {
+    "label_uk": "Діазепам",
+    "label_ru": "Диазепам",
+    "label_gr": "Diazépam",
+    "label_en": "Diazepam",
+    "alias_list_uk": ["Валіум", "Діазепам"],
+    "alias_list_ru": ["Валиум", "Диазепам"],
+    "alias_list_gr": ["Valium", "Diazépam"],
+    "alias_list_en": ["Valium", "Diazepam"]
+  },
+  {
+    "label_uk": "Клоназепам",
+    "label_ru": "Клоназепам",
+    "label_gr": "Clonazépam",
+    "label_en": "Clonazepam",
+    "alias_list_uk": ["Клонопін", "Клоназепам"],
+    "alias_list_ru": ["Клонопин", "Клоназепам"],
+    "alias_list_gr": ["Klonopin", "Clonazépam"],
+    "alias_list_en": ["Klonopin", "Clonazepam"]
+  },
+  {
+    "label_uk": "Рисперидон",
+    "label_ru": "Рисперидон",
+    "label_gr": "Risperidone",
+    "label_en": "Risperidone",
+    "alias_list_uk": ["Рисполепт", "Рисперидон"],
+    "alias_list_ru": ["Рисполепт", "Рисперидон"],
+    "alias_list_gr": ["Risperdal", "Risperidone"],
+    "alias_list_en": ["Risperdal", "Risperidone"]
+  },
+  {
+    "label_uk": "Галазепам",
+    "label_ru": "Галзепам",
+    "label_gr": "Galazepam",
+    "label_en": "Galazepam",
+    "alias_list_uk": ["Галазепам"],
+    "alias_list_ru": ["Галазепам"],
+    "alias_list_gr": ["Galazepam"],
+    "alias_list_en": ["Galazepam"]
+  },
+  {
+    "label_uk": "Буспірон",
+    "label_ru": "Буспирон",
+    "label_gr": "Buspirone",
+    "label_en": "Buspirone",
+    "alias_list_uk": ["Буспірон", "Buspirone"],
+    "alias_list_ru": ["Буспирон", "Buspirone"],
+    "alias_list_gr": ["Buspar", "Buspirone"],
+    "alias_list_en": ["Buspar", "Buspirone"]
+  },
+  {
+    "label_uk": "Тізанідін",
+    "label_ru": "Тизанидин",
+    "label_gr": "Tizanidine",
+    "label_en": "Tizanidine",
+    "alias_list_uk": ["Занадин", "Тізанідін"],
+    "alias_list_ru": ["Занадин", "Тизанидин"],
+    "alias_list_gr": ["Zanaflex", "Tizanidine"],
+    "alias_list_en": ["Zanaflex", "Tizanidine"]
+  },
+  {
+    "label_uk": "Правастатин",
+    "label_ru": "Правастатин",
+    "label_gr": "Pravastatine",
+    "label_en": "Pravastatin",
+    "alias_list_uk": ["Престакол"],
+    "alias_list_ru": ["Престакол"],
+    "alias_list_gr": ["Pravachol"],
+    "alias_list_en": ["Pravachol", "Mevacor"]
+  },
+  {
+    "label_uk": "Апіксабан",
+    "label_ru": "Апиоксабан",
+    "label_gr": "Apixaban",
+    "label_en": "Apixaban",
+    "alias_list_uk": ["Еликвіс"],
+    "alias_list_ru": ["Эликвис"],
+    "alias_list_gr": ["Eliquis"],
+    "alias_list_en": ["Eliquis"]
+  },
+  {
+    "label_uk": "Тразодон",
+    "label_ru": "Тразодон",
+    "label_gr": "Trazodone",
+    "label_en": "Trazodone",
+    "alias_list_uk": ["Дессалекс"],
+    "alias_list_ru": ["Дессалекс"],
+    "alias_list_gr": ["Tritanon"],
+    "alias_list_en": ["Desyrel", "Oleptro"]
+  },
+  {
+    "label_uk": "Ніфедипін",
+    "label_ru": "Нифедипин",
+    "label_gr": "Nifédipine",
+    "label_en": "Nifedipine",
+    "alias_list_uk": ["Аддверол", "Нифедин"],
+    "alias_list_ru": ["Аддверол", "Нифедин"],
+    "alias_list_gr": ["Adalat", "Nifedipine"],
+    "alias_list_en": ["Adalat", "Procardia"]
+  },
+  {
+    "label_uk": "Веропаміл",
+    "label_ru": "Веропамил",
+    "label_gr": "Vérapamil",
+    "label_en": "Verapamil",
+    "alias_list_uk": ["Веронал", "Ізоптин"],
+    "alias_list_ru": ["Веронал", "Изоптин"],
+    "alias_list_gr": ["Calan", "Isoptin"],
+    "alias_list_en": ["Calan", "Isoptin"]
+  },
+  {
+    "label_uk": "Ольмесартан",
+    "label_ru": "Ольмесартан",
+    "label_gr": "Olmesartan",
+    "label_en": "Olmesartan",
+    "alias_list_uk": ["Авігард", "Новартан"],
+    "alias_list_ru": ["Авигард", "Новартан"],
+    "alias_list_gr": ["Olmetec", "Olmesartan"],
+    "alias_list_en": ["Benicar", "Olmetec"]
+  },
+  {
+    "label_uk": "Гідроксіхлорохін",
+    "label_ru": "Гидроксихлорохин",
+    "label_gr": "Hydroxychloroquine",
+    "label_en": "Hydroxychloroquine",
+    "alias_list_uk": ["Арбідол", "Рогман"],
+    "alias_list_ru": ["Арбидол", "Рогман"],
+    "alias_list_gr": ["Plaquenil", "Hydroxychloroquine"],
+    "alias_list_en": ["Plaquenil", "Hydroxychloroquine"]
+  },
+  {
+    "label_uk": "Хлорохін",
+    "label_ru": "Хлорохин",
+    "label_gr": "Chloroquine",
+    "label_en": "Chloroquine",
+    "alias_list_uk": ["Малак", "Хлорохін"],
+    "alias_list_ru": ["Малак", "Хлорохин"],
+    "alias_list_gr": ["Aralen", "Chloroquine"],
+    "alias_list_en": ["Aralen", "Chloroquine"]
+  },
+  {
+    "label_uk": "Фамотидин",
+    "label_ru": "Фамотидин",
+    "label_gr": "Famotidine",
+    "label_en": "Famotidine",
+    "alias_list_uk": ["Фамогаст", "Пепсал"],
+    "alias_list_ru": ["Фамогаст", "Пепсал"],
+    "alias_list_gr": ["Pepcid", "Famotidine"],
+    "alias_list_en": ["Pepcid", "Famotidine"]
+  },
+  {
+    "label_uk": "Мелатонін",
+    "label_ru": "Мелатонин",
+    "label_gr": "Mélatonine",
+    "label_en": "Melatonin",
+    "alias_list_uk": ["Діамел", "Мелатонін"],
+    "alias_list_ru": ["Диамел", "Мелатонин"],
+    "alias_list_gr": ["Circadin", "Mélatonine"],
+    "alias_list_en": ["Circadin", "Melatonin"]
+  },
+  {
+    "label_uk": "Прометазин",
+    "label_ru": "Прометазин",
+    "label_gr": "Prométhazine",
+    "label_en": "Promethazine",
+    "alias_list_uk": ["Фенрейк", "Прометазин"],
+    "alias_list_ru": ["Фенрейк", "Прометазин"],
+    "alias_list_gr": ["Phenergan", "Prométhazine"],
+    "alias_list_en": ["Phenergan", "Promethazine"]
+  },
+  {
+    "label_uk": "Декслензопразол",
+    "label_ru": "Декслензопразол",
+    "label_gr": "Dexlansoprazole",
+    "label_en": "Dexlansoprazole",
+    "alias_list_uk": ["Каменде", "Dexilant"],
+    "alias_list_ru": ["Каменде", "Dexilant"],
+    "alias_list_gr": ["Dexilant", "Dexlansoprazole"],
+    "alias_list_en": ["Dexilant", "Dexlansoprazole"]
+  },
+  {
+    "label_uk": "Дексметилфенідат",
+    "label_ru": "Дексметилфенидат",
+    "label_gr": "Dexmethylphenidate",
+    "label_en": "Dexmethylphenidate",
+    "alias_list_uk": ["Фокін", "Dexmethylphenidate"],
+    "alias_list_ru": ["Фокин", "Dexmethylphenidate"],
+    "alias_list_gr": ["Dexmethylphenidate"],
+    "alias_list_en": ["Dexmethylphenidate"]
+  },
+  {
+    "label_uk": "Ліздексамфетамін",
+    "label_ru": "Лиздексамфетамин",
+    "label_gr": "Lisdexamfetamine",
+    "label_en": "Lisdexamfetamine",
+    "alias_list_uk": ["Віванс"],
+    "alias_list_ru": ["Виванс"],
+    "alias_list_gr": ["Vyvanse"],
+    "alias_list_en": ["Vyvanse"]
+  },
+  {
+    "label_uk": "Метилпреднізолон",
+    "label_ru": "Метилпреднизолон",
+    "label_gr": "Méthylprednisolone",
+    "label_en": "Methylprednisolone",
+    "alias_list_uk": ["Депо-Медрол", "Метипред"],
+    "alias_list_ru": ["Депо-Медрол", "Метипред"],
+    "alias_list_gr": ["Medrol", "Methylprednisolone"],
+    "alias_list_en": ["Medrol", "Methylprednisolone"]
+  },
+  {
+    "label_uk": "Гідрокодон",
+    "label_ru": "Гидрокодон",
+    "label_gr": "Hydrocodone",
+    "label_en": "Hydrocodone",
+    "alias_list_uk": ["Нордиксон", "Гідрокодон"],
+    "alias_list_ru": ["Нордиксон", "Гидрокодон"],
+    "alias_list_gr": ["Hydrocodone"],
+    "alias_list_en": ["Vicodin", "Lortab"]
+  },
+  {
+    "label_uk": "Оксикодон",
+    "label_ru": "Оксикодон",
+    "label_gr": "Oxycodone",
+    "label_en": "Oxycodone",
+    "alias_list_uk": ["Оксиксон", "Оксі"],
+    "alias_list_ru": ["Оксиксон", "Окси"],
+    "alias_list_gr": ["OxyContin", "Roxicodone"],
+    "alias_list_en": ["OxyContin", "Roxicodone"]
+  },
+  {
+    "label_uk": "Морфін",
+    "label_ru": "Морфин",
+    "label_gr": "Morphine",
+    "label_en": "Morphine",
+    "alias_list_uk": ["Морфін", "Нарадин"],
+    "alias_list_ru": ["Морфин", "Нарадин"],
+    "alias_list_gr": ["Morphine Sulfate", "MS Contin"],
+    "alias_list_en": ["MS Contin", "Duramorph"]
+  },
+  {
+    "label_uk": "Тамоксифен",
+    "label_ru": "Тамоксифен",
+    "label_gr": "Tamoxifène",
+    "label_en": "Tamoxifen",
+    "alias_list_uk": ["Нолвадекс", "Тамоксифен"],
+    "alias_list_ru": ["Нолвадекс", "Тамоксифен"],
+    "alias_list_gr": ["Nolvadex", "Tamoxifène"],
+    "alias_list_en": ["Nolvadex", "Tamoxifen"]
+  },
+  {
+    "label_uk": "Дутастерид",
+    "label_ru": "Дутастерид",
+    "label_gr": "Dutastéride",
+    "label_en": "Dutasteride",
+    "alias_list_uk": ["Аводарт", "Дутастерид"],
+    "alias_list_ru": ["Аводарт", "Дутастерид"],
+    "alias_list_gr": ["Avodart", "Dutasteride"],
+    "alias_list_en": ["Avodart", "Dutasteride"]
+  },
+  {
+    "label_uk": "Піоглітозин",
+    "label_ru": "Пиоглитозин",
+    "label_gr": "Pioglitazone",
+    "label_en": "Pioglitazone",
+    "alias_list_uk": ["Диабетон", "Піоглітозин"],
+    "alias_list_ru": ["Диабетон", "Пиоглитозин"],
+    "alias_list_gr": ["Actos", "Pioglitazone"],
+    "alias_list_en": ["Actos", "Pioglitazone"]
+  },
+  {
+    "label_uk": "Ситагліптин",
+    "label_ru": "Ситаглиптин",
+    "label_gr": "Sitagliptine",
+    "label_en": "Sitagliptin",
+    "alias_list_uk": ["Јакупрост", "Ситагліптин"],
+    "alias_list_ru": ["Якупрост", "Ситаглиптин"],
+    "alias_list_gr": ["Januvia", "Sitagliptin"],
+    "alias_list_en": ["Januvia", "Sitagliptin"]
+  },
+  {
+    "label_uk": "Саксаґліптин",
+    "label_ru": "Саксагліптин",
+    "label_gr": "Saxagliptine",
+    "label_en": "Saxagliptin",
+    "alias_list_uk": ["ОнгЛИП", "Саксаґліптин"],
+    "alias_list_ru": ["ОнгЛип", "Саксагліптин"],
+    "alias_list_gr": ["Onglyza", "Saxagliptine"],
+    "alias_list_en": ["Onglyza", "Saxagliptin"]
+  },
+  {
+    "label_uk": "Вілдегліптин",
+    "label_ru": "Вильдеглиптин",
+    "label_gr": "Vildagliptine",
+    "label_en": "Vildagliptin",
+    "alias_list_uk": ["Презим", "Вілдегліптин"],
+    "alias_list_ru": ["Презим", "Вильдеглиптин"],
+    "alias_list_gr": ["Galvus", "Vildagliptine"],
+    "alias_list_en": ["Galvus", "Vildagliptin"]
+  },
+  {
+    "label_uk": "Алогліптин",
+    "label_ru": "Алогліптин",
+    "label_gr": "Alogliptine",
+    "label_en": "Alogliptin",
+    "alias_list_uk": ["Народжет", "Алогліптин"],
+    "alias_list_ru": ["Народжет", "Алоглиптин"],
+    "alias_list_gr": ["Vipidia", "Alogliptine"],
+    "alias_list_en": ["Vipidia", "Alogliptin"]
+  },
+  {
+    "label_uk": "Емпагліфлозин",
+    "label_ru": "Эмпаглифлозин",
+    "label_gr": "Empagliflozine",
+    "label_en": "Empagliflozin",
+    "alias_list_uk": ["Брауфілл", "Емпагліфлозин"],
+    "alias_list_ru": ["Брауфилл", "Эмпаглифлозин"],
+    "alias_list_gr": ["Jardiance", "Empagliflozine"],
+    "alias_list_en": ["Jardiance", "Empagliflozin"]
+  },
+  {
+    "label_uk": "Канагліфлозин",
+    "label_ru": "Канаглифлозин",
+    "label_gr": "Canagliflozine",
+    "label_en": "Canagliflozin",
+    "alias_list_uk": ["Форсада", "Канагліфлозин"],
+    "alias_list_ru": ["Форсада", "Канаглифлозин"],
+    "alias_list_gr": ["Invokana", "Canagliflozine"],
+    "alias_list_en": ["Invokana", "Canagliflozin"]
+  },
+  {
+    "label_uk": "Дапагліфлозин",
+    "label_ru": "Дапаглифлозин",
+    "label_gr": "Dapagliflozine",
+    "label_en": "Dapagliflozin",
+    "alias_list_uk": ["Форсіро", "Дапагліфлозин"],
+    "alias_list_ru": ["Форсиро", "Дапаглифлозин"],
+    "alias_list_gr": ["Farxiga", "Dapagliflozine"],
+    "alias_list_en": ["Farxiga", "Dapagliflozin"]
+  },
+  {
+    "label_uk": "Дулаглутид",
+    "label_ru": "Дулаглутид",
+    "label_gr": "Dulaglutide",
+    "label_en": "Dulaglutide",
+    "alias_list_uk": ["Треджо", "Дулаглутид"],
+    "alias_list_ru": ["Треджо", "Дулаглутид"],
+    "alias_list_gr": ["Trulicity", "Dulaglutide"],
+    "alias_list_en": ["Trulicity", "Dulaglutide"]
+  },
+  {
+    "label_uk": "Ліраглутид",
+    "label_ru": "Лираглутид",
+    "label_gr": "Liraglutide",
+    "label_en": "Liraglutide",
+    "alias_list_uk": ["Вігалту", "Ліраглутид"],
+    "alias_list_ru": ["Вигалту", "Лираглутид"],
+    "alias_list_gr": ["Victoza", "Liraglutide"],
+    "alias_list_en": ["Victoza", "Saxenda"]
+  },
+  {
+    "label_uk": "Семаглутид",
+    "label_ru": "Семаглутид",
+    "label_gr": "Sémaglutide",
+    "label_en": "Semaglutide",
+    "alias_list_uk": ["Оземпик", "Семаглутид"],
+    "alias_list_ru": ["Оземпик", "Семаглутид"],
+    "alias_list_gr": ["Ozempic", "Sémaglutide"],
+    "alias_list_en": ["Ozempic", "Rybelsus"]
+  },
+  {
+    "label_uk": "Ламотриджин",
+    "label_ru": "Ламотриджин",
+    "label_gr": "Lamotrigine",
+    "label_en": "Lamotrigine",
+    "alias_list_uk": ["Ламіктал"],
+    "alias_list_ru": ["Ламиктал"],
+    "alias_list_gr": ["Lamictal"],
+    "alias_list_en": ["Lamictal"]
+  },
+  {
+    "label_uk": "Дозагідрот",
+    "label_ru": "Дозагидрот",
+    "label_gr": "Dihydrocodeine",
+    "label_en": "Dihydrocodeine",
+    "alias_list_uk": ["Діагідроти"],
+    "alias_list_ru": ["Дигидрокодеин"],
+    "alias_list_gr": ["Dihydrocodeine"],
+    "alias_list_en": ["Dihydrocodeine"]
+  },
+  {
+    "label_uk": "Тизанідін",
+    "label_ru": "Тизанидин",
+    "label_gr": "Tizanidine",
+    "label_en": "Tizanidine",
+    "alias_list_uk": ["Тізалуд"],
+    "alias_list_ru": ["Тизалуд"],
+    "alias_list_gr": ["Zanaflex"],
+    "alias_list_en": ["Zanaflex"]
+  },
+  {
+    "label_uk": "Бупренорфін",
+    "label_ru": "Бупренорфин",
+    "label_gr": "Buprénorphine",
+    "label_en": "Buprenorphine",
+    "alias_list_uk": ["Субоксон"],
+    "alias_list_ru": ["Субоксон"],
+    "alias_list_gr": ["Subutex"],
+    "alias_list_en": ["Subutex"]
+  },
+  {
+    "label_uk": "Салметерол",
+    "label_ru": "Салметерол",
+    "label_gr": "Salmétérol",
+    "label_en": "Salmeterol",
+    "alias_list_uk": ["Сервент"],
+    "alias_list_ru": ["Сервент"],
+    "alias_list_gr": ["Serevent"],
+    "alias_list_en": ["Serevent"]
+  },
+  {
+    "label_uk": "Експекторант",
+    "label_ru": "Экспекторант",
+    "label_gr": "Expectorant",
+    "label_en": "Expectorant",
+    "alias_list_uk": ["Геделикс"],
+    "alias_list_ru": ["Геделикс"],
+    "alias_list_gr": ["Gedelix"],
+    "alias_list_en": ["Gedelix"]
+  },
+  {
+    "label_uk": "Клозапін",
+    "label_ru": "Клозапин",
+    "label_gr": "Clozapine",
+    "label_en": "Clozapine",
+    "alias_list_uk": ["Клозапекс"],
+    "alias_list_ru": ["Клозапекс"],
+    "alias_list_gr": ["Clozaril"],
+    "alias_list_en": ["Clozaril"]
+  },
+  {
+    "label_uk": "Суматриптан",
+    "label_ru": "Суматриптан",
+    "label_gr": "Sumatriptan",
+    "label_en": "Sumatriptan",
+    "alias_list_uk": ["Імігран"],
+    "alias_list_ru": ["Имигран"],
+    "alias_list_gr": ["Imigrane"],
+    "alias_list_en": ["Imitrex"]
+  },
+  {
+    "label_uk": "Ріфампіцин",
+    "label_ru": "Рифампицин",
+    "label_gr": "Rifampicine",
+    "label_en": "Rifampicin",
+    "alias_list_uk": ["Рифадин"],
+    "alias_list_ru": ["Рифадин"],
+    "alias_list_gr": ["Rimactane"],
+    "alias_list_en": ["Rifadin"]
+  },
+  {
+    "label_uk": "Цефтриаксон",
+    "label_ru": "Цефтриаксон",
+    "label_gr": "Ceftriaxone",
+    "label_en": "Ceftriaxone",
+    "alias_list_uk": ["Цефзол"],
+    "alias_list_ru": ["Цефзол"],
+    "alias_list_gr": ["Rocephin"],
+    "alias_list_en": ["Rocephin"]
+  },
+  {
+    "label_uk": "Ванкоміцин",
+    "label_ru": "Ванкомицин",
+    "label_gr": "Vancomycine",
+    "label_en": "Vancomycin",
+    "alias_list_uk": ["Ванкоцид"],
+    "alias_list_ru": ["Ванкоцид"],
+    "alias_list_gr": ["Vancocin"],
+    "alias_list_en": ["Vancocin"]
+  },
+  {
+    "label_uk": "Аміноглікозиди",
+    "label_ru": "Аминогликозиды",
+    "label_gr": "Aminosides",
+    "label_en": "Aminoglycosides",
+    "alias_list_uk": ["Гентаміцин"],
+    "alias_list_ru": ["Гентамицин"],
+    "alias_list_gr": ["Gentamicine"],
+    "alias_list_en": ["Gentamicin"]
+  },
+  {
+    "label_uk": "Карбамазепін",
+    "label_ru": "Карбамазепин",
+    "label_gr": "Carbamazépine",
+    "label_en": "Carbamazepine",
+    "alias_list_uk": ["Тегретол"],
+    "alias_list_ru": ["Тегретол"],
+    "alias_list_gr": ["Tegretol"],
+    "alias_list_en": ["Tegretol"]
+  },
+  {
+    "label_uk": "Фелодипін",
+    "label_ru": "Фелодипин",
+    "label_gr": "Felodipine",
+    "label_en": "Felodipine",
+    "alias_list_uk": ["Леркамен"],
+    "alias_list_ru": ["Леркамен"],
+    "alias_list_gr": ["Plendil"],
+    "alias_list_en": ["Plendil"]
+  },
+  {
+    "label_uk": "Кетоконазол",
+    "label_ru": "Кетоконазол",
+    "label_gr": "Kétoconazole",
+    "label_en": "Ketoconazole",
+    "alias_list_uk": ["Нізорал"],
+    "alias_list_ru": ["Низорал"],
+    "alias_list_gr": ["Nizoral"],
+    "alias_list_en": ["Nizoral"]
+  },
+  {
+    "label_uk": "Тебіфеназат",
+    "label_ru": "Тебифеназат",
+    "label_gr": "Tebifenazate",
+    "label_en": "Tebufenozide",
+    "alias_list_uk": ["Тебикур"],
+    "alias_list_ru": ["Тебикур"],
+    "alias_list_gr": ["Tebikur"],
+    "alias_list_en": ["Tebikur"]
+  },
+  {
+    "label_uk": "Нарфін",
+    "label_ru": "Нарфин",
+    "label_gr": "Nalfurafine",
+    "label_en": "Nalfurafine",
+    "alias_list_uk": ["Календекс"],
+    "alias_list_ru": ["Календекс"],
+    "alias_list_gr": ["Kalydeco"],
+    "alias_list_en": ["Kalydeco"]
+  },
+  {
+    "label_uk": "Донепезіл",
+    "label_ru": "Донепезил",
+    "label_gr": "Donépézil",
+    "label_en": "Donepezil",
+    "alias_list_uk": ["Арайс"],
+    "alias_list_ru": ["Арайс"],
+    "alias_list_gr": ["Aricept"],
+    "alias_list_en": ["Aricept"]
+  },
+  {
+    "label_uk": "Левофлоксацин",
+    "label_ru": "Левофлоксацин",
+    "label_gr": "Levofloxacine",
+    "label_en": "Levofloxacin",
+    "alias_list_uk": ["Таванік"],
+    "alias_list_ru": ["Таваник"],
+    "alias_list_gr": ["Tavanic"],
+    "alias_list_en": ["Levaquin"]
+  },
+  {
+    "label_uk": "Німодипін",
+    "label_ru": "Нимодипин",
+    "label_gr": "Nimodipine",
+    "label_en": "Nimodipine",
+    "alias_list_uk": ["Нимотоп"],
+    "alias_list_ru": ["Нимотоп"],
+    "alias_list_gr": ["Nimotop"],
+    "alias_list_en": ["Nimotop"]
+  },
+  {
+    "label_uk": "Сукцинілхолін",
+    "label_ru": "Сукцинилхолин",
+    "label_gr": "Succinylcholine",
+    "label_en": "Succinylcholine",
+    "alias_list_uk": ["Суксаметоній"],
+    "alias_list_ru": ["Суксаметоний"],
+    "alias_list_gr": ["Anectine"],
+    "alias_list_en": ["Anectine"]
+  },
+  {
+    "label_uk": "Фенобарбітал",
+    "label_ru": "Фенобарбитал",
+    "label_gr": "Phénobarbital",
+    "label_en": "Phenobarbital",
+    "alias_list_uk": ["Пенобарбітал"],
+    "alias_list_ru": ["Пенобарбитал"],
+    "alias_list_gr": ["Luminal"],
+    "alias_list_en": ["Luminal"]
+  },
+  {
+    "label_uk": "Тозанідин",
+    "label_ru": "Тизанідін",
+    "label_gr": "Tizanidine",
+    "label_en": "Tizanidine",
+    "alias_list_uk": ["Занакс"],
+    "alias_list_ru": ["Занакс"],
+    "alias_list_gr": ["Zanaflex"],
+    "alias_list_en": ["Zanaflex"]
+  },
+  {
+    "label_uk": "Рапагліфлозин",
+    "label_ru": "Рапаглифлозин",
+    "label_gr": "Empagliflozine",
+    "label_en": "Empagliflozin",
+    "alias_list_uk": ["Сансомаг"],
+    "alias_list_ru": ["Сансомаг"],
+    "alias_list_gr": ["Jardiance"],
+    "alias_list_en": ["Jardiance"]
+  },
+  {
+    "label_uk": "Пірагутід",
+    "label_ru": "Пиоглитазон",
+    "label_gr": "Pioglitazone",
+    "label_en": "Pioglitazone",
+    "alias_list_uk": ["Акатзон"],
+    "alias_list_ru": ["Акатзон"],
+    "alias_list_gr": ["Actos"],
+    "alias_list_en": ["Actos"]
+  },
+  {
+    "label_uk": "Гліпізид",
+    "label_ru": "Глипизид",
+    "label_gr": "Glipizide",
+    "label_en": "Glipizide",
+    "alias_list_uk": ["Глюкобай"],
+    "alias_list_ru": ["Глюкобай"],
+    "alias_list_gr": ["Glucotrol"],
+    "alias_list_en": ["Glucotrol"]
+  },
+  {
+    "label_uk": "Альпразолам",
+    "label_ru": "Алпразолам",
+    "label_gr": "Alprazolam",
+    "label_en": "Alprazolam",
+    "alias_list_uk": ["Ксанакс", "Траксал"],
+    "alias_list_ru": ["Ксанакс", "Траксал"],
+    "alias_list_gr": ["Xanax", "Alprazolam"],
+    "alias_list_en": ["Xanax", "Alprazolam"]
+  },
+  {
+    "label_uk": "Габапентин",
+    "label_ru": "Габапентин",
+    "label_gr": "Gabapentin",
+    "label_en": "Gabapentin",
+    "alias_list_uk": ["Нейронтін", "Габапентин"],
+    "alias_list_ru": ["Нейронтин", "Габапентин"],
+    "alias_list_gr": ["Neurontin", "Gabapentin"],
+    "alias_list_en": ["Neurontin", "Gabapentin"]
+  },
+  {
+    "label_uk": "Фенітоїн",
+    "label_ru": "Фенитоин",
+    "label_gr": "Phenytoin",
+    "label_en": "Phenytoin",
+    "alias_list_uk": ["Дилантин", "Фенітоїн"],
+    "alias_list_ru": ["Дилантин", "Фенитоин"],
+    "alias_list_gr": ["Dilantin", "Phénytoïne"],
+    "alias_list_en": ["Dilantin", "Phenytoin"]
+  },
+  {
+    "label_uk": "Налтрексон",
+    "label_ru": "Налтрексон",
+    "label_gr": "Naltrexone",
+    "label_en": "Naltrexone",
+    "alias_list_uk": ["Налтрексон"],
+    "alias_list_ru": ["Налтрексон"],
+    "alias_list_gr": ["Naltrexone"],
+    "alias_list_en": ["Naltrexone"]
+  },
+  {
+    "label_uk": "Тиротин",
+    "label_ru": "Тиротин",
+    "label_gr": "Tirothin",
+    "label_en": "Tirothin",
+    "alias_list_uk": ["Тиротин"],
+    "alias_list_ru": ["Тиротин"],
+    "alias_list_gr": ["Tirothin"],
+    "alias_list_en": ["Tirothin"]
+  },
+  {
+    "label_uk": "Еторікоксиб",
+    "label_ru": "Эторикоксиб",
+    "label_gr": "Etoricoxib",
+    "label_en": "Etoricoxib",
+    "alias_list_uk": ["Arcoxia"],
+    "alias_list_ru": ["Arcoxia"],
+    "alias_list_gr": ["Arcoxia"],
+    "alias_list_en": ["Arcoxia"]
+  },
+  {
+    "label_uk": "Німесулід",
+    "label_ru": "Нимесулид",
+    "label_gr": "Nimesulide",
+    "label_en": "Nimesulide",
+    "alias_list_uk": ["Нимесулід"],
+    "alias_list_ru": ["Нимесулид"],
+    "alias_list_gr": ["Nimesulide"],
+    "alias_list_en": ["Nimesulide"]
+  },
+  {
+    "label_uk": "Празозин",
+    "label_ru": "Празозин",
+    "label_gr": "Prazosine",
+    "label_en": "Prazosin",
+    "alias_list_uk": ["Мініпрес"],
+    "alias_list_ru": ["Минипресс"],
+    "alias_list_gr": ["Minipress"],
+    "alias_list_en": ["Minipress"]
+  },
+  {
+    "label_uk": "Доксазозин",
+    "label_ru": "Доксазозин",
+    "label_gr": "Doxazosine",
+    "label_en": "Doxazosin",
+    "alias_list_uk": ["Кардура"],
+    "alias_list_ru": ["Кардура"],
+    "alias_list_gr": ["Cardura"],
+    "alias_list_en": ["Cardura"]
+  },
+  {
+    "label_uk": "Анастрозол",
+    "label_ru": "Анастрозол",
+    "label_gr": "Anastrozole",
+    "label_en": "Anastrozole",
+    "alias_list_uk": ["Аримідекс"],
+    "alias_list_ru": ["Аримидекс"],
+    "alias_list_gr": ["Arimidex"],
+    "alias_list_en": ["Arimidex"]
+  },
+  {
+    "label_uk": "Летрозол",
+    "label_ru": "Летрозол",
+    "label_gr": "Létrozole",
+    "label_en": "Letrozole",
+    "alias_list_uk": ["Фемара"],
+    "alias_list_ru": ["Фемара"],
+    "alias_list_gr": ["Femara"],
+    "alias_list_en": ["Femara"]
+  },
+  {
+    "label_uk": "Беклометазон",
+    "label_ru": "Беклометазон",
+    "label_gr": "Béclométhasone",
+    "label_en": "Beclomethasone",
+    "alias_list_uk": ["Бекотид"],
+    "alias_list_ru": ["Бекотид"],
+    "alias_list_gr": ["Becotide"],
+    "alias_list_en": ["Qvar", "Beconase"]
+  },
+  {
+    "label_uk": "Міконазол",
+    "label_ru": "Миконазол",
+    "label_gr": "Miconazole",
+    "label_en": "Miconazole",
+    "alias_list_uk": ["Дактарин"],
+    "alias_list_ru": ["Дактарин"],
+    "alias_list_gr": ["Daktarin"],
+    "alias_list_en": ["Monistat", "Daktarin"]
+  },
+  {
+    "label_uk": "Омепразол/Натрію бікарбонат",
+    "label_ru": "Омепразол/Натрия бикарбонат",
+    "label_gr": "Oméprazole/Bicarbonate de sodium",
+    "label_en": "Omeprazole/Sodium bicarbonate",
+    "alias_list_uk": ["Зегерід"],
+    "alias_list_ru": ["Зегерид"],
+    "alias_list_gr": ["Zegerid"],
+    "alias_list_en": ["Zegerid"]
+  },
+  {
+    "label_uk": "Албутерол",
+    "label_ru": "Альбутерол",
+    "label_gr": "Albutérol",
+    "label_en": "Albuterol",
+    "alias_list_uk": ["Вентолін"],
+    "alias_list_ru": ["Вентолин"],
+    "alias_list_gr": ["Ventolin"],
+    "alias_list_en": ["Ventolin", "ProAir"]
+  },
+  {
+    "label_uk": "Тербуталін",
+    "label_ru": "Тербуталин",
+    "label_gr": "Terbutaline",
+    "label_en": "Terbutaline",
+    "alias_list_uk": ["Бриканіл"],
+    "alias_list_ru": ["Бриканил"],
+    "alias_list_gr": ["Bricanyl"],
+    "alias_list_en": ["Brethine", "Bricanyl"]
+  },
+  {
+    "label_uk": "Фенотерол",
+    "label_ru": "Фенотерол",
+    "label_gr": "Fénétérol",
+    "label_en": "Fenoterol",
+    "alias_list_uk": ["Беротек"],
+    "alias_list_ru": ["Беротек"],
+    "alias_list_gr": ["Berotec"],
+    "alias_list_en": ["Berotec"]
+  },
+  {
+    "label_uk": "Іпратропію бромід",
+    "label_ru": "Ипратропия бромид",
+    "label_gr": "Bromure d'ipratropium",
+    "label_en": "Ipratropium bromide",
+    "alias_list_uk": ["Атровент"],
+    "alias_list_ru": ["Атровент"],
+    "alias_list_gr": ["Atrovent"],
+    "alias_list_en": ["Atrovent"]
+  },
+  {
+    "label_uk": "Тіотропію бромід",
+    "label_ru": "Тиотропия бромид",
+    "label_gr": "Bromure de tiotropium",
+    "label_en": "Tiotropium bromide",
+    "alias_list_uk": ["Спіріва"],
+    "alias_list_ru": ["Спирива"],
+    "alias_list_gr": ["Spiriva"],
+    "alias_list_en": ["Spiriva"]
+  },
+  {
+    "label_uk": "Умеклідініум",
+    "label_ru": "Умеклидиний",
+    "label_gr": "Uméclidinium",
+    "label_en": "Umeclidinium",
+    "alias_list_uk": ["Інкруз"],
+    "alias_list_ru": ["Инкруз"],
+    "alias_list_gr": ["Incruse"],
+    "alias_list_en": ["Incruse"]
+  },
+  {
+    "label_uk": "Вілантерол",
+    "label_ru": "Вилантерол",
+    "label_gr": "Vilanterol",
+    "label_en": "Vilanterol",
+    "alias_list_uk": ["Релвар"],
+    "alias_list_ru": ["Релвар"],
+    "alias_list_gr": ["Relvar"],
+    "alias_list_en": ["Breo Ellipta"]
+  },
+  {
+    "label_uk": "Бензонатат",
+    "label_ru": "Бензонатат",
+    "label_gr": "Benzonatate",
+    "label_en": "Benzonatate",
+    "alias_list_uk": ["Тессалон"],
+    "alias_list_ru": ["Тессалон"],
+    "alias_list_gr": ["Tessalon"],
+    "alias_list_en": ["Tessalon Perles"]
+  },
+  {
+    "label_uk": "Гуафенезин",
+    "label_ru": "Гуайфенезин",
+    "label_gr": "Guaïfénésine",
+    "label_en": "Guaifenesin",
+    "alias_list_uk": ["Мукалтин"],
+    "alias_list_ru": ["Мукалтин"],
+    "alias_list_gr": ["Vicks Expectorant"],
+    "alias_list_en": ["Mucinex", "Robitussin"]
+  },
+  {
+    "label_uk": "Тіоктова кислота",
+    "label_ru": "Тиоктовая кислота",
+    "label_gr": "Acide thioctique",
+    "label_en": "Alpha-lipoic acid",
+    "alias_list_uk": ["Тіогамма"],
+    "alias_list_ru": ["Тиогамма"],
+    "alias_list_gr": ["Thioctacid"],
+    "alias_list_en": ["Thioctacid"]
+  },
+  {
+    "label_uk": "Циклобензаприн",
+    "label_ru": "Циклобензаприн",
+    "label_gr": "Cyclobenzaprine",
+    "label_en": "Cyclobenzaprine",
+    "alias_list_uk": ["Флексеріл"],
+    "alias_list_ru": ["Флексерил"],
+    "alias_list_gr": ["Flexeril"],
+    "alias_list_en": ["Flexeril", "Amrix"]
+  },
+  {
+    "label_uk": "Метаксалон",
+    "label_ru": "Метаксолон",
+    "label_gr": "Metaxalone",
+    "label_en": "Metaxalone",
+    "alias_list_uk": ["Скелаксин"],
+    "alias_list_ru": ["Скелаксин"],
+    "alias_list_gr": ["Skelaxin"],
+    "alias_list_en": ["Skelaxin"]
+  },
+  {
+    "label_uk": "Метформін/Саксагліптин",
+    "label_ru": "Метформин/Саксаглиптин",
+    "label_gr": "Metformine/Saxagliptine",
+    "label_en": "Metformin/Saxagliptin",
+    "alias_list_uk": ["Комбогліза"],
+    "alias_list_ru": ["Комбоглиз"],
+    "alias_list_gr": ["Komboglyze"],
+    "alias_list_en": ["Kombiglyze"]
+  },
+  {
+    "label_uk": "Метформін/Сітегліптин",
+    "label_ru": "Метформин/Ситаглиптин",
+    "label_gr": "Metformine/Sitagliptine",
+    "label_en": "Metformin/Sitagliptin",
+    "alias_list_uk": ["Янумет"],
+    "alias_list_ru": ["Янумет"],
+    "alias_list_gr": ["Janumet"],
+    "alias_list_en": ["Janumet"]
+  },
+  {
+    "label_uk": "Саксагліптин",
+    "label_ru": "Саксаглиптин",
+    "label_gr": "Saxagliptine",
+    "label_en": "Saxagliptin",
+    "alias_list_uk": ["Онгліза"],
+    "alias_list_ru": ["Онглиза"],
+    "alias_list_gr": ["Onglyza"],
+    "alias_list_en": ["Onglyza"]
+  },
+  {
+    "label_uk": "Сітегліптин",
+    "label_ru": "Ситаглиптин",
+    "label_gr": "Sitagliptine",
+    "label_en": "Sitagliptin",
+    "alias_list_uk": ["Янувія"],
+    "alias_list_ru": ["Янувия"],
+    "alias_list_gr": ["Januvia"],
+    "alias_list_en": ["Januvia"]
+  },
+  {
+    "label_uk": "Лінагліптин",
+    "label_ru": "Линаглиптин",
+    "label_gr": "Linagliptine",
+    "label_en": "Linagliptin",
+    "alias_list_uk": ["Тражента"],
+    "alias_list_ru": ["Тражента"],
+    "alias_list_gr": ["Trajenta"],
+    "alias_list_en": ["Tradjenta"]
+  },
+  {
+    "label_uk": "Вілдагліптин",
+    "label_ru": "Вилдаглиптин",
+    "label_gr": "Vildagliptine",
+    "label_en": "Vildagliptin",
+    "alias_list_uk": ["Галвус"],
+    "alias_list_ru": ["Галвус"],
+    "alias_list_gr": ["Galvus"],
+    "alias_list_en": ["Galvus"]
+  },
+  {
+    "label_uk": "Тазобактам/Піперацилін",
+    "label_ru": "Тазобактам/Пиперациллин",
+    "label_gr": "Tazobactam/Pipéracilline",
+    "label_en": "Tazobactam/Piperacillin",
+    "alias_list_uk": ["Тазоцин"],
+    "alias_list_ru": ["Тазоцин"],
+    "alias_list_gr": ["Tazocilline"],
+    "alias_list_en": ["Zosyn", "Tazocin"]
+  },
+  {
+    "label_uk": "Кеторолак",
+    "label_ru": "Кеторолак",
+    "label_gr": "Kétorolac",
+    "label_en": "Ketorolac",
+    "alias_list_uk": ["Кеторол", "Кеторолак"],
+    "alias_list_ru": ["Кеторол", "Кеторолак"],
+    "alias_list_gr": ["Toradol", "Kétorolac"],
+    "alias_list_en": ["Toradol", "Ketorolac"]
+  },
+  {
+    "label_uk": "Сімвастатин",
+    "label_ru": "Симвастатин",
+    "label_gr": "Simvastatine",
+    "label_en": "Simvastatin",
+    "alias_list_uk": ["Зокор", "Сімвастатин"],
+    "alias_list_ru": ["Зокор", "Симвастатин"],
+    "alias_list_gr": ["Zocor", "Simvastatine"],
+    "alias_list_en": ["Zocor", "Simvastatin"]
+  },
+  {
+    "label_uk": "Сульпірид",
+    "label_ru": "Сульпирид",
+    "label_gr": "Sulpiride",
+    "label_en": "Sulpiride",
+    "alias_list_uk": ["Сульпірид"],
+    "alias_list_ru": ["Сульпирид"],
+    "alias_list_gr": ["Sulpiride"],
+    "alias_list_en": ["Sulpiride"]
+  },
+  {
+    "label_uk": "Флувоксамін",
+    "label_ru": "Флувоксамин",
+    "label_gr": "Fluvoxamine",
+    "label_en": "Fluvoxamine",
+    "alias_list_uk": ["Людоміл"],
+    "alias_list_ru": ["Людомил"],
+    "alias_list_gr": ["Luvox"],
+    "alias_list_en": ["Luvox"]
+  },
+  {
+    "label_uk": "Амітриптілін",
+    "label_ru": "Амитриптилин",
+    "label_gr": "Amitriptyline",
+    "label_en": "Amitriptyline",
+    "alias_list_uk": ["Елавіл"],
+    "alias_list_ru": ["Элавил"],
+    "alias_list_gr": ["Elavil"],
+    "alias_list_en": ["Elavil"]
+  },
+  {
+    "label_uk": "Парацетамол",
+    "label_ru": "Парацетамол",
+    "label_gr": "Paracétamol",
+    "label_en": "Paracetamol",
+    "alias_list_uk": ["Панадол"],
+    "alias_list_ru": ["Панадол"],
+    "alias_list_gr": ["Doliprane", "Paracetamol"],
+    "alias_list_en": ["Panadol", "Tylenol"]
+  },
+  {
+    "label_uk": "Глібенкламід",
+    "label_ru": "Глибенкламид",
+    "label_gr": "Glibenclamide",
+    "label_en": "Glibenclamide",
+    "alias_list_uk": ["Діабетон"],
+    "alias_list_ru": ["Диафорт"],
+    "alias_list_gr": ["Diabeton"],
+    "alias_list_en": ["Diabeton"]
+  },
+  {
+    "label_uk": "Розиглітазон",
+    "label_ru": "Розиглитазон",
+    "label_gr": "Rosiglitazone",
+    "label_en": "Rosiglitazone",
+    "alias_list_uk": ["Авандія"],
+    "alias_list_ru": ["Авандия"],
+    "alias_list_gr": ["Avandia"],
+    "alias_list_en": ["Avandia"]
+  },
+  {
+    "label_uk": "Сакогліптин",
+    "label_ru": "Сакоглиптин",
+    "label_gr": "Saxagliptine",
+    "label_en": "Saxagliptin",
+    "alias_list_uk": ["Онгліза"],
+    "alias_list_ru": ["Онглиза"],
+    "alias_list_gr": ["Onglyza"],
+    "alias_list_en": ["Onglyza"]
+  },
+  {
+    "label_uk": "Ексенатид",
+    "label_ru": "Экзенатид",
+    "label_gr": "Exénatide",
+    "label_en": "Exenatide",
+    "alias_list_uk": ["Байетта"],
+    "alias_list_ru": ["Байетта"],
+    "alias_list_gr": ["Byetta"],
+    "alias_list_en": ["Byetta"]
+  },
+  {
+    "label_uk": "Сімевенез",
+    "label_ru": "Симевенез",
+    "label_gr": "Simévénez",
+    "label_en": "Simvastatin",
+    "alias_list_uk": ["Зокор"],
+    "alias_list_ru": ["Зокор"],
+    "alias_list_gr": ["Zocor"],
+    "alias_list_en": ["Zocor"]
+  },
+  {
+    "label_uk": "Креатинін",
+    "label_ru": "Креатинин",
+    "label_gr": "Créatinine",
+    "label_en": "Creatinine",
+    "alias_list_uk": ["Креатин"],
+    "alias_list_ru": ["Креатин"],
+    "alias_list_gr": ["Créatine"],
+    "alias_list_en": ["Creatine"]
+  },
+  {
+    "label_uk": "Метадон",
+    "label_ru": "Метадон",
+    "label_gr": "Méthadone",
+    "label_en": "Methadone",
+    "alias_list_uk": ["Метадон"],
+    "alias_list_ru": ["Метадон"],
+    "alias_list_gr": ["Dolophine"],
+    "alias_list_en": ["Dolophine"]
+  },
+  {
+    "label_uk": "Фентаніл",
+    "label_ru": "Фентанил",
+    "label_gr": "Fentanyl",
+    "label_en": "Fentanyl",
+    "alias_list_uk": ["Дюрагізик"],
+    "alias_list_ru": ["Дюрагізик"],
+    "alias_list_gr": ["Sublimaze"],
+    "alias_list_en": ["Sublimaze"]
+  },
+  {
+    "label_uk": "Фенітоїн",
+    "label_ru": "Фенитоин",
+    "label_gr": "Phénytoïne",
+    "label_en": "Phenytoin",
+    "alias_list_uk": ["Дилантин"],
+    "alias_list_ru": ["Дилантин"],
+    "alias_list_gr": ["Dilantin"],
+    "alias_list_en": ["Dilantin"]
+  },
+  {
+    "label_uk": "Топірамат",
+    "label_ru": "Топирамат",
+    "label_gr": "Topiramate",
+    "label_en": "Topiramate",
+    "alias_list_uk": ["Топамакс"],
+    "alias_list_ru": ["Топамакс"],
+    "alias_list_gr": ["Epitomax"],
+    "alias_list_en": ["Topamax"]
+  },
+  {
+    "label_uk": "Арипіпразол",
+    "label_ru": "Арипипразол",
+    "label_gr": "Aripiprazole",
+    "label_en": "Aripiprazole",
+    "alias_list_uk": ["Абіліфай"],
+    "alias_list_ru": ["Абилифай"],
+    "alias_list_gr": ["Abilify"],
+    "alias_list_en": ["Abilify"]
+  },
+  {
+    "label_uk": "Метилфенідат",
+    "label_ru": "Метилфенидат",
+    "label_gr": "Méthylphénidate",
+    "label_en": "Methylphenidate",
+    "alias_list_uk": ["Ріталін", "Концерта"],
+    "alias_list_ru": ["Риталин", "Концерта"],
+    "alias_list_gr": ["Ritaline", "Concerta"],
+    "alias_list_en": ["Ritalin", "Concerta"]
+  },
+  {
+    "label_uk": "Ліздексамфетамін",
+    "label_ru": "Лисдексамфетамин",
+    "label_gr": "Lisdexamfétamine",
+    "label_en": "Lisdexamfetamine",
+    "alias_list_uk": ["Віванс"],
+    "alias_list_ru": ["Виванс"],
+    "alias_list_gr": ["Elvanse"],
+    "alias_list_en": ["Vyvanse"]
+  },
+  {
+    "label_uk": "Модафініл",
+    "label_ru": "Модафинил",
+    "label_gr": "Modafinil",
+    "label_en": "Modafinil",
+    "alias_list_uk": ["Провіґіл"],
+    "alias_list_ru": ["Провигил"],
+    "alias_list_gr": ["Modiodal"],
+    "alias_list_en": ["Provigil"]
+  },
+  {
+    "label_uk": "Амфетамін/Декстроамфетамін",
+    "label_ru": "Амфетамин/Декстроамфетамин",
+    "label_gr": "Amphétamine/Dextroamphétamine",
+    "label_en": "Amphetamine/Dextroamphetamine",
+    "alias_list_uk": ["Аддералл"],
+    "alias_list_ru": ["Аддералл"],
+    "alias_list_gr": ["Adderall"],
+    "alias_list_en": ["Adderall"]
+  },
+  {
+    "label_uk": "Фентермін",
+    "label_ru": "Фентермин",
+    "label_gr": "Phentermine",
+    "label_en": "Phentermine",
+    "alias_list_uk": ["Адіпекс"],
+    "alias_list_ru": ["Адипекс"],
+    "alias_list_gr": ["Adipex"],
+    "alias_list_en": ["Adipex-P", "Ionamin"]
+  },
+  {
+    "label_uk": "Вареніклін",
+    "label_ru": "Варениклин",
+    "label_gr": "Varénicline",
+    "label_en": "Varenicline",
+    "alias_list_uk": ["Чампікс"],
+    "alias_list_ru": ["Чампикс"],
+    "alias_list_gr": ["Champix"],
+    "alias_list_en": ["Chantix"]
+  },
+  {
+    "label_uk": "Золпідем",
+    "label_ru": "Золпидем",
+    "label_gr": "Zolpidem",
+    "label_en": "Zolpidem",
+    "alias_list_uk": ["Амбієн"],
+    "alias_list_ru": ["Амбиен"],
+    "alias_list_gr": ["Stilnox"],
+    "alias_list_en": ["Ambien"]
+  },
+  {
+    "label_uk": "Есзопіклон",
+    "label_ru": "Эсзопиклон",
+    "label_gr": "Eszopiclone",
+    "label_en": "Eszopiclone",
+    "alias_list_uk": ["Лунеста"],
+    "alias_list_ru": ["Лунеста"],
+    "alias_list_gr": ["Lunivia"],
+    "alias_list_en": ["Lunesta"]
+  },
+  {
+    "label_uk": "Рамелтеон",
+    "label_ru": "Рамелтеон",
+    "label_gr": "Ramelteon",
+    "label_en": "Ramelteon",
+    "alias_list_uk": ["Розерем"],
+    "alias_list_ru": ["Розерем"],
+    "alias_list_gr": ["Rozerem"],
+    "alias_list_en": ["Rozerem"]
+  },
+  {
+    "label_uk": "Суворексант",
+    "label_ru": "Суворексант",
+    "label_gr": "Suvorexant",
+    "label_en": "Suvorexant",
+    "alias_list_uk": ["Белсомра"],
+    "alias_list_ru": ["Белсомра"],
+    "alias_list_gr": ["Belsomra"],
+    "alias_list_en": ["Belsomra"]
+  },
+  {
+    "label_uk": "Едоксабан",
+    "label_ru": "Эдоксабан",
+    "label_gr": "Edoxaban",
+    "label_en": "Edoxaban",
+    "alias_list_uk": ["Ліксіана"],
+    "alias_list_ru": ["Ликсиана"],
+    "alias_list_gr": ["Lixiana"],
+    "alias_list_en": ["Savaysa", "Lixiana"]
+  },
+  {
+    "label_uk": "Тікагрелор",
+    "label_ru": "Тикагрелор",
+    "label_gr": "Ticagrélor",
+    "label_en": "Ticagrelor",
+    "alias_list_uk": ["Брилінта"],
+    "alias_list_ru": ["Брилинта"],
+    "alias_list_gr": ["Brilique"],
+    "alias_list_en": ["Brilinta"]
+  },
+  {
+    "label_uk": "Алопуринол",
+    "label_ru": "Аллопуринол",
+    "label_gr": "Allopurinol",
+    "label_en": "Allopurinol",
+    "alias_list_uk": ["Аллопуринол"],
+    "alias_list_ru": ["Аллопуринол"],
+    "alias_list_gr": ["Zyloric"],
+    "alias_list_en": ["Zyloprim"]
+  },
+  {
+    "label_uk": "Колхіцин",
+    "label_ru": "Колхицин",
+    "label_gr": "Colchicine",
+    "label_en": "Colchicine",
+    "alias_list_uk": ["Колхікум"],
+    "alias_list_ru": ["Колхикум-Дисперт"],
+    "alias_list_gr": ["Colchimax"],
+    "alias_list_en": ["Colcrys"]
+  },
+  {
+    "label_uk": "Пробенецид",
+    "label_ru": "Пробенецид",
+    "label_gr": "Probénécide",
+    "label_en": "Probenecid",
+    "alias_list_uk": ["Бенемід"],
+    "alias_list_ru": ["Бенемид"],
+    "alias_list_gr": ["Benemide"],
+    "alias_list_en": ["Benemid"]
+  },
+  {
+    "label_uk": "Гідроморфон",
+    "label_ru": "Гидроморфон",
+    "label_gr": "Hydromorphone",
+    "label_en": "Hydromorphone",
+    "alias_list_uk": ["Ділаудід"],
+    "alias_list_ru": ["Дилаудид"],
+    "alias_list_gr": ["Sophidone"],
+    "alias_list_en": ["Dilaudid"]
+  },
+  {
+    "label_uk": "Налоксон",
+    "label_ru": "Налоксон",
+    "label_gr": "Naloxone",
+    "label_en": "Naloxone",
+    "alias_list_uk": ["Наркан"],
+    "alias_list_ru": ["Наркан"],
+    "alias_list_gr": ["Narcan"],
+    "alias_list_en": ["Narcan"]
+  },
+  {
+    "label_uk": "Дисульфірам",
+    "label_ru": "Дисульфирам",
+    "label_gr": "Disulfirame",
+    "label_en": "Disulfiram",
+    "alias_list_uk": ["Еспераль"],
+    "alias_list_ru": ["Эспераль"],
+    "alias_list_gr": ["Espéral"],
+    "alias_list_en": ["Antabuse"]
+  },
+  {
+    "label_uk": "Озельтамівір",
+    "label_ru": "Озельтамивир",
+    "label_gr": "Oseltamivir",
+    "label_en": "Oseltamivir",
+    "alias_list_uk": ["Таміфлю"],
+    "alias_list_ru": ["Тамифлю"],
+    "alias_list_gr": ["Tamiflu"],
+    "alias_list_en": ["Tamiflu"]
+  },
+  {
+    "label_uk": "Занамівір",
+    "label_ru": "Занамивир",
+    "label_gr": "Zanamivir",
+    "label_en": "Zanamivir",
+    "alias_list_uk": ["Реленза"],
+    "alias_list_ru": ["Реленза"],
+    "alias_list_gr": ["Relenza"],
+    "alias_list_en": ["Relenza"]
+  },
+  {
+    "label_uk": "Рибавірин",
+    "label_ru": "Рибавирин",
+    "label_gr": "Ribavirine",
+    "label_en": "Ribavirin",
+    "alias_list_uk": ["Ребетол"],
+    "alias_list_ru": ["Ребетол"],
+    "alias_list_gr": ["Copegus"],
+    "alias_list_en": ["Copegus", "Rebetol"]
+  },
+  {
+    "label_uk": "Гентаміцин",
+    "label_ru": "Гентамицин",
+    "label_gr": "Gentamicine",
+    "label_en": "Gentamicin",
+    "alias_list_uk": ["Генталін"],
+    "alias_list_ru": ["Генталин"],
+    "alias_list_gr": ["Gentaflex"],
+    "alias_list_en": ["Gentaflex"]
+  },
+  {
+    "label_uk": "Бензилпеніцилін",
+    "label_ru": "Бензилпенициллин",
+    "label_gr": "Benzylpénicilline",
+    "label_en": "Benzylpenicillin",
+    "alias_list_uk": ["Бензилпеніцилін"],
+    "alias_list_ru": ["Бензилпенициллин"],
+    "alias_list_gr": ["Penicillin G"],
+    "alias_list_en": ["Penicillin G"]
+  },
+  {
+    "label_uk": "Цефалексин",
+    "label_ru": "Цефалексин",
+    "label_gr": "Céphalexine",
+    "label_en": "Cephalexin",
+    "alias_list_uk": ["Кефлекс"],
+    "alias_list_ru": ["Кефлекс"],
+    "alias_list_gr": ["Keflex"],
+    "alias_list_en": ["Keflex"]
+  },
+  {
+    "label_uk": "Цефтриаксон",
+    "label_ru": "Цефтриаксон",
+    "label_gr": "Céfotaxime",
+    "label_en": "Ceftriaxone",
+    "alias_list_uk": ["Роцеф"],
+    "alias_list_ru": ["Роцеф"],
+    "alias_list_gr": ["Rocephin"],
+    "alias_list_en": ["Rocephin"]
+  },
+  {
+    "label_uk": "Рифампіцин",
+    "label_ru": "Рифампицин",
+    "label_gr": "Rifampicine",
+    "label_en": "Rifampicin",
+    "alias_list_uk": ["Рифабутін"],
+    "alias_list_ru": ["Рифабутин"],
+    "alias_list_gr": ["Rifabutin"],
+    "alias_list_en": ["Rifabutin"]
+  },
+  {
+    "label_uk": "Етіфоксин",
+    "label_ru": "Этифоксин",
+    "label_gr": "Éthifoxine",
+    "label_en": "Etifoxine",
+    "alias_list_uk": ["Стрезам"],
+    "alias_list_ru": ["Стрезам"],
+    "alias_list_gr": ["Stresam"],
+    "alias_list_en": ["Stresam"]
+  },
+  {
+    "label_uk": "Ніцерголін",
+    "label_ru": "Ницерголин",
+    "label_gr": "Nicergoline",
+    "label_en": "Nicergoline",
+    "alias_list_uk": ["Серміон"],
+    "alias_list_ru": ["Сермион"],
+    "alias_list_gr": ["Sermion"],
+    "alias_list_en": ["Sermion"]
+  },
+  {
+    "label_uk": "Танакан",
+    "label_ru": "Танакан",
+    "label_gr": "Tanakan",
+    "label_en": "Ginkgo biloba extract",
+    "alias_list_uk": ["Танакан"],
+    "alias_list_ru": ["Танакан"],
+    "alias_list_gr": ["Tanakan"],
+    "alias_list_en": ["Tanakan"]
+  },
+  {
+    "label_uk": "Меклозин",
+    "label_ru": "Меклозин",
+    "label_gr": "Méclozine",
+    "label_en": "Meclizine",
+    "alias_list_uk": ["Бонін"],
+    "alias_list_ru": ["Бонин"],
+    "alias_list_gr": ["Agyrax"],
+    "alias_list_en": ["Antivert", "Bonine"]
+  },
+  {
+    "label_uk": "Аторвастатин/Езетиміб",
+    "label_ru": "Аторвастатин/Эзетимиб",
+    "label_gr": "Atorvastatine/Ézétimibe",
+    "label_en": "Atorvastatin/Ezetimibe",
+    "alias_list_uk": ["Ліптрус"],
+    "alias_list_ru": ["Липтрус"],
+    "alias_list_gr": ["Liptruzet"],
+    "alias_list_en": ["Liptruzet"]
+  },
+  {
+    "label_uk": "Сертиконазол",
+    "label_ru": "Сертиконазол",
+    "label_gr": "Sertaconazole",
+    "label_en": "Sertaconazole",
+    "alias_list_uk": ["Залаїн"],
+    "alias_list_ru": ["Залаин"],
+    "alias_list_gr": ["Monazol"],
+    "alias_list_en": ["Ertaczo"]
+  },
+  {
+    "label_uk": "Трипторелін",
+    "label_ru": "Трипторелин",
+    "label_gr": "Triptoréline",
+    "label_en": "Triptorelin",
+    "alias_list_uk": ["Декапептил"],
+    "alias_list_ru": ["Декапептил"],
+    "alias_list_gr": ["Décapeptyl"],
+    "alias_list_en": ["Trelstar"]
+  },
+  {
+    "label_uk": "Золедронова кислота",
+    "label_ru": "Золедроновая кислота",
+    "label_gr": "Acide zolédronique",
+    "label_en": "Zoledronic acid",
+    "alias_list_uk": ["Зомета"],
+    "alias_list_ru": ["Зомета"],
+    "alias_list_gr": ["Zometa"],
+    "alias_list_en": ["Zometa", "Reclast"]
+  },
+  {
+    "label_uk": "Праміпексол",
+    "label_ru": "Прамипексол",
+    "label_gr": "Pramipexole",
+    "label_en": "Pramipexole",
+    "alias_list_uk": ["Мірапекс"],
+    "alias_list_ru": ["Мирапекс"],
+    "alias_list_gr": ["Sifrol"],
+    "alias_list_en": ["Mirapex"]
+  },
+  {
+    "label_uk": "Ропінірол",
+    "label_ru": "Ропинирол",
+    "label_gr": "Ropinirole",
+    "label_en": "Ropinirole",
+    "alias_list_uk": ["Реквіп"],
+    "alias_list_ru": ["Реквип"],
+    "alias_list_gr": ["Requip"],
+    "alias_list_en": ["Requip"]
+  },
+  {
+    "label_uk": "Ентакапон",
+    "label_ru": "Энтакапон",
+    "label_gr": "Entacapone",
+    "label_en": "Entacapone",
+    "alias_list_uk": ["Комтан"],
+    "alias_list_ru": ["Комтан"],
+    "alias_list_gr": ["Comtan"],
+    "alias_list_en": ["Comtan"]
+  },
+  {
+    "label_uk": "Піридостигмін",
+    "label_ru": "Пиридостигмин",
+    "label_gr": "Pyridostigmine",
+    "label_en": "Pyridostigmine",
+    "alias_list_uk": ["Местінон"],
+    "alias_list_ru": ["Местинон"],
+    "alias_list_gr": ["Mestinon"],
+    "alias_list_en": ["Mestinon"]
+  },
+  {
+    "label_uk": "Севеламер",
+    "label_ru": "Севеламер",
+    "label_gr": "Sévélamer",
+    "label_en": "Sevelamer",
+    "alias_list_uk": ["Ренагель"],
+    "alias_list_ru": ["Ренагель"],
+    "alias_list_gr": ["Renagel"],
+    "alias_list_en": ["Renvela", "Renagel"]
+  },
+  {
+    "label_uk": "Ланреотид",
+    "label_ru": "Ланреотид",
+    "label_gr": "Lanréotide",
+    "label_en": "Lanreotide",
+    "alias_list_uk": ["Соматулін"],
+    "alias_list_ru": ["Соматулин"],
+    "alias_list_gr": ["Somatuline"],
+    "alias_list_en": ["Somatuline"]
+  },
+  {
+    "label_uk": "Гозерелін",
+    "label_ru": "Гозерелин",
+    "label_gr": "Goséréline",
+    "label_en": "Goserelin",
+    "alias_list_uk": ["Золадекс"],
+    "alias_list_ru": ["Золадекс"],
+    "alias_list_gr": ["Zoladex"],
+    "alias_list_en": ["Zoladex"]
+  },
+  {
+    "label_uk": "Каберголін",
+    "label_ru": "Каберголин",
+    "label_gr": "Cabergoline",
+    "label_en": "Cabergoline",
+    "alias_list_uk": ["Достінекс"],
+    "alias_list_ru": ["Достинекс"],
+    "alias_list_gr": ["Dostinex"],
+    "alias_list_en": ["Dostinex"]
+  },
+  {
+    "label_uk": "Літій",
+    "label_ru": "Литий",
+    "label_gr": "Lithium",
+    "label_en": "Lithium",
+    "alias_list_uk": ["Літій Карбонат"],
+    "alias_list_ru": ["Литий Карбонат"],
+    "alias_list_gr": ["Téralithe"],
+    "alias_list_en": ["Lithobid", "Eskalith"]
+  },
+  {
+    "label_uk": "Ацепромазин",
+    "label_ru": "Ацепромазин",
+    "label_gr": "Acepromazine",
+    "label_en": "Acepromazine",
+    "alias_list_uk": ["Промазин"],
+    "alias_list_ru": ["Промазин"],
+    "alias_list_gr": ["Acepromazine"],
+    "alias_list_en": ["Acepromazine"]
+  },
+  {
+    "label_uk": "Вальпроєва кислота",
+    "label_ru": "Вальпроевая кислота",
+    "label_gr": "Acide valproïque",
+    "label_en": "Valproic acid",
+    "alias_list_uk": ["Депакін"],
+    "alias_list_ru": ["Депакин"],
+    "alias_list_gr": ["Dépakine"],
+    "alias_list_en": ["Depakene", "Depakote"]
+  },
+  {
+    "label_uk": "Кверцетин",
+    "label_ru": "Кверцетин",
+    "label_gr": "Quercétine",
+    "label_en": "Quercetin",
+    "alias_list_uk": ["Кверцетин"],
+    "alias_list_ru": ["Кверцетин"],
+    "alias_list_gr": ["Quercétine"],
+    "alias_list_en": ["Quercetin"]
+  },
+  {
+    "label_uk": "Еритроміцин",
+    "label_ru": "Эритромицин",
+    "label_gr": "Érythromycine",
+    "label_en": "Erythromycin",
+    "alias_list_uk": ["Еритроміцин"],
+    "alias_list_ru": ["Эритромицин"],
+    "alias_list_gr": ["Erythrocin"],
+    "alias_list_en": ["Erythrocin"]
+  },
+  {
+    "label_uk": "Тобраміцин",
+    "label_ru": "Тобрамицин",
+    "label_gr": "Tobramycine",
+    "label_en": "Tobramycin",
+    "alias_list_uk": ["Тобрекс"],
+    "alias_list_ru": ["Тобрекс"],
+    "alias_list_gr": ["Tobrex"],
+    "alias_list_en": ["Tobrex"]
+  },
+  {
+    "label_uk": "Кліндаміцин",
+    "label_ru": "Клиндамицин",
+    "label_gr": "Clindamycine",
+    "label_en": "Clindamycin",
+    "alias_list_uk": ["Далацин"],
+    "alias_list_ru": ["Далацин"],
+    "alias_list_gr": ["Dalacin"],
+    "alias_list_en": ["Dalacin"]
+  },
+  {
+    "label_uk": "Сульфаметоксазол/Триметоприм",
+    "label_ru": "Сульфаметоксазол/Триметоприм",
+    "label_gr": "Sulfaméthoxazole/Triméthoprime",
+    "label_en": "Sulfamethoxazole/Trimethoprim",
+    "alias_list_uk": ["Бактрим"],
+    "alias_list_ru": ["Бактрим"],
+    "alias_list_gr": ["Bactrim"],
+    "alias_list_en": ["Bactrim"]
+  },
+  {
+    "label_uk": "Далфопристин/Гезолфопристин",
+    "label_ru": "Далфопристин/Гезолфопристин",
+    "label_gr": "Dalfopristine/Quinupristine",
+    "label_en": "Dalfopristin/Quinupristin",
+    "alias_list_uk": ["Синерацид"],
+    "alias_list_ru": ["Синерацид"],
+    "alias_list_gr": ["Synercid"],
+    "alias_list_en": ["Synercid"]
+  },
+  {
+    "label_uk": "Граміцидін",
+    "label_ru": "Грамицидин",
+    "label_gr": "Gramicidine",
+    "label_en": "Gramicidin",
+    "alias_list_uk": ["Граміцидін"],
+    "alias_list_ru": ["Грамицидин"],
+    "alias_list_gr": ["Gramicidin"],
+    "alias_list_en": ["Gramicidin"]
+  },
+  {
+    "label_uk": "Амікацин",
+    "label_ru": "Амикацин",
+    "label_gr": "Amikacine",
+    "label_en": "Amikacin",
+    "alias_list_uk": ["Амікацин"],
+    "alias_list_ru": ["Амикацин"],
+    "alias_list_gr": ["Amikacin"],
+    "alias_list_en": ["Amikacin"]
+  },
+  {
+    "label_uk": "Карбапенеми",
+    "label_ru": "Карбапенемы",
+    "label_gr": "Carbapénèmes",
+    "label_en": "Carbapenems",
+    "alias_list_uk": ["Іміпенем/Циластатин"],
+    "alias_list_ru": ["Имипенем/Циластатин"],
+    "alias_list_gr": ["Imipénem/Cilastatine"],
+    "alias_list_en": ["Imipenem/Cilastatin"]
+  },
+  {
+    "label_uk": "Цефалоспорини",
+    "label_ru": "Цефалоспори",
+    "label_gr": "Céphalosporines",
+    "label_en": "Cephalosporins",
+    "alias_list_uk": ["Цефалексин"],
+    "alias_list_ru": ["Цефалексин"],
+    "alias_list_gr": ["Céphalexine"],
+    "alias_list_en": ["Cephalexin"]
+  },
+  {
+    "label_uk": "Піперацилін",
+    "label_ru": "Пиперациллин",
+    "label_gr": "Pipéracilline",
+    "label_en": "Piperacillin",
+    "alias_list_uk": ["Піпрін"],
+    "alias_list_ru": ["Пиприн"],
+    "alias_list_gr": ["Pipracil"],
+    "alias_list_en": ["Pipracil"]
+  },
+  {
+    "label_uk": "Тазобактам",
+    "label_ru": "Тазобактам",
+    "label_gr": "Tazobactam",
+    "label_en": "Tazobactam",
+    "alias_list_uk": ["Тазобактам"],
+    "alias_list_ru": ["Тазобактам"],
+    "alias_list_gr": ["Tazocin"],
+    "alias_list_en": ["Tazocin"]
+  },
+  {
+    "label_uk": "Цефепім",
+    "label_ru": "Цефепим",
+    "label_gr": "Céfeprime",
+    "label_en": "Cefepime",
+    "alias_list_uk": ["Фортум"],
+    "alias_list_ru": ["Фортум"],
+    "alias_list_gr": ["Maxipime"],
+    "alias_list_en": ["Maxipime"]
+  },
+  {
+    "label_uk": "Меропенем",
+    "label_ru": "Меропенем",
+    "label_gr": "Méropénème",
+    "label_en": "Meropenem",
+    "alias_list_uk": ["Меропенем"],
+    "alias_list_ru": ["Меропенем"],
+    "alias_list_gr": ["Merrem"],
+    "alias_list_en": ["Merrem"]
+  },
+  {
+    "label_uk": "Клостридії",
+    "label_ru": "Клостридии",
+    "label_gr": "Clostridium",
+    "label_en": "Clostridium",
+    "alias_list_uk": ["Клостридії"],
+    "alias_list_ru": ["Клостридии"],
+    "alias_list_gr": ["Clostridium"],
+    "alias_list_en": ["Clostridium"]
+  },
+  {
+    "label_uk": "Сальметерол",
+    "label_ru": "Сальметерол",
+    "label_gr": "Salmétérol",
+    "label_en": "Salmeterol",
+    "alias_list_uk": ["Сервент"],
+    "alias_list_ru": ["Сервент"],
+    "alias_list_gr": ["Serevent"],
+    "alias_list_en": ["Serevent"]
+  },
+  {
+    "label_uk": "Флутиказон",
+    "label_ru": "Флутиказон",
+    "label_gr": "Fluticasone",
+    "label_en": "Fluticasone",
+    "alias_list_uk": ["Флутиказон"],
+    "alias_list_ru": ["Флутиказон"],
+    "alias_list_gr": ["Flovent"],
+    "alias_list_en": ["Flovent"]
+  },
+  {
+    "label_uk": "Будесонід",
+    "label_ru": "Будесонид",
+    "label_gr": "Budesonide",
+    "label_en": "Budesonide",
+    "alias_list_uk": ["Пульмокорт"],
+    "alias_list_ru": ["Пульмокорт"],
+    "alias_list_gr": ["Pulmicort"],
+    "alias_list_en": ["Pulmicort"]
+  },
+  {
+    "label_uk": "Гліпізид",
+    "label_ru": "Глипизид",
+    "label_gr": "Glyburide",
+    "label_en": "Glyburide",
+    "alias_list_uk": ["Глікобенк"],
+    "alias_list_ru": ["Гликобенк"],
+    "alias_list_gr": ["Diabeta"],
+    "alias_list_en": ["Diabeta"]
+  },
+  {
+    "label_uk": "Піоглітазон",
+    "label_ru": "Пиоглитазон",
+    "label_gr": "Pioglitazone",
+    "label_en": "Pioglitazone",
+    "alias_list_uk": ["Актос"],
+    "alias_list_ru": ["Актос"],
+    "alias_list_gr": ["Actos"],
+    "alias_list_en": ["Actos"]
+  },
+  {
+    "label_uk": "Акарбоза",
+    "label_ru": "Акарбоза",
+    "label_gr": "Acarbose",
+    "label_en": "Acarbose",
+    "alias_list_uk": ["Глюкобай"],
+    "alias_list_ru": ["Глюкобай"],
+    "alias_list_gr": ["Glucobay"],
+    "alias_list_en": ["Glucobay"]
+  },
+  {
+    "label_uk": "Лираглутид",
+    "label_ru": "Лираглутид",
+    "label_gr": "Liraglutide",
+    "label_en": "Liraglutide",
+    "alias_list_uk": ["Саксенда"],
+    "alias_list_ru": ["Саксенда"],
+    "alias_list_gr": ["Saxenda"],
+    "alias_list_en": ["Saxenda"]
+  },
+  {
+    "label_uk": "Симетикон",
+    "label_ru": "Симетикон",
+    "label_gr": "Siméticone",
+    "label_en": "Simethicone",
+    "alias_list_uk": ["Еспумізан"],
+    "alias_list_ru": ["Эспумизан"],
+    "alias_list_gr": ["Mylan Simeticone"],
+    "alias_list_en": ["Gas-X", "Mylicon"]
+  },
+  {
+    "label_uk": "Лоперамід",
+    "label_ru": "Лоперамид",
+    "label_gr": "Lopéramide",
+    "label_en": "Loperamide",
+    "alias_list_uk": ["Імодіум"],
+    "alias_list_ru": ["Имодиум"],
+    "alias_list_gr": ["Imodium"],
+    "alias_list_en": ["Imodium"]
+  },
+  {
+    "label_uk": "Бісакодил",
+    "label_ru": "Бисакодил",
+    "label_gr": "Bisacodyl",
+    "label_en": "Bisacodyl",
+    "alias_list_uk": ["Дульколакс"],
+    "alias_list_ru": ["Дульколакс"],
+    "alias_list_gr": ["Dulcolax"],
+    "alias_list_en": ["Dulcolax"]
+  },
+  {
+    "label_uk": "Сеннозиди",
+    "label_ru": "Сеннозиды",
+    "label_gr": "Sennosides",
+    "label_en": "Sennosides",
+    "alias_list_uk": ["Сенадексин"],
+    "alias_list_ru": ["Сенаде"],
+    "alias_list_gr": ["Laxacodyl"],
+    "alias_list_en": ["Senokot"]
+  },
+  {
+    "label_uk": "Домперидон",
+    "label_ru": "Домперидон",
+    "label_gr": "Dompéridone",
+    "label_en": "Domperidone",
+    "alias_list_uk": ["Мотіліум"],
+    "alias_list_ru": ["Мотилиум"],
+    "alias_list_gr": ["Motilium"],
+    "alias_list_en": ["Motilium"]
+  },
+  {
+    "label_uk": "Панкреатин",
+    "label_ru": "Панкреатин",
+    "label_gr": "Pancréatine",
+    "label_en": "Pancreatin",
+    "alias_list_uk": ["Креон"],
+    "alias_list_ru": ["Креон"],
+    "alias_list_gr": ["Créon"],
+    "alias_list_en": ["Creon", "Pancreaze"]
+  },
+  {
+    "label_uk": "Урсодезоксихолева кислота",
+    "label_ru": "Урсодезоксихолевая кислота",
+    "label_gr": "Acide ursodésoxycholique",
+    "label_en": "Ursodeoxycholic acid",
+    "alias_list_uk": ["Урсофальк"],
+    "alias_list_ru": ["Урсофальк"],
+    "alias_list_gr": ["Delursan"],
+    "alias_list_en": ["Urso", "Actigall"]
+  },
+  {
+    "label_uk": "Адеметіонін",
+    "label_ru": "Адеметионин",
+    "label_gr": "Adémétionine",
+    "label_en": "Ademetionine",
+    "alias_list_uk": ["Гептрал"],
+    "alias_list_ru": ["Гептрал"],
+    "alias_list_gr": ["Transmetil"],
+    "alias_list_en": ["Heptral"]
+  },
+  {
+    "label_uk": "Тіамазол",
+    "label_ru": "Тиамазол",
+    "label_gr": "Thiamazole",
+    "label_en": "Thiamazole",
+    "alias_list_uk": ["Мерказоліл"],
+    "alias_list_ru": ["Мерказолил"],
+    "alias_list_gr": ["Thyrozol"],
+    "alias_list_en": ["Methimazole", "Tapazole"]
+  },
+  {
+    "label_uk": "Пропілтіоурацил",
+    "label_ru": "Пропилтиоурацил",
+    "label_gr": "Propylthiouracile",
+    "label_en": "Propylthiouracil",
+    "alias_list_uk": ["Пропіцил"],
+    "alias_list_ru": ["Пропицил"],
+    "alias_list_gr": ["Propylex"],
+    "alias_list_en": ["PTU"]
+  },
+  {
+    "label_uk": "Окситоцин",
+    "label_ru": "Окситоцин",
+    "label_gr": "Ocytocine",
+    "label_en": "Oxytocin",
+    "alias_list_uk": ["Синтоцинон"],
+    "alias_list_ru": ["Синтоцинон"],
+    "alias_list_gr": ["Syntocinon"],
+    "alias_list_en": ["Pitocin", "Syntocinon"]
+  },
+  {
+    "label_uk": "Динопростон",
+    "label_ru": "Динопростон",
+    "label_gr": "Dinoprostone",
+    "label_en": "Dinoprostone",
+    "alias_list_uk": ["Препідил"],
+    "alias_list_ru": ["Препидил"],
+    "alias_list_gr": ["Propess"],
+    "alias_list_en": ["Cervidil", "Prepidil"]
+  },
+  {
+    "label_uk": "Естрадіол",
+    "label_ru": "Эстрадиол",
+    "label_gr": "Estradiol",
+    "label_en": "Estradiol",
+    "alias_list_uk": ["Естрожель"],
+    "alias_list_ru": ["Эстрожель"],
+    "alias_list_gr": ["Estreva"],
+    "alias_list_en": ["Estrace", "Climara"]
+  },
+  {
+    "label_uk": "Норетистерон",
+    "label_ru": "Норэтистерон",
+    "label_gr": "Noréthistérone",
+    "label_en": "Norethisterone",
+    "alias_list_uk": ["Примолют Нор"],
+    "alias_list_ru": ["Примолют Нор"],
+    "alias_list_gr": ["Primolut Nor"],
+    "alias_list_en": ["Aygestin", "Primolut N"]
+  },
+  {
+    "label_uk": "Дидрогестерон",
+    "label_ru": "Дидрогестерон",
+    "label_gr": "Dydrogestérone",
+    "label_en": "Dydrogesterone",
+    "alias_list_uk": ["Дуфастон"],
+    "alias_list_ru": ["Дюфастон"],
+    "alias_list_gr": ["Duphaston"],
+    "alias_list_en": ["Duphaston"]
+  },
+  {
+    "label_uk": "Левоноргестрел",
+    "label_ru": "Левоноргестрел",
+    "label_gr": "Lévonorgestrel",
+    "label_en": "Levonorgestrel",
+    "alias_list_uk": ["Ескапел"],
+    "alias_list_ru": ["Эскапел"],
+    "alias_list_gr": ["Norlevo"],
+    "alias_list_en": ["Plan B", "Mirena"]
+  },
+  {
+    "label_uk": "Дроспіренон/Етинілестрадіол",
+    "label_ru": "Дроспиренон/Этинилэстрадиол",
+    "label_gr": "Drospirénone/Éthinylestradiol",
+    "label_en": "Drospirenone/Ethinylestradiol",
+    "alias_list_uk": ["Ярина"],
+    "alias_list_ru": ["Ярина"],
+    "alias_list_gr": ["Jasmine"],
+    "alias_list_en": ["Yaz", "Yasmin"]
+  },
+  {
+    "label_uk": "Дієногест/Етинілестрадіол",
+    "label_ru": "Диеногест/Этинилэстрадиол",
+    "label_gr": "Diénogest/Éthinylestradiol",
+    "label_en": "Dienogest/Ethinylestradiol",
+    "alias_list_uk": ["Жанін"],
+    "alias_list_ru": ["Жанин"],
+    "alias_list_gr": ["Qlaira"],
+    "alias_list_en": ["Natazia", "Qlaira"]
+  },
+  {
+    "label_uk": "Тестостерон",
+    "label_ru": "Тестостерон",
+    "label_gr": "Testostérone",
+    "label_en": "Testosterone",
+    "alias_list_uk": ["Андрогель"],
+    "alias_list_ru": ["Андрогель"],
+    "alias_list_gr": ["Androgel"],
+    "alias_list_en": ["AndroGel", "Testim"]
+  },
+  {
+    "label_uk": "Тропісетрон",
+    "label_ru": "Трописетрон",
+    "label_gr": "Tropisétron",
+    "label_en": "Tropisetron",
+    "alias_list_uk": ["Навобан"],
+    "alias_list_ru": ["Навобан"],
+    "alias_list_gr": ["Navoban"],
+    "alias_list_en": ["Navoban"]
+  },
+  {
+    "label_uk": "Гранісетрон",
+    "label_ru": "Гранисетрон",
+    "label_gr": "Granisétron",
+    "label_en": "Granisetron",
+    "alias_list_uk": ["Кітруда"],
+    "alias_list_ru": ["Китруда"],
+    "alias_list_gr": ["Kytril"],
+    "alias_list_en": ["Kytril"]
+  },
+  {
+    "label_uk": "Палонсетрон",
+    "label_ru": "Палонсетрон",
+    "label_gr": "Palonosétron",
+    "label_en": "Palonosetron",
+    "alias_list_uk": ["Алоці"],
+    "alias_list_ru": ["Алоци"],
+    "alias_list_gr": ["Aloxi"],
+    "alias_list_en": ["Aloxi"]
+  },
+  {
+    "label_uk": "Аторвастатин/Амлодипін",
+    "label_ru": "Аторвастатин/Амлодипин",
+    "label_gr": "Atorvastatine/Amlodipine",
+    "label_en": "Atorvastatin/Amlodipine",
+    "alias_list_uk": ["Кадует"],
+    "alias_list_ru": ["Кадуэт"],
+    "alias_list_gr": ["Caduet"],
+    "alias_list_en": ["Caduet"]
+  },
+  {
+    "label_uk": "Симвастатин/Езетиміб",
+    "label_ru": "Симвастатин/Эзетимиб",
+    "label_gr": "Simvastatine/Ézétimibe",
+    "label_en": "Simvastatin/Ezetimibe",
+    "alias_list_uk": ["Віторін"],
+    "alias_list_ru": ["Виторин"],
+    "alias_list_gr": ["Inegy"],
+    "alias_list_en": ["Vytorin"]
+  },
+  {
+    "label_uk": "Капецитабін",
+    "label_ru": "Капецитабин",
+    "label_gr": "Capécitabine",
+    "label_en": "Capecitabine",
+    "alias_list_uk": ["Кселода"],
+    "alias_list_ru": ["Кселода"],
+    "alias_list_gr": ["Xeloda"],
+    "alias_list_en": ["Xeloda"]
+  },
+  {
+    "label_uk": "Іматиніб",
+    "label_ru": "Иматиниб",
+    "label_gr": "Imatinib",
+    "label_en": "Imatinib",
+    "alias_list_uk": ["Глівек"],
+    "alias_list_ru": ["Гливек"],
+    "alias_list_gr": ["Glivec"],
+    "alias_list_en": ["Gleevec"]
+  },
+  {
+    "label_uk": "Гемцитабін",
+    "label_ru": "Гемцитабин",
+    "label_gr": "Gemcitabine",
+    "label_en": "Gemcitabine",
+    "alias_list_uk": ["Гемзар"],
+    "alias_list_ru": ["Гемзар"],
+    "alias_list_gr": ["Gemzar"],
+    "alias_list_en": ["Gemzar"]
+  },
+  {
+    "label_uk": "Пеметрексед",
+    "label_ru": "Пеметрексед",
+    "label_gr": "Pémétrexed",
+    "label_en": "Pemetrexed",
+    "alias_list_uk": ["Алімта"],
+    "alias_list_ru": ["Алимта"],
+    "alias_list_gr": ["Alimta"],
+    "alias_list_en": ["Alimta"]
+  },
+  {
+    "label_uk": "Оксаліплатин",
+    "label_ru": "Оксалиплатин",
+    "label_gr": "Oxaliplatine",
+    "label_en": "Oxaliplatin",
+    "alias_list_uk": ["Елоксатин"],
+    "alias_list_ru": ["Элоксатин"],
+    "alias_list_gr": ["Eloxatine"],
+    "alias_list_en": ["Eloxatin"]
+  },
+  {
+    "label_uk": "Паклітаксел",
+    "label_ru": "Паклитаксел",
+    "label_gr": "Paclitaxel",
+    "label_en": "Paclitaxel",
+    "alias_list_uk": ["Таксол"],
+    "alias_list_ru": ["Таксол"],
+    "alias_list_gr": ["Taxol"],
+    "alias_list_en": ["Taxol"]
+  },
+  {
+    "label_uk": "Доцетаксел",
+    "label_ru": "Доцетаксел",
+    "label_gr": "Docétaxel",
+    "label_en": "Docetaxel",
+    "alias_list_uk": ["Таксотер"],
+    "alias_list_ru": ["Таксотер"],
+    "alias_list_gr": ["Taxotere"],
+    "alias_list_en": ["Taxotere"]
+  },
+  {
+    "label_uk": "Трастузумаб",
+    "label_ru": "Трастузумаб",
+    "label_gr": "Trastuzumab",
+    "label_en": "Trastuzumab",
+    "alias_list_uk": ["Герцептин"],
+    "alias_list_ru": ["Герцептин"],
+    "alias_list_gr": ["Herceptin"],
+    "alias_list_en": ["Herceptin"]
+  },
+  {
+    "label_uk": "Бевацизумаб",
+    "label_ru": "Бевацизумаб",
+    "label_gr": "Bévacizumab",
+    "label_en": "Bevacizumab",
+    "alias_list_uk": ["Авастин"],
+    "alias_list_ru": ["Авастин"],
+    "alias_list_gr": ["Avastin"],
+    "alias_list_en": ["Avastin"]
+  },
+  {
+    "label_uk": "Ритуксимаб",
+    "label_ru": "Ритуксимаб",
+    "label_gr": "Rituximab",
+    "label_en": "Rituximab",
+    "alias_list_uk": ["Мабтера"],
+    "alias_list_ru": ["Мабтера"],
+    "alias_list_gr": ["MabThera"],
+    "alias_list_en": ["Rituxan"]
+  },
+  {
+    "label_uk": "Цетуксимаб",
+    "label_ru": "Цетуксимаб",
+    "label_gr": "Cétuximab",
+    "label_en": "Cetuximab",
+    "alias_list_uk": ["Ербітукс"],
+    "alias_list_ru": ["Эрбитукс"],
+    "alias_list_gr": ["Erbitux"],
+    "alias_list_en": ["Erbitux"]
+  },
+  {
+    "label_uk": "Адалімумаб",
+    "label_ru": "Адалимумаб",
+    "label_gr": "Adalimumab",
+    "label_en": "Adalimumab",
+    "alias_list_uk": ["Хуміра"],
+    "alias_list_ru": ["Хумира"],
+    "alias_list_gr": ["Humira"],
+    "alias_list_en": ["Humira"]
+  },
+  {
+    "label_uk": "Інфліксімаб",
+    "label_ru": "Инфликсимаб",
+    "label_gr": "Infliximab",
+    "label_en": "Infliximab",
+    "alias_list_uk": ["Ремікейд"],
+    "alias_list_ru": ["Ремикейд"],
+    "alias_list_gr": ["Remicade"],
+    "alias_list_en": ["Remicade"]
+  },
+  {
+    "label_uk": "Етанерцепт",
+    "label_ru": "Этанерцепт",
+    "label_gr": "Étançercept",
+    "label_en": "Etanercept",
+    "alias_list_uk": ["Енбрел"],
+    "alias_list_ru": ["Энбрел"],
+    "alias_list_gr": ["Enbrel"],
+    "alias_list_en": ["Enbrel"]
+  },
+  {
+    "label_uk": "Устекинумаб",
+    "label_ru": "Устекинумаб",
+    "label_gr": "Ustékinumab",
+    "label_en": "Ustekinumab",
+    "alias_list_uk": ["Стелара"],
+    "alias_list_ru": ["Стелара"],
+    "alias_list_gr": ["Stelara"],
+    "alias_list_en": ["Stelara"]
+  },
+  {
+    "label_uk": "Секукинумаб",
+    "label_ru": "Секукинумаб",
+    "label_gr": "Sécukinumab",
+    "label_en": "Secukinumab",
+    "alias_list_uk": ["Косентікс"],
+    "alias_list_ru": ["Косентикс"],
+    "alias_list_gr": ["Cosentyx"],
+    "alias_list_en": ["Cosentyx"]
+  },
+  {
+    "label_uk": "Омалізумаб",
+    "label_ru": "Омализумаб",
+    "label_gr": "Omalizumab",
+    "label_en": "Omalizumab",
+    "alias_list_uk": ["Ксолар"],
+    "alias_list_ru": ["Ксолар"],
+    "alias_list_gr": ["Xolair"],
+    "alias_list_en": ["Xolair"]
+  },
+  {
+    "label_uk": "Інсулін гларгін",
+    "label_ru": "Инсулин гларгин",
+    "label_gr": "Insuline glargine",
+    "label_en": "Insulin glargine",
+    "alias_list_uk": ["Лантус"],
+    "alias_list_ru": ["Лантус"],
+    "alias_list_gr": ["Lantus"],
+    "alias_list_en": ["Lantus", "Basaglar"]
+  },
+  {
+    "label_uk": "Інсулін детемір",
+    "label_ru": "Инсулин детемир",
+    "label_gr": "Insuline détémir",
+    "label_en": "Insulin detemir",
+    "alias_list_uk": ["Левемір"],
+    "alias_list_ru": ["Левемир"],
+    "alias_list_gr": ["Levemir"],
+    "alias_list_en": ["Levemir"]
+  },
+  {
+    "label_uk": "Інсулін аспарт",
+    "label_ru": "Инсулин аспарт",
+    "label_gr": "Insuline aspart",
+    "label_en": "Insulin aspart",
+    "alias_list_uk": ["НовоРапід"],
+    "alias_list_ru": ["НовоРапид"],
+    "alias_list_gr": ["Novorapid"],
+    "alias_list_en": ["NovoLog"]
+  },
+  {
+    "label_uk": "Інсулін лізпро",
+    "label_ru": "Инсулин лизпро",
+    "label_gr": "Insuline lispro",
+    "label_en": "Insulin lispro",
+    "alias_list_uk": ["Хумалог"],
+    "alias_list_ru": ["Хумалог"],
+    "alias_list_gr": ["Humalog"],
+    "alias_list_en": ["Humalog"]
+  },
+  {
+    "label_uk": "Інсулін деглудек",
+    "label_ru": "Инсулин деглудек",
+    "label_gr": "Insuline dégludec",
+    "label_en": "Insulin degludec",
+    "alias_list_uk": ["Тресіба"],
+    "alias_list_ru": ["Тресиба"],
+    "alias_list_gr": ["Tresiba"],
+    "alias_list_en": ["Tresiba"]
+  },
+  {
+    "label_uk": "Ксилазин",
+    "label_ru": "Ксилазин",
+    "label_gr": "Xylazine",
+    "label_en": "Xylazine",
+    "alias_list_uk": ["Ксикс"],
+    "alias_list_ru": ["Ксикс"],
+    "alias_list_gr": ["Xylasol"],
+    "alias_list_en": ["Xylasol"]
+  },
+  {
+    "label_uk": "Роксадостат",
+    "label_ru": "Роксадостат",
+    "label_gr": "Roxadustat",
+    "label_en": "Roxadustat",
+    "alias_list_uk": ["Ербудо"],
+    "alias_list_ru": ["Ербудо"],
+    "alias_list_gr": ["Evrenzo"],
+    "alias_list_en": ["Evrenzo"]
+  },
+  {
+    "label_uk": "Месалазин",
+    "label_ru": "Месалазин",
+    "label_gr": "Mésalamine",
+    "label_en": "Mesalamine",
+    "alias_list_uk": ["Асакол"],
+    "alias_list_ru": ["Асакол"],
+    "alias_list_gr": ["Asacol"],
+    "alias_list_en": ["Asacol"]
+  },
+  {
+    "label_uk": "Апрепітант",
+    "label_ru": "Апрепитан",
+    "label_gr": "Aprepitant",
+    "label_en": "Aprepitant",
+    "alias_list_uk": ["Еменд"],
+    "alias_list_ru": ["Эменд"],
+    "alias_list_gr": ["Emend"],
+    "alias_list_en": ["Emend"]
+  },
+  {
+    "label_uk": "Вемурафеніб",
+    "label_ru": "Вемурафениб",
+    "label_gr": "Vemurafib",
+    "label_en": "Vemurafenib",
+    "alias_list_uk": ["Зелбораф"],
+    "alias_list_ru": ["Зелбораф"],
+    "alias_list_gr": ["Zelboraf"],
+    "alias_list_en": ["Zelboraf"]
+  },
+  {
+    "label_uk": "Сосеталін",
+    "label_ru": "Сосеталин",
+    "label_gr": "Sosetaline",
+    "label_en": "Sosetalin",
+    "alias_list_uk": ["Сосепто"],
+    "alias_list_ru": ["Сосепто"],
+    "alias_list_gr": ["Sosept"],
+    "alias_list_en": ["Sosept"]
+  },
+  {
+    "label_uk": "Мідодронат",
+    "label_ru": "Мидодронат",
+    "label_gr": "Midodrine",
+    "label_en": "Midodrine",
+    "alias_list_uk": ["Гідрекс"],
+    "alias_list_ru": ["Гидрекс"],
+    "alias_list_gr": ["ProAmatine"],
+    "alias_list_en": ["ProAmatine"]
+  },
+  {
+    "label_uk": "Дексмедетомідин",
+    "label_ru": "Дексмедетомидин",
+    "label_gr": "Dexmedetomidine",
+    "label_en": "Dexmedetomidine",
+    "alias_list_uk": ["Промедол"],
+    "alias_list_ru": ["Промедол"],
+    "alias_list_gr": ["Precedex"],
+    "alias_list_en": ["Precedex"]
+  },
+  {
+    "label_uk": "Топіромати",
+    "label_ru": "Топирамат",
+    "label_gr": "Topiramate",
+    "label_en": "Topiramate",
+    "alias_list_uk": ["Топамакс"],
+    "alias_list_ru": ["Топамакс"],
+    "alias_list_gr": ["Topamax"],
+    "alias_list_en": ["Topamax"]
+  },
+  {
+    "label_uk": "Гемфіброзил",
+    "label_ru": "Гемфиброзил",
+    "label_gr": "Gemfibrozil",
+    "label_en": "Gemfibrozil",
+    "alias_list_uk": ["Лопід"],
+    "alias_list_ru": ["Лопид"],
+    "alias_list_gr": ["Lopid"],
+    "alias_list_en": ["Lopid"]
+  },
+  {
+    "label_uk": "Флікаїнід",
+    "label_ru": "Флекаинид",
+    "label_gr": "Flecainide",
+    "label_en": "Flecainide",
+    "alias_list_uk": ["Тапок"],
+    "alias_list_ru": ["Тапок"],
+    "alias_list_gr": ["Tambocor"],
+    "alias_list_en": ["Tambocor"]
+  },
+  {
+    "label_uk": "Бромкриптин",
+    "label_ru": "Бромокриптин",
+    "label_gr": "Bromocriptine",
+    "label_en": "Bromocriptine",
+    "alias_list_uk": ["Парлодел"],
+    "alias_list_ru": ["Парлодел"],
+    "alias_list_gr": ["Parlodel"],
+    "alias_list_en": ["Parlodel"]
+  },
+  {
+    "label_uk": "Норфлоксацин",
+    "label_ru": "Норфлоксацин",
+    "label_gr": "Norfloxacine",
+    "label_en": "Norfloxacin",
+    "alias_list_uk": ["Норфлекс"],
+    "alias_list_ru": ["Норфлекс"],
+    "alias_list_gr": ["Norfloxacin"],
+    "alias_list_en": ["Noroxin"]
+  },
+  {
+    "label_uk": "Циклофосфамід",
+    "label_ru": "Циклофосфамид",
+    "label_gr": "Cyclophosphamide",
+    "label_en": "Cyclophosphamide",
+    "alias_list_uk": ["Циклофосфамід"],
+    "alias_list_ru": ["Циклофосфамид"],
+    "alias_list_gr": ["Endoxan"],
+    "alias_list_en": ["Cytoxan"]
+  },
+  {
+    "label_uk": "Амітриптилін",
+    "label_ru": "Амитриптилин",
+    "label_gr": "Amitriptyline",
+    "label_en": "Amitriptyline",
+    "alias_list_uk": ["Елапріл"],
+    "alias_list_ru": ["Элаприл"],
+    "alias_list_gr": ["Elavil"],
+    "alias_list_en": ["Elavil"]
+  },
+  {
+    "label_uk": "Тикагрелор",
+    "label_ru": "Тикагрелор",
+    "label_gr": "Ticagrélor",
+    "label_en": "Ticagrelor",
+    "alias_list_uk": ["Браво"],
+    "alias_list_ru": ["Браво"],
+    "alias_list_gr": ["Brilinta"],
+    "alias_list_en": ["Brilinta"]
+  },
+  {
+    "label_uk": "Клопідогрел",
+    "label_ru": "Клопидогрел",
+    "label_gr": "Clopidogrel",
+    "label_en": "Clopidogrel",
+    "alias_list_uk": ["Плавікс"],
+    "alias_list_ru": ["Плавикс"],
+    "alias_list_gr": ["Plavix"],
+    "alias_list_en": ["Plavix"]
+  },
+  {
+    "label_uk": "Ретапариб",
+    "label_ru": "Ретапариб",
+    "label_gr": "Rucaparib",
+    "label_en": "Rucaparib",
+    "alias_list_uk": ["Руцапариб"],
+    "alias_list_ru": ["Руцапариб"],
+    "alias_list_gr": ["Rubraca"],
+    "alias_list_en": ["Rubraca"]
+  },
+  {
+    "label_uk": "Олапариб",
+    "label_ru": "Олапариб",
+    "label_gr": "Olaparib",
+    "label_en": "Olaparib",
+    "alias_list_uk": ["Лінпарза"],
+    "alias_list_ru": ["Линпарза"],
+    "alias_list_gr": ["Lynparza"],
+    "alias_list_en": ["Lynparza"]
+  },
+  {
+    "label_uk": "Летрозол",
+    "label_ru": "Летрозол",
+    "label_gr": "Letrozole",
+    "label_en": "Letrozole",
+    "alias_list_uk": ["Фемара"],
+    "alias_list_ru": ["Фемара"],
+    "alias_list_gr": ["Femara"],
+    "alias_list_en": ["Femara"]
+  },
+  {
+    "label_uk": "Аромазин",
+    "label_ru": "Аромазин",
+    "label_gr": "Exemestane",
+    "label_en": "Exemestane",
+    "alias_list_uk": ["Аромазин"],
+    "alias_list_ru": ["Аромазин"],
+    "alias_list_gr": ["Aromasin"],
+    "alias_list_en": ["Aromasin"]
+  },
+  {
+    "label_uk": "Ганцернобол",
+    "label_ru": "Ганцернобол",
+    "label_gr": "Ganciclovir",
+    "label_en": "Ganciclovir",
+    "alias_list_uk": ["Цитомегаловірус"],
+    "alias_list_ru": ["Цитомегаловирус"],
+    "alias_list_gr": ["Cytovene"],
+    "alias_list_en": ["Cytovene"]
+  },
+  {
+    "label_uk": "Ацикловір",
+    "label_ru": "Ацикловир",
+    "label_gr": "Acyclovir",
+    "label_en": "Acyclovir",
+    "alias_list_uk": ["Зовіракс"],
+    "alias_list_ru": ["Зовиракс"],
+    "alias_list_gr": ["Zovirax"],
+    "alias_list_en": ["Zovirax"]
+  },
+  {
+    "label_uk": "Ацеклофенак",
+    "label_ru": "Ацеклофенак",
+    "label_gr": "Acéclofénac",
+    "label_en": "Aceclofenac",
+    "alias_list_uk": ["Аертал"],
+    "alias_list_ru": ["Аэртал"],
+    "alias_list_gr": ["Cartrex"],
+    "alias_list_en": ["Airtal"]
+  },
+  {
+    "label_uk": "Алфузозин",
+    "label_ru": "Алфузозин",
+    "label_gr": "Alfuzosine",
+    "label_en": "Alfuzosin",
+    "alias_list_uk": ["Дальфаз"],
+    "alias_list_ru": ["Дальфаз"],
+    "alias_list_gr": ["Xatral"],
+    "alias_list_en": ["Uroxatral"]
+  },
+  {
+    "label_uk": "Амантадин",
+    "label_ru": "Амантадин",
+    "label_gr": "Amantadine",
+    "label_en": "Amantadine",
+    "alias_list_uk": ["Мідантан"],
+    "alias_list_ru": ["Мидантан"],
+    "alias_list_gr": ["Mantadix"],
+    "alias_list_en": ["Symmetrel"]
+  },
+  {
+    "label_uk": "Аміодарон",
+    "label_ru": "Амиодарон",
+    "label_gr": "Amiodarone",
+    "label_en": "Amiodarone",
+    "alias_list_uk": ["Кордарон"],
+    "alias_list_ru": ["Кордарон"],
+    "alias_list_gr": ["Cordarone"],
+    "alias_list_en": ["Cordarone", "Pacerone"]
+  },
+  {
+    "label_uk": "Ампіцилін",
+    "label_ru": "Ампициллин",
+    "label_gr": "Ampicilline",
+    "label_en": "Ampicillin",
+    "alias_list_uk": ["Пенбрітін"],
+    "alias_list_ru": ["Пенбритин"],
+    "alias_list_gr": ["Penbritin"],
+    "alias_list_en": ["Principen"]
+  },
+  {
+    "label_uk": "Анальгін",
+    "label_ru": "Анальгин",
+    "label_gr": "Métamizole",
+    "label_en": "Metamizole",
+    "alias_list_uk": ["Баралгін"],
+    "alias_list_ru": ["Баралгин"],
+    "alias_list_gr": ["Nolotil"],
+    "alias_list_en": ["Dipyrone", "Novalgin"]
+  },
+  {
+    "label_uk": "Азаметоній",
+    "label_ru": "Азаметоний",
+    "label_gr": "Hexaméthonium",
+    "label_en": "Hexamethonium",
+    "alias_list_uk": ["Пентамін"],
+    "alias_list_ru": ["Пентамин"],
+    "alias_list_gr": ["Pentacarinat"],
+    "alias_list_en": ["Pentolinium"]
+  },
+  {
+    "label_uk": "Баклофен",
+    "label_ru": "Баклофен",
+    "label_gr": "Baclofène",
+    "label_en": "Baclofen",
+    "alias_list_uk": ["Ліоресал"],
+    "alias_list_ru": ["Лиоресал"],
+    "alias_list_gr": ["Lioresal"],
+    "alias_list_en": ["Lioresal", "Gablofen"]
+  },
+  {
+    "label_uk": "Бетагістин",
+    "label_ru": "Бетагистин",
+    "label_gr": "Bétahistine",
+    "label_en": "Betahistine",
+    "alias_list_uk": ["Бетасерк"],
+    "alias_list_ru": ["Бетасерк"],
+    "alias_list_gr": ["Betaserc"],
+    "alias_list_en": ["Serc", "Betaserc"]
+  },
+  {
+    "label_uk": "Біфоназол",
+    "label_ru": "Бифоназол",
+    "label_gr": "Bifonazole",
+    "label_en": "Bifonazole",
+    "alias_list_uk": ["Мікоспор"],
+    "alias_list_ru": ["Микоспор"],
+    "alias_list_gr": ["Mycospor"],
+    "alias_list_en": ["Canespor"]
+  },
+  {
+    "label_uk": "Біотин",
+    "label_ru": "Биотин",
+    "label_gr": "Biotine",
+    "label_en": "Biotin",
+    "alias_list_uk": ["Вітамін H"],
+    "alias_list_ru": ["Витамин H"],
+    "alias_list_gr": ["Vitamine B8"],
+    "alias_list_en": ["Vitamin B7"]
+  },
+  {
+    "label_uk": "Вориконазол",
+    "label_ru": "Вориконазол",
+    "label_gr": "Voriconazole",
+    "label_en": "Voriconazole",
+    "alias_list_uk": ["Віфенд"],
+    "alias_list_ru": ["Вифенд"],
+    "alias_list_gr": ["Vfend"],
+    "alias_list_en": ["Vfend"]
+  },
+  {
+    "label_uk": "Гатифлоксацин",
+    "label_ru": "Гатифлоксацин",
+    "label_gr": "Gatifloxacine",
+    "label_en": "Gatifloxacin",
+    "alias_list_uk": ["Тевафлокс"],
+    "alias_list_ru": ["Тевафлокс"],
+    "alias_list_gr": ["Zymar"],
+    "alias_list_en": ["Tequin", "Zymar"]
+  },
+  {
+    "label_uk": "Гідрокортизон",
+    "label_ru": "Гидрокортизон",
+    "label_gr": "Hydrocortisone",
+    "label_en": "Hydrocortisone",
+    "alias_list_uk": ["Латикорт"],
+    "alias_list_ru": ["Латикорт"],
+    "alias_list_gr": ["Cortef"],
+    "alias_list_en": ["Cortef", "Solu-Cortef"]
+  },
+  {
+    "label_uk": "Гліклазид",
+    "label_ru": "Гликлазид",
+    "label_gr": "Gliclazide",
+    "label_en": "Gliclazide",
+    "alias_list_uk": ["Діабетон"],
+    "alias_list_ru": ["Диабетон"],
+    "alias_list_gr": ["Diamicron"],
+    "alias_list_en": ["Diamicron"]
+  },
+  {
+    "label_uk": "Дапсон",
+    "label_ru": "Дапсон",
+    "label_gr": "Dapsone",
+    "label_en": "Dapsone",
+    "alias_list_uk": ["Авлосульфон"],
+    "alias_list_ru": ["Авлосульфон"],
+    "alias_list_gr": ["Disulone"],
+    "alias_list_en": ["Aczone"]
+  },
+  {
+    "label_uk": "Диклоберл",
+    "label_ru": "Диклоберл",
+    "label_gr": "Diclofénac",
+    "label_en": "Diclofenac",
+    "alias_list_uk": ["Вольтарен"],
+    "alias_list_ru": ["Вольтарен"],
+    "alias_list_gr": ["Voltarène"],
+    "alias_list_en": ["Voltaren"]
+  },
+  {
+    "label_uk": "Димедрол",
+    "label_ru": "Димедрол",
+    "label_gr": "Diphénhydramine",
+    "label_en": "Diphenhydramine",
+    "alias_list_uk": ["Бенадріл"],
+    "alias_list_ru": ["Бенадрил"],
+    "alias_list_gr": ["Nytol"],
+    "alias_list_en": ["Benadryl"]
+  },
+  {
+    "label_uk": "Доксорубіцин",
+    "label_ru": "Доксорубицин",
+    "label_gr": "Doxorubicine",
+    "label_en": "Doxorubicin",
+    "alias_list_uk": ["Адріаміцин"],
+    "alias_list_ru": ["Адриамицин"],
+    "alias_list_gr": ["Adriamycin"],
+    "alias_list_en": ["Adriamycin", "Doxil"]
+  },
+  {
+    "label_uk": "Ерготамін",
+    "label_ru": "Эрготамин",
+    "label_gr": "Ergotamine",
+    "label_en": "Ergotamine",
+    "alias_list_uk": ["Кафергот"],
+    "alias_list_ru": ["Кафергот"],
+    "alias_list_gr": ["Gynergène"],
+    "alias_list_en": ["Cafergot"]
+  },
+  {
+    "label_uk": "Ізосорбіду динітрат",
+    "label_ru": "Изосорбида динитрат",
+    "label_gr": "Dinitrate d'isosorbide",
+    "label_en": "Isosorbide dinitrate",
+    "alias_list_uk": ["Ізокет"],
+    "alias_list_ru": ["Изокет"],
+    "alias_list_gr": ["Risordan"],
+    "alias_list_en": ["Isordil", "Dilatrate"]
+  },
+  {
+    "label_uk": "Ізосорбіду мононітрат",
+    "label_ru": "Изосорбида мононитрат",
+    "label_gr": "Mononitrate d'isosorbide",
+    "label_en": "Isosorbide mononitrate",
+    "alias_list_uk": ["Моночинкве"],
+    "alias_list_ru": ["Моночинкве"],
+    "alias_list_gr": ["Monicor"],
+    "alias_list_en": ["Imdur", "Monoket"]
+  },
+  {
+    "label_uk": "Ізотретиноїн",
+    "label_ru": "Изотретиноин",
+    "label_gr": "Isotrétinoïne",
+    "label_en": "Isotretinoin",
+    "alias_list_uk": ["Роаккутан"],
+    "alias_list_ru": ["Роаккутан"],
+    "alias_list_gr": ["Curacné"],
+    "alias_list_en": ["Accutane", "Claravis"]
+  },
+  {
+    "label_uk": "Кетамін",
+    "label_ru": "Кетамин",
+    "label_gr": "Kétamine",
+    "label_en": "Ketamine",
+    "alias_list_uk": ["Кеталар"],
+    "alias_list_ru": ["Кеталар"],
+    "alias_list_gr": ["Ketalar"],
+    "alias_list_en": ["Ketalar"]
+  },
+  {
+    "label_uk": "Кетотифен",
+    "label_ru": "Кетотифен",
+    "label_gr": "Kétotifène",
+    "label_en": "Ketotifen",
+    "alias_list_uk": ["Задітен"],
+    "alias_list_ru": ["Задитен"],
+    "alias_list_gr": ["Zaditen"],
+    "alias_list_en": ["Zaditor", "Alaway"]
+  },
+  {
+    "label_uk": "Левамізол",
+    "label_ru": "Левамизол",
+    "label_gr": "Lévamisole",
+    "label_en": "Levamisole",
+    "alias_list_uk": ["Декарис"],
+    "alias_list_ru": ["Декарис"],
+    "alias_list_gr": ["Décaris"],
+    "alias_list_en": ["Ergamisol"]
+  },
+  {
+    "label_uk": "Ловастатин",
+    "label_ru": "Ловастатин",
+    "label_gr": "Lovastatine",
+    "label_en": "Lovastatin",
+    "alias_list_uk": ["Мевакор"],
+    "alias_list_ru": ["Мевакор"],
+    "alias_list_gr": ["Lovastatine"],
+    "alias_list_en": ["Mevacor", "Altoprev"]
+  },
+  {
+    "label_uk": "Меклофенамова кислота",
+    "label_ru": "Меклофенамовая кислота",
+    "label_gr": "Acide méclofénamique",
+    "label_en": "Meclofenamic acid",
+    "alias_list_uk": ["Меклофен"],
+    "alias_list_ru": ["Меклофен"],
+    "alias_list_gr": ["Meclomen"],
+    "alias_list_en": ["Meclomen"]
+  },
+  {
+    "label_uk": "Метилурацил",
+    "label_ru": "Метилурацил",
+    "label_gr": "Méthyluracile",
+    "label_en": "Methyluracil",
+    "alias_list_uk": ["Стимул"],
+    "alias_list_ru": ["Стимул"],
+    "alias_list_gr": ["Methyluracil"],
+    "alias_list_en": ["Methyluracil"]
+  },
+  {
+    "label_uk": "Ніацин",
+    "label_ru": "Ниацин",
+    "label_gr": "Niacine",
+    "label_en": "Niacin",
+    "alias_list_uk": ["Вітамін B3"],
+    "alias_list_ru": ["Витамин B3"],
+    "alias_list_gr": ["Vitamine B3"],
+    "alias_list_en": ["Vitamin B3", "Niaspan"]
+  },
+  {
+    "label_uk": "Ніфуроксазид",
+    "label_ru": "Нифуроксазид",
+    "label_gr": "Nifuroxazide",
+    "label_en": "Nifuroxazide",
+    "alias_list_uk": ["Ерсефурил"],
+    "alias_list_ru": ["Эрсефурил"],
+    "alias_list_gr": ["Ercefuryl"],
+    "alias_list_en": ["Antinal"]
+  },
+  {
+    "label_uk": "Нітрофурал",
+    "label_ru": "Нитрофурал",
+    "label_gr": "Nitrofural",
+    "label_en": "Nitrofurazone",
+    "alias_list_uk": ["Фурацилін"],
+    "alias_list_ru": ["Фурацилин"],
+    "alias_list_gr": ["Furacine"],
+    "alias_list_en": ["Furacin"]
+  },
+  {
+    "label_uk": "Пентоксифілін",
+    "label_ru": "Пентоксифиллин",
+    "label_gr": "Pentoxifylline",
+    "label_en": "Pentoxifylline",
+    "alias_list_uk": ["Трентал"],
+    "alias_list_ru": ["Трентал"],
+    "alias_list_gr": ["Torental"],
+    "alias_list_en": ["Trental"]
+  },
+  {
+    "label_uk": "Пірацетам",
+    "label_ru": "Пирацетам",
+    "label_gr": "Piracétam",
+    "label_en": "Piracetam",
+    "alias_list_uk": ["Ноотропіл"],
+    "alias_list_ru": ["Ноотропил"],
+    "alias_list_gr": ["Nootropyl"],
+    "alias_list_en": ["Nootropil"]
+  },
+  {
+    "label_uk": "Силімарин",
+    "label_ru": "Силимарин",
+    "label_gr": "Silymarine",
+    "label_en": "Silymarin",
+    "alias_list_uk": ["Карсил"],
+    "alias_list_ru": ["Карсил"],
+    "alias_list_gr": ["Legalon"],
+    "alias_list_en": ["Milk Thistle", "Legalon"]
+  },
+  {
+    "label_uk": "Сиролімус",
+    "label_ru": "Сиролимус",
+    "label_gr": "Sirolimus",
+    "label_en": "Sirolimus",
+    "alias_list_uk": ["Рапамун"],
+    "alias_list_ru": ["Рапамун"],
+    "alias_list_gr": ["Rapamune"],
+    "alias_list_en": ["Rapamune"]
+  },
+  {
+    "label_uk": "Субалдол",
+    "label_ru": "Субалдол",
+    "label_gr": "Subaldol",
+    "label_en": "Subaldol",
+    "alias_list_uk": ["Трилептал"],
+    "alias_list_ru": ["Трилептал"],
+    "alias_list_gr": ["Trileptal"],
+    "alias_list_en": ["Trileptal"]
+  },
+  {
+    "label_uk": "Тавегіл",
+    "label_ru": "Тавегил",
+    "label_gr": "Tavégyl",
+    "label_en": "Clemastine",
+    "alias_list_uk": ["Тавегіл"],
+    "alias_list_ru": ["Тавегил"],
+    "alias_list_gr": ["Tavégyl"],
+    "alias_list_en": ["Tavist"]
+  },
+  {
+    "label_uk": "Феназепам",
+    "label_ru": "Феназепам",
+    "label_gr": "Phénazépam",
+    "label_en": "Phenazepam",
+    "alias_list_uk": ["Фензепам"],
+    "alias_list_ru": ["Фензепам"],
+    "alias_list_gr": ["Phénazépam"],
+    "alias_list_en": ["Phenazepam"]
+  },
+  {
+    "label_uk": "Фенілефрин",
+    "label_ru": "Фенилэфрин",
+    "label_gr": "Phényléphrine",
+    "label_en": "Phenylephrine",
+    "alias_list_uk": ["Неосінефрин"],
+    "alias_list_ru": ["Неосинефрин"],
+    "alias_list_gr": ["Néo-Synéphrine"],
+    "alias_list_en": ["Neo-Synephrine"]
+  },
+  {
+    "label_uk": "Цефтріаксон",
+    "label_ru": "Цефтриаксон",
+    "label_gr": "Ceftriaxone",
+    "label_en": "Ceftriaxone",
+    "alias_list_uk": ["Роцефін"],
+    "alias_list_ru": ["Роцефин"],
+    "alias_list_gr": ["Rocéphine"],
+    "alias_list_en": ["Rocephin"]
+  },
+  {
+    "label_uk": "Цефуроксим",
+    "label_ru": "Цефуроксим",
+    "label_gr": "Céfuroxime",
+    "label_en": "Cefuroxime",
+    "alias_list_uk": ["Зінацеф"],
+    "alias_list_ru": ["Зинацеф"],
+    "alias_list_gr": ["Zinacef"],
+    "alias_list_en": ["Ceftin", "Zinacef"]
+  },
+  {
+    "label_uk": "Героїн",
+    "label_ru": "Героин",
+    "label_gr": "Héroïne",
+    "label_en": "Heroin",
+    "alias_list_uk": ["Героїн"],
+    "alias_list_ru": ["Геройн"],
+    "alias_list_gr": ["Héroïne"],
+    "alias_list_en": ["H"]
+  },
+  {
+    "label_uk": "Кокаїн",
+    "label_ru": "Кокаин",
+    "label_gr": "Cocaïne",
+    "label_en": "Cocaine",
+    "alias_list_uk": ["Кока"],
+    "alias_list_ru": ["Кока"],
+    "alias_list_gr": ["Coke"],
+    "alias_list_en": ["Coke"]
+  },
+  {
+    "label_uk": "Метамфетамін",
+    "label_ru": "Метамфетамин",
+    "label_gr": "Méthamphétamine",
+    "label_en": "Methamphetamine",
+    "alias_list_uk": ["Мет", "Кристал"],
+    "alias_list_ru": ["Мет", "Кристал"],
+    "alias_list_gr": ["Crystal"],
+    "alias_list_en": ["Crystal"]
+  },
+  {
+    "label_uk": "Екстазі",
+    "label_ru": "Экстази",
+    "label_gr": "Ecstasy",
+    "label_en": "Ecstasy",
+    "alias_list_uk": ["МДМА"],
+    "alias_list_ru": ["МДМА"],
+    "alias_list_gr": ["MDMA"],
+    "alias_list_en": ["MDMA"]
+  },
+  {
+    "label_uk": "ЛСД",
+    "label_ru": "ЛСД",
+    "label_gr": "LSD",
+    "label_en": "LSD",
+    "alias_list_uk": ["Сірий"],
+    "alias_list_ru": ["Серая"],
+    "alias_list_gr": ["Acide"],
+    "alias_list_en": ["Acid"]
+  },
+  {
+    "label_uk": "Псилоцибін",
+    "label_ru": "Псилоцибин",
+    "label_gr": "Psilocybine",
+    "label_en": "Psilocybin",
+    "alias_list_uk": ["Гриби"],
+    "alias_list_ru": ["Грибы"],
+    "alias_list_gr": ["Champignons magiques"],
+    "alias_list_en": ["Magic Mushrooms"]
+  },
+  {
+    "label_uk": "ТГК (Тетрагідроканабінол)",
+    "label_ru": "ТГК (Тетрагидроканнабинол)",
+    "label_gr": "THC (Tétrahydrocannabinol)",
+    "label_en": "THC (Tetrahydrocannabinol)",
+    "alias_list_uk": ["Марихуана", "Куріння"],
+    "alias_list_ru": ["Марихуана", "Курение"],
+    "alias_list_gr": ["Marihuana", "Fumer"],
+    "alias_list_en": ["Marijuana", "Weed"]
+  },
+  {
+    "label_uk": "MDMA",
+    "label_ru": "MDMA",
+    "label_gr": "MDMA",
+    "label_en": "MDMA",
+    "alias_list_uk": ["Екстазі", "Молекула"],
+    "alias_list_ru": ["Экстази", "Молекула"],
+    "alias_list_gr": ["Ecstasy", "Molecule"],
+    "alias_list_en": ["Ecstasy", "Molly"]
+  },
+  {
+    "label_uk": "Сальвія",
+    "label_ru": "Сальвия",
+    "label_gr": "Sauge",
+    "label_en": "Salvia",
+    "alias_list_uk": ["Сальвія дивовижна"],
+    "alias_list_ru": ["Сальвия необыкновенная"],
+    "alias_list_gr": ["Sauge divinorum"],
+    "alias_list_en": ["Diviner's Sage"]
+  },
+  {
+    "label_uk": "Фенциклідин",
+    "label_ru": "Фенциклидин",
+    "label_gr": "Phencyclidine",
+    "label_en": "Phencyclidine",
+    "alias_list_uk": ["PCP"],
+    "alias_list_ru": ["ПЦП"],
+    "alias_list_gr": ["PCP"],
+    "alias_list_en": ["PCP"]
+  },
+  {
+    "label_uk": "Субутекс",
+    "label_ru": "Субутекс",
+    "label_gr": "Subutex",
+    "label_en": "Subutex",
+    "alias_list_uk": ["Бупренорфін"],
+    "alias_list_ru": ["Бупренорфин"],
+    "alias_list_gr": ["Buprénorphine"],
+    "alias_list_en": ["Buprenorphine"]
+  },
+  {
+    "label_uk": "Дофетилід",
+    "label_ru": "Дофетилид",
+    "label_gr": "Dofétilide",
+    "label_en": "Dofetilide",
+    "alias_list_uk": ["Тікониді"],
+    "alias_list_ru": ["Тиконид"],
+    "alias_list_gr": ["Tikosyn"],
+    "alias_list_en": ["Tikosyn"]
+  },
+  {
+    "label_uk": "Циклобензапрін",
+    "label_ru": "Циклобензаприн",
+    "label_gr": "Cyclobenzaprine",
+    "label_en": "Cyclobenzaprine",
+    "alias_list_uk": ["Мускулекс"],
+    "alias_list_ru": ["Мускулекс"],
+    "alias_list_gr": ["Flexeril"],
+    "alias_list_en": ["Flexeril"]
+  },
+  {
+    "label_uk": "Роксагліфлозин",
+    "label_ru": "Роксаглифлозин",
+    "label_gr": "Roxagliflozine",
+    "label_en": "Roxagliflozin",
+    "alias_list_uk": ["Діаглік"],
+    "alias_list_ru": ["Діаглік"],
+    "alias_list_gr": ["Farxiga"],
+    "alias_list_en": ["Farxiga"]
+  },
+  {
+    "label_uk": "Кальцитонін",
+    "label_ru": "Кальцитонин",
+    "label_gr": "Calcitonine",
+    "label_en": "Calcitonin",
+    "alias_list_uk": ["Міакальцік"],
+    "alias_list_ru": ["Миакальцик"],
+    "alias_list_gr": ["Miacalcin"],
+    "alias_list_en": ["Miacalcin"]
+  },
+  {
+    "label_uk": "Сетиризин",
+    "label_ru": "Сетиризин",
+    "label_gr": "Cétirizine",
+    "label_en": "Cetirizine",
+    "alias_list_uk": ["Зиртек"],
+    "alias_list_ru": ["Зиртек"],
+    "alias_list_gr": ["Zyrtec"],
+    "alias_list_en": ["Zyrtec"]
+  },
+  {
+    "label_uk": "Епінефрин",
+    "label_ru": "Эпинефрин",
+    "label_gr": "Épinéphrine",
+    "label_en": "Epinephrine",
+    "alias_list_uk": ["Адреналін"],
+    "alias_list_ru": ["Адреналин"],
+    "alias_list_gr": ["Adrenaline"],
+    "alias_list_en": ["Adrenaline"]
+  },
+  {
+    "label_uk": "Офлоксацин",
+    "label_ru": "Офлоксацин",
+    "label_gr": "Ofloxacine",
+    "label_en": "Ofloxacin",
+    "alias_list_uk": ["Офлокс"],
+    "alias_list_ru": ["Офлокс"],
+    "alias_list_gr": ["Floxin"],
+    "alias_list_en": ["Floxin"]
+  },
+  {
+    "label_uk": "Бенадрил",
+    "label_ru": "Бенадрил",
+    "label_gr": "Bénadryl",
+    "label_en": "Benadryl",
+    "alias_list_uk": ["Дипенгідрамін"],
+    "alias_list_ru": ["Дипенгидрамин"],
+    "alias_list_gr": ["Diphenhydramine"],
+    "alias_list_en": ["Diphenhydramine"]
+  },
+  {
+    "label_uk": "Клофелін",
+    "label_ru": "Клофелин",
+    "label_gr": "Clonidine",
+    "label_en": "Clonidine",
+    "alias_list_uk": ["Клофелін"],
+    "alias_list_ru": ["Клофелин"],
+    "alias_list_gr": ["Catapres"],
+    "alias_list_en": ["Catapres"]
+  },
+  {
+    "label_uk": "Діазепам",
+    "label_ru": "Диаzepам",
+    "label_gr": "Diazépam",
+    "label_en": "Diazepam",
+    "alias_list_uk": ["Валій"],
+    "alias_list_ru": ["Валиум"],
+    "alias_list_gr": ["Valium"],
+    "alias_list_en": ["Valium"]
+  },
+  {
+    "label_uk": "Топотекан",
+    "label_ru": "Топотекан",
+    "label_gr": "Topotécan",
+    "label_en": "Topotecan",
+    "alias_list_uk": ["Хайклофос"],
+    "alias_list_ru": ["Хайклофос"],
+    "alias_list_gr": ["Hycamtin"],
+    "alias_list_en": ["Hycamtin"]
+  },
+  {
+    "label_uk": "Фенитоїн",
+    "label_ru": "Фенитоин",
+    "label_gr": "Phénytoïne",
+    "label_en": "Phenytoin",
+    "alias_list_uk": ["Дилантін"],
+    "alias_list_ru": ["Дилантин"],
+    "alias_list_gr": ["Dilantin"],
+    "alias_list_en": ["Dilantin"]
+  },
+  {
+    "label_uk": "Ретиноєва кислота",
+    "label_ru": "Ретиноевa кислота",
+    "label_gr": "Acide rétinoïque",
+    "label_en": "Retinoic acid",
+    "alias_list_uk": ["Тazorac"],
+    "alias_list_ru": ["Тазарот"],
+    "alias_list_gr": ["Tazorac"],
+    "alias_list_en": ["Tazorac"]
+  },
+  {
+    "label_uk": "Вальпроат натрію",
+    "label_ru": "Вальпроат натрия",
+    "label_gr": "Valproate de sodium",
+    "label_en": "Sodium valproate",
+    "alias_list_uk": ["Депакін"],
+    "alias_list_ru": ["Депакин"],
+    "alias_list_gr": ["Dépakine"],
+    "alias_list_en": ["Depacon"]
+  },
+  {
+    "label_uk": "Токсоплазмоз",
+    "label_ru": "Токсоплазмоз",
+    "label_gr": "Toxoplasmose",
+    "label_en": "Toxoplasmosis",
+    "alias_list_uk": ["Токсоплазма"],
+    "alias_list_ru": ["Токсоплазма"],
+    "alias_list_gr": ["Toxoplasma"],
+    "alias_list_en": ["Toxoplasma"]
+  },
+  {
+    "label_uk": "Бендамустин",
+    "label_ru": "Бендамустин",
+    "label_gr": "Bendamustine",
+    "label_en": "Bendamustine",
+    "alias_list_uk": ["Таваліз", "Бендац"],
+    "alias_list_ru": ["Таваліз", "Бендац"],
+    "alias_list_gr": ["Treanda"],
+    "alias_list_en": ["Treanda"]
+  },
+  {
+    "label_uk": "Ломустин",
+    "label_ru": "Ломустин",
+    "label_gr": "Lomustine",
+    "label_en": "Lomustine",
+    "alias_list_uk": ["Ломустин"],
+    "alias_list_ru": ["Ломустин"],
+    "alias_list_gr": ["CeeNU"],
+    "alias_list_en": ["CeeNU"]
+  },
+  {
+    "label_uk": "Іпратропій",
+    "label_ru": "Ипратропий",
+    "label_gr": "Ipratropium",
+    "label_en": "Ipratropium",
+    "alias_list_uk": ["Атровент"],
+    "alias_list_ru": ["Атровент"],
+    "alias_list_gr": ["Atrovent"],
+    "alias_list_en": ["Atrovent"]
+  },
+  {
+    "label_uk": "Рамізек",
+    "label_ru": "Рамизек",
+    "label_gr": "Ramipril",
+    "label_en": "Ramipril",
+    "alias_list_uk": ["Прилесек"],
+    "alias_list_ru": ["Прилесек"],
+    "alias_list_gr": ["Tritace"],
+    "alias_list_en": ["Altace"]
+  },
+  {
+    "label_uk": "Терафлю",
+    "label_ru": "Терафлю",
+    "label_gr": "Theraflu",
+    "label_en": "Theraflu",
+    "alias_list_uk": ["Терафлю"],
+    "alias_list_ru": ["Терафлю"],
+    "alias_list_gr": ["Theraflu"],
+    "alias_list_en": ["Theraflu"]
+  },
+  {
+    "label_uk": "Фенілпропаноламін",
+    "label_ru": "Фенилпропаноламин",
+    "label_gr": "Phénylpropanolamine",
+    "label_en": "Phenylpropanolamine",
+    "alias_list_uk": ["Ринолар"],
+    "alias_list_ru": ["Ринолар"],
+    "alias_list_gr": ["Phenegran"],
+    "alias_list_en": ["Phenegran"]
+  },
+  {
+    "label_uk": "Ацетазоламід",
+    "label_ru": "Ацетазоламид",
+    "label_gr": "Acétazolamide",
+    "label_en": "Acetazolamide",
+    "alias_list_uk": ["Діамокс"],
+    "alias_list_ru": ["Диамокс"],
+    "alias_list_gr": ["Diamox"],
+    "alias_list_en": ["Diamox"]
+  },
+  {
+    "label_uk": "Тиогамма",
+    "label_ru": "Тиогамма",
+    "label_gr": "Thiogamma",
+    "label_en": "Thiogamma",
+    "alias_list_uk": ["Тиогамма"],
+    "alias_list_ru": ["Тиогамма"],
+    "alias_list_gr": ["Thiogamma"],
+    "alias_list_en": ["Thiogamma"]
+  },
+  {
+    "label_uk": "Селективні інгібітори зворотного захоплення серотоніну",
+    "label_ru": "Селективные ингибиторы обратного захвата серотонина",
+    "label_gr": "Inhibiteurs sélectifs de la recapture de la sérotonine",
+    "label_en": "Selective Serotonin Reuptake Inhibitors",
+    "alias_list_uk": ["Флуоксетин"],
+    "alias_list_ru": ["Флуоксетин"],
+    "alias_list_gr": ["Fluoxétine"],
+    "alias_list_en": ["Fluoxetine"]
+  },
+  {
+    "label_uk": "Мепробамат",
+    "label_ru": "Мепробамат",
+    "label_gr": "Meprobamate",
+    "label_en": "Meprobamate",
+    "alias_list_uk": ["Мебікар"],
+    "alias_list_ru": ["Мебикар"],
+    "alias_list_gr": ["Mebicar"],
+    "alias_list_en": ["Mebicar"]
+  },
+  {
+    "label_uk": "Сертраліна",
+    "label_ru": "Сертралин",
+    "label_gr": "Sertraline",
+    "label_en": "Sertraline",
+    "alias_list_uk": ["Золофт"],
+    "alias_list_ru": ["Золофт"],
+    "alias_list_gr": ["Zoloft"],
+    "alias_list_en": ["Zoloft"]
+  },
+  {
+    "label_uk": "Амоксицилін/Клавуланова кислота",
+    "label_ru": "Амоксициллин/Клавулановая кислота",
+    "label_gr": "Amoxicilline/Acide clavulanique",
+    "label_en": "Amoxicillin/Clavulanic acid",
+    "alias_list_uk": ["Аугментин"],
+    "alias_list_ru": ["Аугментин"],
+    "alias_list_gr": ["Augmentin"],
+    "alias_list_en": ["Augmentin"]
+  },
+  {
+    "label_uk": "Мебеверин",
+    "label_ru": "Мебеверин",
+    "label_gr": "Mébévérine",
+    "label_en": "Mebeverine",
+    "alias_list_uk": ["Дюспаталін"],
+    "alias_list_ru": ["Дюспаталин"],
+    "alias_list_gr": ["Duspatalin"],
+    "alias_list_en": ["Colofac", "Duspatalin"]
+  },
+  {
+    "label_uk": "Гіосцину бутилбромід",
+    "label_ru": "Гиосцина бутилбромид",
+    "label_gr": "Butylhyoscine",
+    "label_en": "Hyoscine butylbromide",
+    "alias_list_uk": ["Бускопан"],
+    "alias_list_ru": ["Бускопан"],
+    "alias_list_gr": ["Buscopan"],
+    "alias_list_en": ["Buscopan"]
+  },
+  {
+    "label_uk": "Дротаверин",
+    "label_ru": "Дротаверин",
+    "label_gr": "Drotavérine",
+    "label_en": "Drotaverine",
+    "alias_list_uk": ["Но-шпа"],
+    "alias_list_ru": ["Но-шпа"],
+    "alias_list_gr": ["Spasfon"],
+    "alias_list_en": ["No-Spa"]
+  },
+  {
+    "label_uk": "Папаверин",
+    "label_ru": "Папаверин",
+    "label_gr": "Papavérine",
+    "label_en": "Papaverine",
+    "alias_list_uk": ["Папазол"],
+    "alias_list_ru": ["Папазол"],
+    "alias_list_gr": ["Loxen"],
+    "alias_list_en": ["Pavabid"]
+  },
+  {
+    "label_uk": "Карбоцистеїн",
+    "label_ru": "Карбоцистеин",
+    "label_gr": "Carbocistéine",
+    "label_en": "Carbocisteine",
+    "alias_list_uk": ["Мукодін"],
+    "alias_list_ru": ["Мукодин"],
+    "alias_list_gr": ["Bronchokod"],
+    "alias_list_en": ["Mucodyne"]
+  },
+  {
+    "label_uk": "Бромгексин",
+    "label_ru": "Бромгексин",
+    "label_gr": "Bromhexine",
+    "label_en": "Bromhexine",
+    "alias_list_uk": ["Солвін"],
+    "alias_list_ru": ["Сольвин"],
+    "alias_list_gr": ["Bisolvon"],
+    "alias_list_en": ["Bisolvon"]
+  },
+  {
+    "label_uk": "Ксилометазолін",
+    "label_ru": "Ксилометазолин",
+    "label_gr": "Xylométazoline",
+    "label_en": "Xylometazoline",
+    "alias_list_uk": ["Отривін"],
+    "alias_list_ru": ["Отривин"],
+    "alias_list_gr": ["Otrivine"],
+    "alias_list_en": ["Otrivin"]
+  },
+  {
+    "label_uk": "Оксиметазолін",
+    "label_ru": "Оксиметазолин",
+    "label_gr": "Oxymétazoline",
+    "label_en": "Oxymetazoline",
+    "alias_list_uk": ["Називін"],
+    "alias_list_ru": ["Називин"],
+    "alias_list_gr": ["Nesivine"],
+    "alias_list_en": ["Afrin", "Vicks Sinex"]
+  },
+  {
+    "label_uk": "Мометазон",
+    "label_ru": "Мометазон",
+    "label_gr": "Mométasone",
+    "label_en": "Mometasone",
+    "alias_list_uk": ["Назонекс"],
+    "alias_list_ru": ["Назонекс"],
+    "alias_list_gr": ["Nasonex"],
+    "alias_list_en": ["Nasonex"]
+  },
+  {
+    "label_uk": "Клобетазол",
+    "label_ru": "Клобетазол",
+    "label_gr": "Clobétasol",
+    "label_en": "Clobetasol",
+    "alias_list_uk": ["Дермовейт"],
+    "alias_list_ru": ["Дермовейт"],
+    "alias_list_gr": ["Dermoval"],
+    "alias_list_en": ["Temovate", "Dermovate"]
+  },
+  {
+    "label_uk": "Бетаметазон",
+    "label_ru": "Бетаметазон",
+    "label_gr": "Bétaméthasone",
+    "label_en": "Betamethasone",
+    "alias_list_uk": ["Целестодерм"],
+    "alias_list_ru": ["Целестодерм"],
+    "alias_list_gr": ["Diprosone"],
+    "alias_list_en": ["Celestone", "Diprolene"]
+  },
+  {
+    "label_uk": "Тербінафін",
+    "label_ru": "Тербинафин",
+    "label_gr": "Terbinafine",
+    "label_en": "Terbinafine",
+    "alias_list_uk": ["Ламізил"],
+    "alias_list_ru": ["Ламизил"],
+    "alias_list_gr": ["Lamisil"],
+    "alias_list_en": ["Lamisil"]
+  },
+  {
+    "label_uk": "Толнафтат",
+    "label_ru": "Толнафтат",
+    "label_gr": "Tolnaftate",
+    "label_en": "Tolnaftate",
+    "alias_list_uk": ["Тінактін"],
+    "alias_list_ru": ["Тинактин"],
+    "alias_list_gr": ["Mycoster"],
+    "alias_list_en": ["Tinactin"]
+  },
+  {
+    "label_uk": "Ністатин",
+    "label_ru": "Нистатин",
+    "label_gr": "Nystatine",
+    "label_en": "Nystatin",
+    "alias_list_uk": ["Мікостатин"],
+    "alias_list_ru": ["Микостатин"],
+    "alias_list_gr": ["Mycostatine"],
+    "alias_list_en": ["Mycostatin"]
+  },
+  {
+    "label_uk": "Міноциклін",
+    "label_ru": "Миноциклин",
+    "label_gr": "Minocycline",
+    "label_en": "Minocycline",
+    "alias_list_uk": ["Міноцин"],
+    "alias_list_ru": ["Миноцин"],
+    "alias_list_gr": ["Mynocine"],
+    "alias_list_en": ["Minocin", "Solodyn"]
+  },
+  {
+    "label_uk": "Лімециклін",
+    "label_ru": "Лимециклин",
+    "label_gr": "Lymécycline",
+    "label_en": "Lymecycline",
+    "alias_list_uk": ["Тетралісаль"],
+    "alias_list_ru": ["Тетралисаль"],
+    "alias_list_gr": ["Tetralysal"],
+    "alias_list_en": ["Tetralysal"]
+  },
+  {
+    "label_uk": "Бензоїл пероксид",
+    "label_ru": "Бензоил пероксид",
+    "label_gr": "Peroxyde de benzoyle",
+    "label_en": "Benzoyl peroxide",
+    "alias_list_uk": ["Базирон"],
+    "alias_list_ru": ["Базирон"],
+    "alias_list_gr": ["Cutacnyl"],
+    "alias_list_en": ["Benzac", "PanOxyl"]
+  },
+  {
+    "label_uk": "Третиноїн",
+    "label_ru": "Третиноин",
+    "label_gr": "Trétinoïne",
+    "label_en": "Tretinoin",
+    "alias_list_uk": ["Ретин-А"],
+    "alias_list_ru": ["Ретин-А"],
+    "alias_list_gr": ["Effederm"],
+    "alias_list_en": ["Retin-A", "Renova"]
+  },
+  {
+    "label_uk": "Інтерферон альфа",
+    "label_ru": "Интерферон альфа",
+    "label_gr": "Interféron alpha",
+    "label_en": "Interferon alpha",
+    "alias_list_uk": ["Роферон-А"],
+    "alias_list_ru": ["Роферон-А"],
+    "alias_list_gr": ["Roferon-A"],
+    "alias_list_en": ["Roferon-A", "Intron A"]
+  },
+  {
+    "label_uk": "Ламівудин",
+    "label_ru": "Ламивудин",
+    "label_gr": "Lamivudine",
+    "label_en": "Lamivudine",
+    "alias_list_uk": ["Епівір"],
+    "alias_list_ru": ["Эпивир"],
+    "alias_list_gr": ["Epivir"],
+    "alias_list_en": ["Epivir"]
+  },
+  {
+    "label_uk": "Зидовудин",
+    "label_ru": "Зидовудин",
+    "label_gr": "Zidovudine",
+    "label_en": "Zidovudine",
+    "alias_list_uk": ["Ретровір"],
+    "alias_list_ru": ["Ретровир"],
+    "alias_list_gr": ["Retrovir"],
+    "alias_list_en": ["Retrovir"]
+  },
+  {
+    "label_uk": "Ставудин",
+    "label_ru": "Ставудин",
+    "label_gr": "Stavudine",
+    "label_en": "Stavudine",
+    "alias_list_uk": ["Зерит"],
+    "alias_list_ru": ["Зерит"],
+    "alias_list_gr": ["Zerit"],
+    "alias_list_en": ["Zerit"]
+  },
+  {
+    "label_uk": "Диданозин",
+    "label_ru": "Диданозин",
+    "label_gr": "Didanosine",
+    "label_en": "Didanosine",
+    "alias_list_uk": ["Відекс"],
+    "alias_list_ru": ["Видекс"],
+    "alias_list_gr": ["Videx"],
+    "alias_list_en": ["Videx"]
+  },
+  {
+    "label_uk": "Ентекавір",
+    "label_ru": "Энтекавир",
+    "label_gr": "Entécavir",
+    "label_en": "Entecavir",
+    "alias_list_uk": ["Бараклюд"],
+    "alias_list_ru": ["Бараклюд"],
+    "alias_list_gr": ["Baraclude"],
+    "alias_list_en": ["Baraclude"]
+  },
+  {
+    "label_uk": "Тенофовір",
+    "label_ru": "Тенофовир",
+    "label_gr": "Ténofovir",
+    "label_en": "Tenofovir",
+    "alias_list_uk": ["Віреад"],
+    "alias_list_ru": ["Виреад"],
+    "alias_list_gr": ["Viread"],
+    "alias_list_en": ["Viread"]
+  },
+  {
+    "label_uk": "Софосбувір",
+    "label_ru": "Софосбувир",
+    "label_gr": "Sofosbuvir",
+    "label_en": "Sofosbuvir",
+    "alias_list_uk": ["Совальді"],
+    "alias_list_ru": ["Совалди"],
+    "alias_list_gr": ["Sovaldi"],
+    "alias_list_en": ["Sovaldi"]
+  },
+  {
+    "label_uk": "Ледіпасвір/Софосбувір",
+    "label_ru": "Ледипасвир/Софосбувир",
+    "label_gr": "Lédipasvir/Sofosbuvir",
+    "label_en": "Ledipasvir/Sofosbuvir",
+    "alias_list_uk": ["Харвоні"],
+    "alias_list_ru": ["Харвони"],
+    "alias_list_gr": ["Harvoni"],
+    "alias_list_en": ["Harvoni"]
+  },
+  {
+    "label_uk": "Велпатасвір/Софосбувір",
+    "label_ru": "Велпатасвир/Софосбувир",
+    "label_gr": "Velpatasvir/Sofosbuvir",
+    "label_en": "Velpatasvir/Sofosbuvir",
+    "alias_list_uk": ["Епклуза"],
+    "alias_list_ru": ["Эпклуза"],
+    "alias_list_gr": ["Epclusa"],
+    "alias_list_en": ["Epclusa"]
+  },
+  {
+    "label_uk": "Парітапревір/Ритонавір/Омбітасвір",
+    "label_ru": "Паритапревир/Ритонавир/Омбитасвир",
+    "label_gr": "Paritaprévir/Ritonavir/Ombitasvir",
+    "label_en": "Paritaprevir/Ritonavir/Ombitasvir",
+    "alias_list_uk": ["Вієкіра Пак"],
+    "alias_list_ru": ["Вьекьера Пак"],
+    "alias_list_gr": ["Viekirax"],
+    "alias_list_en": ["Viekira Pak"]
+  },
+  {
+    "label_uk": "Мідакозолам",
+    "label_ru": "Мидакозолам",
+    "label_gr": "Midazolam",
+    "label_en": "Midazolam",
+    "alias_list_uk": ["Седуксен"],
+    "alias_list_ru": ["Седуксен"],
+    "alias_list_gr": ["Versed"],
+    "alias_list_en": ["Versed"]
+  },
+  {
+    "label_uk": "Леканідамід",
+    "label_ru": "Леканидомид",
+    "label_gr": "Lecanicidamide",
+    "label_en": "Lecanicidamide",
+    "alias_list_uk": ["Леканід"],
+    "alias_list_ru": ["Леканид"],
+    "alias_list_gr": ["Lecanicid"],
+    "alias_list_en": ["Lecanicid"]
+  },
+  {
+    "label_uk": "Текозалон",
+    "label_ru": "Текозалон",
+    "label_gr": "Tecosalon",
+    "label_en": "Tecosalon",
+    "alias_list_uk": ["Текозал"],
+    "alias_list_ru": ["Текозал"],
+    "alias_list_gr": ["Tecosalon"],
+    "alias_list_en": ["Tecosalon"]
+  },
+  {
+    "label_uk": "Сульфасалазин",
+    "label_ru": "Сульфасалазин",
+    "label_gr": "Sulfasalazine",
+    "label_en": "Sulfasalazine",
+    "alias_list_uk": ["Сулфасалазин"],
+    "alias_list_ru": ["Сульфасалазин"],
+    "alias_list_gr": ["Salazopyrin"],
+    "alias_list_en": ["Azulfidine"]
+  },
+  {
+    "label_uk": "Кетопрофен",
+    "label_ru": "Кетопрофен",
+    "label_gr": "Kétoprofène",
+    "label_en": "Ketoprofen",
+    "alias_list_uk": ["Кетонал"],
+    "alias_list_ru": ["Кетонал"],
+    "alias_list_gr": ["Ketum"],
+    "alias_list_en": ["Orudis"]
+  },
+  {
+    "label_uk": "Емеліт",
+    "label_ru": "Эмелит",
+    "label_gr": "Emelith",
+    "label_en": "Emelith",
+    "alias_list_uk": ["Емеліт"],
+    "alias_list_ru": ["Эмелит"],
+    "alias_list_gr": ["Emelith"],
+    "alias_list_en": ["Emelith"]
+  },
+  {
+    "label_uk": "Капсипент",
+    "label_ru": "Капсипент",
+    "label_gr": "Capsipent",
+    "label_en": "Capsipent",
+    "alias_list_uk": ["Капсипент"],
+    "alias_list_ru": ["Капсипент"],
+    "alias_list_gr": ["Capsipent"],
+    "alias_list_en": ["Capsipent"]
+  },
+  {
+    "label_uk": "Рамсеприн",
+    "label_ru": "Рамсеприн",
+    "label_gr": "Ramseprin",
+    "label_en": "Ramseprin",
+    "alias_list_uk": ["Рамсеприн"],
+    "alias_list_ru": ["Рамсеприн"],
+    "alias_list_gr": ["Ramseprin"],
+    "alias_list_en": ["Ramseprin"]
+  },
+  {
+    "label_uk": "Кобіцізомаб",
+    "label_ru": "Кобіцізомаб",
+    "label_gr": "Cobicistat",
+    "label_en": "Cobicistat",
+    "alias_list_uk": ["Кобіцізомаб"],
+    "alias_list_ru": ["Кобіцізомаб"],
+    "alias_list_gr": ["Cobicistat"],
+    "alias_list_en": ["Cobicistat"]
+  },
+  {
+    "label_uk": "Талідомід",
+    "label_ru": "Талидамид",
+    "label_gr": "Thalidomide",
+    "label_en": "Thalidomide",
+    "alias_list_uk": ["Талідомід"],
+    "alias_list_ru": ["Талидамид"],
+    "alias_list_gr": ["Thalidomide"],
+    "alias_list_en": ["Thalidomide"]
+  },
+  {
+    "label_uk": "Езомепразол",
+    "label_ru": "Эзомепразол",
+    "label_gr": "Esoméprazole",
+    "label_en": "Esomeprazole",
+    "alias_list_uk": ["Нексиум"],
+    "alias_list_ru": ["Нексиум"],
+    "alias_list_gr": ["Nexium"],
+    "alias_list_en": ["Nexium"]
+  },
+  {
+    "label_uk": "Варикозне захворювання",
+    "label_ru": "Варикозное заболевание",
+    "label_gr": "Varices",
+    "label_en": "Varicose veins",
+    "alias_list_uk": ["Варикоз"],
+    "alias_list_ru": ["Варикоз"],
+    "alias_list_gr": ["Varices"],
+    "alias_list_en": ["Varicose veins"]
+  },
+  {
+    "label_uk": "Ксалатамін",
+    "label_ru": "Ксалатамин",
+    "label_gr": "Xalatin",
+    "label_en": "Xalatin",
+    "alias_list_uk": ["Ксалатамін"],
+    "alias_list_ru": ["Ксалатамин"],
+    "alias_list_gr": ["Xalatin"],
+    "alias_list_en": ["Xalatin"]
+  },
+  {
+    "label_uk": "Гліцерол",
+    "label_ru": "Глицерин",
+    "label_gr": "Glycérol",
+    "label_en": "Glycerol",
+    "alias_list_uk": ["Гліцерин"],
+    "alias_list_ru": ["Глицерин"],
+    "alias_list_gr": ["Glycerol"],
+    "alias_list_en": ["Glycerol"]
+  },
+  {
+    "label_uk": "Клінапек",
+    "label_ru": "Клинапек",
+    "label_gr": "Clinapex",
+    "label_en": "Clinapex",
+    "alias_list_uk": ["Клінапек"],
+    "alias_list_ru": ["Клинапек"],
+    "alias_list_gr": ["Clinapex"],
+    "alias_list_en": ["Clinapex"]
+  },
+  {
+    "label_uk": "Ланозин",
+    "label_ru": "Ланозин",
+    "label_gr": "Lanocin",
+    "label_en": "Lanocin",
+    "alias_list_uk": ["Ланозин"],
+    "alias_list_ru": ["Ланозин"],
+    "alias_list_gr": ["Lanocin"],
+    "alias_list_en": ["Lanocin"]
+  },
+  {
+    "label_uk": "Месалазин",
+    "label_ru": "Месалазин",
+    "label_gr": "Mésalazine",
+    "label_en": "Mesalazine",
+    "alias_list_uk": ["Асакол"],
+    "alias_list_ru": ["Асакол"],
+    "alias_list_gr": ["Asacol"],
+    "alias_list_en": ["Asacol"]
+  },
+  {
+    "label_uk": "Канцероген",
+    "label_ru": "Канцероген",
+    "label_gr": "Cancérogène",
+    "label_en": "Carcinogen",
+    "alias_list_uk": ["Канцероген"],
+    "alias_list_ru": ["Канцероген"],
+    "alias_list_gr": ["Cancérogène"],
+    "alias_list_en": ["Carcinogen"]
+  },
+  {
+    "label_uk": "Естроген",
+    "label_ru": "Эстроген",
+    "label_gr": "Estrogène",
+    "label_en": "Estrogen",
+    "alias_list_uk": ["Естроген"],
+    "alias_list_ru": ["Эстроген"],
+    "alias_list_gr": ["Estrogène"],
+    "alias_list_en": ["Estrogen"]
+  },
+  {
+    "label_uk": "Ацетилсаліцилова кислота",
+    "label_ru": "Ацетилсалициловая кислота",
+    "label_gr": "Acide acétylsalicylique",
+    "label_en": "Acetylsalicylic acid",
+    "alias_list_uk": ["Аспірин"],
+    "alias_list_ru": ["Аспирин"],
+    "alias_list_gr": ["Aspirine"],
+    "alias_list_en": ["Aspirin"]
+  },
+  {
+    "label_uk": "Тамоксіфен",
+    "label_ru": "Тамоксифен",
+    "label_gr": "Tamoxifène",
+    "label_en": "Tamoxifen",
+    "alias_list_uk": ["Нолвадекс"],
+    "alias_list_ru": ["Нолвадекс"],
+    "alias_list_gr": ["Nolvadex"],
+    "alias_list_en": ["Nolvadex"]
+  },
+  {
+    "label_uk": "Ацетамінофен",
+    "label_ru": "Парацетамол",
+    "label_gr": "Paracétamol",
+    "label_en": "Acetaminophen",
+    "alias_list_uk": ["Парацетамол"],
+    "alias_list_ru": ["Тайленол"],
+    "alias_list_gr": ["Tylenol"],
+    "alias_list_en": ["Tylenol"]
+  },
+  {
+    "label_uk": "Пропофол",
+    "label_ru": "Пропофол",
+    "label_gr": "Propofol",
+    "label_en": "Propofol",
+    "alias_list_uk": ["Діприван"],
+    "alias_list_ru": ["Диприван"],
+    "alias_list_gr": ["Diprivan"],
+    "alias_list_en": ["Diprivan"]
+  },
+  {
+    "label_uk": "Епілептол",
+    "label_ru": "Эпилептол",
+    "label_gr": "Épileptol",
+    "label_en": "Epiliptol",
+    "alias_list_uk": ["Ламотриджин"],
+    "alias_list_ru": ["Ламотриджин"],
+    "alias_list_gr": ["Lamotrigine"],
+    "alias_list_en": ["Lamotrigine"]
+  },
+  {
+    "label_uk": "Беназеприл",
+    "label_ru": "Беназеприл",
+    "label_gr": "Bénazépril",
+    "label_en": "Benazepril",
+    "alias_list_uk": ["Лотензин"],
+    "alias_list_ru": ["Лотензин"],
+    "alias_list_gr": ["Lotensin"],
+    "alias_list_en": ["Lotensin"]
+  },
+  {
+    "label_uk": "Ізосорбід",
+    "label_ru": "Изосорбид",
+    "label_gr": "Isosorbide",
+    "label_en": "Isosorbide",
+    "alias_list_uk": ["Ізосорбід динітрат"],
+    "alias_list_ru": ["Изосорбид динитрат"],
+    "alias_list_gr": ["Isosorbide dinitrate"],
+    "alias_list_en": ["Isosorbide dinitrate"]
+  },
+  {
+    "label_uk": "Дексразоксан",
+    "label_ru": "Дексразоксан",
+    "label_gr": "Dextrazoxane",
+    "label_en": "Dextrazoxane",
+    "alias_list_uk": ["Зинкера"],
+    "alias_list_ru": ["Зинкера"],
+    "alias_list_gr": ["Zinecard"],
+    "alias_list_en": ["Zinecard"]
+  },
+  {
+    "label_uk": "Тіаприд",
+    "label_ru": "Тиаприд",
+    "label_gr": "Tiapride",
+    "label_en": "Tiapride",
+    "alias_list_uk": ["Тіаприд"],
+    "alias_list_ru": ["Тиаприд"],
+    "alias_list_gr": ["Tiapride"],
+    "alias_list_en": ["Tiapride"]
+  },
+  {
+    "label_uk": "Бета-блокатор",
+    "label_ru": "Бета-блокатор",
+    "label_gr": "Bêta-bloquant",
+    "label_en": "Beta-blocker",
+    "alias_list_uk": ["Бета-блокатор"],
+    "alias_list_ru": ["Бета-блокатор"],
+    "alias_list_gr": ["Bêta-bloquant"],
+    "alias_list_en": ["Beta-blocker"]
+  },
+  {
+    "label_uk": "Вігант",
+    "label_ru": "Вигант",
+    "label_gr": "Vigant",
+    "label_en": "Vigant",
+    "alias_list_uk": ["Вігант"],
+    "alias_list_ru": ["Вигант"],
+    "alias_list_gr": ["Vigant"],
+    "alias_list_en": ["Vigant"]
+  },
+  {
+    "label_uk": "Сульфасалазин",
+    "label_ru": "Сульфасалазин",
+    "label_gr": "Sulfazalazine",
+    "label_en": "Sulfasalazine",
+    "alias_list_uk": ["Салазопірин"],
+    "alias_list_ru": ["Салазопирин"],
+    "alias_list_gr": ["Salazopyrin"],
+    "alias_list_en": ["Salazopyrin"]
+  },
+  {
+    "label_uk": "Метотрексат",
+    "label_ru": "Метотрексат",
+    "label_gr": "Méthotrexate",
+    "label_en": "Methotrexate",
+    "alias_list_uk": ["Тревітек"],
+    "alias_list_ru": ["Тревитек"],
+    "alias_list_gr": ["Trexall"],
+    "alias_list_en": ["Trexall"]
+  },
+  {
+    "label_uk": "Ремікейд",
+    "label_ru": "Ремикейд",
+    "label_gr": "Remicade",
+    "label_en": "Remicade",
+    "alias_list_uk": ["Інфліксімаб"],
+    "alias_list_ru": ["Инфликсимаб"],
+    "alias_list_gr": ["Infliximab"],
+    "alias_list_en": ["Infliximab"]
+  },
+  {
+    "label_uk": "Сульфаніламіди",
+    "label_ru": "Сульфаниламиды",
+    "label_gr": "Sulfamides",
+    "label_en": "Sulfonamides",
+    "alias_list_uk": ["Сульфаметоксазол"],
+    "alias_list_ru": ["Сульфаметоксазол"],
+    "alias_list_gr": ["Sulfaméthoxazole"],
+    "alias_list_en": ["Sulfamethoxazole"]
+  },
+  {
+    "label_uk": "Ломачен",
+    "label_ru": "Ломачен",
+    "label_gr": "Lomachen",
+    "label_en": "Lomachen",
+    "alias_list_uk": ["Морфін"],
+    "alias_list_ru": ["Морфин"],
+    "alias_list_gr": ["Morphine"],
+    "alias_list_en": ["Morphine"]
+  },
+  {
+    "label_uk": "Гашиш",
+    "label_ru": "Гашиш",
+    "label_gr": "Hashish",
+    "label_en": "Hashish",
+    "alias_list_uk": ["Гашиш"],
+    "alias_list_ru": ["Гашиш"],
+    "alias_list_gr": ["Hashish"],
+    "alias_list_en": ["Hashish"]
+  },
+  {
+    "label_uk": "Мефедрон",
+    "label_ru": "Мефедрон",
+    "label_gr": "Méphédrone",
+    "label_en": "Mephedrone",
+    "alias_list_uk": ["Мяу"],
+    "alias_list_ru": ["Мяу"],
+    "alias_list_gr": ["Meow"],
+    "alias_list_en": ["Meow"]
+  },
+  {
+    "label_uk": "Клопідогрель",
+    "label_ru": "Клопидогрель",
+    "label_gr": "Clopidogrel",
+    "label_en": "Clopidogrel",
+    "alias_list_uk": ["Плавікс"],
+    "alias_list_ru": ["Плавикс"],
+    "alias_list_gr": ["Plavix"],
+    "alias_list_en": ["Plavix"]
+  },
+  {
+    "label_uk": "Тиклопідин",
+    "label_ru": "Тиклопидин",
+    "label_gr": "Ticlopidine",
+    "label_en": "Ticlopidine",
+    "alias_list_uk": ["Тиклід"],
+    "alias_list_ru": ["Тиклид"],
+    "alias_list_gr": ["Ticlid"],
+    "alias_list_en": ["Ticlid"]
+  },
+  {
+    "label_uk": "Прасугрель",
+    "label_ru": "Прасугрел",
+    "label_gr": "Prasugrel",
+    "label_en": "Prasugrel",
+    "alias_list_uk": ["Еффієнт"],
+    "alias_list_ru": ["Эффиент"],
+    "alias_list_gr": ["Efient"],
+    "alias_list_en": ["Effient"]
+  },
+  {
+    "label_uk": "Кангрелор",
+    "label_ru": "Кангрелор",
+    "label_gr": "Cangrelor",
+    "label_en": "Cangrelor",
+    "alias_list_uk": ["Кенгрел"],
+    "alias_list_ru": ["Кенгрел"],
+    "alias_list_gr": ["Kengrexal"],
+    "alias_list_en": ["Kengreal"]
+  },
+  {
+    "label_uk": "Еплеренон",
+    "label_ru": "Эплеренон",
+    "label_gr": "Éplérénone",
+    "label_en": "Eplerenone",
+    "alias_list_uk": ["Інспра"],
+    "alias_list_ru": ["Инспра"],
+    "alias_list_gr": ["Inspra"],
+    "alias_list_en": ["Inspra"]
+  },
+  {
+    "label_uk": "Гідралазин",
+    "label_ru": "Гидралазин",
+    "label_gr": "Hydralazine",
+    "label_en": "Hydralazine",
+    "alias_list_uk": ["Апрессін"],
+    "alias_list_ru": ["Апрессин"],
+    "alias_list_gr": ["Népressol"],
+    "alias_list_en": ["Apresoline"]
+  },
+  {
+    "label_uk": "Миноксидил",
+    "label_ru": "Миноксидил",
+    "label_gr": "Minoxidil",
+    "label_en": "Minoxidil",
+    "alias_list_uk": ["Лонітен"],
+    "alias_list_ru": ["Лонитен"],
+    "alias_list_gr": ["Lonoten"],
+    "alias_list_en": ["Loniten", "Rogaine"]
+  },
+  {
+    "label_uk": "Зопіклон",
+    "label_ru": "Зопиклон",
+    "label_gr": "Zopiclone",
+    "label_en": "Zopiclone",
+    "alias_list_uk": ["Імован"],
+    "alias_list_ru": ["Имован"],
+    "alias_list_gr": ["Imovane"],
+    "alias_list_en": ["Imovane", "Zimovane"]
+  },
+  {
+    "label_uk": "Етакринова кислота",
+    "label_ru": "Этакриновая кислота",
+    "label_gr": "Acide éthacrynique",
+    "label_en": "Ethacrynic acid",
+    "alias_list_uk": ["Едекрін"],
+    "alias_list_ru": ["Эдекрин"],
+    "alias_list_gr": ["Edecrin"],
+    "alias_list_en": ["Edecrin"]
+  },
+  {
+    "label_uk": "Цефтазидим",
+    "label_ru": "Цефтазидим",
+    "label_gr": "Ceftazidime",
+    "label_en": "Ceftazidime",
+    "alias_list_uk": ["Фортум"],
+    "alias_list_ru": ["Фортум"],
+    "alias_list_gr": ["Fortum"],
+    "alias_list_en": ["Fortaz", "Tazicef"]
+  },
+  {
+    "label_uk": "Ганцикловір",
+    "label_ru": "Ганцикловир",
+    "label_gr": "Ganciclovir",
+    "label_en": "Ganciclovir",
+    "alias_list_uk": ["Цітовен"],
+    "alias_list_ru": ["Цитовен"],
+    "alias_list_gr": ["Cymevene"],
+    "alias_list_en": ["Cytovene"]
+  },
+  {
+    "label_uk": "Сітагліптин",
+    "label_ru": "Ситаглиптин",
+    "label_gr": "Sitagliptine",
+    "label_en": "Sitagliptin",
+    "alias_list_uk": ["Янувія"],
+    "alias_list_ru": ["Янувия"],
+    "alias_list_gr": ["Januvia"],
+    "alias_list_en": ["Januvia"]
+  },
+  {
+    "label_uk": "Албендазол",
+    "label_ru": "Альбендазол",
+    "label_gr": "Albendazole",
+    "label_en": "Albendazole",
+    "alias_list_uk": ["Зентел"],
+    "alias_list_ru": ["Зентел"],
+    "alias_list_gr": ["Zentel"],
+    "alias_list_en": ["Albenza"]
+  },
+  {
+    "label_uk": "Мебендазол",
+    "label_ru": "Мебендазол",
+    "label_gr": "Mébendazole",
+    "label_en": "Mebendazole",
+    "alias_list_uk": ["Вермокс"],
+    "alias_list_ru": ["Вермокс"],
+    "alias_list_gr": ["Vermox"],
+    "alias_list_en": ["Vermox"]
+  },
+  {
+    "label_uk": "Івермектин",
+    "label_ru": "Ивермектин",
+    "label_gr": "Ivermectine",
+    "label_en": "Ivermectin",
+    "alias_list_uk": ["Стромектол"],
+    "alias_list_ru": ["Стромектол"],
+    "alias_list_gr": ["Mectizan"],
+    "alias_list_en": ["Stromectol"]
+  },
+  {
+    "label_uk": "Скорпіон",
+    "label_ru": "Скорпион",
+    "label_gr": "Scorpion",
+    "label_en": "Scorpion",
+    "alias_list_uk": ["Скорпіон"],
+    "alias_list_ru": ["Скорпион"],
+    "alias_list_gr": ["Scorpion"],
+    "alias_list_en": ["Scorpion"]
+  },
+  {
+    "label_uk": "ЛSD",
+    "label_ru": "ЛСД",
+    "label_gr": "LSD",
+    "label_en": "LSD",
+    "alias_list_uk": ["Лізергічна кислота"],
+    "alias_list_ru": ["Лизергиновая кислота"],
+    "alias_list_gr": ["Acide lysergique"],
+    "alias_list_en": ["Lysergic acid"]
+  },
+  {
+    "label_uk": "MDMA",
+    "label_ru": "МДМА",
+    "label_gr": "MDMA",
+    "label_en": "MDMA",
+    "alias_list_uk": ["Екстазі"],
+    "alias_list_ru": ["Экстази"],
+    "alias_list_gr": ["Ecstasy"],
+    "alias_list_en": ["Ecstasy"]
+  },
+  {
+    "label_uk": "ДМТ",
+    "label_ru": "ДМТ",
+    "label_gr": "DMT",
+    "label_en": "DMT",
+    "alias_list_uk": ["Диметилтриптамін"],
+    "alias_list_ru": ["Диметилтриптамин"],
+    "alias_list_gr": ["Diméthyltryptamine"],
+    "alias_list_en": ["Dimethyltryptamine"]
+  },
+  {
+    "label_uk": "МДМА",
+    "label_ru": "МДМА",
+    "label_gr": "MDMA",
+    "label_en": "MDMA",
+    "alias_list_uk": ["Екстазі"],
+    "alias_list_ru": ["Экстази"],
+    "alias_list_gr": ["Ecstasy"],
+    "alias_list_en": ["Ecstasy"]
+  },
+  {
+    "label_uk": "Глімепірид",
+    "label_ru": "Глимепирид",
+    "label_gr": "Glimépiride",
+    "label_en": "Glimepiride",
+    "alias_list_uk": ["Арипріда"],
+    "alias_list_ru": ["Ариприд"],
+    "alias_list_gr": ["Amaryl"],
+    "alias_list_en": ["Amaryl"]
+  },
+  {
+    "label_uk": "Мелоксикам",
+    "label_ru": "Мелоксикам",
+    "label_gr": "Méloxicam",
+    "label_en": "Meloxicam",
+    "alias_list_uk": ["Моваліс"],
+    "alias_list_ru": ["Мовалис"],
+    "alias_list_gr": ["Mobic"],
+    "alias_list_en": ["Mobic"]
+  },
+  {
+    "label_uk": "Прокарбазин",
+    "label_ru": "Прокарбазин",
+    "label_gr": "Procarbazine",
+    "label_en": "Procarbazine",
+    "alias_list_uk": ["Матулан"],
+    "alias_list_ru": ["Матулан"],
+    "alias_list_gr": ["Matulane"],
+    "alias_list_en": ["Matulane"]
+  },
+  {
+    "label_uk": "Калію хлорид",
+    "label_ru": "Калия хлорид",
+    "label_gr": "Chlorure de potassium",
+    "label_en": "Potassium chloride",
+    "alias_list_uk": ["Калій хлорид"],
+    "alias_list_ru": ["Калий хлорид"],
+    "alias_list_gr": ["Chlorure de potassium"],
+    "alias_list_en": ["Potassium chloride"]
+  },
+  {
+    "label_uk": "Доксиламін",
+    "label_ru": "Доксиламин",
+    "label_gr": "Doxylamine",
+    "label_en": "Doxylamine",
+    "alias_list_uk": ["Доксиламін сукцинат"],
+    "alias_list_ru": ["Доксиламин сукцинат"],
+    "alias_list_gr": ["Doxylamine succinate"],
+    "alias_list_en": ["Doxylamine succinate"]
+  },
+  {
+    "label_uk": "Кветіапін",
+    "label_ru": "Кветиапин",
+    "label_gr": "Quetiapine",
+    "label_en": "Quetiapine",
+    "alias_list_uk": ["Сероквель"],
+    "alias_list_ru": ["Сероквель"],
+    "alias_list_gr": ["Seroquel"],
+    "alias_list_en": ["Seroquel"]
+  },
+  {
+    "label_uk": "Літизум",
+    "label_ru": "Литиум",
+    "label_gr": "Lithium",
+    "label_en": "Lithium",
+    "alias_list_uk": ["Літій"],
+    "alias_list_ru": ["Литий"],
+    "alias_list_gr": ["Lithium"],
+    "alias_list_en": ["Lithium"]
+  },
+  {
+    "label_uk": "Дієта для діабетиків",
+    "label_ru": "Диета для диабетиков",
+    "label_gr": "Régime pour diabétiques",
+    "label_en": "Diabetic diet",
+    "alias_list_uk": ["Діабетична дієта"],
+    "alias_list_ru": ["Диабетическая диета"],
+    "alias_list_gr": ["Régime diabétique"],
+    "alias_list_en": ["Diabetic diet"]
+  },
+  {
+    "label_uk": "Кальцій",
+    "label_ru": "Кальций",
+    "label_gr": "Calcium",
+    "label_en": "Calcium",
+    "alias_list_uk": ["Кальцій"],
+    "alias_list_ru": ["Кальций"],
+    "alias_list_gr": ["Calcium"],
+    "alias_list_en": ["Calcium"]
+  },
+  {
+    "label_uk": "Вітамін D",
+    "label_ru": "Витамин D",
+    "label_gr": "Vitamine D",
+    "label_en": "Vitamin D",
+    "alias_list_uk": ["Дегідроерикостерон"],
+    "alias_list_ru": ["Дегидроэрекостерон"],
+    "alias_list_gr": ["Déhydroépiandrostérone"],
+    "alias_list_en": ["Dehydroepiandrosterone"]
+  },
+  {
+    "label_uk": "Тіамін",
+    "label_ru": "Тиамин",
+    "label_gr": "Thiamine",
+    "label_en": "Thiamine",
+    "alias_list_uk": ["Вітамін B1"],
+    "alias_list_ru": ["Витамин B1"],
+    "alias_list_gr": ["Vitamine B1"],
+    "alias_list_en": ["Vitamin B1"]
+  },
+  {
+    "label_uk": "Дапагліфлозин/Саксагліптин",
+    "label_ru": "Дапаглифлозин/Саксаглиптин",
+    "label_gr": "Dapagliflozine/Saxagliptine",
+    "label_en": "Dapagliflozin/Saxagliptin",
+    "alias_list_uk": ["Ксигдуо"],
+    "alias_list_ru": ["Ксигдуо"],
+    "alias_list_gr": ["Xigduo"],
+    "alias_list_en": ["Xigduo"]
+  },
+  {
+    "label_uk": "Емпагліфлозин/Лінагліптин",
+    "label_ru": "Эмпаглифлозин/Линаглиптин",
+    "label_gr": "Empagliflozine/Linagliptine",
+    "label_en": "Empagliflozin/Linagliptin",
+    "alias_list_uk": ["Гліксамбі"],
+    "alias_list_ru": ["Гликсамби"],
+    "alias_list_gr": ["Glyxambi"],
+    "alias_list_en": ["Glyxambi"]
+  },
+  {
+    "label_uk": "Аспартат амінотрансферази",
+    "label_ru": "Аспартат аминотрансфераза",
+    "label_gr": "Aspartate aminotransférase",
+    "label_en": "Aspartate aminotransferase",
+    "alias_list_uk": ["АСАТ"],
+    "alias_list_ru": ["АСТ"],
+    "alias_list_gr": ["ASAT"],
+    "alias_list_en": ["AST"]
+  },
+  {
+    "label_uk": "Алтеплаза",
+    "label_ru": "Алтеплаза",
+    "label_gr": "Altéplase",
+    "label_en": "Alteplase",
+    "alias_list_uk": ["Актилизе"],
+    "alias_list_ru": ["Актилизе"],
+    "alias_list_gr": ["Actilyse"],
+    "alias_list_en": ["Activase"]
+  },
+  {
+    "label_uk": "Урокіназа",
+    "label_ru": "Урокиназа",
+    "label_gr": "Urokinase",
+    "label_en": "Urokinase",
+    "alias_list_uk": ["Абіокіназа"],
+    "alias_list_ru": ["Абиокиназа"],
+    "alias_list_gr": ["Ukidan"],
+    "alias_list_en": ["Kinlytic"]
+  },
+  {
+    "label_uk": "Дигоксин",
+    "label_ru": "Дигоксин",
+    "label_gr": "Digoxine",
+    "label_en": "Digoxin",
+    "alias_list_uk": ["Ланоксин"],
+    "alias_list_ru": ["Ланоксин"],
+    "alias_list_gr": ["Lanoxin"],
+    "alias_list_en": ["Lanoxin"]
+  },
+  {
+    "label_uk": "Нікардипін",
+    "label_ru": "Никардипин",
+    "label_gr": "Nicardipine",
+    "label_en": "Nicardipine",
+    "alias_list_uk": ["Карден"],
+    "alias_list_ru": ["Карден"],
+    "alias_list_gr": ["Loxen"],
+    "alias_list_en": ["Cardene"]
+  },
+  {
+    "label_uk": "Лерканідипін",
+    "label_ru": "Лерканидипин",
+    "label_gr": "Lercanidipine",
+    "label_en": "Lercanidipine",
+    "alias_list_uk": ["Занідип"],
+    "alias_list_ru": ["Занидип"],
+    "alias_list_gr": ["Zanidip"],
+    "alias_list_en": ["Zanidip"]
+  },
+  {
+    "label_uk": "Фозиноприл",
+    "label_ru": "Фозиноприл",
+    "label_gr": "Fosinopril",
+    "label_en": "Fosinopril",
+    "alias_list_uk": ["Моноприл"],
+    "alias_list_ru": ["Моноприл"],
+    "alias_list_gr": ["Fosinil"],
+    "alias_list_en": ["Monopril"]
+  },
+  {
+    "label_uk": "Спіронолактон/Гідрохлоротіазид",
+    "label_ru": "Спиронолактон/Гидрохлоротиазид",
+    "label_gr": "Spironolactone/Hydrochlorothiazide",
+    "label_en": "Spironolactone/Hydrochlorothiazide",
+    "alias_list_uk": ["Альдактазид"],
+    "alias_list_ru": ["Альдактазид"],
+    "alias_list_gr": ["Aldactazine"],
+    "alias_list_en": ["Aldactazide"]
+  },
+  {
+    "label_uk": "Флутиказон/Вілантерол",
+    "label_ru": "Флутиказон/Вилантерол",
+    "label_gr": "Fluticasone/Vilanterol",
+    "label_en": "Fluticasone/Vilanterol",
+    "alias_list_uk": ["Релвар Елліпта"],
+    "alias_list_ru": ["Релвар Эллипта"],
+    "alias_list_gr": ["Relvar Ellipta"],
+    "alias_list_en": ["Breo Ellipta"]
+  },
+  {
+    "label_uk": "Глікопіролат",
+    "label_ru": "Гликопирролат",
+    "label_gr": "Glycopyrronium",
+    "label_en": "Glycopyrrolate",
+    "alias_list_uk": ["Севелла"],
+    "alias_list_ru": ["Севелла"],
+    "alias_list_gr": ["Seebri"],
+    "alias_list_en": ["Seebri Neohaler"]
+  },
+  {
+    "label_uk": "Індакатерол",
+    "label_ru": "Индакатерол",
+    "label_gr": "Indacatérol",
+    "label_en": "Indacaterol",
+    "alias_list_uk": ["Онбрез"],
+    "alias_list_ru": ["Онбрез"],
+    "alias_list_gr": ["Onbrez"],
+    "alias_list_en": ["Arcapta Neohaler"]
+  },
+  {
+    "label_uk": "Тіотропій/Олодартерол",
+    "label_ru": "Тиотропий/Олодартерол",
+    "label_gr": "Tiotropium/Olodatérol",
+    "label_en": "Tiotropium/Olodaterol",
+    "alias_list_uk": ["Спіолто"],
+    "alias_list_ru": ["Спиолто"],
+    "alias_list_gr": ["Spiolto"],
+    "alias_list_en": ["Stiolto Respimat"]
+  },
+  {
+    "label_uk": "Умеклідініум/Вілантерол",
+    "label_ru": "Умеклидиний/Вилантерол",
+    "label_gr": "Uméclidinium/Vilanterol",
+    "label_en": "Umeclidinium/Vilanterol",
+    "alias_list_uk": ["Аново Елліпта"],
+    "alias_list_ru": ["Аноро Эллипта"],
+    "alias_list_gr": ["Anoro Ellipta"],
+    "alias_list_en": ["Anoro Ellipta"]
+  },
+  {
+    "label_uk": "Формотерол/Будесонід",
+    "label_ru": "Формотерол/Будесонид",
+    "label_gr": "Formotérol/Budésonide",
+    "label_en": "Formoterol/Budesonide",
+    "alias_list_uk": ["Сімбікорт"],
+    "alias_list_ru": ["Симбикорт"],
+    "alias_list_gr": ["Symbicort"],
+    "alias_list_en": ["Symbicort"]
+  },
+  {
+    "label_uk": "Івабрадин",
+    "label_ru": "Ивабрадин",
+    "label_gr": "Ivabradine",
+    "label_en": "Ivabradine",
+    "alias_list_uk": ["Кораксан"],
+    "alias_list_ru": ["Кораксан"],
+    "alias_list_gr": ["Procoralan"],
+    "alias_list_en": ["Corlanor"]
+  },
+  {
+    "label_uk": "Сакубітрил/Валсартан",
+    "label_ru": "Сакубитрил/Валсартан",
+    "label_gr": "Sacubitril/Valsartan",
+    "label_en": "Sacubitril/Valsartan",
+    "alias_list_uk": ["Ентресто"],
+    "alias_list_ru": ["Энтресто"],
+    "alias_list_gr": ["Entresto"],
+    "alias_list_en": ["Entresto"]
+  },
+  {
+    "label_uk": "Дабігатран етексилат",
+    "label_ru": "Дабигатрана этексилат",
+    "label_gr": "Dabigatran étexilate",
+    "label_en": "Dabigatran etexilate",
+    "alias_list_uk": ["Прадакса"],
+    "alias_list_ru": ["Прадакса"],
+    "alias_list_gr": ["Pradaxa"],
+    "alias_list_en": ["Pradaxa"]
+  },
+  {
+    "label_uk": "Гідроксихлорохін",
+    "label_ru": "Гидроксихлорохин",
+    "label_gr": "Hydroxychloroquine",
+    "label_en": "Hydroxychloroquine",
+    "alias_list_uk": ["Плаквеніл"],
+    "alias_list_ru": ["Плаквенил"],
+    "alias_list_gr": ["Plaquenil"],
+    "alias_list_en": ["Plaquenil"]
+  },
+  {
+    "label_uk": "Лефлуномід",
+    "label_ru": "Лефлуномид",
+    "label_gr": "Leflunomide",
+    "label_en": "Leflunomide",
+    "alias_list_uk": ["Арава"],
+    "alias_list_ru": ["Арава"],
+    "alias_list_gr": ["Arava"],
+    "alias_list_en": ["Arava"]
+  },
+  {
+    "label_uk": "Тофацитиніб",
+    "label_ru": "Тофацитиниб",
+    "label_gr": "Tofacitinib",
+    "label_en": "Tofacitinib",
+    "alias_list_uk": ["Кселжанз"],
+    "alias_list_ru": ["Кселджанз"],
+    "alias_list_gr": ["Xeljanz"],
+    "alias_list_en": ["Xeljanz"]
+  },
+  {
+    "label_uk": "Анапронакс",
+    "label_ru": "Анапрокс",
+    "label_gr": "Anaprox",
+    "label_en": "Naproxen",
+    "alias_list_uk": ["Напроксен"],
+    "alias_list_ru": ["Напроксен"],
+    "alias_list_gr": ["Apranax"],
+    "alias_list_en": ["Aleve", "Naprosyn"]
+  },
+  {
+    "label_uk": "Дапагліфлозин/Метформін",
+    "label_ru": "Дапаглифлозин/Метформин",
+    "label_gr": "Dapagliflozine/Metformine",
+    "label_en": "Dapagliflozin/Metformin",
+    "alias_list_uk": ["Ксигдуо"],
+    "alias_list_ru": ["Ксигдуо"],
+    "alias_list_gr": ["Xigduo"],
+    "alias_list_en": ["Xigduo"]
+  },
+  {
+    "label_uk": "Емпагліфлозин/Метформін",
+    "label_ru": "Эмпаглифлозин/Метформин",
+    "label_gr": "Empagliflozine/Metformine",
+    "label_en": "Empagliflozin/Metformin",
+    "alias_list_uk": ["Сінджарді"],
+    "alias_list_ru": ["Синджарди"],
+    "alias_list_gr": ["Synjardy"],
+    "alias_list_en": ["Synjardy"]
+  },
+  {
+    "label_uk": "Саксагліптин/Метформін",
+    "label_ru": "Саксаглиптин/Метформин",
+    "label_gr": "Saxagliptine/Metformine",
+    "label_en": "Saxagliptin/Metformin",
+    "alias_list_uk": ["Комбогліза XR"],
+    "alias_list_ru": ["Комбоглиз XR"],
+    "alias_list_gr": ["Komboglyze XR"],
+    "alias_list_en": ["Kombiglyze XR"]
+  },
+  {
+    "label_uk": "Лінагліптин/Метформін",
+    "label_ru": "Линаглиптин/Метформин",
+    "label_gr": "Linagliptine/Metformine",
+    "label_en": "Linagliptin/Metformin",
+    "alias_list_uk": ["Йентдуето"],
+    "alias_list_ru": ["Йентдуето"],
+    "alias_list_gr": ["Jentadueto"],
+    "alias_list_en": ["Jentadueto"]
+  },
+  {
+    "label_uk": "Дуалотідін",
+    "label_ru": "Дуалотидин",
+    "label_gr": "Duloxetine",
+    "label_en": "Duloxetine",
+    "alias_list_uk": ["Симбалта"],
+    "alias_list_ru": ["Симбалта"],
+    "alias_list_gr": ["Cymbalta"],
+    "alias_list_en": ["Cymbalta"]
+  },
+  {
+    "label_uk": "Бупропіон",
+    "label_ru": "Бупропион",
+    "label_gr": "Bupropione",
+    "label_en": "Bupropion",
+    "alias_list_uk": ["Вельбутрин"],
+    "alias_list_ru": ["Веллбутрин"],
+    "alias_list_gr": ["Wellbutrin"],
+    "alias_list_en": ["Wellbutrin"]
+  },
+  {
+    "label_uk": "Азафен",
+    "label_ru": "Азафен",
+    "label_gr": "Azafén",
+    "label_en": "Azafén",
+    "alias_list_uk": ["Азафен"],
+    "alias_list_ru": ["Азафен"],
+    "alias_list_gr": ["Azafén"],
+    "alias_list_en": ["Azafén"]
+  },
+  {
+    "label_uk": "Таблетки цинку",
+    "label_ru": "Таблетки цинка",
+    "label_gr": "Comprimés de zinc",
+    "label_en": "Zinc tablets",
+    "alias_list_uk": ["Цинк"],
+    "alias_list_ru": ["Цинк"],
+    "alias_list_gr": ["Zinc"],
+    "alias_list_en": ["Zinc"]
+  },
+  {
+    "label_uk": "Афлатоксин",
+    "label_ru": "Афлатоксин",
+    "label_gr": "Aflatoxine",
+    "label_en": "Aflatoxin",
+    "alias_list_uk": ["Афлатоксин"],
+    "alias_list_ru": ["Афлатоксин"],
+    "alias_list_gr": ["Aflatoxin"],
+    "alias_list_en": ["Aflatoxin"]
+  },
+  {
+    "label_uk": "Фіностерид",
+    "label_ru": "Финастерид",
+    "label_gr": "Finastéride",
+    "label_en": "Finasteride",
+    "alias_list_uk": ["Пропеція"],
+    "alias_list_ru": ["Пропеция"],
+    "alias_list_gr": ["Propecia"],
+    "alias_list_en": ["Propecia"]
+  },
+  {
+    "label_uk": "Кетонал",
+    "label_ru": "Кетонал",
+    "label_gr": "Kétoprofène",
+    "label_en": "Ketoprofen",
+    "alias_list_uk": ["Кетонал"],
+    "alias_list_ru": ["Кетонал"],
+    "alias_list_gr": ["Ketonal"],
+    "alias_list_en": ["Ketonal"]
+  },
+  {
+    "label_uk": "Фенібут",
+    "label_ru": "Фенибут",
+    "label_gr": "Phénibut",
+    "label_en": "Phenibut",
+    "alias_list_uk": ["Фенібут"],
+    "alias_list_ru": ["Фенибут"],
+    "alias_list_gr": ["Phenibut"],
+    "alias_list_en": ["Phenibut"]
+  },
+  {
+    "label_uk": "Дилтиазем",
+    "label_ru": "Дилтиазем",
+    "label_gr": "Diltiazem",
+    "label_en": "Diltiazem",
+    "alias_list_uk": ["Тахікол"],
+    "alias_list_ru": ["Тахикол"],
+    "alias_list_gr": ["Cardizem"],
+    "alias_list_en": ["Cardizem"]
+  },
+  {
+    "label_uk": "Карбоплатин",
+    "label_ru": "Карбоплатин",
+    "label_gr": "Carboplatine",
+    "label_en": "Carboplatin",
+    "alias_list_uk": ["Пароплатин"],
+    "alias_list_ru": ["Пароплатин"],
+    "alias_list_gr": ["Paraplatin"],
+    "alias_list_en": ["Paraplatin"]
+  },
+  {
+    "label_uk": "Тизанідин",
+    "label_ru": "Тизанидин",
+    "label_gr": "Tizanidine",
+    "label_en": "Tizanidine",
+    "alias_list_uk": ["Занфекс"],
+    "alias_list_ru": ["Занфекс"],
+    "alias_list_gr": ["Zanaflex"],
+    "alias_list_en": ["Zanaflex"]
+  },
+  {
+    "label_uk": "Бургер з куркою",
+    "label_ru": "Куриный бургер",
+    "label_gr": "Burger au poulet",
+    "label_en": "Chicken Burger",
+    "alias_list_uk": ["McChicken"],
+    "alias_list_ru": ["МакЧикен"],
+    "alias_list_gr": ["McChicken"],
+    "alias_list_en": ["McChicken"]
+  },
+  {
+    "label_uk": "Чизбургер",
+    "label_ru": "Чизбургер",
+    "label_gr": "Cheeseburger",
+    "label_en": "Cheeseburger",
+    "alias_list_uk": ["Чізбургер"],
+    "alias_list_ru": ["Чизбургер"],
+    "alias_list_gr": ["Cheeseburger"],
+    "alias_list_en": ["Cheeseburger"]
+  },
+  {
+    "label_uk": "Картопля фрі",
+    "label_ru": "Картошка фри",
+    "label_gr": "Frites",
+    "label_en": "French Fries",
+    "alias_list_uk": ["Фрі"],
+    "alias_list_ru": ["Картошка фри"],
+    "alias_list_gr": ["Frites"],
+    "alias_list_en": ["Fries"]
+  },
+  {
+    "label_uk": "Гамбургер",
+    "label_ru": "Гамбургер",
+    "label_gr": "Hamburger",
+    "label_en": "Hamburger",
+    "alias_list_uk": ["Гамбургер"],
+    "alias_list_ru": ["Гамбургер"],
+    "alias_list_gr": ["Hamburger"],
+    "alias_list_en": ["Hamburger"]
+  },
+  {
+    "label_uk": "Макфлурі",
+    "label_ru": "Макфлури",
+    "label_gr": "McFlurry",
+    "label_en": "McFlurry",
+    "alias_list_uk": ["Макфлурі з Орео"],
+    "alias_list_ru": ["Макфлури с Орео"],
+    "alias_list_gr": ["McFlurry Oreo"],
+    "alias_list_en": ["Oreo McFlurry"]
+  },
+  {
+    "label_uk": "Курячі нагетси",
+    "label_ru": "Куриные наггетсы",
+    "label_gr": "Nuggets de poulet",
+    "label_en": "Chicken Nuggets",
+    "alias_list_uk": ["Наггетси"],
+    "alias_list_ru": ["Наггетсы"],
+    "alias_list_gr": ["Nuggets"],
+    "alias_list_en": ["Nuggets"]
+  },
+  {
+    "label_uk": "Сендвіч з рибою",
+    "label_ru": "Рыбный сендвич",
+    "label_gr": "Sandwich au poisson",
+    "label_en": "Fish Sandwich",
+    "alias_list_uk": ["Фішбургер"],
+    "alias_list_ru": ["Фишбургер"],
+    "alias_list_gr": ["Fishburger"],
+    "alias_list_en": ["Fishburger"]
+  },
+  {
+    "label_uk": "Салат",
+    "label_ru": "Салат",
+    "label_gr": "Salade",
+    "label_en": "Salad",
+    "alias_list_uk": ["Салат Цезар"],
+    "alias_list_ru": ["Салат Цезарь"],
+    "alias_list_gr": ["Salade César"],
+    "alias_list_en": ["Caesar Salad"]
+  },
+  {
+    "label_uk": "Кофе",
+    "label_ru": "Кофе",
+    "label_gr": "Café",
+    "label_en": "Coffee",
+    "alias_list_uk": ["Еспресо"],
+    "alias_list_ru": ["Эспрессо"],
+    "alias_list_gr": ["Expresso"],
+    "alias_list_en": ["Espresso"]
+  },
+  {
+    "label_uk": "Сирний соус",
+    "label_ru": "Сырный соус",
+    "label_gr": "Sauce au fromage",
+    "label_en": "Cheese Sauce",
+    "alias_list_uk": ["Соус для нагетсів"],
+    "alias_list_ru": ["Соус для наггетсов"],
+    "alias_list_gr": ["Sauce pour nuggets"],
+    "alias_list_en": ["Nugget Sauce"]
+  },
+  {
+    "label_uk": "Коктейль з молока",
+    "label_ru": "Молочный коктейль",
+    "label_gr": "Milkshake",
+    "label_en": "Milkshake",
+    "alias_list_uk": ["Шейк"],
+    "alias_list_ru": ["Шейк"],
+    "alias_list_gr": ["Milkshake"],
+    "alias_list_en": ["Shake"]
+  },
+  {
+    "label_uk": "Фруктовий салат",
+    "label_ru": "Фруктовый салат",
+    "label_gr": "Salade de fruits",
+    "label_en": "Fruit Salad",
+    "alias_list_uk": ["Фрукти"],
+    "alias_list_ru": ["Фрукты"],
+    "alias_list_gr": ["Fruits"],
+    "alias_list_en": ["Fruits"]
+  },
+  {
+    "label_uk": "Горіховий десерт",
+    "label_ru": "Ореховый десерт",
+    "label_gr": "Dessert aux noix",
+    "label_en": "Nut Dessert",
+    "alias_list_uk": ["МакДесерт"],
+    "alias_list_ru": ["МакДесерт"],
+    "alias_list_gr": ["McDessert"],
+    "alias_list_en": ["McDessert"]
+  },
+  {
+    "label_uk": "Піна колада",
+    "label_ru": "Пина колада",
+    "label_gr": "Piña colada",
+    "label_en": "Pina colada",
+    "alias_list_uk": ["Коктейль"],
+    "alias_list_ru": ["Коктейль"],
+    "alias_list_gr": ["Cocktail"],
+    "alias_list_en": ["Cocktail"]
+  },
+  {
+    "label_uk": "Тиротропін",
+    "label_ru": "Тиротропин",
+    "label_gr": "Thyréostimuline",
+    "label_en": "Thyrotropin",
+    "alias_list_uk": ["Тіроген"],
+    "alias_list_ru": ["Тироген"],
+    "alias_list_gr": ["Thyrogen"],
+    "alias_list_en": ["Thyrogen"]
+  },
+  {
+    "label_uk": "Епопростенол",
+    "label_ru": "Эпопростенол",
+    "label_gr": "Époprosténol",
+    "label_en": "Epoprostenol",
+    "alias_list_uk": ["Флолоан"],
+    "alias_list_ru": ["Флолоан"],
+    "alias_list_gr": ["Flolan"],
+    "alias_list_en": ["Flolan", "Veletri"]
+  },
+  {
+    "label_uk": "Трепростиніл",
+    "label_ru": "Трепростинил",
+    "label_gr": "Tréprostinil",
+    "label_en": "Treprostinil",
+    "alias_list_uk": ["Ремодулін"],
+    "alias_list_ru": ["Ремодулин"],
+    "alias_list_gr": ["Remodulin"],
+    "alias_list_en": ["Remodulin", "Tyvaso"]
+  },
+  {
+    "label_uk": "Бозентан",
+    "label_ru": "Бозентан",
+    "label_gr": "Bosentan",
+    "label_en": "Bosentan",
+    "alias_list_uk": ["Траклір"],
+    "alias_list_ru": ["Траклир"],
+    "alias_list_gr": ["Tracleer"],
+    "alias_list_en": ["Tracleer"]
+  },
+  {
+    "label_uk": "Амбризентан",
+    "label_ru": "Амбризентан",
+    "label_gr": "Ambrisentan",
+    "label_en": "Ambrisentan",
+    "alias_list_uk": ["Волібрыс"],
+    "alias_list_ru": ["Волибрис"],
+    "alias_list_gr": ["Volibris"],
+    "alias_list_en": ["Letairis"]
+  },
+  {
+    "label_uk": "Риоцигуат",
+    "label_ru": "Риоцигуат",
+    "label_gr": "Riociguat",
+    "label_en": "Riociguat",
+    "alias_list_uk": ["Адемпас"],
+    "alias_list_ru": ["Адемпас"],
+    "alias_list_gr": ["Adempas"],
+    "alias_list_en": ["Adempas"]
+  },
+  {
+    "label_uk": "Макітентан",
+    "label_ru": "Макитентан",
+    "label_gr": "Macitentan",
+    "label_en": "Macitentan",
+    "alias_list_uk": ["Опсуміт"],
+    "alias_list_ru": ["Опсумит"],
+    "alias_list_gr": ["Opsumit"],
+    "alias_list_en": ["Opsumit"]
+  },
+  {
+    "label_uk": "Ілопрост",
+    "label_ru": "Илопрост",
+    "label_gr": "Iloprost",
+    "label_en": "Iloprost",
+    "alias_list_uk": ["Вентавіс"],
+    "alias_list_ru": ["Вентавис"],
+    "alias_list_gr": ["Ventavis"],
+    "alias_list_en": ["Ventavis"]
+  },
+  {
+    "label_uk": "Сілденафіл",
+    "label_ru": "Силденафил",
+    "label_gr": "Sildénafil",
+    "label_en": "Sildenafil",
+    "alias_list_uk": ["Реваціо"],
+    "alias_list_ru": ["Ревацио"],
+    "alias_list_gr": ["Revatio"],
+    "alias_list_en": ["Revatio"]
+  },
+  {
+    "label_uk": "Севофлуран",
+    "label_ru": "Севофлуран",
+    "label_gr": "Sévoflurane",
+    "label_en": "Sevoflurane",
+    "alias_list_uk": ["Севоран"],
+    "alias_list_ru": ["Севоран"],
+    "alias_list_gr": ["Sevorane"],
+    "alias_list_en": ["Ultane", "Sojourn"]
+  },
+  {
+    "label_uk": "Десфлуран",
+    "label_ru": "Десфлуран",
+    "label_gr": "Desflurane",
+    "label_en": "Desflurane",
+    "alias_list_uk": ["Супран"],
+    "alias_list_ru": ["Супран"],
+    "alias_list_gr": ["Suprane"],
+    "alias_list_en": ["Suprane"]
+  },
+  {
+    "label_uk": "Ізофлуран",
+    "label_ru": "Изофлуран",
+    "label_gr": "Isoflurane",
+    "label_en": "Isoflurane",
+    "alias_list_uk": ["Форан"],
+    "alias_list_ru": ["Форан"],
+    "alias_list_gr": ["Forane"],
+    "alias_list_en": ["Forane"]
+  },
+  {
+    "label_uk": "Етомідат",
+    "label_ru": "Этомидат",
+    "label_gr": "Étomidate",
+    "label_en": "Etomidate",
+    "alias_list_uk": ["Гіпномідат"],
+    "alias_list_ru": ["Гипномидат"],
+    "alias_list_gr": ["Hypnomidate"],
+    "alias_list_en": ["Amidate"]
+  },
+  {
+    "label_uk": "Мідазолам",
+    "label_ru": "Мидазолам",
+    "label_gr": "Midazolam",
+    "label_en": "Midazolam",
+    "alias_list_uk": ["Дормікум"],
+    "alias_list_ru": ["Дормикум"],
+    "alias_list_gr": ["Hypnovel"],
+    "alias_list_en": ["Versed"]
+  },
+  {
+    "label_uk": "Реміфентаніл",
+    "label_ru": "Ремифентанил",
+    "label_gr": "Rémifentanil",
+    "label_en": "Remifentanil",
+    "alias_list_uk": ["Ультів"],
+    "alias_list_ru": ["Ультив"],
+    "alias_list_gr": ["Ultiva"],
+    "alias_list_en": ["Ultiva"]
+  },
+  {
+    "label_uk": "Суксаметоній",
+    "label_ru": "Суксаметоний",
+    "label_gr": "Succinylcholine",
+    "label_en": "Succinylcholine",
+    "alias_list_uk": ["Лістенон"],
+    "alias_list_ru": ["Листенон"],
+    "alias_list_gr": ["Celocurine"],
+    "alias_list_en": ["Anectine", "Quelicin"]
+  },
+  {
+    "label_uk": "Рокуроній",
+    "label_ru": "Рокуроний",
+    "label_gr": "Rocuronium",
+    "label_en": "Rocuronium",
+    "alias_list_uk": ["Есмерон"],
+    "alias_list_ru": ["Эсмерон"],
+    "alias_list_gr": ["Esmeron"],
+    "alias_list_en": ["Zemuron"]
+  },
+  {
+    "label_uk": "Векуроній",
+    "label_ru": "Векуроний",
+    "label_gr": "Vecuronium",
+    "label_en": "Vecuronium",
+    "alias_list_uk": ["Норкурон"],
+    "alias_list_ru": ["Норкурон"],
+    "alias_list_gr": ["Norcuron"],
+    "alias_list_en": ["Norcuron"]
+  },
+  {
+    "label_uk": "Панкуроній",
+    "label_ru": "Панкуроний",
+    "label_gr": "Pancuronium",
+    "label_en": "Pancuronium",
+    "alias_list_uk": ["Павулон"],
+    "alias_list_ru": ["Павулон"],
+    "alias_list_gr": ["Pavulon"],
+    "alias_list_en": ["Pavulon"]
+  },
+  {
+    "label_uk": "Сугамадекс",
+    "label_ru": "Сугамадекс",
+    "label_gr": "Sugammadex",
+    "label_en": "Sugammadex",
+    "alias_list_uk": ["Брідіон"],
+    "alias_list_ru": ["Бридион"],
+    "alias_list_gr": ["Bridion"],
+    "alias_list_en": ["Bridion"]
+  },
+  {
+    "label_uk": "Неостигмін",
+    "label_ru": "Неостигмин",
+    "label_gr": "Néostigmine",
+    "label_en": "Neostigmine",
+    "alias_list_uk": ["Простигмін"],
+    "alias_list_ru": ["Простигмин"],
+    "alias_list_gr": ["Prostigmine"],
+    "alias_list_en": ["Prostigmin"]
+  },
+  {
+    "label_uk": "Цисплатин",
+    "label_ru": "Цисплатин",
+    "label_gr": "Cisplatine",
+    "label_en": "Cisplatin",
+    "alias_list_uk": ["Платинол"],
+    "alias_list_ru": ["Платинол"],
+    "alias_list_gr": ["Platinol"],
+    "alias_list_en": ["Platinol"]
+  },
+  {
+    "label_uk": "Блеоміцин",
+    "label_ru": "Блеомицин",
+    "label_gr": "Bléomycine",
+    "label_en": "Bleomycin",
+    "alias_list_uk": ["Бленоксан"],
+    "alias_list_ru": ["Бленоксан"],
+    "alias_list_gr": ["Blenoxane"],
+    "alias_list_en": ["Blenoxane"]
+  },
+  {
+    "label_uk": "Іфосфамід",
+    "label_ru": "Ифосфамид",
+    "label_gr": "Ifosfamide",
+    "label_en": "Ifosfamide",
+    "alias_list_uk": ["Іфос"],
+    "alias_list_ru": ["Ифос"],
+    "alias_list_gr": ["Holoxan"],
+    "alias_list_en": ["Ifex"]
+  },
+  {
+    "label_uk": "Іринотекан",
+    "label_ru": "Иринотекан",
+    "label_gr": "Irinotécan",
+    "label_en": "Irinotecan",
+    "alias_list_uk": ["Кампто"],
+    "alias_list_ru": ["Кампто"],
+    "alias_list_gr": ["Campto"],
+    "alias_list_en": ["Camptosar"]
+  },
+  {
+    "label_uk": "Нілотиніб",
+    "label_ru": "Нилотиниб",
+    "label_gr": "Nilotinib",
+    "label_en": "Nilotinib",
+    "alias_list_uk": ["Тасігна"],
+    "alias_list_ru": ["Тасигна"],
+    "alias_list_gr": ["Tasigna"],
+    "alias_list_en": ["Tasigna"]
+  },
+  {
+    "label_uk": "Дазатиніб",
+    "label_ru": "Дазатиниб",
+    "label_gr": "Dasatinib",
+    "label_en": "Dasatinib",
+    "alias_list_uk": ["Спрайсел"],
+    "alias_list_ru": ["Спрайсел"],
+    "alias_list_gr": ["Sprycel"],
+    "alias_list_en": ["Sprycel"]
+  },
+  {
+    "label_uk": "Сунітиніб",
+    "label_ru": "Сунитиниб",
+    "label_gr": "Sunitinib",
+    "label_en": "Sunitinib",
+    "alias_list_uk": ["Сутент"],
+    "alias_list_ru": ["Сутент"],
+    "alias_list_gr": ["Sutent"],
+    "alias_list_en": ["Sutent"]
+  },
+  {
+    "label_uk": "Сорафеніб",
+    "label_ru": "Сорафениб",
+    "label_gr": "Sorafénib",
+    "label_en": "Sorafenib",
+    "alias_list_uk": ["Нексавар"],
+    "alias_list_ru": ["Нексавар"],
+    "alias_list_gr": ["Nexavar"],
+    "alias_list_en": ["Nexavar"]
+  },
+  {
+    "label_uk": "Ленватиніб",
+    "label_ru": "Ленватиниб",
+    "label_gr": "Lenvatinib",
+    "label_en": "Lenvatinib",
+    "alias_list_uk": ["Ленвима"],
+    "alias_list_ru": ["Ленвима"],
+    "alias_list_gr": ["Lenvima"],
+    "alias_list_en": ["Lenvima"]
+  },
+  {
+    "label_uk": "Пембролізумаб",
+    "label_ru": "Пембролизумаб",
+    "label_gr": "Pembrolizumab",
+    "label_en": "Pembrolizumab",
+    "alias_list_uk": ["Кітруда"],
+    "alias_list_ru": ["Китруда"],
+    "alias_list_gr": ["Keytruda"],
+    "alias_list_en": ["Keytruda"]
+  },
+  {
+    "label_uk": "Ніволумаб",
+    "label_ru": "Ниволумаб",
+    "label_gr": "Nivolumab",
+    "label_en": "Nivolumab",
+    "alias_list_uk": ["Опдіво"],
+    "alias_list_ru": ["Опдиво"],
+    "alias_list_gr": ["Opdivo"],
+    "alias_list_en": ["Opdivo"]
+  },
+  {
+    "label_uk": "Клінікамін",
+    "label_ru": "Клиникамин",
+    "label_gr": "Clonidine",
+    "label_en": "Clonidine",
+    "alias_list_uk": ["Клонідіне"],
+    "alias_list_ru": ["Клонидин"],
+    "alias_list_gr": ["Catapres"],
+    "alias_list_en": ["Catapres"]
+  },
+  {
+    "label_uk": "Флуоксетин",
+    "label_ru": "Флуоксетин",
+    "label_gr": "Fluoxetine",
+    "label_en": "Fluoxetine",
+    "alias_list_uk": ["Прозак"],
+    "alias_list_ru": ["Прозак"],
+    "alias_list_gr": ["Prozac"],
+    "alias_list_en": ["Prozac"]
+  },
+  {
+    "label_uk": "Ескіталопрам",
+    "label_ru": "Эсциталопрам",
+    "label_gr": "Escitalopram",
+    "label_en": "Escitalopram",
+    "alias_list_uk": ["Ципралекс"],
+    "alias_list_ru": ["Ципралекс"],
+    "alias_list_gr": ["Cipralex"],
+    "alias_list_en": ["Lexapro"]
+  },
+  {
+    "label_uk": "Доксепін",
+    "label_ru": "Доксепин",
+    "label_gr": "Doxepine",
+    "label_en": "Doxepin",
+    "alias_list_uk": ["Седуксен"],
+    "alias_list_ru": ["Седуксен"],
+    "alias_list_gr": ["Silenor"],
+    "alias_list_en": ["Silenor"]
+  },
+  {
+    "label_uk": "Мідакалаксон",
+    "label_ru": "Мидакалксон",
+    "label_gr": "Midazolam",
+    "label_en": "Midazolam",
+    "alias_list_uk": ["Діазепам"],
+    "alias_list_ru": ["Диазепам"],
+    "alias_list_gr": ["Versed"],
+    "alias_list_en": ["Versed"]
+  }
+]
