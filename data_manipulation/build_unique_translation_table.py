@@ -274,4 +274,6 @@ translation_table = translation_table.drop_duplicates().query(
 )
 
 ## %% save the translation table to a CSV file
-translation_table.to_csv("prepared_data/unique_translation_table.csv", index=False)
+translation_table.to_csv(
+    "fastapi_backend/database/unique_translation_table_20221027.csv", index=False
+)

@@ -168,8 +168,8 @@ foreach ($script in $scripts) {
 }
 
 Write-Output ""
-Write-Output "All scripts executed successfully. Check for Codex DB in \fastapi_backend\codex.db"
+Write-Output "All scripts executed successfully. Check for Codex DB in fastapi_backend\database\codex.db"
 
-Write-Output "Database will now be available in fastapi_backend\codex.db"
+Write-Output "Database will now be available in fastapi_backend\database\codex.db"
 
-# Database will now be available in fastapi_backend\prepared_data.db
+# Database will now be available in fastapi_backend\database\codex.db
