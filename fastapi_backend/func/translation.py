@@ -12,14 +12,14 @@ def translate(query) -> dict:
 
         logger.info(f"Searching for translation of '{term}' in '{target_language}'")
 
-        conn = sqlite3.connect("fastapi_backend/database/medicines.db")
+        conn = sqlite3.connect("fastapi_backend/database/codex.db")
         cursor = conn.cursor()
 
         language_column = f"label_{target_language}"
 
         sql_query = f"""
             SELECT {language_column}
-            FROM medicines
+            FROM wikidata_names
             WHERE LOWER(label_uk) = ? OR LOWER(label_ru) = ? 
                OR LOWER(label_gr) = ? OR LOWER(label_en) = ?
                OR alias_list_uk LIKE ? OR alias_list_ru LIKE ? 

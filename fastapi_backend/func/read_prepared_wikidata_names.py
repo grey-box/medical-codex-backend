@@ -27,8 +27,8 @@ def read_prepared_wikidata_names(language) -> pd.Series:
     else:
         raise Exception("Unsupported language")
     try:
-        conn = sqlite3.connect("fastapi_backend/database/medicines.db")
-        query = f"SELECT DISTINCT {label} FROM medicines WHERE {label} IS NOT NULL"
+        conn = sqlite3.connect("fastapi_backend/database/codex.db")
+        query = f"SELECT DISTINCT {label} FROM wikidata_names WHERE {label} IS NOT NULL"
         names_df = pd.read_sql_query(query, conn)
         conn.close()
 
