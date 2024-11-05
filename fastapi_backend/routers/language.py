@@ -1,5 +1,4 @@
 import logging
-from typing import List
 
 from fastapi import APIRouter, Depends
 from sqlalchemy.orm import Session
@@ -15,4 +14,4 @@ logger = logging.getLogger(LOGGER_NAME)
 
 @router.get("/", response_model=schemas.TranslationLanguageResult)
 def get_languages(db: Session = Depends(dependancies.get_db)):
-    return db.query(models.LanguagePairs).all()
+    return db.query(models.Languages).all()
