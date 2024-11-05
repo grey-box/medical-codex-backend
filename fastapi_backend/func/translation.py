@@ -21,9 +21,9 @@ def translate(query) -> dict:
             SELECT {language_column}
             FROM wikidata_names
             WHERE LOWER(label_uk) = ? OR LOWER(label_ru) = ? 
-               OR LOWER(label_gr) = ? OR LOWER(label_en) = ?
+               OR LOWER(label_fr) = ? OR LOWER(label_en) = ?
                OR alias_list_uk LIKE ? OR alias_list_ru LIKE ? 
-               OR alias_list_gr LIKE ? OR alias_list_en LIKE ?
+               OR alias_list_fr LIKE ? OR alias_list_en LIKE ?
             LIMIT 1;
         """
 
