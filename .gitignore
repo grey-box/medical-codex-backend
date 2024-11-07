@@ -172,3 +172,7 @@ cython_debug/
 /.idea/
 
 codex.db
+
+# VSCode
+#   Settings folder and other VSCode specific folders.
+.vscode 
