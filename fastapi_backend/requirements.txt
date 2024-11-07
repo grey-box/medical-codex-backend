@@ -9,3 +9,4 @@ python-dotenv==1.0.1
 SQLAlchemy==2.0.32
 uvicorn==0.30.5
 pandas==2.2.2
+requests==2.32.3
