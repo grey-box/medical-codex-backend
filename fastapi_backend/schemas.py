@@ -1,4 +1,4 @@
-from typing import List
+from typing import List, Optional
 
 from pydantic import BaseModel
 
@@ -49,3 +49,21 @@ class Translation(BaseModel):
 class TranslationQuery(BaseModel):
     translation_query: FuzzyResult
     target_language: str
+
+
+class UniqueTranslationsPYD(BaseModel):
+    '''
+        The TranslationPydantic schema is used to validate data from the
+        translation database table
+    '''
+    source_language: str
+    target_language: str
+    source_text: str
+    target_text: str
+    table_name: str
+    source_comment: Optional[str] = None
+    weight: int
+
+    class Config:
+        # If needed, you can configure ORM mode so Pydantic can serialize SQLAlchemy models directly.
+        orm_mode = True
