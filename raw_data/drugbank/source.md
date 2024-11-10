@@ -1,5 +1,0 @@
-- Date: 2024-03-14
-- Source: https://go.drugbank.com/releases/latest#open-data
-- Original Format: ZIP
-- Transformed Format: CSV file
-- Tool: Unzip

@@ -1,50 +1,46 @@
-
-
 services:
   #codex-frontend:
   
   fastapi_backend:
     build:
-      context: ./fastapi_backend
-    env_file: 
-      - ./fastapi_backend/.env
+      context: ./
+    env_file:
+      - .env
     #secrets:  # How to import secrets to the app in the container
     #  - database_url
     ports:
-      - 8000:8000
+      - "8000:8000"
     develop:
       watch:
         - action: rebuild
-          path: ./fastapi_backend/requirements.txt
+          path: ./requirements.txt
         - action: sync
-          path: ./fastapi_backend/database
-          target: ./database
+          path: ./app
+          target: ./
         - action: sync
-          path: ./fastapi_backend/func
+          path: ./app/func
           target: ./func
         - action: sync
-          path: ./fastapi_backend/routers
+          path: ./app/routers
           target: ./routers
         - action: sync
-          path: ./fastapi_backend/static
+          path: ./app/static
           target: ./static
-    volumes: # docker_volumeName:app/containerPath 
-      - codex-database:/codex.db
-      - wikidata_names:/database/wikidata_names.csv
     networks:
       - codex-network
 
 networks:
   codex-network:
     name: medical-codex-net
-    #internal: true
+    # comment if creating new network
+    external: true
 
 volumes:
   codex-database:
   wikidata_names:
 
-# Add Sensitive information to secrets files to then be loaded
-#secrets:
-#  database_url: # Loads secret from external file
-#    external: true
+  # Add Sensitive information to secrets files to then be loaded
+  #secrets:
+  #  database_url: # Loads secret from external file
+  #    external: true
   
