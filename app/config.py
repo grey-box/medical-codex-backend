@@ -6,7 +6,12 @@ LOGGER_NAME = "codex_backend_logger"
 
 
 class Settings(BaseSettings):
-    DATABASE_URL: str
+    DB_TYPE: str = "postgresql"
+    DB_HOST: str = "localhost"
+    DB_PORT: int = 5432
+    DB_NAME: str = "postgres"
+    DB_USER: str = "postgres"
+    DB_PASSWORD: str
     LOGGING_LEVEL: str
     LOGGING_FORMAT: str
 
