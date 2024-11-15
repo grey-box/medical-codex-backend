@@ -67,7 +67,7 @@ class UniqueTranslationsPYD(BaseModel):
 
     class Config:
         # If needed, you can configure ORM mode so Pydantic can serialize SQLAlchemy models directly.
-        orm_mode = True
+        from_attributes = True
 
     @classmethod
     def from_orm(cls, obj):

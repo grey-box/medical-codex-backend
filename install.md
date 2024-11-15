@@ -14,7 +14,7 @@ brew update && brew install azure-cli
 
 ```shell
 az login --use-device-code
-export AZ_SUBSCRIPTION_ID=""
+export AZ_SUBSCRIPTION_ID="08e59679-84be-4450-8545-7c4330328505"
 az account set --subscription "${AZ_SUBSCRIPTION_ID}"
 ```
 
@@ -25,7 +25,7 @@ Set the Service Plan variables
 ```shell
 export AZ_APPSERVICE_PLAN="MedicalCodexApp"
 export AZ_RESGRP="project_codex_dev"
-export AZ_APP_NAME="MedicalCodexBackend"
+export AZ_APP_NAME="MedicalCodexBackendASU"
 ```
 
 If you don't have already an App Service Plan, create one
@@ -58,12 +58,15 @@ az webapp config set --resource-group "${AZ_RESGRP}" --name "${AZ_APP_NAME}" --s
 
 ```shell
 az webapp config appsettings set --name "${AZ_APP_NAME}" --resource-group "${AZ_RESGRP}" --settings LOGGING_FORMAT='%(levelname) -10s %(asctime)s %(name) -30s %(funcName) -35s %(lineno) -5d: %(message)s'
-
 az webapp config appsettings set --name "${AZ_APP_NAME}" --resource-group "${AZ_RESGRP}" --settings LOGGING_LEVEL='NOTSET'
-
-az webapp config appsettings set --name "${AZ_APP_NAME}" --resource-group "${AZ_RESGRP}" --settings DATABASE_URL='sqlite:///static/codex.db'
-
 az webapp config appsettings set --name "${AZ_APP_NAME}" --resource-group "${AZ_RESGRP}" --settings SCM_DO_BUILD_DURING_DEPLOYMENT=1
+# Fill values from .env here
+az webapp config appsettings set --name "${AZ_APP_NAME}" --resource-group "${AZ_RESGRP}" --settings DB_TYPE=''
+az webapp config appsettings set --name "${AZ_APP_NAME}" --resource-group "${AZ_RESGRP}" --settings DB_HOST=''
+az webapp config appsettings set --name "${AZ_APP_NAME}" --resource-group "${AZ_RESGRP}" --settings DB_PORT=''
+az webapp config appsettings set --name "${AZ_APP_NAME}" --resource-group "${AZ_RESGRP}" --settings DB_NAME=''
+az webapp config appsettings set --name "${AZ_APP_NAME}" --resource-group "${AZ_RESGRP}" --settings DB_USER=''
+az webapp config appsettings set --name "${AZ_APP_NAME}" --resource-group "${AZ_RESGRP}" --settings DB_PASSWORD=''
 ```
 
 ## Deploy Web App
