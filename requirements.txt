@@ -79,3 +79,6 @@ uvicorn==0.30.5
 w3lib==2.2.1
 wrapt==1.16.0
 zope.interface==7.1.0
+google-cloud-aiplatform==1.38
+google-generativeai==0.8.3
+google-ai-generativelanguage==0.6.10
