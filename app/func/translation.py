@@ -21,8 +21,10 @@ def translate(db: Session, query: schemas.TranslationQuery):
             UniqueTranslationsORM.source_text == term
         ))
         result = db.execute(dbQuery).scalars().all()
-        
+        print("RESULTS: ")
+        print(result)
         db.close()
+        return [str(value) for value in result]
 
         if result:
             translated_term = result[0]
@@ -37,15 +39,15 @@ def translate(db: Session, query: schemas.TranslationQuery):
             #         }
             #     ]
             # }
-        else:
-            return lastResortTranslate(query, "gemini") ##change the type of last resort translation here.
+        # else:
+        #     return lastResortTranslate(query, "gemini") ##change the type of last resort translation here.
 
     except requests.exceptions.RequestException as e:
         print("Error:", e)
         return None
 
 
-def lastResortTranslate(query: schemas.TranslationQuery, translationType: str) -> schemas.TranslationResult:
+def lastResortTranslate(query: schemas.TranslationQuery, translationType: str):
 
     if translationType == "gemini":
         translatedValue = getGeminiTranslation(query)
@@ -79,7 +81,7 @@ def getGeminiTranslation(query: schemas.TranslationQuery):
     response = model.generate_content(prompt, safety_settings=safety_settings)
 
     if not response:
-        resposne = "GemeniAPI unable to give response" ## maybe have another API called after?
+        response = "GemeniAPI unable to give response" ## maybe have another API called after?
 
     return response
 

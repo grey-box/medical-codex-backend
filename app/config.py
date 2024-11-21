@@ -14,6 +14,7 @@ class Settings(BaseSettings):
     DB_PASSWORD: str
     LOGGING_LEVEL: str
     LOGGING_FORMAT: str
+    GOOGLE_API_KEY: str
 
     class Config:
         env_file = find_dotenv()
