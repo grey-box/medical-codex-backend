@@ -12,7 +12,7 @@ Base.metadata.create_all(engine)
 class UniqueTranslationsORM(Base):
     """
         The "unique_translation_table" model is used to build a single
-        translation table that is the first and main source to 
+        translation table that is the first and main source to
         query for translation results.
     """
     __tablename__ = "unique_translation_table"
@@ -42,7 +42,7 @@ class LanguagePairs(Base):
         View for language pairs from the 'unique_translation_table' table.
         View is named: 'available_languages_view'
 
-        Excludes odd names like  
+        Excludes odd names like
     """
     __tablename__ = "available_languages_view"
 
@@ -50,7 +50,7 @@ class LanguagePairs(Base):
     target_language = Column(String, nullable=False, primary_key=True)
 
     __table_args__ = {'autoload_with': engine}
-    
+
     def __repr__(self):
         return f'\
 <Language(\n\

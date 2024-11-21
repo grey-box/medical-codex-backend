@@ -15,6 +15,7 @@ logger = logging.getLogger(LOGGER_NAME)
 @router.post("/", response_model=schemas.Translation)
 def get_translation(query: schemas.TranslationQuery, db: Session = Depends(get_db)):
     results = translation.translate(db, query)
+    print(results)
     return results
 
 
@@ -33,4 +34,9 @@ def get_translation_test(
         }
 
     results = {"results": [result(i) for i in range(5)]}
+    return results
+
+@router.post("/lastresort", response_model=schemas.Translation)
+def get_last_resort_translation(query: schemas.TranslationQuery, agnosticModel: str = "gemini"):
+    results = translation.lastResortTranslate(query, agnosticModel)
     return results
