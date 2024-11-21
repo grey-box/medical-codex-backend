@@ -15,7 +15,6 @@ logger = logging.getLogger(LOGGER_NAME)
 @router.post("/", response_model=schemas.Translation)
 def get_translation(query: schemas.TranslationQuery, db: Session = Depends(get_db)):
     results = translation.translate(db, query)
-    print(results)
     return results
 
 
