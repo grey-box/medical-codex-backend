@@ -10,22 +10,8 @@ services:
     #  - database_url
     ports:
       - "8000:8000"
-    develop:
-      watch:
-        - action: rebuild
-          path: ./requirements.txt
-        - action: sync
-          path: ./app
-          target: ./
-        - action: sync
-          path: ./app/func
-          target: ./func
-        - action: sync
-          path: ./app/routers
-          target: ./routers
-        - action: sync
-          path: ./app/static
-          target: ./static
+    volumes:
+      - ./:/app
     networks:
       - codex-network
 
@@ -34,10 +20,13 @@ networks:
     name: medical-codex-net
     # comment if creating new network
     external: true
+    # If you run into an error with the network "medical-codex-net" check it exists with command:
+    # docker network ls
+    # Create it if needed with command:
+    # docker network create medical-codex-net
 
 volumes:
-  codex-database:
-  wikidata_names:
+  codex-database: {}
 
   # Add Sensitive information to secrets files to then be loaded
   #secrets:

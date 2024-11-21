@@ -10,7 +10,7 @@ POST http://0.0.0.0:8000/fuzzymatching/test
 POST http://0.0.0.0:8000/fuzzymatching/
 
 {
-    "source_language": "Ukrainian",
+    "source_language": "uk",
     "query": "астмито",
     "threshold": 5,
     "nb_max_results": 5
