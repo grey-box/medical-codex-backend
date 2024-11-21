@@ -15,7 +15,7 @@ Base.metadata.create_all(engine)
 
 
 class UniqueTranslationsORM(Base):
-    __tablename__ = "unique_translation"
+    __tablename__ = "unique_translation_table"
 
     id = Column(Integer, primary_key=True)
     source_language = Column(String, nullable=False)

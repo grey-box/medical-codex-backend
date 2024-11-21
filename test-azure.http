@@ -10,7 +10,7 @@ POST https://medicalcodexbackend.azurewebsites.net/fuzzymatching/test
 POST https://medicalcodexbackend.azurewebsites.net/fuzzymatching/
 
 {
-    "source_language": "Ukrainian",
+    "source_language": "uk",
     "query": "астмито",
     "threshold": 5,
     "nb_max_results": 5
