@@ -6,41 +6,40 @@ import google.generativeai as genai
 from google.generativeai.types import HarmCategory, HarmBlockThreshold
 from dotenv import load_dotenv
 from app.models import UniqueTranslationsORM
+from typing import Callable, Dict, Any
+from typing import List
 
 import app.schemas as schemas
 
-def translate(db: Session, query: schemas.TranslationQuery):
+def translate(db: Session, query: schemas.TranslationQuery) -> Dict[str, List[Dict[str, Any]]]:
 
-    print()
     try:
-        term = query.translation_query.matching_name.lower()
-        target_language = query.target_language.lower()
+        term = query.translation_query.matching_name
+        target_language = query.target_language
 
         dbQuery = select(distinct(UniqueTranslationsORM.target_text)).where(and_(
             UniqueTranslationsORM.target_language == target_language, 
             UniqueTranslationsORM.source_text == term
         ))
         result = db.execute(dbQuery).scalars().all()
-        print("RESULTS: ")
-        print(result)
         db.close()
-        return [str(value) for value in result]
+        resultList = [str(value) for value in result]
 
-        if result:
-            translated_term = result[0]
-
-            return result
-            # return {
-            #     "results": [
-            #         {
-            #             "translated_name": "test",
-            #             "translated_source": "local_db",
-            #             "translated_uid": query.translation_query.matching_uid,
-            #         }
-            #     ]
-            # }
-        # else:
-        #     return lastResortTranslate(query, "gemini") ##change the type of last resort translation here.
+        if resultList and resultList[0]:
+            finalResults = {
+            "results": [
+                {
+                    "translated_name": medicine,
+                    "translated_source": "local_db",
+                    "translated_uid": query.translation_query.matching_uid,
+                }
+                for medicine in resultList
+            ]
+            }
+        else:
+            finalResults = lastResortTranslate(query, "gemini")
+        
+        return finalResults
 
     except requests.exceptions.RequestException as e:
         print("Error:", e)
@@ -58,21 +57,24 @@ def lastResortTranslate(query: schemas.TranslationQuery, translationType: str):
     elif translationType == "":
         translatedValue = None
         
-
-    # translationResults.translated_source = query.target_language 
-    # translationResults.translated_uid = query.translation_query.matching_uid
     return translatedValue
 
-def getGeminiTranslation(query: schemas.TranslationQuery):
+def getGeminiTranslation(query: schemas.TranslationQuery)  -> Dict[str, List[Dict[str, Any]]]:
     load_dotenv("env.local")
-
     GEMINI_API_KEY = os.getenv("GOOGLE_API_KEY")
-
     genai.configure(api_key=GEMINI_API_KEY)
     model = genai.GenerativeModel("gemini-1.5-flash")
-    print(query)
 
-    prompt = f'Translate "{query.translation_query.matching_name}" to "{query.target_language}". Do not use brand names. Only respond with the translated term.'
+    if query.target_language == "en":
+        query.target_language = "english"
+    elif query.target_language == "uk":
+        query.target_language = "ukranian"
+    elif query.target_language == "ru":
+        query.target_language = "russian"
+    elif query.target_language == "fr":
+        query.target_language == "french"
+
+    prompt = f'Translate "{query.translation_query.matching_name}" to "{query.target_language}" as a drug name. Convert any brand name to the actual drug name.'
     
     safety_settings = {
         HarmCategory.HARM_CATEGORY_DANGEROUS_CONTENT: HarmBlockThreshold.BLOCK_NONE,
@@ -80,10 +82,22 @@ def getGeminiTranslation(query: schemas.TranslationQuery):
 
     response = model.generate_content(prompt, safety_settings=safety_settings)
 
+    print(type(response))
     if not response:
         response = "GemeniAPI unable to give response" ## maybe have another API called after?
 
-    return response
+
+    finalResults = {
+        "results": [
+            {
+                "translated_name": response.text,
+                "translated_source": "gemini_api",
+                "translated_uid": query.translation_query.matching_uid,
+            }
+        ]
+    }
+
+    return finalResults
 
 
 ## Problem lies where most translations instruct users to use their python libraries instead of having a url to json call into. 
