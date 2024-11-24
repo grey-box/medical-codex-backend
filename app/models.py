@@ -7,14 +7,14 @@ from app.database import Base, engine
 Base.metadata.create_all(engine)
 
 
-"""
-    The "Translation" Table models are used to build a single
-    translation table that is the first and main source to 
-    query for translation results.
-"""
 
 
 class UniqueTranslationsORM(Base):
+    """
+        The "unique_translation_table" model is used to build a single
+        translation table that is the first and main source to 
+        query for translation results.
+    """
     __tablename__ = "unique_translation_table"
 
     id = Column(Integer, primary_key=True)
@@ -37,7 +37,25 @@ class UniqueTranslationsORM(Base):
                 )>"
 
 
-class LanguagePairs:
-    """TODO: Define a view for language pairs from the 'unique_translation' table."""
+class LanguagePairs(Base):
+    """
+        View for language pairs from the 'unique_translation_table' table.
+        View is named: 'available_languages_view'
 
-    pass
+        Excludes odd names like  
+    """
+    __tablename__ = "available_languages_view"
+
+    source_language = Column(String, nullable=False, primary_key=True)
+    target_language = Column(String, nullable=False, primary_key=True)
+
+    __table_args__ = {'autoload_with': engine}
+    
+    def __repr__(self):
+        return f'\
+<Language(\n\
+    source_language={self.source_language},\n\
+    target_language={self.target_language}\n\
+)>'
+
+
