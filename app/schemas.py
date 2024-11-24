@@ -38,13 +38,13 @@ class Translation(BaseModel):
 
 class AvailableLanguageResult(BaseModel):
     source_language: str
-    target_language: str
+    target_languages: list[str]
 
     class Config:
         from_attributes = True
 
 class AvailableLanguages(BaseModel):
-    translations: List[AvailableLanguageResult]
+    available_languages: List[AvailableLanguageResult]
 
 
 
