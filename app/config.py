@@ -1,14 +1,15 @@
+from typing import Optional, Dict, Any
+
 from dotenv import find_dotenv
-from pydantic import BaseModel, ValidationError, ValidationInfo, field_validator
+from pydantic import BaseModel, field_validator
 from pydantic_settings import BaseSettings
-from typing import Optional
 
 LOGGER_NAME = "codex_backend_logger"
 
 
 class Settings(BaseSettings):
-    LOGGING_FORMAT: str = '%(asctime)s - %(levelname)s - %(message)s'
-    LOGGING_LEVEL: str = 'INFO'
+    LOGGING_FORMAT: str = "%(asctime)s - %(levelname)s - %(message)s"
+    LOGGING_LEVEL: str = "INFO"
     DB_TYPE: str = "postgresql"
     DB_HOST: str = "localhost"
     DB_PORT: int = 5432
@@ -19,11 +20,12 @@ class Settings(BaseSettings):
 
     class Config:
         env_file = find_dotenv()
-        env_file_encoding = 'utf-8'
+        env_file_encoding = "utf-8"
 
-    @field_validator('DB_PASSWORD')
-    def check_db_password(cls, v, values):
-        if values['DB_TYPE'] != "sqlite" and not v:
+    @field_validator("DB_PASSWORD")
+    @classmethod
+    def check_db_password(cls, v: Optional[str], info: Dict[str, Any]) -> Optional[str]:
+        if info.get("DB_TYPE") != "sqlite" and not v:
             raise ValueError("Database password is required for non-sqlite databases")
         return v
 

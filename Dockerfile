@@ -7,9 +7,9 @@ LABEL authors="Grey-Box, François Pelletier"
 
 # Install dependancies
 
-RUN apt-get -y update
+RUN apt-get -y update && apt-get -y upgrade
 
-RUN apt-get -y install postgresql postgresql-contrib libpq-dev gcc
+RUN apt-get -y install postgresql-15 postgresql-contrib-15 libpq-dev gcc
 
 # Set the working directory
 WORKDIR /app
@@ -30,4 +30,4 @@ EXPOSE 8000
 #CMD ["uvicorn", "main:app", "--host", "0.0.0.0", "--port", "8000", "--reload"]
 
 # Run the Application for Production
-CMD ["uvicorn", "main:app", "--host", "0.0.0.0", "--port", "8000", "-k", "uvicorn.workers.UvicornWorker"]
+CMD ["uvicorn", "main:app", "--host", "0.0.0.0", "--port", "8000"]
