@@ -1,8 +1,7 @@
 from typing import Optional
 
 from dotenv import find_dotenv
-from pydantic import BaseModel, field_validator
-from pydantic_core.core_schema import ValidationInfo
+from pydantic import BaseModel
 from pydantic_settings import BaseSettings
 
 LOGGER_NAME = "codex_backend_logger"
@@ -22,12 +21,6 @@ class Settings(BaseSettings):
     class Config:
         env_file = find_dotenv()
         env_file_encoding = "utf-8"
-
-    @field_validator("DB_PASSWORD")
-    def check_db_password(cls, v: Optional[str], info: ValidationInfo) -> Optional[str]:
-        if info.data.get("DB_TYPE") != "sqlite" and not v:
-            raise ValueError("Database password is required for non-sqlite databases")
-        return v
 
 
 settings = Settings()
