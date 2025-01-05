@@ -1,4 +1,4 @@
-from typing import List, Optional
+from typing import List
 
 from pydantic import BaseModel
 
@@ -70,3 +70,10 @@ class UniqueTranslationsPYD(BaseModel):
     @classmethod
     def from_orm(cls, obj):
         return cls.model_validate(obj)
+
+class LastResortQuery(BaseModel):
+    medicine: str
+    target_language: str
+
+class LastResortResponse(BaseModel):
+    translated_medicine: str

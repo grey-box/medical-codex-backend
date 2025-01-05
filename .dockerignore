@@ -1,25 +1,16 @@
-# Ignore version control files
-.git
-.gitignore
+# .git directories are ignored automatically
 
-# Ignore Docker-related files
-Dockerfile
-.dockerignore
-
-# Ignore development and local environment files
-*.log
-*.pyc
-__pycache__
-.vscode
-.idea
-
-# Ignore test files
-test/
-tests/
-
-# Ignore documentation
+#Files
+*.http
 *.md
-LICENSE
+*.ps1
+build*.sh
+docker-*
+create_database*
+
+#Directories
+.azure
+
 
 # Ignore any other files or directories not needed in the container
 node_modules/

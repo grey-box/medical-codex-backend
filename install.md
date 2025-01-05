@@ -14,7 +14,7 @@ brew update && brew install azure-cli
 
 ```shell
 az login --use-device-code
-export AZ_SUBSCRIPTION_ID="08e59679-84be-4450-8545-7c4330328505"
+export AZ_SUBSCRIPTION_ID=""
 az account set --subscription "${AZ_SUBSCRIPTION_ID}"
 ```
 
@@ -25,7 +25,7 @@ Set the Service Plan variables
 ```shell
 export AZ_APPSERVICE_PLAN="MedicalCodexApp"
 export AZ_RESGRP="project_codex_dev"
-export AZ_APP_NAME="MedicalCodexBackendASU"
+export AZ_APP_NAME="MedicalCodexBackend"
 ```
 
 If you don't have already an App Service Plan, create one

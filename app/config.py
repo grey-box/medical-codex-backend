@@ -1,8 +1,8 @@
 from typing import Optional
 
-from dotenv import find_dotenv
 from pydantic import BaseModel
 from pydantic_settings import BaseSettings
+from dotenv import find_dotenv
 
 LOGGER_NAME = "codex_backend_logger"
 
