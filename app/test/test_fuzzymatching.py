@@ -1,23 +1,24 @@
-from app.database import get_db
+from app.algorithms.search_medications_by_levenshtein import (
+    search_medications_by_levenshtein,
+)
+from app.algorithms.search_medications_by_soundex import search_medications_by_soundex
+from app.database import get_database_session
+from app.func.get_unique_source_texts import get_unique_source_texts
 
-from app.func.algorithms import fonetika_soundex
-from app.func.algorithms import fuzzy_levenshtein
-from app.func.fuzzy_matching import get_unique_source_values
+db = next(get_database_session())
 
-db = get_db()
-
-source_uk = get_unique_source_values(db, "uk")
-source_ru = get_unique_source_values(db, "ru")
+source_uk = get_unique_source_texts(db, "uk")
+source_ru = get_unique_source_texts(db, "ru")
 
 
 def test_levenshtein():
     assert (
-        fuzzy_levenshtein(
-            source_language="uk",
-            input_string="астмито",
-            source_data=source_uk,
-            threshold=5,
-            nb_max_results=5,
+        search_medications_by_levenshtein(
+            language="uk",
+            query="астмито",
+            medications=source_uk,
+            max_distance=5,
+            max_results=5,
         )[0]
         == "астматол"
     )
@@ -25,12 +26,12 @@ def test_levenshtein():
 
 def test_fonetika_soundex():
     assert (
-        fonetika_soundex(
+        search_medications_by_soundex(
             source_language="ru",
-            input_string="изотретиноїн",
-            source_data=source_ru,
-            threshold=2,
-            nb_max_results=5,
+            query="изотретиноїн",
+            medications=source_ru,
+            max_distance=2,
+            max_results=5,
         )[0]
         == "ізотретиноїн"
     )
