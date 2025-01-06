@@ -2,7 +2,7 @@
 POST http://0.0.0.0:8000/fuzzymatching/test
 
 {
-    "source_language": "uk",
+    "language": "uk",
     "query": "sample_query"
 }
 
@@ -10,10 +10,10 @@ POST http://0.0.0.0:8000/fuzzymatching/test
 POST http://0.0.0.0:8000/fuzzymatching/
 
 {
-    "source_language": "uk",
-    "query": "астмито",
-    "threshold": 5,
-    "nb_max_results": 5
+    "language": "uk",
+    "query": "мелатонін",
+    "max_distance": 5,
+    "max_results": 5
 }
 
 ### test POST request for translation

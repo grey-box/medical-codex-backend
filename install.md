@@ -76,3 +76,16 @@ az webapp up --name "${AZ_APP_NAME}" \
 --resource-group "${AZ_RESGRP}" \
 --sku B1 --runtime "PYTHON|3.11"
 ```
+
+## Enable PostgreSQL database extension
+
+To enable this extension in Azure, you need first to allow it from the Azure Portal: Server parameters / extensions.
+
+See [Manage PostgreSQL extensions in Azure Database for PostgreSQL - Flexible Server](https://learn.microsoft.com/en-us/azure/postgresql/extensions/how-to-allow-extensions?tabs=allow-extensions-portal%2Cload-libraries-portal#how-to-use-postgresql-extensions)
+for more details.
+
+![enable-azure-postgres-extension-fuzzystrmatch.png](images/enable-azure-postgres-extension-fuzzystrmatch.png)
+
+```
+CREATE EXTENSION fuzzystrmatch;
+```

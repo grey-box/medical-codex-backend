@@ -33,6 +33,8 @@ def get_fuzzymatching_test(
             "matching_name": f"matching_name{number}",
             "matching_source": f"matching_source{number}",
             "matching_uid": number,
+            "matching_algorithm": "test",
+            "matching_row_number": number + 1,  # This is just for testing purposes.
         }
 
     results = {"results": [result(i) for i in range(5)]}

@@ -6,7 +6,6 @@ from sqlalchemy.orm import Session
 import app.schemas as schemas
 from app.config import LOGGER_NAME
 from app.database import get_database_session
-from func.translate_using_fallback import translate_using_fallback
 from func.translate_with_database import translate_with_database
 
 router = APIRouter(prefix="/translate", tags=["levels"])
@@ -36,10 +35,4 @@ def get_translation_test(
         }
 
     results = {"results": [result(i) for i in range(5)]}
-    return results
-
-
-@router.post("/fallback", response_model=schemas.Translation)
-def get_fallback_translation(query: schemas.TranslationQuery):
-    results = translate_using_fallback(query)
     return results

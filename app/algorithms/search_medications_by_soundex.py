@@ -8,17 +8,18 @@ from app.algorithms.filter_medications_by_distance import filter_medications_by_
 from app.algorithms.get_top_matches_by_distance import get_top_matches_by_distance
 from app.config import LOGGER_NAME
 from app.func.normalize_and_filter_strings import normalize_and_filter_strings
+from app.schemas import FuzzyResult
 
 logger = logging.getLogger(LOGGER_NAME)
 
 
 def search_medications_by_soundex(
-    source_language: str,
+    language: str,
     medications: List[str],
     query: str,
     max_distance: float = 2,
     max_results: int = 10,
-) -> List[str]:
+) -> List[FuzzyResult]:
     """
     Search for medications using Soundex algorithm.
 
@@ -26,14 +27,14 @@ def search_medications_by_soundex(
     based on the specified language.
 
     Args:
-        source_language (str): Language of the input and medication names ('en', 'ru', or 'uk').
+        language (str): Language of the input and medication names ('en', 'ru', or 'uk').
         medications (List[str]): List of medication names to search through.
         query (str): Input string to search for.
         max_distance (float, optional): Maximum phonetic distance allowed. Defaults to 2.
         max_results (int, optional): Maximum number of results to return. Defaults to 10.
 
     Returns:
-        List[str]: List of medication names matching the query within the specified threshold.
+        List[FuzzyResult]: List of FuzzyResult objects matching the query within the specified max_distance.
 
     Raises:
         ValueError: If the input is invalid or the language is unsupported.
@@ -41,21 +42,37 @@ def search_medications_by_soundex(
     try:
         processed_medications = normalize_and_filter_strings(medications, query)
 
-        if source_language == ["en", "fr"]:
+        if language in ["en", "fr"]:
             soundex = EnglishSoundex()
-        elif source_language in ["ru", "uk"]:
+            soundex_version_name = "English Soundex"
+        elif language in ["ru", "uk"]:
             soundex = RussianSoundex()
+            soundex_version_name = "Russian Soundex"
         else:
-            raise ValueError(f"Unsupported language: {source_language}")
+            raise ValueError(f"Unsupported language: {language}")
 
         phonetic_distance = PhoneticsInnerLanguageDistance(soundex)
         filtered_medications, distances = filter_medications_by_distance(
             processed_medications, query, phonetic_distance.distance, max_distance
         )
-        top_matches = get_top_matches_by_distance(filtered_medications, distances, max_results)
+        top_matches = get_top_matches_by_distance(
+            filtered_medications, distances, max_results
+        )
 
-        logger.info(f"Soundex search results: {top_matches}")
-        return top_matches
+        # Create FuzzyResult objects for each matched medication
+        fuzzy_results = [
+            FuzzyResult(
+                matching_name=medication,
+                matching_source="Soundex",
+                matching_algorithm=f"{soundex_version_name} (Local)",
+                matching_uid=0,  # You may need to adjust this if you have a way to get the UID
+                matching_row_number=index + 1,
+            )
+            for index, medication in enumerate(top_matches)
+        ]
+
+        logger.info(f"Soundex search results: {fuzzy_results}")
+        return fuzzy_results
 
     except Exception as e:
         logger.error(f"Error in Soundex search: {str(e)}")

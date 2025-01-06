@@ -13,7 +13,7 @@ def filter_medications_by_distance(
     Filter medications based on their distance to a query string.
 
     Compute the distance between the query and each medication using the specified
-    distance function. Return medications and their distances within the given threshold.
+    distance function. Return medications and their distances within the given max_distance.
 
     Args:
         medications (List[str]): List of medication names to compare against.
@@ -23,7 +23,7 @@ def filter_medications_by_distance(
 
     Returns:
         Tuple[List[str], List[float]]: A tuple containing two lists:
-            - List of medications within the threshold distance.
+            - List of medications within the max_distance distance.
             - Corresponding distances for the medications.
 
     Raises:
@@ -50,7 +50,7 @@ def filter_medications_by_distance(
                 )
 
         logger.info(
-            f"Filtered {len(filtered_medications)} medications within the distance threshold."
+            f"Filtered {len(filtered_medications)} medications within the distance max_distance."
         )
         return filtered_medications, distances
 
