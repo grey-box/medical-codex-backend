@@ -1,0 +1,30 @@
+### test POST request for fuzzy matching
+POST https://medicalcodexbackend.azurewebsites.net/fuzzymatching/test
+
+{
+    "source_language": "uk",
+    "query": "sample_query"
+}
+
+### test POST request for fuzzy matching
+POST https://medicalcodexbackend.azurewebsites.net/fuzzymatching/
+
+{
+    "source_language": "uk",
+    "query": "астмито",
+    "threshold": 5,
+    "nb_max_results": 5
+}
+
+### test POST request for translation
+POST https://medicalcodexbackend.azurewebsites.net/translate/test
+
+{
+    "source_language": "uk",
+    "target_language": "en",
+    "translation_query": {
+      "matching_name": "matching_name3",
+      "matching_source": "matching_source3",
+      "matching_uid": 3
+    }
+}

@@ -1,26 +1,35 @@
-
 services:
   #codex-frontend:
   
   fastapi_backend:
     build:
-      context: ./fastapi_backend
-      dockerfile: Dockerfile
-    image: local/fastapi-backend
-    container_name: fastapi_backend
-    ports:
-      - 8000:8000
-    env_file: 
-      - ./fastapi_backend/.env
-    volumes: # docker_volumeName:app/containerPath 
-      - ./fastapi_backend/database:/app/database
-    network_mode: host
+      context: ./
+    env_file:
+      - .env
     #secrets:  # How to import secrets to the app in the container
     #  - database_url
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./:/app
+    networks:
+      - codex-network
 
-  
-# Add Sensitive information to secrets files to then be loaded
-#secrets:
-#  database_url: # Loads secret from external file
-#    external: true
+networks:
+  codex-network:
+    name: medical-codex-net
+    # comment if creating new network
+    external: true
+    # If you run into an error with the network "medical-codex-net" check it exists with command:
+    # docker network ls
+    # Create it if needed with command:
+    # docker network create medical-codex-net
+
+volumes:
+  codex-database: {}
+
+  # Add Sensitive information to secrets files to then be loaded
+  #secrets:
+  #  database_url: # Loads secret from external file
+  #    external: true
   

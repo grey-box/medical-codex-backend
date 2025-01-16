@@ -1,0 +1,27 @@
+# Ignore version control files
+.git
+.gitignore
+
+# Ignore Docker-related files
+Dockerfile
+.dockerignore
+
+# Ignore development and local environment files
+*.log
+*.pyc
+__pycache__
+.vscode
+.idea
+
+# Ignore test files
+test/
+tests/
+
+# Ignore documentation
+*.md
+LICENSE
+
+# Ignore any other files or directories not needed in the container
+node_modules/
+venv/
+*.env

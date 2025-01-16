@@ -1,1 +1,0 @@
-REQUEST_FINGERPRINTER_CLASS = "my_project.utils.RequestFingerprinter"
