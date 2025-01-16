@@ -2,7 +2,7 @@
 POST https://medicalcodexbackend.azurewebsites.net/fuzzymatching/test
 
 {
-    "source_language": "uk",
+    "language": "uk",
     "query": "sample_query"
 }
 
@@ -10,10 +10,10 @@ POST https://medicalcodexbackend.azurewebsites.net/fuzzymatching/test
 POST https://medicalcodexbackend.azurewebsites.net/fuzzymatching/
 
 {
-    "source_language": "uk",
+    "language": "uk",
     "query": "астмито",
-    "threshold": 5,
-    "nb_max_results": 5
+    "max_distance": 5,
+    "max_results": 5
 }
 
 ### test POST request for translation

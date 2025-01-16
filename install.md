@@ -14,7 +14,7 @@ brew update && brew install azure-cli
 
 ```shell
 az login --use-device-code
-export AZ_SUBSCRIPTION_ID="08e59679-84be-4450-8545-7c4330328505"
+export AZ_SUBSCRIPTION_ID=""
 az account set --subscription "${AZ_SUBSCRIPTION_ID}"
 ```
 
@@ -25,7 +25,7 @@ Set the Service Plan variables
 ```shell
 export AZ_APPSERVICE_PLAN="MedicalCodexApp"
 export AZ_RESGRP="project_codex_dev"
-export AZ_APP_NAME="MedicalCodexBackendASU"
+export AZ_APP_NAME="MedicalCodexBackend"
 ```
 
 If you don't have already an App Service Plan, create one
@@ -75,4 +75,17 @@ az webapp config appsettings set --name "${AZ_APP_NAME}" --resource-group "${AZ_
 az webapp up --name "${AZ_APP_NAME}" \
 --resource-group "${AZ_RESGRP}" \
 --sku B1 --runtime "PYTHON|3.11"
+```
+
+## Enable PostgreSQL database extension
+
+To enable this extension in Azure, you need first to allow it from the Azure Portal: Server parameters / extensions.
+
+See [Manage PostgreSQL extensions in Azure Database for PostgreSQL - Flexible Server](https://learn.microsoft.com/en-us/azure/postgresql/extensions/how-to-allow-extensions?tabs=allow-extensions-portal%2Cload-libraries-portal#how-to-use-postgresql-extensions)
+for more details.
+
+![enable-azure-postgres-extension-fuzzystrmatch.png](images/enable-azure-postgres-extension-fuzzystrmatch.png)
+
+```
+CREATE EXTENSION fuzzystrmatch;
 ```

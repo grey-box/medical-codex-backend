@@ -6,7 +6,7 @@ from sqlalchemy.orm import Session
 import app.database as database
 from app import schemas
 from app.config import LOGGER_NAME
-from app.func import fuzzy_matching
+from func import perform_fuzzy_matching
 
 router = APIRouter(prefix="/fuzzymatching", tags=["fuzzymatching"])
 logger = logging.getLogger(LOGGER_NAME)
@@ -14,16 +14,16 @@ logger = logging.getLogger(LOGGER_NAME)
 
 @router.post("/", response_model=schemas.FuzzyMatching)
 def get_fuzzymatching(
-    query: schemas.FuzzyQuery, db: Session = Depends(database.get_db)
+    query: schemas.FuzzyQuery, db: Session = Depends(database.get_database_session)
 ):
-    results = fuzzy_matching.fuzzy_matching(db, query)
+    results = perform_fuzzy_matching.perform_fuzzy_matching(db, query)
     logging.info(results)
     return results
 
 
 @router.post("/test", response_model=schemas.FuzzyMatching)
 def get_fuzzymatching_test(
-    query: schemas.FuzzyQuery, db: Session = Depends(database.get_db)
+    query: schemas.FuzzyQuery, db: Session = Depends(database.get_database_session)
 ):
     logging.info(query)
     logging.info(db.info)
@@ -33,6 +33,8 @@ def get_fuzzymatching_test(
             "matching_name": f"matching_name{number}",
             "matching_source": f"matching_source{number}",
             "matching_uid": number,
+            "matching_algorithm": "test",
+            "matching_row_number": number + 1,  # This is just for testing purposes.
         }
 
     results = {"results": [result(i) for i in range(5)]}

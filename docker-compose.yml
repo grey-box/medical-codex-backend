@@ -1,0 +1,13 @@
+services:
+  fastapi_backend:
+    build:
+      context: ./
+    env_file:
+      - .env
+    expose:
+      - "8000"
+    networks:
+      - codex-network
+networks:
+  codex-network:
+    name: medical-codex-net

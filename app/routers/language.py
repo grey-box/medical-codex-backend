@@ -1,76 +1,91 @@
 import logging
+from typing import List
 
-from fastapi import APIRouter, Depends
+from fastapi import APIRouter, Depends, HTTPException
 from sqlalchemy.orm import Session
-import test
 
-from app.database import get_db
 import app.models as models
 import app.schemas as schemas
 from app.config import LOGGER_NAME
+from app.database import get_database_session
 
 router = APIRouter(prefix="/languages", tags=["languages"])
 logger = logging.getLogger(LOGGER_NAME)
 
 
 @router.get("/", response_model=schemas.AvailableLanguages)
-def get_languages(db: Session = Depends(get_db)):
-    '''
-        Gets the languages currently available to translate works to
-        and from using the translate endpoint
-    '''
-    # Query to get the langauge pairs from a View in the DB
-    language_pairs = db.query(
-            models.LanguagePairs
-        ).order_by(
-            models.LanguagePairs.source_language.asc(),
-            models.LanguagePairs.target_language.asc()
-        ).all()
-    
-    # Group Languages with list of languages they can be translated to
-    grouped_languages = {}
-    for language in language_pairs:
-        if language.source_language not in grouped_languages:
-            grouped_languages[language.source_language] = []
-        grouped_languages[language.source_language].append(language.target_language)
+def get_available_languages(
+    db: Session = Depends(get_database_session),
+) -> schemas.AvailableLanguages:
+    """
+    Retrieve the languages currently available for translation.
 
-    # Covert to pydantic models
-    avialable_languages_list = [
-        schemas.AvailableLanguageResult(
-            source_language=source,
-            target_languages=targets,
+    Args:
+        db: Database session.
+
+    Returns:
+        AvailableLanguages: Object containing available language pairs.
+    """
+    try:
+        language_pairs = (
+            db.query(models.LanguagePairs)
+            .order_by(
+                models.LanguagePairs.source_language.asc(),
+                models.LanguagePairs.target_language.asc(),
+            )
+            .all()
         )
-        for source, targets in grouped_languages.items()
-    ]
 
-    # Log the pairs we are returning
-    logger.info(f'\nLanguage pairs:\n{language_pairs}')
-    
-    # Translate to a list based on the pydantic schemas
-    return schemas.AvailableLanguages(available_languages=avialable_languages_list)
+        grouped_languages = {}
+        for pair in language_pairs:
+            if pair.source_language not in grouped_languages:
+                grouped_languages[pair.source_language] = []
+            grouped_languages[pair.source_language].append(pair.target_language)
+
+        available_languages_list = [
+            schemas.AvailableLanguageResult(
+                source_language=source,
+                target_languages=targets,
+            )
+            for source, targets in grouped_languages.items()
+        ]
+
+        logger.info(f"Retrieved language pairs: {language_pairs}")
+        return schemas.AvailableLanguages(available_languages=available_languages_list)
+    except Exception as e:
+        logger.error(f"Error retrieving available languages: {str(e)}")
+        raise HTTPException(status_code=500, detail="Internal server error")
+
 
 @router.get("/test", response_model=schemas.AvailableLanguages)
-def get_translation_test(
-    db: Session = Depends(get_db)
-):
-    logging.info(db.info)
+def get_test_languages(
+    db: Session = Depends(get_database_session),
+) -> schemas.AvailableLanguages:
+    """
+    Generate test language pairs for development purposes.
 
-    def result(num_range):
-        
-        test_result = []
+    Args:
+        db: Database session (not used in this function, kept for consistency).
 
-        for num in range(1, num_range + 1):
-            
-            source_language = f'lang{num}'
-            target_languages = [f'lang{i}' for i in range(1, num_range + 1) if i != num]
+    Returns:
+        AvailableLanguages: Object containing test language pairs.
+    """
+    try:
+        logger.info("Generating test language pairs")
 
-            test_result.append({
-                'source_language': source_language,
-                'target_languages': target_languages, 
+        def generate_test_pairs(num_languages: int) -> List[dict]:
+            return [
+                {
+                    "source_language": f"lang{num}",
+                    "target_languages": [
+                        f"lang{i}" for i in range(1, num_languages + 1) if i != num
+                    ],
+                }
+                for num in range(1, num_languages + 1)
+            ]
 
-            })
-
-        return test_result
-
-    results = {"available_languages": result(3)}
-    return results
+        test_results = generate_test_pairs(3)
+        return schemas.AvailableLanguages(available_languages=test_results)
+    except Exception as e:
+        logger.error(f"Error generating test language pairs: {str(e)}")
+        raise HTTPException(status_code=500, detail="Internal server error")

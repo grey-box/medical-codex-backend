@@ -1,23 +1,27 @@
-from typing import List, Optional
+from typing import List, Optional, Callable
 
 from pydantic import BaseModel
 
 
 # 2 in the diagram
 class FuzzyQuery(BaseModel):
-    source_language: str
+    language: str
     query: str
-    threshold: int = 10
-    nb_max_results: int = 10
+    max_distance: int = 10
+    max_results: int = 10
+
+
 class FuzzyResult(BaseModel):
     matching_name: str
     matching_source: str
+    matching_algorithm: str
     matching_uid: int
+    matching_row_number: int
+
 
 # 3 in the diagram
 class FuzzyMatching(BaseModel):
     results: List[FuzzyResult]
-
 
 
 # 5 in the diagram
@@ -25,15 +29,16 @@ class TranslationQuery(BaseModel):
     translation_query: FuzzyResult
     target_language: str
 
+
 class TranslationResult(BaseModel):
     translated_name: str
     translated_source: str
     translated_uid: int
 
+
 # 6 in the diagram
 class Translation(BaseModel):
     results: List[TranslationResult]
-
 
 
 class AvailableLanguageResult(BaseModel):
@@ -43,10 +48,9 @@ class AvailableLanguageResult(BaseModel):
     class Config:
         from_attributes = True
 
+
 class AvailableLanguages(BaseModel):
     available_languages: List[AvailableLanguageResult]
-
-
 
 
 class UniqueTranslationsPYD(BaseModel):
@@ -70,3 +74,17 @@ class UniqueTranslationsPYD(BaseModel):
     @classmethod
     def from_orm(cls, obj):
         return cls.model_validate(obj)
+
+
+class FallbackQuery(BaseModel):
+    medicine: FuzzyResult
+    target_language: str
+
+
+class FallbackResponse(BaseModel):
+    translated_medicine: str
+
+
+class FuzzyAlgorithm(BaseModel):
+    function: Callable
+    local: bool
