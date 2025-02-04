@@ -9,7 +9,7 @@ LABEL authors="Grey-Box, François Pelletier"
 
 RUN apt-get -y update && apt-get -y upgrade
 
-RUN apt-get -y install postgresql-15 postgresql-contrib-15 libpq-dev gcc
+RUN apt-get -y install build-essential postgresql-15 postgresql-contrib-15 libpq-dev gcc
 
 # Set the working directory
 WORKDIR /app
