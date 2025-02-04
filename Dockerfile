@@ -2,7 +2,7 @@
 # escape=`
 #Useful to set escape to backtick since \ is dir separator for windows.
 
-FROM python:3.11-slim
+FROM python:3.13-slim
 LABEL authors="Grey-Box, François Pelletier"
 
 # Install dependancies
