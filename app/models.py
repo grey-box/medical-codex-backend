@@ -49,6 +49,35 @@ class UniqueTranslations(Base):
             f"weight={self.weight}"
             f")>"
         )
+    
+class ManualTranslations(Base):
+    """
+    Represent a single translation entry in the manual translation table.
+
+    This model is used to build a single translation table that serves as the
+    primary source for querying translation results.
+    """
+
+    __tablename__ = "manual_translation"
+
+    term = Column(String, nullable=False, primary_key=True)
+    language_from = Column(String, nullable=False)
+    language_to = Column(String, nullable=False)
+
+    def __repr__(self) -> str:
+        """
+        Return a string representation of the UniqueTranslationsORM instance.
+
+        Returns:
+            str: A formatted string containing the instance's attributes.
+        """
+        return (
+            f"<Manual Translation("
+            f"term={self.term}, "
+            f"language_from={self.language_from}, "
+            f"language_to={self.language_to}, "
+            f")>"
+        )
 
 
 class LanguagePairs(Base):

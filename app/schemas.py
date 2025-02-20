@@ -88,3 +88,11 @@ class FallbackResponse(BaseModel):
 class FuzzyAlgorithm(BaseModel):
     function: Callable
     local: bool
+
+class ManualTranslationQuery(BaseModel):
+    term: str
+    language_to: str
+    language_from: str
+
+class ManualTranslationResponse(BaseModel):
+    storedTranslationResponse: str
