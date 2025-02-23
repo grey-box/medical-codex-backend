@@ -41,7 +41,7 @@ def run_matching_algorithm(
     )
 
     common_params = {
-        "language": query_params.language,
+        "language": query_params.source_language,
         "query": query_params.query.lower(),
         "max_distance": query_params.max_distance,
         "max_results": query_params.max_results,

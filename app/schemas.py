@@ -5,8 +5,9 @@ from pydantic import BaseModel
 
 # 2 in the diagram
 class FuzzyQuery(BaseModel):
-    language: str
+    source_language: str
     query: str
+    target_language: str = None
     max_distance: int = 10
     max_results: int = 10
 

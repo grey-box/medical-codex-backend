@@ -9,10 +9,13 @@ from schemas import FuzzyQuery
 db = next(get_database_session())
 
 source_uk = get_unique_source_texts(
-    db, FuzzyQuery(language="uk", query="астмито", max_distance=5, max_results=5)
+    db, FuzzyQuery(source_language="uk", query="астмито", max_distance=5, max_results=5)
 )
 source_ru = get_unique_source_texts(
-    db, FuzzyQuery(language="ru", query="изотретиноїн", max_distance=2, max_results=5)
+    db,
+    FuzzyQuery(
+        source_language="ru", query="изотретиноїн", max_distance=2, max_results=5
+    ),
 )
 
 

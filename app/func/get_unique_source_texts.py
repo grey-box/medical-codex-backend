@@ -27,7 +27,7 @@ def get_unique_source_texts(db: Session, query: FuzzyQuery) -> List[str]:
     """
     try:
         query = select(distinct(UniqueTranslations.source_text)).where(
-            UniqueTranslations.source_language == query.language
+            UniqueTranslations.source_language == query.source_language
         )
         result = db.execute(query).scalars().all()
         return [str(value) for value in result]
