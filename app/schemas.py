@@ -89,3 +89,11 @@ class FallbackResponse(BaseModel):
 class FuzzyAlgorithm(BaseModel):
     function: Callable
     local: bool
+
+
+class ManualTranslationQuery(BaseModel):
+    term: str
+    proposed_translation: str
+    source_language: str
+    target_language: str
+    description: Optional[str] = None
