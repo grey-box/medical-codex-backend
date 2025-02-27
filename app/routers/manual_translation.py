@@ -18,7 +18,7 @@ async def manual_translation(
     query: schemas.ManualTranslationQuery, db: Session = Depends(get_database_session)
 ):
     """
-    Translate medicine name using AI as a last resort.
+    Store manual translation query for manual review.
 
     Args:
         query (schemas.ManualTranslationQuery): Query containing the medical term, the lanugage to convert to, and the language to convert from.
