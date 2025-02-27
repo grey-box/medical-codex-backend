@@ -1,5 +1,5 @@
 import logging
-from typing import Dict, List, Any
+from typing import Dict, List
 
 from sqlalchemy import insert
 from sqlalchemy.orm import Session
@@ -7,14 +7,13 @@ from sqlalchemy.orm import Session
 import app.schemas as schemas
 from app.config import LOGGER_NAME
 from app.models import ManualTranslations
-from config import settings
 
 logger = logging.getLogger(LOGGER_NAME)
 
 
 def store_manual_translation(
     db: Session, query: schemas.ManualTranslationQuery
-) -> str:
+) -> bool:
     """
     Store a term to be manually translated for later.
 
@@ -27,17 +26,22 @@ def store_manual_translation(
     """
     try:
         term = query.term
-        target_language = query.language_to
-        source_language = query.language_from
+        source_language = query.source_language
+        target_language = query.target_language
+        description = query.description if query.description else None
 
-        db_query = insert(ManualTranslations).values(term=term, language_to=target_language, language_from=source_language)
+        db_query = insert(ManualTranslations).values(
+            term=term,
+            proposed_translation=query.proposed_translation,
+            language_to=target_language,
+            language_from=source_language,
+            description=description,
+        )
         db.execute(db_query).scalars().all()
         db.close()
 
-        return {
-                term + " inserted into the database for manual translation"
-        }
+        return True
 
     except Exception as e:
         logger.error(f"Error in store_translation: {str(e)}")
-        return {"Error"}
+        raise

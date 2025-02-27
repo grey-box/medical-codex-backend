@@ -1,10 +1,11 @@
 import logging
+from http import HTTPStatus
 
 from fastapi import APIRouter, HTTPException, Depends
 from sqlalchemy.orm import Session
 
 from app import schemas
-from app.config import LOGGER_NAME, settings
+from app.config import LOGGER_NAME
 from app.database import get_database_session
 from app.func.store_manual_translation import store_manual_translation
 
@@ -15,13 +16,13 @@ logger = logging.getLogger(LOGGER_NAME)
 @router.post("/", response_model=schemas.FallbackResponse)
 async def manual_translation(
     query: schemas.ManualTranslationQuery, db: Session = Depends(get_database_session)
-) -> schemas.ManualTranslationResponse:
+):
     """
     Translate medicine name using AI as a last resort.
 
     Args:
         query (schemas.ManualTranslationQuery): Query containing the medical term, the lanugage to convert to, and the language to convert from.
-
+        db (Session): Database session.
     Returns:
         schemas.ManualTranslationResponse: Response stating the term has been put into the database for manual translation.
 
@@ -30,14 +31,14 @@ async def manual_translation(
     """
     logger.info(f"Received manual translation query: {query}")
     try:
-        stored_medicine = store_manual_translation(
-            db, query
-        )
+        store_manual_translation(db, query)
         logger.info(
-            f"Successfully stored '{stored_medicine}'"
+            f"Successfully stored term '{query.term}' for manual translation validation."
         )
-        return schemas.ManualTranslationResponse(storedTranslationResponse=stored_medicine)
+        return HTTPStatus(201)
     except Exception as error:
-        error_message = f"Manual translation store failed for '{query.term}': {str(error)}"
+        error_message = (
+            f"Manual translation store failed for '{query.term}': {str(error)}"
+        )
         logger.error(error_message)
         raise HTTPException(status_code=500, detail=error_message)

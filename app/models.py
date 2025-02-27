@@ -49,7 +49,8 @@ class UniqueTranslations(Base):
             f"weight={self.weight}"
             f")>"
         )
-    
+
+
 class ManualTranslations(Base):
     """
     Represent a single translation entry in the manual translation table.
@@ -60,9 +61,12 @@ class ManualTranslations(Base):
 
     __tablename__ = "manual_translation"
 
-    term = Column(String, nullable=False, primary_key=True)
-    language_from = Column(String, nullable=False)
-    language_to = Column(String, nullable=False)
+    id = Column(Integer, primary_key=True)
+    term = Column(String, nullable=False)
+    proposed_translation = Column(String, nullable=True)
+    source_language = Column(String, nullable=False)
+    target_language = Column(String, nullable=False)
+    description = Column(String, nullable=True)
 
     def __repr__(self) -> str:
         """
@@ -74,8 +78,10 @@ class ManualTranslations(Base):
         return (
             f"<Manual Translation("
             f"term={self.term}, "
-            f"language_from={self.language_from}, "
-            f"language_to={self.language_to}, "
+            f"proposed_translation={self.proposed_translation}, "
+            f"source_language={self.source_language}, "
+            f"target_language={self.target_language}, "
+            f"description={self.description}\n"
             f")>"
         )
 
