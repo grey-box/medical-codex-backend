@@ -1,6 +1,6 @@
 from typing import List, Optional, Callable
 
-from pydantic import BaseModel
+from pydantic import BaseModel, Field
 
 
 # 2 in the diagram
@@ -97,3 +97,16 @@ class ManualTranslationQuery(BaseModel):
     source_language: str
     target_language: str
     description: Optional[str] = None
+
+class ServiceLog(BaseModel):
+    """Pydantic model for validating logs to write to the db"""
+    error_level: int = Field(..., description="Log level", ge=0, le=50)
+    source: str = Field(..., max_length=50, description="Source of the log")
+    message: str = Field(..., description="Log message")
+
+    @classmethod
+    def validate_error_level(cls, value):
+        if value not in {0, 10, 20, 30, 40, 50}:
+            raise ValueError("Invalid log level. Must be one of {0, 10, 20, 30, 40, 50}")
+        return value
+    
