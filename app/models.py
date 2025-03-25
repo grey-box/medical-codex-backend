@@ -1,6 +1,6 @@
 import logging
 
-from sqlalchemy import Column
+from sqlalchemy import CheckConstraint, Column, DateTime, Text, func
 from sqlalchemy.types import String, Integer
 
 from app.database import Base, engine
@@ -115,6 +115,23 @@ class LanguagePairs(Base):
             f")>"
         )
 
+class ServiceLogs(Base):
+
+    """Model to store log messages in the database."""
+    __tablename__ = "_service_logs"
+    
+    id = Column(Integer, primary_key=True, autoincrement=True)
+    log_timestamp = Column(DateTime(timezone=True), server_default=func.now())  # Auto timestamp
+    error_level = Column(Integer, nullable=False)
+    source = Column(String(50), nullable=False)
+    message = Column(Text, nullable=False)
+    
+    __table_args__ = (
+        CheckConstraint("error_level IN (0, 10, 20, 30, 40, 50)", name="check_log_level"),
+    )
+
+    def __repr__(self):
+        return f"<LogEntry(id={self.id}, timestamp={self.log_timestamp}, level={self.error_level}, source={self.source})>"
 
 try:
     Base.metadata.create_all(engine)
