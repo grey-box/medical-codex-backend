@@ -109,10 +109,7 @@ class LanguagePairs(Base):
             str: A formatted string containing the instance's attributes.
         """
         return (
-            f"<Language(\n"
-            f"    source_language={self.source_language},\n"
-            f"    target_language={self.target_language}\n"
-            f")>"
+            f"<Language(source_language={self.source_language},target_language={self.target_language})>"
         )
 
 class ServiceLogs(Base):
@@ -127,11 +124,11 @@ class ServiceLogs(Base):
     message = Column(Text, nullable=False)
     
     __table_args__ = (
-        CheckConstraint("error_level IN (0, 10, 20, 30, 40, 50)", name="check_log_level"),
+        CheckConstraint("error_level IN (0, 10, 20, 30, 40, 50)", name="_service_logs_error_level_check"),
     )
 
     def __repr__(self):
-        return f"<LogEntry(id={self.id}, timestamp={self.log_timestamp}, level={self.error_level}, source={self.source})>"
+        return f"<LogEntry(id={self.id}, timestamp={self.log_timestamp}, level={self.error_level}, source={self.source}, message={self.message})>"
 
 try:
     Base.metadata.create_all(engine)

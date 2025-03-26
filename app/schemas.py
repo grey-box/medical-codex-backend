@@ -1,6 +1,7 @@
+from datetime import datetime, timezone
 from typing import List, Optional, Callable
 
-from pydantic import BaseModel, Field
+from pydantic import BaseModel, Field, field_validator
 
 
 # 2 in the diagram
@@ -98,12 +99,14 @@ class ManualTranslationQuery(BaseModel):
     target_language: str
     description: Optional[str] = None
 
-class ServiceLog(BaseModel):
+class ServiceLogEntry(BaseModel):
     """Pydantic model for validating logs to write to the db"""
+    log_timestamp: datetime = Field(default_factory=lambda: datetime.now(timezone.utc))
     error_level: int = Field(..., description="Log level", ge=0, le=50)
     source: str = Field(..., max_length=50, description="Source of the log")
     message: str = Field(..., description="Log message")
 
+    @field_validator('error_level')
     @classmethod
     def validate_error_level(cls, value):
         if value not in {0, 10, 20, 30, 40, 50}:
