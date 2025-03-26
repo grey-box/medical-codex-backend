@@ -8,7 +8,7 @@ import app.schemas as schemas
 from app.config import LOGGER_NAME
 from app.func.translate_using_fallback import translate_using_fallback
 from app.models import UniqueTranslations
-from config import settings
+from config import SETTINGS
 
 logger = logging.getLogger(LOGGER_NAME)
 
@@ -52,7 +52,7 @@ def translate_with_database(
                 ]
             }
         else:
-            return translate_using_fallback(query, settings.fallback_translation_method)
+            return translate_using_fallback(query, SETTINGS.fallback_translation_method)
 
     except Exception as e:
         logger.error(f"Error in get_translation: {str(e)}")

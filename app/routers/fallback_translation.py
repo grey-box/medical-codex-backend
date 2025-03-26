@@ -3,7 +3,7 @@ import logging
 from fastapi import APIRouter, HTTPException
 
 from app import schemas
-from app.config import LOGGER_NAME, settings
+from app.config import LOGGER_NAME, SETTINGS
 from app.func.translate_using_fallback import translate_using_fallback
 
 router = APIRouter(prefix="/fallback_translation", tags=["fallback_translation"])
@@ -33,7 +33,7 @@ async def fallback_translation(
                 translation_query=query.medicine.matching_name,
                 target_language=query.target_language,
             ),
-            fallback_method=settings.fallback_translation_method,
+            fallback_method=SETTINGS.fallback_translation_method,
         )
         logger.info(
             f"Successfully translated '{query.medicine}' to '{translated_medicine}'"

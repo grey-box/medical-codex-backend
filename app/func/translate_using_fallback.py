@@ -2,7 +2,7 @@ import logging
 from typing import Dict, List, Any
 
 from app import schemas
-from app.config import LOGGER_NAME, settings
+from app.config import LOGGER_NAME, SETTINGS
 from app.func.get_gemini_translation import get_gemini_translation
 
 logger = logging.getLogger(LOGGER_NAME)
@@ -10,7 +10,7 @@ logger = logging.getLogger(LOGGER_NAME)
 
 def translate_using_fallback(
     query: schemas.TranslationQuery,
-    fallback_method: str = settings.fallback_translation_method,
+    fallback_method: str = SETTINGS.fallback_translation_method,
 ) -> Dict[str, List[Dict[str, Any]]]:
     """
     Translate using a fallback method when primary translation fails.
