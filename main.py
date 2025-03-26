@@ -7,9 +7,10 @@ from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 
 import app.routers as routers
-from app.config import LogConfig, LOGGER_NAME
+from app.config import LogConfig, LOGGER_NAME, LOGGER_NAME_FILE
 
 logger = logging.getLogger(LOGGER_NAME)
+logger_file = logging.getLogger(LOGGER_NAME_FILE)
 
 def setup_logging() -> None:
     """Set up logging configuration for the application."""
@@ -55,6 +56,7 @@ def run_server() -> None:
     try:
         logger.info("Application starting")
         logger.debug("Debug mode enabled")
+        logger_file.info("File logging enabled")
         logger.info("Starting server")
         uvicorn.run(app, host="0.0.0.0", port=8000)
     except Exception as e:

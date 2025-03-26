@@ -1,5 +1,5 @@
 import logging
-from logging import config as logging_config
+from logging import INFO, config as logging_config
 import os
 from typing import Optional, Dict, Any
 
@@ -55,9 +55,19 @@ class LogConfig(BaseModel):
     formatters: Dict[str, Dict[str, Any]] = {
         "default": {
             "()": "uvicorn.logging.DefaultFormatter",
-            "fmt": log_format,
+            "fmt": "%(asctime)s - %(levelname)s - %(name)s - %(message)s",#log_format,
             "datefmt": "%Y-%m-%d %H:%M:%S",
         },
+        "access": {
+            "()": "uvicorn.logging.AccessFormatter",
+            "fmt": "%(asctime)s - %(levelname)s - %(name)s - %(message)s",
+            "datefmt": "%Y-%m-%d %H:%M:%S",
+        },
+        "file_formatter": {
+            "()": "logging.Formatter",
+            "fmt": "%(asctime)s - %(levelname)s - %(name)s - %(message)s",
+            "datefmt": "%Y-%m-%d %H:%M:%S",
+        }
     }
     handlers: Dict[str, Dict[str, Any]] = {
         "default": {
@@ -65,8 +75,18 @@ class LogConfig(BaseModel):
             "class": "logging.StreamHandler",
             "stream": "ext://sys.stderr",
         },
-        "file": {
+        "access": {
+            "formatter": "access",
+            "class": "logging.StreamHandler",
+            "stream": "ext://sys.stderr",
+        },
+        "console": {
             "formatter": "default",
+            "class": "logging.StreamHandler",
+            "stream": "ext://sys.stderr",
+        },
+        "file": {
+            "formatter": "file_formatter",
             "class": "logging.handlers.TimedRotatingFileHandler",
             "filename": log_file_path,
             "when": "midnight",
@@ -76,8 +96,10 @@ class LogConfig(BaseModel):
         }
     }
     loggers: Dict[str, Dict[str, Any]] = {
-        logger_name: {"handlers": ["default"], "level": log_level},
-        logger_name_file: {"handlers": ["default", "file"], "level": log_level}
+        logger_name: {"handlers": ["console"], "level": log_level, "propagate": False},
+        logger_name_file: {"handlers": ["console", "file"], "level": log_level, "propagate": False},
+        "uvicorn.error": {"handlers": ["default", ], "level": INFO, "propagate": False},     
+        "uvicorn.access": {"handlers": ["access", ], "level": INFO, "propagate": False},     
     }
 
 
