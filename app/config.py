@@ -5,7 +5,7 @@ from typing import Optional, Dict, Any
 
 from dotenv import find_dotenv
 from pydantic import BaseModel
-from pydantic_settings import Basesettings
+from pydantic_settings import BaseSettings
 
 
 LOGGER_NAME = "codex_backend_logger"
@@ -13,7 +13,7 @@ LOGGER_NAME_FILE = "codex_file_logger"
 logger = logging.getLogger(LOGGER_NAME)
 
 
-class settings(Basesettings):
+class settings(BaseSettings):
     """Define application settings."""
 
     logging_format: str = "%(asctime)s - %(levelname)s - %(message)s"
