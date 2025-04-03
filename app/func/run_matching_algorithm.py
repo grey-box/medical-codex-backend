@@ -3,7 +3,7 @@ from typing import List, Callable
 
 from sqlalchemy.orm import Session
 
-from app.config import LOGGER_NAME
+from config import LOGGER_NAME
 from func.get_unique_source_texts import get_unique_source_texts
 from schemas import FuzzyQuery, FuzzyAlgorithm, FuzzyResult
 

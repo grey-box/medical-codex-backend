@@ -3,7 +3,7 @@ import logging
 from sqlalchemy import CheckConstraint, Column, DateTime, Text, func
 from sqlalchemy.types import String, Integer
 
-from app.database import Base, engine
+from database import Base, engine
 from config import LOGGER_NAME
 
 # Create all tables

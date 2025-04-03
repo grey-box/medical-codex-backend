@@ -3,9 +3,9 @@ import logging
 from fastapi import APIRouter, Depends
 from sqlalchemy.orm import Session
 
-import app.schemas as schemas
-from app.config import LOGGER_NAME
-from app.database import get_database_session
+import schemas
+from config import LOGGER_NAME
+from database import get_database_session
 from func.translate_with_database import translate_with_database
 
 router = APIRouter(prefix="/translate", tags=["levels"])

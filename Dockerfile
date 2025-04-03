@@ -21,7 +21,7 @@ COPY requirements.txt .
 RUN pip install -r requirements.txt
 
 # Copy the application code
-COPY . .
+COPY ./app/ .
 
 # Expose the application port
 EXPOSE 8000

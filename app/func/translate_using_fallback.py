@@ -1,9 +1,9 @@
 import logging
 from typing import Dict, List, Any
 
-from app import schemas
-from app.config import LOGGER_NAME, SETTINGS
-from app.func.get_gemini_translation import get_gemini_translation
+import schemas
+from config import LOGGER_NAME, SETTINGS
+from func.get_gemini_translation import get_gemini_translation
 
 logger = logging.getLogger(LOGGER_NAME)
 

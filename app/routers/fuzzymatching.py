@@ -3,9 +3,9 @@ import logging
 from fastapi import APIRouter, Depends
 from sqlalchemy.orm import Session
 
-import app.database as database
-from app import schemas
-from app.config import LOGGER_NAME
+import database
+import schemas
+from config import LOGGER_NAME
 from func import perform_fuzzy_matching
 
 router = APIRouter(prefix="/fuzzymatching", tags=["fuzzymatching"])

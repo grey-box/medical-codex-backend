@@ -2,9 +2,9 @@ import logging
 
 from fastapi import APIRouter, HTTPException
 
-from app import schemas
-from app.config import LOGGER_NAME, SETTINGS
-from app.func.translate_using_fallback import translate_using_fallback
+import schemas
+from config import LOGGER_NAME, SETTINGS
+from func.translate_using_fallback import translate_using_fallback
 
 router = APIRouter(prefix="/fallback_translation", tags=["fallback_translation"])
 logger = logging.getLogger(LOGGER_NAME)

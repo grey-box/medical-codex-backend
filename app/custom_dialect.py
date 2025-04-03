@@ -2,7 +2,7 @@ from typing import Any
 import logging
 from sqlalchemy.dialects import postgresql, sqlite, mysql, mssql
 from sqlalchemy.types import Unicode
-from app.config import LOGGER_NAME
+from config import LOGGER_NAME
 
 logger = logging.getLogger(LOGGER_NAME)
 
