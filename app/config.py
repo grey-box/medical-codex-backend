@@ -55,18 +55,18 @@ class LogConfig(BaseModel):
     formatters: Dict[str, Dict[str, Any]] = {
         "default": {
             "()": "uvicorn.logging.DefaultFormatter",
-            "fmt": "%(asctime)s - %(levelname)s - %(name)s - %(message)s",#log_format,
+            "fmt": log_format,
             "datefmt": "%Y-%m-%d %H:%M:%S",
         },
         "access": {
             "()": "uvicorn.logging.AccessFormatter",
-            "fmt": "%(asctime)s - %(levelname)s - %(name)s - %(message)s",
+            "fmt": log_format,
             "datefmt": "%Y-%m-%d %H:%M:%S",
         },
         "file_formatter": {
             "()": "logging.Formatter",
             "fmt": "%(asctime)s - %(levelname)s - %(name)s - %(message)s",
-            "datefmt": "%Y-%m-%d %H:%M:%S",
+            "datefmt": "%Y-%m-%d %H:%M:%S %z",
         }
     }
     handlers: Dict[str, Dict[str, Any]] = {
