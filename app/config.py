@@ -1,11 +1,11 @@
 import logging
-from logging import INFO, config as logging_config
+from logging import config as logging_config
 import os
 from typing import Optional, Dict, Any
 
 from dotenv import find_dotenv
 from pydantic import BaseModel
-from pydantic_settings import BaseSettings
+from pydantic_settings import Basesettings
 
 
 LOGGER_NAME = "codex_backend_logger"
@@ -13,7 +13,7 @@ LOGGER_NAME_FILE = "codex_file_logger"
 logger = logging.getLogger(LOGGER_NAME)
 
 
-class Settings(BaseSettings):
+class settings(Basesettings):
     """Define application settings."""
 
     logging_format: str = "%(asctime)s - %(levelname)s - %(message)s"
@@ -34,7 +34,7 @@ class Settings(BaseSettings):
         env_file_encoding = "utf-8"
 
 
-SETTINGS = Settings()
+settings = settings()
 
 
 class LogConfig(BaseModel):
@@ -42,8 +42,8 @@ class LogConfig(BaseModel):
 
     logger_name: str = LOGGER_NAME
     logger_name_file: str = LOGGER_NAME_FILE
-    log_format: str = SETTINGS.logging_format
-    log_level: str = SETTINGS.logging_level
+    log_format: str = settings.logging_format
+    log_level: str = settings.logging_level
     version: int = 1
     disable_existing_loggers: bool = False
 
@@ -98,8 +98,8 @@ class LogConfig(BaseModel):
     loggers: Dict[str, Dict[str, Any]] = {
         logger_name: {"handlers": ["console"], "level": log_level, "propagate": False},
         logger_name_file: {"handlers": ["console", "file"], "level": log_level, "propagate": False},
-        "uvicorn.error": {"handlers": ["default", ], "level": INFO, "propagate": False},     
-        "uvicorn.access": {"handlers": ["access", ], "level": INFO, "propagate": False},     
+        "uvicorn.error": {"handlers": ["default", ], "level": logging.INFO, "propagate": False},     
+        "uvicorn.access": {"handlers": ["access", ], "level": logging.INFO, "propagate": False},     
     }
 
 

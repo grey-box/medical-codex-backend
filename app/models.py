@@ -124,7 +124,7 @@ class ServiceLogs(Base):
     message = Column(Text, nullable=False)
     
     __table_args__ = (
-        CheckConstraint("error_level IN (0, 10, 20, 30, 40, 50)", name="_service_logs_error_level_check"),
+        CheckConstraint("error_level IN (logging.NOTSET, logging.INFO, logging.WARNING, logging.ERROR, logging.DEBUG, logging.CRITICAL)", name="_service_logs_error_level_check"),
     )
 
     def __repr__(self):

@@ -5,7 +5,7 @@ from sqlalchemy import select, distinct, and_
 from sqlalchemy.orm import Session
 
 import schemas
-from config import LOGGER_NAME, SETTINGS
+from config import LOGGER_NAME, settings
 from func.translate_using_fallback import translate_using_fallback
 from models import UniqueTranslations
 
@@ -51,7 +51,7 @@ def translate_with_database(
                 ]
             }
         else:
-            return translate_using_fallback(query, SETTINGS.fallback_translation_method)
+            return translate_using_fallback(query, settings.fallback_translation_method)
 
     except Exception as e:
         logger.error(f"Error in get_translation: {str(e)}")

@@ -1,5 +1,6 @@
 from datetime import datetime, timezone
 from typing import List, Optional, Callable
+import logging
 
 from pydantic import BaseModel, Field, field_validator
 
@@ -109,7 +110,7 @@ class ServiceLogEntry(BaseModel):
     @field_validator('error_level')
     @classmethod
     def validate_error_level(cls, value):
-        if value not in {0, 10, 20, 30, 40, 50}:
-            raise ValueError("Invalid log level. Must be one of {0, 10, 20, 30, 40, 50}")
+        if value not in {logging.NOTSET, logging.INFO, logging.WARNING, logging.ERROR, logging.DEBUG, logging.CRITICAL}:
+            raise ValueError("Invalid log level.")
         return value
     
