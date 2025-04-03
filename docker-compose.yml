@@ -10,6 +10,13 @@ services:
       - codex-network
     ports:
       - 8000:8000
+    develop:
+      watch:
+        - action: sync
+          path: ./app
+          target: /app
+        - action: rebuild
+          path: ./Dockerfile
 networks:
   codex-network:
     name: medical-codex-net
