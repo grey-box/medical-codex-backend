@@ -55,7 +55,7 @@ def get_available_languages(
         return schemas.AvailableLanguages(available_languages=available_languages_list)
     except Exception as e:
         logger_file.error(f"Error retrieving available languages: {str(e)}")
-        raise HTTPException(status_code=500, detail="Internal server error")
+        raise HTTPException(status_code=status.HTTP_500_INTERNAL_SERVER_ERROR, detail="Internal server error")
 
 
 @router.get("/test", response_model=schemas.AvailableLanguages)
@@ -89,4 +89,4 @@ def get_test_languages(
         return schemas.AvailableLanguages(available_languages=test_results)
     except Exception as e:
         logger_file.error(f"Error generating test language pairs: {str(e)}")
-        raise HTTPException(status_code=500, detail="Internal server error")
+        raise HTTPException(status_code=status.HTTP_500_INTERNAL_SERVER_ERROR, detail="Internal server error")

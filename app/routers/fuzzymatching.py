@@ -1,6 +1,6 @@
 import logging
 
-from fastapi import APIRouter, Depends
+from fastapi import APIRouter, Depends, status
 from sqlalchemy.orm import Session
 
 import database
@@ -12,20 +12,20 @@ router = APIRouter(prefix="/fuzzymatching", tags=["fuzzymatching"])
 logger = logging.getLogger(LOGGER_NAME)
 
 
-@router.post("/", response_model=schemas.FuzzyMatching)
+@router.post("/", response_model=schemas.FuzzyMatching, status_code=status.HTTP_201_CREATED)
 def get_fuzzymatching(
     query: schemas.FuzzyQuery, db: Session = Depends(database.get_database_session)
 ):
     results = perform_fuzzy_matching.perform_fuzzy_matching(db, query)
-    logging.info(results)
+    logging.info(status.HTTP_201_CREATED + results)
     return results
 
 
-@router.post("/test", response_model=schemas.FuzzyMatching)
+@router.post("/test", response_model=schemas.FuzzyMatching, status_code=status.HTTP_201_CREATED)
 def get_fuzzymatching_test(
     query: schemas.FuzzyQuery, db: Session = Depends(database.get_database_session)
 ):
-    logging.info(query)
+    logging.info(status.HTTP_201_CREATED + query)
     logging.info(db.info)
 
     def result(number):

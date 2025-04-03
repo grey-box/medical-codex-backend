@@ -6,6 +6,7 @@ from typing import Optional, Dict, Any
 from dotenv import find_dotenv
 from pydantic import BaseModel
 from pydantic_settings import BaseSettings
+from fastapi import status
 
 
 LOGGER_NAME = "codex_backend_logger"
@@ -112,9 +113,9 @@ def setup_logging() -> None:
     """
     try:
         logging_config.dictConfig(LogConfig().model_dump())
-        logger.info("Logging configured successfully.")
+        logger.info(status.HTTP_202_ACCEPTED + " Logging configured successfully.")
     except Exception as error:
-        logger.error(f"Failed to configure logging: {str(error)}")
+        logger.error(status.HTTP_500_INTERNAL_SERVER_ERROR + f" Failed to configure logging: {str(error)}")
         raise
 
 

@@ -6,6 +6,7 @@ from sqlalchemy.orm import Session
 from config import LOGGER_NAME
 from func.get_unique_source_texts import get_unique_source_texts
 from schemas import FuzzyQuery, FuzzyAlgorithm, FuzzyResult
+from fastapi import status
 
 logger = logging.getLogger(LOGGER_NAME)
 
@@ -13,10 +14,10 @@ logger = logging.getLogger(LOGGER_NAME)
 def execute_algorithm(func: Callable, **kwargs) -> List[FuzzyResult]:
     try:
         matches = func(**kwargs)
-        logger.info(f"Found {len(matches)} matches for query: {kwargs.get('query')}")
+        logger.info(status.HTTP_200_OK + f" Found {len(matches)} matches for query: {kwargs.get('query')}")
         return matches
     except Exception as error:
-        logger.error(f"Error during {func.__name__} algorithm: {str(error)}")
+        logger.error(status.HTTP_400_BAD_REQUEST + f" Error during {func.__name__} algorithm: {str(error)}")
         return []
 
 

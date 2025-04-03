@@ -3,7 +3,7 @@ from logging.config import dictConfig
 from typing import List
 
 import uvicorn
-from fastapi import FastAPI
+from fastapi import FastAPI, status
 from fastapi.middleware.cors import CORSMiddleware
 
 import routers as routers
@@ -17,7 +17,7 @@ def setup_logging() -> None:
     try:
         dictConfig(LogConfig().model_dump())
     except Exception as e:
-        logger.error(f"Failed to configure logging: {e}")
+        logger.error(status.HTTP_500_INTERNAL_SERVER_ERROR + f" Failed to configure logging: {e}")
         raise
 
 def create_app() -> FastAPI:
@@ -60,7 +60,7 @@ def run_server() -> None:
         logger.info("Starting server")
         uvicorn.run(app, host="0.0.0.0", port=8000)
     except Exception as e:
-        logger.error(f"Failed to run the application: {e}")
+        logger.error(status.HTTP_400_BAD_REQUEST + f" Failed to run the application: {e}")
         raise
 
 if __name__ == "__main__":

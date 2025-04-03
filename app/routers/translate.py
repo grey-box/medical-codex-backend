@@ -1,6 +1,6 @@
 import logging
 
-from fastapi import APIRouter, Depends
+from fastapi import APIRouter, Depends, status
 from sqlalchemy.orm import Session
 
 import schemas
@@ -12,7 +12,7 @@ router = APIRouter(prefix="/translate", tags=["levels"])
 logger = logging.getLogger(LOGGER_NAME)
 
 
-@router.post("/", response_model=schemas.Translation)
+@router.post("/", response_model=schemas.Translation, status_code=status.HTTP_201_CREATED)
 def get_translation(
     query: schemas.TranslationQuery, db: Session = Depends(get_database_session)
 ):
@@ -20,11 +20,11 @@ def get_translation(
     return results
 
 
-@router.post("/test", response_model=schemas.Translation)
+@router.post("/test", response_model=schemas.Translation, status_code=status.HTTP_201_CREATED)
 def get_translation_test(
     query: schemas.TranslationQuery, db: Session = Depends(get_database_session)
 ):
-    logging.info(query)
+    logging.info(status.HTTP_201_CREATED + query)
     logging.info(db.info)
 
     def result(number):

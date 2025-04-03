@@ -7,6 +7,7 @@ from sqlalchemy import create_engine
 from sqlalchemy.engine import Engine
 from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy.orm import sessionmaker, Session
+from fastapi import status
 
 from config import LOGGER_NAME
 from custom_dialect import (
@@ -44,7 +45,7 @@ def create_database_url() -> str:
     elif DB_TYPE == "mysql":
         return f"mysql://{DB_USER}:{DB_PASSWORD}@{DB_HOST}:{DB_PORT}/{DB_NAME}"
     else:
-        raise ValueError(f"Unsupported database type: {DB_TYPE}")
+        raise ValueError(status.HTTP_400_BAD_REQUEST + f" Unsupported database type: {DB_TYPE}")
 
 
 def create_database_engine() -> Engine:
@@ -74,9 +75,9 @@ def create_database_engine() -> Engine:
                 database_url, pool_pre_ping=True, dialect=MySQLUnicodeDialect()
             )
         else:
-            raise ValueError(f"Unsupported database type: {DB_TYPE}")
+            raise ValueError(status.HTTP_400_BAD_REQUEST + f" Unsupported database type: {DB_TYPE}")
     except Exception as e:
-        logger.error(f"Failed to create database engine: {str(e)}")
+        logger.error(status.HTTP_400_BAD_REQUEST + f" Failed to create database engine: {str(e)}")
         raise
 
 

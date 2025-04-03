@@ -9,6 +9,7 @@ from google.generativeai.types import HarmCategory, HarmBlockThreshold
 import schemas
 from func.get_full_language_name import get_full_language_name
 from config import LOGGER_NAME
+from fastapi import status
 
 logger = logging.getLogger(LOGGER_NAME)
 
@@ -41,7 +42,7 @@ def get_gemini_translation(
         response = model.generate_content(prompt, safety_settings=safety_settings)
 
         if not response:
-            logger.warning("Gemini API unable to provide a response")
+            logger.warning(status.HTTP_400_BAD_REQUEST + " Gemini API unable to provide a response")
             translated_text = "Translation unavailable"
         else:
             translated_text = response.text
@@ -56,5 +57,5 @@ def get_gemini_translation(
             ]
         }
     except Exception as e:
-        logger.error(f"Error in get_gemini_translation: {str(e)}")
+        logger.error(status.HTTP_500_INTERNAL_SERVER_ERROR + f" Error in get_gemini_translation: {str(e)}")
         return {"results": []}
