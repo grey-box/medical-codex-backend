@@ -4,8 +4,8 @@ from typing import List, Literal
 from sqlalchemy import text
 from sqlalchemy.orm import Session
 
-from app.config import LOGGER_NAME
-from app.schemas import FuzzyResult
+from config import LOGGER_NAME
+from schemas import FuzzyResult
 
 logger = logging.getLogger(LOGGER_NAME)
 

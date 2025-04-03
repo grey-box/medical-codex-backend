@@ -1,12 +1,11 @@
 import logging
-from typing import Dict, List
 
 from sqlalchemy import insert
 from sqlalchemy.orm import Session
 
-import app.schemas as schemas
-from app.config import LOGGER_NAME
-from app.models import ManualTranslations
+import schemas
+from config import LOGGER_NAME
+from models import ManualTranslations
 
 logger = logging.getLogger(LOGGER_NAME)
 

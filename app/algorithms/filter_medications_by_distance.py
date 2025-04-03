@@ -1,7 +1,7 @@
 import logging
 from typing import List, Callable, Tuple
 
-from app.config import LOGGER_NAME
+from config import LOGGER_NAME
 
 logger = logging.getLogger(LOGGER_NAME)
 

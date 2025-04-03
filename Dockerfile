@@ -21,13 +21,10 @@ COPY requirements.txt .
 RUN pip install -r requirements.txt
 
 # Copy the application code
-COPY . .
+COPY ./app/ .
 
 # Expose the application port
 EXPOSE 8000
 
-# Run the Application for Development
-#CMD ["uvicorn", "main:app", "--host", "0.0.0.0", "--port", "8000", "--reload"]
-
-# Run the Application for Production
-CMD ["uvicorn", "main:app", "--host", "0.0.0.0", "--port", "8000"]
+# Run the Application
+CMD ["sh", "-c", "uvicorn main:app --host 0.0.0.0 --port 8000 $UVICORN_RELOAD"]

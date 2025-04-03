@@ -2,7 +2,7 @@ import logging
 
 from langcodes import Language
 
-from app.config import LOGGER_NAME
+from config import LOGGER_NAME
 
 logger = logging.getLogger(LOGGER_NAME)
 

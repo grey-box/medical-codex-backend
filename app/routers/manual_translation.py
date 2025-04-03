@@ -4,10 +4,10 @@ from http import HTTPStatus
 from fastapi import APIRouter, HTTPException, Depends
 from sqlalchemy.orm import Session
 
-from app import schemas
-from app.config import LOGGER_NAME
-from app.database import get_database_session
-from app.func.store_manual_translation import store_manual_translation
+import schemas
+from config import LOGGER_NAME
+from database import get_database_session
+from func.store_manual_translation import store_manual_translation
 
 router = APIRouter(prefix="/manual_translation", tags=["manual_translation"])
 logger = logging.getLogger(LOGGER_NAME)

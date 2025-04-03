@@ -4,13 +4,14 @@ from typing import List
 from fastapi import APIRouter, Depends, HTTPException
 from sqlalchemy.orm import Session
 
-import app.models as models
-import app.schemas as schemas
-from app.config import LOGGER_NAME
-from app.database import get_database_session
+import models
+import schemas
+from config import LOGGER_NAME, LOGGER_NAME_FILE
+from database import get_database_session
 
 router = APIRouter(prefix="/languages", tags=["languages"])
 logger = logging.getLogger(LOGGER_NAME)
+logger_file = logging.getLogger(LOGGER_NAME_FILE)
 
 
 @router.get("/", response_model=schemas.AvailableLanguages)
@@ -50,10 +51,10 @@ def get_available_languages(
             for source, targets in grouped_languages.items()
         ]
 
-        logger.info(f"Retrieved language pairs: {language_pairs}")
+        logger_file.info(f"Retrieved language pairs: {language_pairs}")
         return schemas.AvailableLanguages(available_languages=available_languages_list)
     except Exception as e:
-        logger.error(f"Error retrieving available languages: {str(e)}")
+        logger_file.error(f"Error retrieving available languages: {str(e)}")
         raise HTTPException(status_code=500, detail="Internal server error")
 
 
@@ -87,5 +88,5 @@ def get_test_languages(
         test_results = generate_test_pairs(3)
         return schemas.AvailableLanguages(available_languages=test_results)
     except Exception as e:
-        logger.error(f"Error generating test language pairs: {str(e)}")
+        logger_file.error(f"Error generating test language pairs: {str(e)}")
         raise HTTPException(status_code=500, detail="Internal server error")
