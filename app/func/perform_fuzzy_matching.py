@@ -16,6 +16,7 @@ from app.config import LOGGER_NAME
 from app.func.run_matching_algorithm import run_matching_algorithm
 from app.schemas import FuzzyAlgorithm
 from schemas import FuzzyResult
+from fastapi import status
 
 logger = logging.getLogger(LOGGER_NAME)
 
@@ -60,7 +61,7 @@ def perform_fuzzy_matching(
     try:
         algorithm = algorithms.get(matching_algorithm)
         if not algorithm:
-            logger.error(f"Unsupported matching algorithm: {matching_algorithm}")
+            logger.error(status.HTTP_400_BAD_REQUEST + f" Unsupported matching algorithm: {matching_algorithm}")
             return {"results": []}
 
         matched_medications = run_matching_algorithm(algorithm, db, query)
@@ -70,5 +71,5 @@ def perform_fuzzy_matching(
         return {"results": matched_medications}
 
     except Exception as e:
-        logger.error(f"Error in fuzzy matching: {str(e)}")
+        logger.error(status.HTTP_400_BAD_REQUEST + f" Error in fuzzy matching: {str(e)}")
         return {"results": []}

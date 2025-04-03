@@ -7,6 +7,7 @@ from sqlalchemy.orm import Session
 import app.schemas as schemas
 from app.config import LOGGER_NAME
 from app.models import ManualTranslations
+from fastapi import status
 
 logger = logging.getLogger(LOGGER_NAME)
 
@@ -43,5 +44,5 @@ def store_manual_translation(
         return True
 
     except Exception as e:
-        logger.error(f"Error in store_translation: {str(e)}")
+        logger.error(status.HTTP_400_BAD_REQUEST + f" Error in store_translation: {str(e)}")
         raise

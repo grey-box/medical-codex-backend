@@ -4,6 +4,7 @@ from typing import Dict, List, Any
 from app import schemas
 from app.config import LOGGER_NAME, settings
 from app.func.get_gemini_translation import get_gemini_translation
+from fastapi import status
 
 logger = logging.getLogger(LOGGER_NAME)
 
@@ -26,10 +27,10 @@ def translate_using_fallback(
         if fallback_method == "gemini":
             return get_gemini_translation(query)
         else:
-            logger.warning(
-                f"Unsupported fallback translation method: {fallback_method}"
+            logger.warning(status.HTTP_400_BAD_REQUEST + 
+                f" Unsupported fallback translation method: {fallback_method}"
             )
             return {"results": []}
     except Exception as e:
-        logger.error(f"Error in fallback translation using {fallback_method}: {str(e)}")
+        logger.error(status.HTTP_400_BAD_REQUEST + f" Error in fallback translation using {fallback_method}: {str(e)}")
         return {"results": []}

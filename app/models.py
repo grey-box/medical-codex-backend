@@ -5,6 +5,7 @@ from sqlalchemy.types import String, Integer
 
 from app.database import Base, engine
 from config import LOGGER_NAME
+from fastapi import status
 
 # Create all tables
 Base.metadata.create_all(engine)
@@ -118,7 +119,7 @@ class LanguagePairs(Base):
 
 try:
     Base.metadata.create_all(engine)
-    logger.info("Database tables created successfully.")
+    logger.info(status.HTTP_201_CREATED + " Database tables created successfully.")
 except Exception as e:
-    logger.error(f"Error creating database tables: {str(e)}")
+    logger.error(status.HTTP_400_BAD_REQUEST + f"Error creating database tables: {str(e)}")
     raise

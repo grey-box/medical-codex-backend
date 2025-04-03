@@ -3,6 +3,7 @@ import logging
 from langcodes import Language
 
 from app.config import LOGGER_NAME
+from fastapi import status
 
 logger = logging.getLogger(LOGGER_NAME)
 
@@ -20,8 +21,8 @@ def get_full_language_name(language_code: str) -> str:
     try:
         language = Language.get(language_code)
         full_name = language.display_name("en")
-        logger.info(f"Successfully converted '{language_code}' to '{full_name}'")
+        logger.info(status.HTTP_200_OK + f" Successfully converted '{language_code}' to '{full_name}'")
         return full_name
     except Exception as error:
-        logger.error(f"Failed to convert language code '{language_code}': {str(error)}")
+        logger.error(status.HTTP_400_BAD_REQUEST + f" Failed to convert language code '{language_code}': {str(error)}")
         return language_code

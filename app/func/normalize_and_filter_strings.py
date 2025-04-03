@@ -1,6 +1,7 @@
 from typing import List
 import logging
 from app.config import LOGGER_NAME
+from fastapi import status
 
 logger = logging.getLogger(LOGGER_NAME)
 
@@ -23,8 +24,8 @@ def normalize_and_filter_strings(source_strings: List[str], query: str) -> List[
             raise ValueError("Query string cannot be None")
 
         normalized_strings = [str(item).lower() for item in source_strings if item is not None]
-        logger.info(f"Processed {len(normalized_strings)} strings")
+        logger.info(status.HTTP_200_OK + f" Processed {len(normalized_strings)} strings")
         return normalized_strings
     except Exception as e:
-        logger.error(f"Error in normalize_and_filter_strings: {str(e)}")
+        logger.error(status.HTTP_400_BAD_REQUEST + f" Error in normalize_and_filter_strings: {str(e)}")
         raise

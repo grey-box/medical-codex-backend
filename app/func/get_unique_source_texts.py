@@ -7,6 +7,7 @@ from sqlalchemy.orm import Session
 from app.models import UniqueTranslations
 from config import LOGGER_NAME
 from schemas import FuzzyQuery
+from fastapi import status
 
 logger = logging.getLogger(LOGGER_NAME)
 
@@ -32,5 +33,5 @@ def get_unique_source_texts(db: Session, query: FuzzyQuery) -> List[str]:
         result = db.execute(query).scalars().all()
         return [str(value) for value in result]
     except Exception as e:
-        logger.error(f"Error retrieving unique source texts: {str(e)}")
+        logger.error(status.HTTP_400_BAD_REQUEST + f" Error retrieving unique source texts: {str(e)}")
         raise

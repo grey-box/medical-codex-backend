@@ -3,6 +3,7 @@ import logging
 from sqlalchemy.dialects import postgresql, sqlite, mysql, mssql
 from sqlalchemy.types import Unicode
 from app.config import LOGGER_NAME
+from fastapi import status
 
 logger = logging.getLogger(LOGGER_NAME)
 
@@ -25,7 +26,7 @@ class UnicodeDialectMixin:
                 return Unicode()
             return super().type_descriptor(typeobj)
         except Exception as e:
-            logger.error(f"Error in type_descriptor: {str(e)}")
+            logger.error(status.HTTP_400_BAD_REQUEST + f" Error in type_descriptor: {str(e)}")
             raise
 
 

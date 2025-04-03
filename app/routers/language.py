@@ -1,7 +1,7 @@
 import logging
 from typing import List
 
-from fastapi import APIRouter, Depends, HTTPException
+from fastapi import APIRouter, Depends, HTTPException, status
 from sqlalchemy.orm import Session
 
 import app.models as models
@@ -13,7 +13,7 @@ router = APIRouter(prefix="/languages", tags=["languages"])
 logger = logging.getLogger(LOGGER_NAME)
 
 
-@router.get("/", response_model=schemas.AvailableLanguages)
+@router.get("/", response_model=schemas.AvailableLanguages, status_code=status.HTTP_200_OK)
 def get_available_languages(
     db: Session = Depends(get_database_session),
 ) -> schemas.AvailableLanguages:
@@ -50,14 +50,14 @@ def get_available_languages(
             for source, targets in grouped_languages.items()
         ]
 
-        logger.info(f"Retrieved language pairs: {language_pairs}")
+        logger.info(status.HTTP_200_OK + f" Retrieved language pairs: {language_pairs}")
         return schemas.AvailableLanguages(available_languages=available_languages_list)
     except Exception as e:
-        logger.error(f"Error retrieving available languages: {str(e)}")
-        raise HTTPException(status_code=500, detail="Internal server error")
+        logger.error(status.HTTP_500_INTERNAL_SERVER_ERROR + f" Error retrieving available languages: {str(e)}")
+        raise HTTPException(status_code=status.HTTP_500_INTERNAL_SERVER_ERROR, detail="Internal server error")
 
 
-@router.get("/test", response_model=schemas.AvailableLanguages)
+@router.get("/test", response_model=schemas.AvailableLanguages, status_code=status.HTTP_200_OK)
 def get_test_languages(
     db: Session = Depends(get_database_session),
 ) -> schemas.AvailableLanguages:
@@ -71,7 +71,7 @@ def get_test_languages(
         AvailableLanguages: Object containing test language pairs.
     """
     try:
-        logger.info("Generating test language pairs")
+        logger.info(status.HTTP_100_CONTINUE + "Generating test language pairs")
 
         def generate_test_pairs(num_languages: int) -> List[dict]:
             return [
@@ -87,5 +87,5 @@ def get_test_languages(
         test_results = generate_test_pairs(3)
         return schemas.AvailableLanguages(available_languages=test_results)
     except Exception as e:
-        logger.error(f"Error generating test language pairs: {str(e)}")
-        raise HTTPException(status_code=500, detail="Internal server error")
+        logger.error(status.HTTP_500_INTERNAL_SERVER_ERROR + f" Error generating test language pairs: {str(e)}")
+        raise HTTPException(status_code=status.HTTP_500_INTERNAL_SERVER_ERROR, detail="Internal server error")

@@ -9,6 +9,7 @@ from app.algorithms.get_top_matches_by_distance import get_top_matches_by_distan
 from app.config import LOGGER_NAME
 from app.func.normalize_and_filter_strings import normalize_and_filter_strings
 from app.schemas import FuzzyResult
+from fastapi import status
 
 logger = logging.getLogger(LOGGER_NAME)
 
@@ -71,9 +72,9 @@ def search_medications_by_soundex(
             for index, medication in enumerate(top_matches)
         ]
 
-        logger.info(f"Soundex search results: {fuzzy_results}")
+        logger.info(status.HTTP_200_OK + f" Soundex search results: {fuzzy_results}")
         return fuzzy_results
 
     except Exception as e:
-        logger.error(f"Error in Soundex search: {str(e)}")
+        logger.error(status.HTTP_400_BAD_REQUEST + f" Error in Soundex search: {str(e)}")
         raise

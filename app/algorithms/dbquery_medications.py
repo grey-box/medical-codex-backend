@@ -72,7 +72,7 @@ def dbquery_medications(
                 """
             )
         else:
-            raise ValueError(f"Unsupported algorithm: {algorithm}")
+            raise ValueError(status.HTTP_400_BAD_REQUEST + f" Unsupported algorithm: {algorithm}")
 
         params = {
             "language": language,
@@ -100,8 +100,8 @@ def dbquery_medications(
         return medications
 
     except Exception as e:
-        logger.error(
-            f"Error querying medications using {algorithm} algorithm: {str(e)}"
+        logger.error(status.HTTP_400_BAD_REQUEST + 
+            f" Error querying medications using {algorithm} algorithm: {str(e)}"
         )
         return []
 

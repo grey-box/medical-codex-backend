@@ -2,6 +2,7 @@ import logging
 from typing import List, Callable, Tuple
 
 from app.config import LOGGER_NAME
+from fastapi import status
 
 logger = logging.getLogger(LOGGER_NAME)
 
@@ -45,7 +46,7 @@ def filter_medications_by_distance(
                     filtered_medications.append(medication)
                     distances.append(distance)
             except Exception as e:
-                logger.warning(
+                logger.warning(status.HTTP_400_BAD_REQUEST + 
                     f"Error calculating distance for medication '{medication}': {str(e)}"
                 )
 
@@ -55,5 +56,5 @@ def filter_medications_by_distance(
         return filtered_medications, distances
 
     except Exception as e:
-        logger.error(f"Error in filter_medications_by_distance: {str(e)}")
+        logger.error(status.HTTP_400_BAD_REQUEST + f" Error in filter_medications_by_distance: {str(e)}")
         raise
