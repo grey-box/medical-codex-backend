@@ -135,5 +135,5 @@ try:
     Base.metadata.create_all(engine)
     logger.info(status.HTTP_201_CREATED + " Database tables created successfully.")
 except Exception as e:
-    logger.error(status.HTTP_400_BAD_REQUEST + f"Error creating database tables: {str(e)}")
+    logger.error(status.HTTP_500_INTERNAL_SERVER_ERROR + f"Error creating database tables: {str(e)}")
     raise

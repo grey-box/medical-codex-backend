@@ -17,7 +17,7 @@ def execute_algorithm(func: Callable, **kwargs) -> List[FuzzyResult]:
         logger.info(status.HTTP_200_OK + f" Found {len(matches)} matches for query: {kwargs.get('query')}")
         return matches
     except Exception as error:
-        logger.error(status.HTTP_400_BAD_REQUEST + f" Error during {func.__name__} algorithm: {str(error)}")
+        logger.error(status.HTTP_500_INTERNAL_SERVER_ERROR + f" Error during {func.__name__} algorithm: {str(error)}")
         return []
 
 

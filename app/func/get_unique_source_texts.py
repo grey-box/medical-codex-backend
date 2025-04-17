@@ -33,5 +33,5 @@ def get_unique_source_texts(db: Session, query: FuzzyQuery) -> List[str]:
         result = db.execute(query).scalars().all()
         return [str(value) for value in result]
     except Exception as e:
-        logger.error(status.HTTP_400_BAD_REQUEST + f" Error retrieving unique source texts: {str(e)}")
+        logger.error(status.HTTP_500_INTERNAL_SERVER_ERROR + f" Error retrieving unique source texts: {str(e)}")
         raise
