@@ -1,9 +1,9 @@
-from app.algorithms.search_medications_by_levenshtein import (
+from algorithms.search_medications_by_levenshtein import (
     search_medications_by_levenshtein,
 )
-from app.algorithms.search_medications_by_soundex import search_medications_by_soundex
-from app.database import get_database_session
-from app.func.get_unique_source_texts import get_unique_source_texts
+from algorithms.search_medications_by_soundex import search_medications_by_soundex
+from database import get_database_session
+from func.get_unique_source_texts import get_unique_source_texts
 from schemas import FuzzyQuery
 
 db = next(get_database_session())

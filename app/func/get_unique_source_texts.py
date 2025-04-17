@@ -4,7 +4,7 @@ from typing import List
 from sqlalchemy import select, distinct
 from sqlalchemy.orm import Session
 
-from app.models import UniqueTranslations
+from models import UniqueTranslations
 from config import LOGGER_NAME
 from schemas import FuzzyQuery
 from fastapi import status

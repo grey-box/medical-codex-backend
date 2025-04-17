@@ -6,8 +6,8 @@ from dotenv import load_dotenv
 from google import generativeai as genai
 from google.generativeai.types import HarmCategory, HarmBlockThreshold
 
-from app import schemas as schemas
-from app.func.get_full_language_name import get_full_language_name
+import schemas
+from func.get_full_language_name import get_full_language_name
 from config import LOGGER_NAME
 from fastapi import status
 

@@ -4,11 +4,10 @@ from typing import Dict, List, Any
 from sqlalchemy import select, distinct, and_
 from sqlalchemy.orm import Session
 
-import app.schemas as schemas
-from app.config import LOGGER_NAME
-from app.func.translate_using_fallback import translate_using_fallback
-from app.models import UniqueTranslations
-from config import settings
+import schemas
+from config import LOGGER_NAME, settings
+from func.translate_using_fallback import translate_using_fallback
+from models import UniqueTranslations
 
 logger = logging.getLogger(LOGGER_NAME)
 

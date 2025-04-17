@@ -4,13 +4,14 @@ from typing import List
 from fastapi import APIRouter, Depends, HTTPException, status
 from sqlalchemy.orm import Session
 
-import app.models as models
-import app.schemas as schemas
-from app.config import LOGGER_NAME
-from app.database import get_database_session
+import models
+import schemas
+from config import LOGGER_NAME, LOGGER_NAME_FILE
+from database import get_database_session
 
 router = APIRouter(prefix="/languages", tags=["languages"])
 logger = logging.getLogger(LOGGER_NAME)
+logger_file = logging.getLogger(LOGGER_NAME_FILE)
 
 
 @router.get("/", response_model=schemas.AvailableLanguages, status_code=status.HTTP_200_OK)

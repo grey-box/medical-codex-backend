@@ -28,7 +28,9 @@ To start the app for development run:
 
 `docker compose up --build --watch`
 
-This will build the container according to the `Dockerfile` and then start the container. The `--watch` option watches the source code for changes and rebuilds/refreshes containers when files are updated. It doesn't seem to update files as described in the documentation without rebuilding the image first but you can see output from the FastAPI app without opening docker desktop.
+This will build the container according to the `Dockerfile` and then start the container. The `--watch` option watches the source code for changes and rebuilds/refreshes containers when files are updated. Make sure you have the `UVICORN_RELOAD` variable set in you .env file to ensure Uvicorn restarts your app in the container to display the changes you made.
+
+Watch can then be enabled/disabled in the terminal to toggle this feature on and off. If you are making a large number of changes, it might be good to toggle it off until you need it to update.
 
 Alternatively, you can run the two commands separately to achieve the same result:
 
@@ -36,6 +38,13 @@ Alternatively, you can run the two commands separately to achieve the same resul
 `docker compose watch`
 
 The `-d` option starts the container in the background.
+
+
+To stop the application press Ctrl+C and run:
+
+`docker compose down` or `docker compose down --rmi local`
+
+This will remove the container and the network generated to access the API endpoints. The `--rmi local` will also automatically remove local images which take up space on your drive. You can manually remove them via CLI or the Docker Desktop app.
 
 <hr>
 

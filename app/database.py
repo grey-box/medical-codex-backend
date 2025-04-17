@@ -9,8 +9,8 @@ from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy.orm import sessionmaker, Session
 from fastapi import status
 
-from app.config import LOGGER_NAME
-from app.custom_dialect import (
+from config import LOGGER_NAME
+from custom_dialect import (
     PostgresqlUnicodeDialect,
     SqliteUnicodeDialect,
     MySQLUnicodeDialect,

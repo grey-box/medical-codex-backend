@@ -1,16 +1,21 @@
-# .git directories are ignored automatically
+# .git directory is ignored automatically, .github is not.
 
 #Files
 *.http
 *.md
 *.ps1
-build*.sh
-docker-*
+*.sh
 create_database*
+/*.db
+/*.template
+/*.gitignore
 
 #Directories
 .azure
-
+.github
+blond_maggots/
+images/
+app/test/
 
 # Ignore any other files or directories not needed in the container
 node_modules/

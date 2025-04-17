@@ -3,18 +3,18 @@ from typing import Dict, List
 
 from sqlalchemy.orm import Session
 
-import app.schemas
-from app.algorithms.dbquery_medications import (
+import schemas
+from algorithms.dbquery_medications import (
     dbquery_medications_with_daitch_mokotoff,
     dbquery_medications_with_levenstein,
 )
-from app.algorithms.search_medications_by_levenshtein import (
+from algorithms.search_medications_by_levenshtein import (
     search_medications_by_levenshtein,
 )
-from app.algorithms.search_medications_by_soundex import search_medications_by_soundex
-from app.config import LOGGER_NAME
-from app.func.run_matching_algorithm import run_matching_algorithm
-from app.schemas import FuzzyAlgorithm
+from algorithms.search_medications_by_soundex import search_medications_by_soundex
+from config import LOGGER_NAME
+from func.run_matching_algorithm import run_matching_algorithm
+from schemas import FuzzyAlgorithm
 from schemas import FuzzyResult
 from fastapi import status
 
@@ -23,7 +23,7 @@ logger = logging.getLogger(LOGGER_NAME)
 
 def perform_fuzzy_matching(
     db: Session,
-    query: app.schemas.FuzzyQuery,
+    query: schemas.FuzzyQuery,
     matching_algorithm: str = "DaitchMokotoffDB",
 ) -> Dict[str, List[FuzzyResult]]:
     """
@@ -31,7 +31,7 @@ def perform_fuzzy_matching(
 
     Args:
         db (Session): The database session.
-        query (app.schemas.FuzzyQuery): The query parameters for fuzzy matching.
+        query (schemas.FuzzyQuery): The query parameters for fuzzy matching.
         matching_algorithm (str): The name of the matching algorithm to use.
 
     Returns:

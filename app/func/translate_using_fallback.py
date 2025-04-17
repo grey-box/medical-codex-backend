@@ -1,7 +1,7 @@
 import logging
 from typing import Dict, List, Any
 
-from app import schemas
+import schemas
 from app.config import LOGGER_NAME, settings
 from app.func.get_gemini_translation import get_gemini_translation
 from fastapi import status

@@ -1,9 +1,9 @@
 import logging
 
-from sqlalchemy import Column
+from sqlalchemy import CheckConstraint, Column, DateTime, Text, func
 from sqlalchemy.types import String, Integer
 
-from app.database import Base, engine
+from database import Base, engine
 from config import LOGGER_NAME
 from fastapi import status
 
@@ -110,12 +110,26 @@ class LanguagePairs(Base):
             str: A formatted string containing the instance's attributes.
         """
         return (
-            f"<Language(\n"
-            f"    source_language={self.source_language},\n"
-            f"    target_language={self.target_language}\n"
-            f")>"
+            f"<Language(source_language={self.source_language},target_language={self.target_language})>"
         )
 
+class ServiceLogs(Base):
+
+    """Model to store log messages in the database."""
+    __tablename__ = "_service_logs"
+    
+    id = Column(Integer, primary_key=True, autoincrement=True)
+    log_timestamp = Column(DateTime(timezone=True), server_default=func.now())  # Auto timestamp
+    error_level = Column(Integer, nullable=False)
+    source = Column(String(50), nullable=False)
+    message = Column(Text, nullable=False)
+    
+    __table_args__ = (
+        CheckConstraint("error_level IN (logging.NOTSET, logging.INFO, logging.WARNING, logging.ERROR, logging.DEBUG, logging.CRITICAL)", name="_service_logs_error_level_check"),
+    )
+
+    def __repr__(self):
+        return f"<LogEntry(id={self.id}, timestamp={self.log_timestamp}, level={self.error_level}, source={self.source}, message={self.message})>"
 
 try:
     Base.metadata.create_all(engine)
