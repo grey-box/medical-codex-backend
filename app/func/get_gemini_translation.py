@@ -42,7 +42,7 @@ def get_gemini_translation(
         response = model.generate_content(prompt, safety_settings=safety_settings)
 
         if not response:
-            logger.warning(status.HTTP_400_BAD_REQUEST + " Gemini API unable to provide a response")
+            logger.warning(status.HTTP_503_SERVICE_UNAVAILABLE + " Gemini API unable to provide a response")
             translated_text = "Translation unavailable"
         else:
             translated_text = response.text

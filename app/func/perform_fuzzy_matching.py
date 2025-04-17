@@ -71,5 +71,5 @@ def perform_fuzzy_matching(
         return {"results": matched_medications}
 
     except Exception as e:
-        logger.error(status.HTTP_400_BAD_REQUEST + f" Error in fuzzy matching: {str(e)}")
+        logger.error(status.HTTP_500_INTERNAL_SERVER_ERROR + f" Error in fuzzy matching: {str(e)}")
         return {"results": []}

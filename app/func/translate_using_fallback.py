@@ -32,5 +32,5 @@ def translate_using_fallback(
             )
             return {"results": []}
     except Exception as e:
-        logger.error(status.HTTP_400_BAD_REQUEST + f" Error in fallback translation using {fallback_method}: {str(e)}")
+        logger.error(status.HTTP_500_INTERNAL_SERVER_ERROR + f" Error in fallback translation using {fallback_method}: {str(e)}")
         return {"results": []}

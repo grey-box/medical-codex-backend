@@ -43,5 +43,5 @@ def store_manual_translation(
         return True
 
     except Exception as e:
-        logger.error(status.HTTP_400_BAD_REQUEST + f" Error in store_translation: {str(e)}")
+        logger.error(status.HTTP_500_INTERNAL_SERVER_ERROR + f" Error in store_translation: {str(e)}")
         raise
