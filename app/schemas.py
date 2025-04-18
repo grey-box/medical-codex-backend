@@ -2,7 +2,7 @@ from datetime import datetime, timezone
 from typing import List, Optional, Callable
 import logging
 
-from pydantic import BaseModel, Field, field_validator
+from pydantic import BaseModel, Field
 
 
 # 2 in the diagram
@@ -56,29 +56,6 @@ class AvailableLanguages(BaseModel):
     available_languages: List[AvailableLanguageResult]
 
 
-class UniqueTranslationsPYD(BaseModel):
-    """
-    The TranslationPydantic schema is used to validate data from the
-    translation database table
-    """
-
-    source_language: str
-    target_language: str
-    source_text: str
-    target_text: str
-    table_name: str
-    source_comment: Optional[str] = None
-    weight: int
-
-    class Config:
-        # If needed, you can configure ORM mode so Pydantic can serialize SQLAlchemy models directly.
-        from_attributes = True
-
-    @classmethod
-    def from_orm(cls, obj):
-        return cls.model_validate(obj)
-
-
 class FallbackQuery(BaseModel):
     medicine: FuzzyResult
     target_language: str
@@ -86,11 +63,13 @@ class FallbackQuery(BaseModel):
 
 class FallbackResponse(BaseModel):
     translated_medicine: str
+    fallback_method: str
 
 
 class FuzzyAlgorithm(BaseModel):
     function: Callable
     local: bool
+    name: str
 
 
 class ManualTranslationQuery(BaseModel):
@@ -107,7 +86,6 @@ class ServiceLogEntry(BaseModel):
     source: str = Field(..., max_length=50, description="Source of the log")
     message: str = Field(..., description="Log message")
 
-    @field_validator('error_level')
     @classmethod
     def validate_error_level(cls, value):
         if value not in {logging.NOTSET, logging.INFO, logging.WARNING, logging.ERROR, logging.DEBUG, logging.CRITICAL}:

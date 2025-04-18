@@ -5,7 +5,7 @@ from sqlalchemy.types import String, Integer
 
 from database import Base, engine
 from config import LOGGER_NAME
-from fastapi import status
+from fastapi import status, HTTPException
 
 # Create all tables
 Base.metadata.create_all(engine)
@@ -31,7 +31,8 @@ class UniqueTranslations(Base):
     target_text = Column(String, nullable=False)
     table_name = Column(String, nullable=False)
     source_comment = Column(String, nullable=True)
-    weight = Column(Integer, nullable=False)
+    weight = Column(Integer, nullable=True)
+    description = Column(String, nullable=True)
 
     def __repr__(self) -> str:
         """
@@ -133,7 +134,9 @@ class ServiceLogs(Base):
 
 try:
     Base.metadata.create_all(engine)
-    logger.info(status.HTTP_201_CREATED + " Database tables created successfully.")
 except Exception as e:
-    logger.error(status.HTTP_500_INTERNAL_SERVER_ERROR + f"Error creating database tables: {str(e)}")
-    raise
+    logger.error(f"Error creating database tables: {str(e)}")
+    raise HTTPException(
+        status_code=status.HTTP_500_INTERNAL_SERVER_ERROR,
+        detail="Failed to create database tables",
+    )

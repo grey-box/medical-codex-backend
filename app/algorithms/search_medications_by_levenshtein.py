@@ -3,11 +3,11 @@ from typing import List
 
 import Levenshtein
 
-from app.algorithms.filter_medications_by_distance import filter_medications_by_distance
-from app.algorithms.get_top_matches_by_distance import get_top_matches_by_distance
-from app.config import LOGGER_NAME
-from app.func.normalize_and_filter_strings import normalize_and_filter_strings
-from app.schemas import FuzzyResult
+from algorithms.filter_medications_by_distance import filter_medications_by_distance
+from algorithms.get_top_matches_by_distance import get_top_matches_by_distance
+from config import LOGGER_NAME
+from func.normalize_and_filter_strings import normalize_and_filter_strings
+from schemas import FuzzyResult
 from fastapi import status
 
 logger = logging.getLogger(LOGGER_NAME)

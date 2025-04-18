@@ -1,7 +1,7 @@
 from typing import List
 import pandas as pd
 import logging
-from app.config import LOGGER_NAME
+from config import LOGGER_NAME
 from fastapi import status
 
 logger = logging.getLogger(LOGGER_NAME)
