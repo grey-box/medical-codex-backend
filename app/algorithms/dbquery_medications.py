@@ -7,6 +7,8 @@ from sqlalchemy.orm import Session
 from config import LOGGER_NAME
 from schemas import FuzzyResult
 
+from fastapi import HTTPException, status
+
 logger = logging.getLogger(LOGGER_NAME)
 
 AlgorithmType = Literal["Levenshtein", "DaitchMokotoff"]
@@ -72,7 +74,11 @@ def dbquery_medications(
                 """
             )
         else:
-            raise ValueError(status.HTTP_400_BAD_REQUEST + f" Unsupported algorithm: {algorithm}")
+            logger.error(f" Unsupported algorithm: {algorithm}")
+            raise HTTPException(
+                status_code=status.HTTP_400_BAD_REQUEST,
+                detail=f"Unsupported algorithm: {algorithm}"
+            )
 
         params = {
             "language": language,
