@@ -66,7 +66,5 @@ This removes:
 
 You can manually remove them via CLI or the Docker Desktop app.
 
-<hr>
-
 
 

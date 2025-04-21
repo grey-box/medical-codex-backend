@@ -6,7 +6,7 @@ finding approximate matches for medical terms in the database.
 """
 
 import logging
-from typing import Dict, List, Any
+from typing import Dict, List
 
 from fastapi import APIRouter, Depends, HTTPException, status
 from sqlalchemy.orm import Session
@@ -15,6 +15,7 @@ import database
 import schemas
 from config import LOGGER_NAME
 from func import perform_fuzzy_matching
+from schemas import FuzzyMatching, FuzzyResult
 
 # Initialize router with prefix and tags for API documentation
 router = APIRouter(prefix="/fuzzymatching", tags=["fuzzymatching"])
@@ -60,7 +61,7 @@ async def get_fuzzymatching(
 async def get_fuzzymatching_test(
     query: schemas.FuzzyQuery, 
     db: Session = Depends(database.get_database_session)
-) -> Dict[str, List[Dict[str, Any]]]:
+) -> schemas.FuzzyMatching:
     """
     Test endpoint for fuzzy matching that returns mock data.
     
@@ -79,7 +80,7 @@ async def get_fuzzymatching_test(
         logger.debug(f"Database info: {db.info}")
         
         # Helper function to generate a mock result
-        def create_mock_result(number: int) -> Dict[str, Any]:
+        def create_mock_result(number: int) -> FuzzyResult:
             """
             Create a mock fuzzy matching result.
             
@@ -89,16 +90,16 @@ async def get_fuzzymatching_test(
             Returns:
                 Dict[str, Any]: A mock result dictionary.
             """
-            return {
-                "matching_name": f"matching_name{number}",
-                "matching_source": f"matching_source{number}",
-                "matching_uid": number,
-                "matching_algorithm": "test",
-                "matching_row_number": number + 1,  # This is just for testing purposes.
-            }
+            return schemas.FuzzyResult(
+                matching_name=f"matching_name{number}",
+                matching_source=f"matching_source{number}",
+                matching_uid=number,
+                matching_algorithm="test",
+                matching_row_number=number + 1,  # This is just for testing purposes.
+            )
         
         # Generate 5 mock results
-        results = {"results": [create_mock_result(i) for i in range(5)]}
+        results = FuzzyMatching(results = [create_mock_result(i) for i in range(5)])
         logger.info("Successfully generated test fuzzy matching results")
         return results
     except Exception as e:
