@@ -1,3 +1,5 @@
+# 
+
 # Installation steps for Azure (MacOS based)
 
 ## Install Azure CLI on macOS
@@ -84,7 +86,7 @@ To enable this extension in Azure, you need first to allow it from the Azure Por
 See [Manage PostgreSQL extensions in Azure Database for PostgreSQL - Flexible Server](https://learn.microsoft.com/en-us/azure/postgresql/extensions/how-to-allow-extensions?tabs=allow-extensions-portal%2Cload-libraries-portal#how-to-use-postgresql-extensions)
 for more details.
 
-![enable-azure-postgres-extension-fuzzystrmatch.png](images/enable-azure-postgres-extension-fuzzystrmatch.png)
+![enable-azure-postgres-extension-fuzzystrmatch.png](/images/enable-azure-postgres-extension-fuzzystrmatch.png)
 
 ```
 CREATE EXTENSION fuzzystrmatch;
