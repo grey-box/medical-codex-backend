@@ -12,6 +12,7 @@ from langcodes import Language, tag_parser
 
 from config import LOGGER_NAME
 
+# Set up logger for this module
 logger = logging.getLogger(LOGGER_NAME)
 
 
@@ -32,7 +33,7 @@ def get_full_language_name(language_code: str) -> str:
         'invalid_code'
 
     Args:
-        language_code (str): ISO 639 language code to convert.
+        language_code (str): ISO 639 language code (e.g., 'en', 'uk', 'ru').
 
     Returns:
         str: Full language name in English if conversion succeeds,
@@ -48,14 +49,14 @@ def get_full_language_name(language_code: str) -> str:
 
         # Get the display name in English
         full_name = language.display_name("en")
+
+        # Log successful conversion
         logger.info(f"Successfully converted '{language_code}' to '{full_name}'")
 
         # Log successful conversion
         logger.info(f"Successfully converted '{language_code}' to '{full_name}'")
 
         return full_name
-    except Exception as error:
-        logger.error(f"Failed to convert language code '{language_code}': {str(error)}")
 
     except tag_parser.LanguageTagError as e:
         # Handle specific language tag parsing errors

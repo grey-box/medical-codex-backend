@@ -2,6 +2,7 @@ from typing import List
 import pandas as pd
 import logging
 from config import LOGGER_NAME
+from fastapi import status
 
 logger = logging.getLogger(LOGGER_NAME)
 
@@ -33,9 +34,9 @@ def get_top_matches_by_distance(
         df_sorted = df.sort_values("distance")
         top_matches = df_sorted.head(max_results)["item"].tolist()
 
-        logger.info(f"Retrieved top {len(top_matches)} matches.")
+        logger.info(status.HTTP_200_OK + f" Retrieved top {len(top_matches)} matches.")
         return top_matches
 
     except Exception as e:
-        logger.error(f"Error in get_top_matches_by_distance: {str(e)}")
+        logger.error(status.HTTP_400_BAD_REQUEST + f"Error in get_top_matches_by_distance: {str(e)}")
         raise
