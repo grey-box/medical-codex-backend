@@ -52,12 +52,12 @@ def translate_with_database(
         # Extract term and language information from the query
         term = query.translation_query.matching_name
         term_uid = query.translation_query.matching_uid
-        source_language = query.source_language
+        #source_language = query.source_language
         target_language = query.target_language
         
         logger.info(
-            f"Attempting to translate '{term}' (UID: {term_uid}) "
-            f"from {source_language} to {target_language}"
+            f"Attempting to translate '{term}' (UID: {term_uid}) to {target_language}"
+            #f"from {source_language} to {target_language}"
         )
         
         # Try to find translations in the database

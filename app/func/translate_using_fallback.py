@@ -51,13 +51,13 @@ def translate_using_fallback(
         HTTPException: With appropriate status code if the translation fails or
                       the fallback method is not supported.
     """
-    source_text = query.text
-    source_lang = query.source_language
+    source_text = query.translation_query.matching_name
+    #source_lang = query.source_language
     target_lang = query.target_language
     
     logger.info(
         f"Attempting fallback translation using '{fallback_method}' method: "
-        f"'{source_text}' from {source_lang} to {target_lang}"
+        f"'{source_text}' to {target_lang}"
     )
     
     # Validate fallback method
@@ -104,7 +104,7 @@ def _translate_with_gemini(query: TranslationQuery) -> str:
     Raises:
         ValueError: If the Gemini translation returns empty or invalid results.
     """
-    logger.debug(f"Translating with Gemini AI: '{query.text}'")
+    logger.debug(f"Translating with Gemini AI: '{query.translation_query.matching_name}'")
     
     # Call the Gemini translation function
     translation_result = get_gemini_translation(query)
