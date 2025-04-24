@@ -48,7 +48,8 @@ async def get_translation(
     try:
         logger.info(f"Received translation query: {query}")
         results = translate_with_database(db, query)
-        logger.info(f"Successfully translated term with {len(results.get('results', []))} results")
+        len_results = len(results.results) or 0
+        logger.info(f"Successfully translated term with {len_results} results")
         return results
     except Exception as e:
         error_message = f"Error translating term: {str(e)}"
@@ -103,7 +104,7 @@ async def get_translation_test(
         
         # Generate 5 mock translation results
         results = schemas.Translation(results=[create_mock_result(i) for i in range(5)])
-        logger.info(f"Generated {len(results['results'])} test translation results")
+        logger.info(f"Generated {len(results.results)} test translation results")
         return results
     except Exception as e:
         error_message = f"Error generating test translations: {str(e)}"

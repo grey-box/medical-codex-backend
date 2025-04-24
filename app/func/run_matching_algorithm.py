@@ -86,7 +86,7 @@ def run_matching_algorithm(
     """
     # Log the algorithm execution
     algorithm_name = algorithm.function.__name__
-    query_string = query_params.query_string
+    query_string = query_params.query
     source_language = query_params.source_language
     
     logger.info(f"Running {algorithm_name} algorithm for query: '{query_string}' in language: {source_language}")

@@ -40,8 +40,7 @@ def translate_with_database(
     
     Args:
         db (Session): Database session for querying translations.
-        query (TranslationQuery): Object containing the term to translate,
-                                 source language, and target language.
+        query (TranslationQuery): Object containing the term to translate and target language.
         
     Returns:
         Translation: Object containing the translation results. If no translations
@@ -52,12 +51,11 @@ def translate_with_database(
         # Extract term and language information from the query
         term = query.translation_query.matching_name
         term_uid = query.translation_query.matching_uid
-        source_language = query.source_language
         target_language = query.target_language
         
         logger.info(
             f"Attempting to translate '{term}' (UID: {term_uid}) "
-            f"from {source_language} to {target_language}"
+            f"to {target_language}"
         )
         
         # Try to find translations in the database
@@ -175,15 +173,8 @@ def _translate_using_fallback_method(query: TranslationQuery) -> Translation:
         # Call the fallback translation function
         fallback_result = translate_using_fallback(query, fallback_method)
         
-        # Create a TranslationResult object with the fallback result
-        result = TranslationResult(
-            translated_name=fallback_result,
-            translated_source="fallback",
-            translated_uid=0,
-        )
-        
-        logger.info(f"Successfully translated '{term}' using fallback method: '{fallback_result}'")
-        return Translation(results=[result])
+        logger.info(f"Successfully translated '{term}' using fallback method {fallback_method}: '{fallback_result.results[0].translated_name}'")
+        return fallback_result
         
     except Exception as e:
         logger.error(f"Fallback translation failed for '{term}': {str(e)}")

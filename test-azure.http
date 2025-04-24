@@ -1,30 +1,336 @@
-### test POST request for fuzzy matching
-POST https://medicalcodexbackend.azurewebsites.net/fuzzymatching/test
+### Fuzzy Matching - Successful (en -> uk)
+POST https://backend.asu2024.azure.project-codex.grey-box.ca//fuzzymatching/
+Content-Type: application/json
 
 {
-    "language": "uk",
-    "query": "sample_query"
+  "source_language": "en",
+  "query": "paracetamol",
+  "target_language": "uk"
 }
 
-### test POST request for fuzzy matching
-POST https://medicalcodexbackend.azurewebsites.net/fuzzymatching/
-
-{
-    "language": "uk",
-    "query": "астмито",
-    "max_distance": 5,
-    "max_results": 5
-}
-
-### test POST request for translation
-POST https://medicalcodexbackend.azurewebsites.net/translate/test
-
-{
-    "source_language": "uk",
-    "target_language": "en",
-    "translation_query": {
-      "matching_name": "matching_name3",
-      "matching_source": "matching_source3",
-      "matching_uid": 3
+> {%
+    client.assert(response.status === 201, "Response status is not 201");
+    client.assert(response.contentType.mimeType === "application/json", "Response content type is not application/json");
+    const responseBody = JSON.parse(response.body);
+    client.assert(responseBody.results !== undefined && Array.isArray(responseBody.results), "Response should contain a 'results' array");
+    if (responseBody.results && responseBody.results.length > 0) {
+        client.assert(responseBody.results[0].matching_name !== undefined, "First result should have 'matching_name'");
+        client.assert(responseBody.results[0].matching_source !== undefined, "First result should have 'matching_source'");
     }
+%}
+
+### Fuzzy Matching - Successful (uk -> ru)
+POST https://backend.asu2024.azure.project-codex.grey-box.ca//fuzzymatching/
+Content-Type: application/json
+
+{
+  "source_language": "uk",
+  "query": "ацетамінофен",
+  "target_language": "en"
 }
+
+> {%
+    client.assert(response.status === 201, "Response status is not 201");
+    client.assert(response.contentType.mimeType === "application/json", "Response content type is not application/json");
+    const responseBody = JSON.parse(response.body);
+    client.assert(responseBody.results !== undefined && Array.isArray(responseBody.results), "Response should contain a 'results' array");
+    if (responseBody.results && responseBody.results.length > 0) {
+        client.assert(responseBody.results[0].matching_name !== undefined, "First result should have 'matching_name'");
+        client.assert(responseBody.results[0].matching_source !== undefined, "First result should have 'matching_source'");
+    }
+%}
+
+### Fuzzy Matching - Validation Error
+POST https://backend.asu2024.azure.project-codex.grey-box.ca//fuzzymatching/
+Content-Type: application/json
+
+{
+  "query": "ibuprofen",
+  "target_language": "de"
+}
+
+> {%
+    client.assert(response.status === 422, "Response status is not 422");
+    client.assert(response.contentType.mimeType === "application/json", "Response content type is not application/json");
+    const responseBody = JSON.parse(response.body);
+    client.assert(responseBody.detail !== undefined && Array.isArray(responseBody.detail), "Response should contain a 'detail' array for validation errors");
+%}
+
+### Fuzzy Matching Test - Successful (ru -> en)
+POST https://backend.asu2024.azure.project-codex.grey-box.ca//fuzzymatching/test
+Content-Type: application/json
+
+{
+  "source_language": "ru",
+  "query": "аспирин",
+  "target_language": "en"
+}
+
+> {%
+    client.assert(response.status === 201, "Response status is not 201");
+    client.assert(response.contentType.mimeType === "application/json", "Response content type is not application/json");
+    const responseBody = JSON.parse(response.body);
+    client.assert(responseBody.results !== undefined && Array.isArray(responseBody.results), "Response should contain a 'results' array");
+%}
+
+### Fuzzy Matching Test - Validation Error
+POST https://backend.asu2024.azure.project-codex.grey-box.ca//fuzzymatching/test
+Content-Type: application/json
+
+{
+  "query": "анальгін",
+  "target_language": "it"
+}
+
+> {%
+    client.assert(response.status === 422, "Response status is not 422");
+    client.assert(response.contentType.mimeType === "application/json", "Response content type is not application/json");
+    const responseBody = JSON.parse(response.body);
+    client.assert(responseBody.detail !== undefined && Array.isArray(responseBody.detail), "Response should contain a 'detail' array for validation errors");
+%}
+
+### Get Available Languages - Successful
+GET https://backend.asu2024.azure.project-codex.grey-box.ca//languages/
+
+> {%
+    client.assert(response.status === 200, "Response status is not 200");
+    client.assert(response.contentType.mimeType === "application/json", "Response content type is not application/json");
+    const responseBody = JSON.parse(response.body);
+    client.assert(responseBody.available_languages !== undefined && Array.isArray(responseBody.available_languages), "Response should contain 'available_languages' array");
+    if (responseBody.available_languages && responseBody.available_languages.length > 0) {
+        client.assert(responseBody.available_languages[0].source_language !== undefined, "First language pair should have 'source_language'");
+        client.assert(responseBody.available_languages[0].target_languages !== undefined && Array.isArray(responseBody.available_languages[0].target_languages), "First language pair should have 'target_languages' array");
+    }
+%}
+
+### Get Test Languages - Successful
+GET https://backend.asu2024.azure.project-codex.grey-box.ca//languages/test
+
+> {%
+    client.assert(response.status === 200, "Response status is not 200");
+    client.assert(response.contentType.mimeType === "application/json", "Response content type is not application/json");
+    const responseBody = JSON.parse(response.body);
+    client.assert(responseBody.available_languages !== undefined && Array.isArray(responseBody.available_languages), "Response should contain 'available_languages' array");
+%}
+
+### Get Translation - Successful (en -> ru)
+POST https://backend.asu2024.azure.project-codex.grey-box.ca//translate/
+Content-Type: application/json
+
+{
+  "translation_query": {
+      "matching_name": "paracetamol",
+      "matching_source": "UTIS",
+      "matching_algorithm": "DaitchMokotoff",
+      "matching_uid": 0,
+      "matching_row_number": 8
+    },
+  "target_language": "ru"
+}
+
+> {%
+    client.assert(response.status === 201, "Response status is not 201");
+    client.assert(response.contentType.mimeType === "application/json", "Response content type is not application/json");
+    const responseBody = JSON.parse(response.body);
+    client.assert(responseBody.results !== undefined && Array.isArray(responseBody.results), "Response should contain a 'results' array");
+    if (responseBody.results && responseBody.results.length > 0) {
+        client.assert(responseBody.results[0].translated_name !== undefined, "First result should have 'translated_name'");
+        client.assert(responseBody.results[0].translated_source !== undefined, "First result should have 'translated_source'");
+    }
+%}
+
+### Get Translation - Successful (uk -> en)
+POST https://backend.asu2024.azure.project-codex.grey-box.ca//translate/
+Content-Type: application/json
+
+{
+  "translation_query": {
+      "matching_name": "Ацетамінофен",
+      "matching_source": "UTIS",
+      "matching_algorithm": "DaitchMokotoff",
+      "matching_uid": 0,
+      "matching_row_number": 1
+    },
+  "target_language": "en"
+}
+
+> {%
+    client.assert(response.status === 201, "Response status is not 201");
+    client.assert(response.contentType.mimeType === "application/json", "Response content type is not application/json");
+    const responseBody = JSON.parse(response.body);
+    client.assert(responseBody.translated_medicine.results !== undefined && Array.isArray(responseBody.translated_medicine.results), "Response should contain a 'results' array");
+    if (responseBody.translated_medicine.results && responseBody.translated_medicine.results.length > 0) {
+        client.assert(responseBody.translated_medicine.results[0].translated_name !== undefined, "First result should have 'translated_name'");
+        client.assert(responseBody.translated_medicine.results[0].translated_source !== undefined, "First result should have 'translated_source'");
+    }
+%}
+
+### Get Translation - Validation Error
+POST https://backend.asu2024.azure.project-codex.grey-box.ca//translate/
+Content-Type: application/json
+
+{
+  "target_language": "zh"
+}
+
+> {%
+    client.assert(response.status === 422, "Response status is not 422");
+    client.assert(response.contentType.mimeType === "application/json", "Response content type is not application/json");
+    const responseBody = JSON.parse(response.body);
+    client.assert(responseBody.detail !== undefined && Array.isArray(responseBody.detail), "Response should contain a 'detail' array for validation errors");
+%}
+
+### Get Translation Test - Successful (ru -> uk)
+POST https://backend.asu2024.azure.project-codex.grey-box.ca//translate/test
+Content-Type: application/json
+
+{
+  "translation_query": {
+    "matching_name": "Ибупрофен",
+    "matching_source": "Russian Pharmacopoeia",
+    "matching_algorithm": "exact",
+    "matching_uid": 112,
+    "matching_row_number": 334
+  },
+  "target_language": "uk"
+}
+
+> {%
+    client.assert(response.status === 201, "Response status is not 201");
+    client.assert(response.contentType.mimeType === "application/json", "Response content type is not application/json");
+    const responseBody = JSON.parse(response.body);
+    client.assert(responseBody.results !== undefined && Array.isArray(responseBody.results), "Response should contain a 'results' array");
+%}
+
+### Get Translation Test - Validation Error
+POST https://backend.asu2024.azure.project-codex.grey-box.ca//translate/test
+Content-Type: application/json
+
+{
+  "target_language": "ja"
+}
+
+> {%
+    client.assert(response.status === 422, "Response status is not 422");
+    client.assert(response.contentType.mimeType === "application/json", "Response content type is not application/json");
+    const responseBody = JSON.parse(response.body);
+    client.assert(responseBody.detail !== undefined && Array.isArray(responseBody.detail), "Response should contain a 'detail' array for validation errors");
+%}
+
+### Fallback Translation - Successful (en -> ru)
+POST https://backend.asu2024.azure.project-codex.grey-box.ca//fallback_translation/
+Content-Type: application/json
+
+{
+  "medicine": {
+    "matching_name": "Amoxicillin",
+    "matching_source": "WHO",
+    "matching_algorithm": "fuzzy",
+    "matching_uid": 555,
+    "matching_row_number": 777
+  },
+  "target_language": "ru"
+}
+
+> {%
+    client.assert(response.status === 201, "Response status is not 201");
+    client.assert(response.contentType.mimeType === "application/json", "Response content type is not application/json");
+    const responseBody = JSON.parse(response.body);
+    client.assert(responseBody.translated_medicine !== undefined, "Response should contain 'translated_medicine'");
+    client.assert(responseBody.fallback_method !== undefined, "Response should contain 'fallback_method'");
+%}
+
+### Fallback Translation - Successful (uk -> en)
+POST https://backend.asu2024.azure.project-codex.grey-box.ca//fallback_translation/
+Content-Type: application/json
+
+{
+  "medicine": {
+    "matching_name": "Амоксицилін",
+    "matching_source": "Ukrainian Guidelines",
+    "matching_algorithm": "fuzzy",
+    "matching_uid": 999,
+    "matching_row_number": 111
+  },
+  "target_language": "en"
+}
+
+> {%
+    client.assert(response.status === 201, "Response status is not 201");
+    client.assert(response.contentType.mimeType === "application/json", "Response content type is not application/json");
+    const responseBody = JSON.parse(response.body);
+    client.assert(responseBody.translated_medicine !== undefined, "Response should contain 'translated_medicine'");
+    client.assert(responseBody.fallback_method !== undefined, "Response should contain 'fallback_method'");
+%}
+
+### Fallback Translation - Validation Error
+POST https://backend.asu2024.azure.project-codex.grey-box.ca//fallback_translation/
+Content-Type: application/json
+
+{
+  "target_language": "ko"
+}
+
+> {%
+    client.assert(response.status === 422, "Response status is not 422");
+    client.assert(response.contentType.mimeType === "application/json", "Response content type is not application/json");
+    const responseBody = JSON.parse(response.body);
+    client.assert(responseBody.detail !== undefined && Array.isArray(responseBody.detail), "Response should contain a 'detail' array for validation errors");
+%}
+
+### Manual Translation - Successful (ru -> en)
+POST https://backend.asu2024.azure.project-codex.grey-box.ca//manual_translation/
+Content-Type: application/json
+
+{
+  "term": "Артериальная гипертензия",
+  "proposed_translation": "Arterial hypertension",
+  "source_language": "ru",
+  "target_language": "en",
+  "description": "Common cardiovascular condition"
+}
+
+> {%
+    client.assert(response.status === 201, "Response status is not 201");
+    client.assert(response.contentType.mimeType === "application/json", "Response content type is not application/json");
+    const responseBody = JSON.parse(response.body);
+    client.assert(responseBody.translated_medicine !== undefined, "Response should contain 'translated_medicine'");
+    client.assert(responseBody.fallback_method !== undefined, "Response should contain 'fallback_method'");
+%}
+
+### Manual Translation - Successful (uk -> ru)
+POST https://backend.asu2024.azure.project-codex.grey-box.ca//manual_translation/
+Content-Type: application/json
+
+{
+  "term": "Цукровий діабет",
+  "proposed_translation": "Сахарный диабет",
+  "source_language": "uk",
+  "target_language": "ru",
+  "description": "Endocrine disorder"
+}
+
+> {%
+    client.assert(response.status === 201, "Response status is not 201");
+    client.assert(response.contentType.mimeType === "application/json", "Response content type is not application/json");
+    const responseBody = JSON.parse(response.body);
+    client.assert(responseBody.translated_medicine !== undefined, "Response should contain 'translated_medicine'");
+    client.assert(responseBody.fallback_method !== undefined, "Response should contain 'fallback_method'");
+%}
+
+### Manual Translation - Validation Error
+POST https://backend.asu2024.azure.project-codex.grey-box.ca//manual_translation/
+Content-Type: application/json
+
+{
+  "proposed_translation": "Гіпертонія",
+  "source_language": "en",
+  "target_language": "uk"
+}
+
+> {%
+    client.assert(response.status === 422, "Response status is not 422");
+    client.assert(response.contentType.mimeType === "application/json", "Response content type is not application/json");
+    const responseBody = JSON.parse(response.body);
+    client.assert(responseBody.detail !== undefined && Array.isArray(responseBody.detail), "Response should contain a 'detail' array for validation errors");
+%}
