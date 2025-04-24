@@ -62,7 +62,7 @@ class FallbackQuery(BaseModel):
 
 
 class FallbackResponse(BaseModel):
-    translated_medicine: str
+    translated_medicine: Translation
     fallback_method: str
 
 

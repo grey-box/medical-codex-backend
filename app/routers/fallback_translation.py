@@ -34,7 +34,7 @@ async def fallback_translation(
         query (schemas.FallbackQuery): Query containing medicine name and target language.
 
     Returns:
-        schemas.FallbackResponse: Response containing the translated medicine name.
+        schemas.FallbackResponse: Response containing the translation and the fallback method.
         
     Raises:
         HTTPException 400: If there's a validation error with the input.
@@ -57,7 +57,7 @@ async def fallback_translation(
         
         # Log successful translation
         logger.info(
-            f"Successfully translated '{query.medicine}' to '{translated_medicine}'"
+            f"Successfully translated '{query.medicine}' to '{str(translated_medicine.results)}'"
         )
         
         # Return the translated medicine name

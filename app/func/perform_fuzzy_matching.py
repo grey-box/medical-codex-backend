@@ -104,7 +104,7 @@ def perform_fuzzy_matching(
         if match_count > 0:
             logger.debug(f"Matched medications: {matched_medications}")
         else:
-            logger.warning(f"No matches found for query: {query.query_string}")
+            logger.warning(f"No matches found for query: {query.query}")
         
         # Return the results
         return FuzzyMatching(results=matched_medications)

@@ -6,7 +6,7 @@ finding approximate matches for medical terms in the database.
 """
 
 import logging
-from typing import Dict, List
+from typing import Dict
 
 from fastapi import APIRouter, Depends, HTTPException, status
 from sqlalchemy.orm import Session
@@ -66,14 +66,23 @@ async def get_fuzzymatching_test(
     Test endpoint for fuzzy matching that returns mock data.
     
     This endpoint is used for testing purposes and returns predefined mock data
-    instead of performing actual fuzzy matching.
+    instead of performing actual fuzzy matching. It generates a fixed set of 5 mock
+    results with predictable values to facilitate testing of the API and client
+    applications without requiring actual database matching operations.
     
     Args:
-        query (schemas.FuzzyQuery): The query parameters (not used for actual matching).
-        db (Session): Database session dependency (not used for actual matching).
+        query (schemas.FuzzyQuery): The query parameters for fuzzy matching. These
+            parameters are logged but not used for actual matching in this test endpoint.
+        db (Session): Database session dependency. The session is not used for actual
+            database operations but its information is logged for debugging purposes.
         
     Returns:
-        Dict[str, List[Dict[str, Any]]]: Mock fuzzy matching results.
+        schemas.FuzzyMatching: A FuzzyMatching object containing a list of 5 mock
+            FuzzyResult objects with predictable test values.
+            
+    Raises:
+        HTTPException: If an error occurs during the test fuzzy matching process,
+            returns a 500 Internal Server Error with details about the exception.
     """
     try:
         logger.info(f"Received test fuzzy matching query: {query}")

@@ -1,6 +1,15 @@
+"""
+Matching Algorithm Runner Module.
+
+This module provides functions for executing fuzzy matching algorithms with
+consistent error handling and parameter preparation. It supports both local
+(in-memory) and database-based matching algorithms.
+"""
+
 import logging
 from typing import List, Callable, Dict, Any
 
+from fastapi import HTTPException, status
 from sqlalchemy.orm import Session
 
 from config import LOGGER_NAME
@@ -70,6 +79,10 @@ def run_matching_algorithm(
         
     Returns:
         List[FuzzyResult]: A list of matching results sorted by relevance.
+        
+    Raises:
+        Exception: Propagates any exceptions from the underlying algorithm execution.
+                  These are caught and handled by the execute_algorithm function.
     """
     # Log the algorithm execution
     algorithm_name = algorithm.function.__name__
@@ -90,9 +103,17 @@ def run_matching_algorithm(
     if algorithm.local:
         # For local algorithms, retrieve all source texts to use as the corpus
         logger.debug(f"Retrieving source texts for local algorithm: {algorithm_name}")
-        source_texts = get_unique_source_texts(db, query_params)
-        common_params["medications"] = source_texts
-        logger.debug(f"Retrieved {len(source_texts)} source texts for matching")
+        try:
+            source_texts = get_unique_source_texts(db, query_params)
+            common_params["medications"] = source_texts
+            logger.debug(f"Retrieved {len(source_texts)} source texts for matching")
+        except Exception as e:
+            error_message = f"Failed to retrieve source texts: {str(e)}"
+            logger.error(error_message)
+            raise HTTPException(
+                status_code=status.HTTP_500_INTERNAL_SERVER_ERROR,
+                detail=error_message
+            )
     else:
         # For database algorithms, pass the database session
         logger.debug(f"Using database for algorithm: {algorithm_name}")
