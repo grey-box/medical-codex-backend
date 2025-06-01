@@ -23,7 +23,7 @@ logger_file = logging.getLogger(LOGGER_NAME_FILE)
 
 # Default server configuration
 DEFAULT_HOST = "0.0.0.0"
-DEFAULT_PORT = 8000
+DEFAULT_PORT = 8080
 
 
 def setup_logging() -> None:
@@ -125,7 +125,7 @@ def run_server(host: Optional[str] = None, port: Optional[int] = None) -> None:
         host (Optional[str]): The host address to bind the server to.
                              Defaults to "0.0.0.0" if None.
         port (Optional[int]): The port to bind the server to.
-                             Defaults to 8000 if None.
+                             Defaults to 8080 if None.
     
     Raises:
         Exception: If the server fails to start or encounters an error.

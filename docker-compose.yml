@@ -5,11 +5,11 @@ services:
     env_file:
       - .env
     expose:
-      - "8000"
+      - "8080"
     networks:
       - codex-network
     ports:
-      - 8000:8000
+      - 8080:8080
     develop:
       watch:
         - action: sync

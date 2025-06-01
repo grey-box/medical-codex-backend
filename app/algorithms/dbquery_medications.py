@@ -63,7 +63,7 @@ def dbquery_medications(
             sql = text(
                 """
                 SELECT 
-                0 AS matching_uid,
+                id AS matching_uid,
                 source_text AS matching_name, 
                 table_name AS matching_source,
                 ROW_NUMBER() OVER (ORDER BY levenshtein(lower(source_text), lower(:query))) AS row_number,
@@ -78,13 +78,16 @@ def dbquery_medications(
         elif algorithm == "DaitchMokotoff":
             sql = text(
                 """
-                WITH matched_rows AS (SELECT source_text,
-                             table_name,
-                             array_dms_diff(my_daitch_mokotoff(source_text), my_daitch_mokotoff(:query)) AS distance
-                      FROM unique_translation_table
-                      WHERE source_language = :language
-                        AND (my_daitch_mokotoff(source_text) && my_daitch_mokotoff(:query)))
-                SELECT 0                                     AS matching_uid,
+                WITH matched_rows AS (SELECT id,
+                                             source_text,
+                                             table_name,
+                                             array_dms_diff(
+                                                     my_daitch_mokotoff(source_text),
+                                                     my_daitch_mokotoff(:query)) AS distance
+                                      FROM unique_translation_table
+                                      WHERE source_language = :language
+                                        AND my_daitch_mokotoff(source_text) && my_daitch_mokotoff(:query))
+                SELECT id                                    AS matching_uid,
                        source_text                           AS matching_name,
                        table_name                            AS matching_source,
                        ROW_NUMBER() OVER (ORDER BY distance) AS row_number,

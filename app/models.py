@@ -24,7 +24,7 @@ class UniqueTranslations(Base):
 
     __tablename__ = "unique_translation_table"
 
-    id = Column(Integer, primary_key=True)
+
     source_language = Column(String, nullable=False)
     target_language = Column(String, nullable=False)
     source_text = Column(String, nullable=False)
@@ -32,6 +32,7 @@ class UniqueTranslations(Base):
     table_name = Column(String, nullable=False)
     source_comment = Column(String, nullable=True)
     weight = Column(Integer, nullable=True)
+    id = Column(Integer, primary_key=True, nullable=False, autoincrement=True)
     description = Column(String, nullable=True)
 
     def __repr__(self) -> str:

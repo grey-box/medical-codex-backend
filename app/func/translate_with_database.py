@@ -62,11 +62,13 @@ def translate_with_database(
         translated_terms = _query_database_translations(db, term, target_language)
         
         # If translations were found in the database, return them
-        if translated_terms:
+        if len(translated_terms) > 0:
             return _create_database_translation_response(translated_terms, term_uid)
         
         # If no translations were found, use fallback method
-        return _translate_using_fallback_method(query)
+        else:
+            logger.info(f"No translations found in database for '{term}'")
+            return _translate_using_fallback_method(query)
         
     except Exception as e:
         # Log the error and return an empty result set
@@ -121,9 +123,6 @@ def _query_database_translations(
     except SQLAlchemyError as e:
         logger.error(f"Database error while querying translations: {str(e)}")
         raise
-    finally:
-        # Don't close the session here - it should be managed by the caller
-        return None
 
 
 def _create_database_translation_response(

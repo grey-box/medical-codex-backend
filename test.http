@@ -1,5 +1,5 @@
 ### Fuzzy Matching - Successful (en -> uk)
-POST http://localhost:8000/fuzzymatching/
+POST http://localhost:8080/fuzzymatching/
 Content-Type: application/json
 
 {
@@ -20,7 +20,7 @@ Content-Type: application/json
 %}
 
 ### Fuzzy Matching - Successful (uk -> ru)
-POST http://localhost:8000/fuzzymatching/
+POST http://localhost:8080/fuzzymatching/
 Content-Type: application/json
 
 {
@@ -41,7 +41,7 @@ Content-Type: application/json
 %}
 
 ### Fuzzy Matching - Validation Error
-POST http://localhost:8000/fuzzymatching/
+POST http://localhost:8080/fuzzymatching/
 Content-Type: application/json
 
 {
@@ -57,7 +57,7 @@ Content-Type: application/json
 %}
 
 ### Fuzzy Matching Test - Successful (ru -> en)
-POST http://localhost:8000/fuzzymatching/test
+POST http://localhost:8080/fuzzymatching/test
 Content-Type: application/json
 
 {
@@ -74,7 +74,7 @@ Content-Type: application/json
 %}
 
 ### Fuzzy Matching Test - Validation Error
-POST http://localhost:8000/fuzzymatching/test
+POST http://localhost:8080/fuzzymatching/test
 Content-Type: application/json
 
 {
@@ -90,7 +90,7 @@ Content-Type: application/json
 %}
 
 ### Get Available Languages - Successful
-GET http://localhost:8000/languages/
+GET http://localhost:8080/languages/
 
 > {%
     client.assert(response.status === 200, "Response status is not 200");
@@ -104,7 +104,7 @@ GET http://localhost:8000/languages/
 %}
 
 ### Get Test Languages - Successful
-GET http://localhost:8000/languages/test
+GET http://localhost:8080/languages/test
 
 > {%
     client.assert(response.status === 200, "Response status is not 200");
@@ -114,16 +114,16 @@ GET http://localhost:8000/languages/test
 %}
 
 ### Get Translation - Successful (en -> ru)
-POST http://localhost:8000/translate/
+POST http://localhost:8080/translate/
 Content-Type: application/json
 
 {
   "translation_query": {
-      "matching_name": "paracetamol",
-      "matching_source": "UTIS",
-      "matching_algorithm": "DaitchMokotoff",
-      "matching_uid": 0,
-      "matching_row_number": 8
+        "matching_name": "paracetamolum",
+        "matching_source": "compendium.com.ua",
+        "matching_algorithm": "DaitchMokotoff",
+        "matching_uid": 1695,
+        "matching_row_number": 1
     },
   "target_language": "ru"
 }
@@ -140,7 +140,7 @@ Content-Type: application/json
 %}
 
 ### Get Translation - Successful (uk -> en)
-POST http://localhost:8000/translate/
+POST http://localhost:8080/translate/
 Content-Type: application/json
 
 {
@@ -166,7 +166,7 @@ Content-Type: application/json
 %}
 
 ### Get Translation - Validation Error
-POST http://localhost:8000/translate/
+POST http://localhost:8080/translate/
 Content-Type: application/json
 
 {
@@ -181,7 +181,7 @@ Content-Type: application/json
 %}
 
 ### Get Translation Test - Successful (ru -> uk)
-POST http://localhost:8000/translate/test
+POST http://localhost:8080/translate/test
 Content-Type: application/json
 
 {
@@ -203,7 +203,7 @@ Content-Type: application/json
 %}
 
 ### Get Translation Test - Validation Error
-POST http://localhost:8000/translate/test
+POST http://localhost:8080/translate/test
 Content-Type: application/json
 
 {
@@ -218,7 +218,7 @@ Content-Type: application/json
 %}
 
 ### Fallback Translation - Successful (en -> ru)
-POST http://localhost:8000/fallback_translation/
+POST http://localhost:8080/fallback_translation/
 Content-Type: application/json
 
 {
@@ -241,7 +241,7 @@ Content-Type: application/json
 %}
 
 ### Fallback Translation - Successful (uk -> en)
-POST http://localhost:8000/fallback_translation/
+POST http://localhost:8080/fallback_translation/
 Content-Type: application/json
 
 {
@@ -264,7 +264,7 @@ Content-Type: application/json
 %}
 
 ### Fallback Translation - Validation Error
-POST http://localhost:8000/fallback_translation/
+POST http://localhost:8080/fallback_translation/
 Content-Type: application/json
 
 {
@@ -279,7 +279,7 @@ Content-Type: application/json
 %}
 
 ### Manual Translation - Successful (ru -> en)
-POST http://localhost:8000/manual_translation/
+POST http://localhost:8080/manual_translation/
 Content-Type: application/json
 
 {
@@ -299,7 +299,7 @@ Content-Type: application/json
 %}
 
 ### Manual Translation - Successful (uk -> ru)
-POST http://localhost:8000/manual_translation/
+POST http://localhost:8080/manual_translation/
 Content-Type: application/json
 
 {
@@ -319,7 +319,7 @@ Content-Type: application/json
 %}
 
 ### Manual Translation - Validation Error
-POST http://localhost:8000/manual_translation/
+POST http://localhost:8080/manual_translation/
 Content-Type: application/json
 
 {
