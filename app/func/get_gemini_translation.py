@@ -29,8 +29,13 @@ def get_gemini_translation(
         load_dotenv("env.local")
         gemini_api_key = os.getenv("GOOGLE_API_KEY")
         genai.configure(api_key=gemini_api_key)
-        model = genai.GenerativeModel("gemini-1.5-flash")
-
+        
+        # Select the model to use
+        # Malcolm Gauthier (4 jun 2025): switched from gemini 1.5 flash to 2.5 flash
+        # at the time of writing this, gemini 2.5 flash doesn't have a standalone version, it's still only previews
+        model = genai.GenerativeModel("gemini-2.5-flash-preview-05-20")
+        
+        # Get the full language name for better translation results
         target_language = get_full_language_name(query.target_language)
         prompt = f'Translate "{query.translation_query.matching_name}" to "{target_language}" as a drug name. Convert any brand name to the actual drug name.'
 
