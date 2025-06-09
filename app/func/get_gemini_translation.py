@@ -1,65 +1,40 @@
-"""
-Gemini Translation Module.
-
-This module provides functionality for translating medical terms using Google's
-Gemini AI API. It serves as a fallback translation method when database translations
-are not available.
-"""
-
 import json
 import logging
 import os
-import re
+from typing import Dict, List, Any
 
 from dotenv import load_dotenv
 from google import generativeai as genai
 from google.generativeai.types import HarmCategory, HarmBlockThreshold
 
-import schemas
-from config import LOGGER_NAME, settings
-from func.get_full_language_name import get_full_language_name
+from app import schemas as schemas
+from app.func.get_full_language_name import get_full_language_name
+from config import LOGGER_NAME
 
-# Set up logger for this module
 logger = logging.getLogger(LOGGER_NAME)
 
 
 def get_gemini_translation(
     query: schemas.TranslationQuery,
-) -> schemas.Translation:
+) -> Dict[str, List[Dict[str, Any]]]:
     """
-    Translate a medical term using Google's Gemini AI API.
-    
-    This function takes a translation query containing a medical term and target language,
-    then uses Google's Gemini AI to generate a translation. It specifically instructs
-    the AI to translate drug names and convert brand names to generic drug names.
-    
+    Get translation using Google's Gemini API.
+
     Args:
-        query (schemas.TranslationQuery): Object containing the term to translate
-                                         and the target language.
-        
+        query (schemas.TranslationQuery): Translation query parameters.
+
     Returns:
-        schemas.Translation: Object containing the translation results.
-        If successful, contains the translated term with source "gemini_api".
-        If unsuccessful, returns an empty result set.
+        Dict[str, List[Dict[str, Any]]]: Translation results.
     """
-    # Initialize variables
-    translated_text = "Translation unavailable"
-    
     try:
-        # Load API key from environment variables
-        env_file = settings.env_file if hasattr(settings, 'env_file') else ".env"
-        load_dotenv(env_file)
+        load_dotenv("env.local")
         gemini_api_key = os.getenv("GOOGLE_API_KEY")
-        
-        if not gemini_api_key:
-            logger.error("Google API key not found in environment variables")
-            return schemas.Translation(results=[])
-        
-        # Configure Gemini API
         genai.configure(api_key=gemini_api_key)
         
         # Select the model to use
-        model = genai.GenerativeModel("gemini-1.5-flash")
+        # Malcolm Gauthier (4 jun 2025): switched from gemini 1.5 flash to 2.5 flash
+        # at the time of writing this, gemini 2.5 flash doesn't have a standalone version, it's still only previews
+        model = genai.GenerativeModel("gemini-2.5-flash-preview-05-20")
         
         # Get the full language name for better translation results
         target_language = get_full_language_name(query.target_language)
@@ -98,14 +73,14 @@ def get_gemini_translation(
         safety_settings = {
             HarmCategory.HARM_CATEGORY_DANGEROUS_CONTENT: HarmBlockThreshold.BLOCK_NONE,
         }
-        
-        # Generate the translation
+
         response = model.generate_content(prompt, safety_settings=safety_settings)
         
         
         # Process the response
         if not response:
             logger.warning("Gemini API unable to provide a response")
+            translated_text = "Translation unavailable"
         else:
             translated_text = response.text.strip()
             logger.info(f"Received translation from Gemini API: '{translated_text}'")
@@ -160,9 +135,5 @@ def get_gemini_translation(
         return schemas.Translation(results=[translation_result])
         
     except Exception as e:
-        # Handle any other errors
-        error_message = f"Error in Gemini translation for '{query.translation_query.matching_name}': {str(e)}"
-        logger.error(error_message)
-        
-        # Return an empty result set
-        return schemas.Translation(results=[])
+        logger.error(f"Error in get_gemini_translation: {str(e)}")
+        return {"results": []}
