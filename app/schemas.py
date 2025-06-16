@@ -9,7 +9,7 @@ from pydantic import BaseModel, Field
 class FuzzyQuery(BaseModel):
     source_language: str
     query: str
-    target_language: str = None
+    target_language: Optional[str] = None
     max_distance: int = 10
     max_results: int = 10
 
