@@ -31,9 +31,7 @@ def get_gemini_translation(
         genai.configure(api_key=gemini_api_key)
         
         # Select the model to use
-        # Malcolm Gauthier (4 jun 2025): switched from gemini 1.5 flash to 2.5 flash
-        # at the time of writing this, gemini 2.5 flash doesn't have a standalone version, it's still only previews
-        model = genai.GenerativeModel("gemini-2.5-flash-preview-05-20")
+        model = genai.GenerativeModel("gemini-2.5-flash")
         
         # Get the full language name for better translation results
         target_language = get_full_language_name(query.target_language)
