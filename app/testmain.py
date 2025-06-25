@@ -25,14 +25,7 @@ from app.dummy_database import dummy_database
 #]
 
 dummy_medications = dummy_database()
-results = search_medication_with_image(
-    "uk",
-    0.85,
-    dummy_medications,
-    10,
-    5,
-    5
-)
+results = search_medication_with_image("uk",dummy_medications,0.85,)
 
 print("-----------------------")
 for result in results:
