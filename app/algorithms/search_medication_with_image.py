@@ -14,11 +14,11 @@ logger = logging.getLogger(LOGGER_NAME)
 
 def search_medication_with_image(
         language: str,
-        confidence_threshold: float,
         medications : List[str],
-        max_results_per_word: int =5,
+        confidence_threshold: float = 0,
+        max_results_per_word: int =10,
         max_distance: int = 5,
-        max_results: int = 10,
+        max_results: int = 5,
 
 ) -> List[FuzzyResult]:
     """
@@ -30,12 +30,13 @@ def search_medication_with_image(
         Args:
             language (str): Language of the input and medication names ('en', 'uk', or 'ru').
             medications (List[str]): List of medication names to search through.
-            confidence_threshold (float): A cutoff value between 0 and 1 which filters OCR extracted text by quality.
+            confidence_threshold (float, optional): A cutoff value between 0 and 1 which filters OCR extracted text by quality.
                 The closer this number is to 1 the more strict it is. setting this to 0 will skip the filtering process. (quality control)
+                Defaults to 0.
 
-            max_results_per_word (int, optional): Maximum number of results for each word passed through the Levenshtein distance algorithm. Defaults to 5
+            max_results_per_word (int, optional): Maximum number of results for each word passed through the Levenshtein distance algorithm. Defaults to 10
             max_distance (int, optional): Maximum Levenshtein distance allowed. Defaults to 5.
-            max_results (int, optional): Maximum number of results to return. Defaults to 10.
+            max_results (int, optional): Maximum number of results to return. Defaults to 5.
 
         Returns:
             List[FuzzyResult]: List of FuzzyResult objects matching the query within the specified max_distance.
