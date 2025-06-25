@@ -6,8 +6,10 @@ Gemini AI API. It serves as a fallback translation method when database translat
 are not available.
 """
 
+import json
 import logging
 import os
+import re
 
 from dotenv import load_dotenv
 from google import generativeai as genai
@@ -64,10 +66,31 @@ def get_gemini_translation(
         source_term = query.translation_query.matching_name
         
         # Create the translation prompt
-        prompt = (
-            f'Translate "{source_term}" to "{target_language}" as a drug name. '
-            f'Convert any brand name to the actual drug name.'
-        )
+        prompt = f"""
+            Translate "{source_term}" to "{target_language}" as a drug name. 
+            Insert the results in a JSON format with the following structure:
+            {{
+                "source_term": "{source_term}",
+                "source_language": ,
+                "translated_name": ,
+                "target_language": ,
+                "confidence": ,
+                "alternatives": [
+                    {{
+                        "text": ,
+                        "confidence": ,
+                        "meaning": 
+                    }}
+                ],
+                "additional_details": {{
+                    "domain",
+                    "formality",
+                    "examples_in_context": [],
+                }}
+            }}
+            Keep the names of the variables the same for consistency.
+            Convert any brand name to the actual drug name.
+        """
         
         logger.info(f"Sending translation request to Gemini API: '{source_term}' to '{target_language}'")
         
@@ -79,6 +102,7 @@ def get_gemini_translation(
         # Generate the translation
         response = model.generate_content(prompt, safety_settings=safety_settings)
         
+        
         # Process the response
         if not response:
             logger.warning("Gemini API unable to provide a response")
@@ -86,11 +110,37 @@ def get_gemini_translation(
             translated_text = response.text.strip()
             logger.info(f"Received translation from Gemini API: '{translated_text}'")
         
+        
+        # Remove json file characters (e.g., ```json ... ```)
+        cleaned_output = re.sub(r"^```(?:json)?\s*|```$", "", translated_text, flags=re.IGNORECASE | re.MULTILINE).strip()
+        
+        # Parse the JSON
+        try:
+            parsed_result = json.loads(cleaned_output)
+            
+            # Pop the alternatives from the data
+            raw_alternatives = parsed_result.pop("alternatives", [])
+
+            # Build the alternatives list
+            alternatives = [schemas.Alternative(**alt) for alt in raw_alternatives]
+            
+            # Pop the additional_details from the data
+            raw_details = parsed_result.pop("additional_details", None)
+            
+            # Build the additional_details
+            additional_details = schemas.AdditionalDetails(**raw_details) if raw_details else None
+        
+        except json.JSONDecodeError as e:
+            logger.error(f"Failed to decode Gemini JSON: {e}")
+            raise ValueError("Gemini output is not valid JSON")
+
         # Create and return the translation result
         translation_result = schemas.TranslationResult(
-            translated_name=translated_text,
+            **parsed_result,
             translated_source="gemini_api",
             translated_uid=query.translation_query.matching_uid,
+            alternatives=alternatives,
+            additionalDetails=additional_details
         )
         
         return schemas.Translation(results=[translation_result])
