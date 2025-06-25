@@ -48,8 +48,9 @@ def search_medication_with_image(
         if language not in ['en', 'ru', 'uk']:
             raise ValueError(f"Invalid language: {language}")
 
+        #For testing purposes please insert path string into the function bellow
+        extracted_text = perform_ocr_extraction('')
 
-        extracted_text = perform_ocr_extraction('text_doc.txt')
         if extracted_text is None:
             logger.error(f"Invalid File Format or Image")
             return []
