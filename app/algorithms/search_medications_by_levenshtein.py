@@ -89,7 +89,8 @@ def search_medications_by_levenshtein(
                 matching_source="Levenshtein",
                 matching_algorithm="Levenshtein (Local)",
                 matching_uid=0,  # Default UID as 0 for local search results
-                matching_row_number=index + 1
+                matching_row_number=index + 1,
+                distance = Levenshtein.distance(medication, query)
             )
             for index, medication in enumerate(top_matches)
         ]

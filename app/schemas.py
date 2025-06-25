@@ -20,6 +20,7 @@ class FuzzyResult(BaseModel):
     matching_algorithm: str
     matching_uid: int
     matching_row_number: int
+    distance: Optional[int] = None
 
 
 # 3 in the diagram
