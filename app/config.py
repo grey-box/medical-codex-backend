@@ -62,6 +62,8 @@ class Settings(BaseSettings):
     fallback_translation_method: str = "gemini"
     google_api_key: Optional[str] = None
 
+    uvicorn_reload: Optional[str] = None
+
     class Config:
         """Configuration for environment variable loading."""
         env_file = find_dotenv()
