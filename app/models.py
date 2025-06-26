@@ -134,15 +134,3 @@ class ServiceLogs(Base):
     def __repr__(self):
         return f"<LogEntry(id={self.id}, timestamp={self.log_timestamp}, level={self.error_level}, source={self.source}, message={self.message})>"
 
-try:
-    # This block might also be removed if tables are always created externally.
-    # However, if you want to keep the error handling for unforeseen circumstances,
-    # you can keep this try-except block, but ensure the create_all is commented out.
-    # Base.metadata.create_all(engine) # <-- REMOVE OR COMMENT OUT THIS LINE
-    pass # Add a pass statement if the try block becomes empty
-except Exception as e:
-    logger.error(f"Error creating database tables: {str(e)}")
-    raise HTTPException(
-        status_code=status.HTTP_500_INTERNAL_SERVER_ERROR,
-        detail="Failed to create database tables",
-    )
