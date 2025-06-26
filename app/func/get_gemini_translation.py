@@ -1,4 +1,3 @@
-<<<<<<< Format-LLM-data
 """
 Gemini Translation Module.
 
@@ -8,8 +7,6 @@ are not available.
 """
 
 import json
-=======
->>>>>>> asu-azure
 import logging
 import os
 from typing import Dict, List, Any
@@ -47,7 +44,6 @@ def get_gemini_translation(
         
         # Get the full language name for better translation results
         target_language = get_full_language_name(query.target_language)
-<<<<<<< Format-LLM-data
         source_term = query.translation_query.matching_name
         
         # Create the translation prompt
@@ -112,30 +108,19 @@ def get_gemini_translation(
         logger.info(f"Sending translation request to Gemini API: '{source_term}' to '{target_language}'")
         
         # Configure safety settings to allow medical content
-=======
-        prompt = f'Translate "{query.translation_query.matching_name}" to "{target_language}" as a drug name. Convert any brand name to the actual drug name.'
 
->>>>>>> asu-azure
         safety_settings = {
             HarmCategory.HARM_CATEGORY_DANGEROUS_CONTENT: HarmBlockThreshold.BLOCK_NONE,
         }
 
         response = model.generate_content(prompt, safety_settings=safety_settings)
-<<<<<<< Format-LLM-data
-        
-        
-        # Process the response
-        
-        
-        # Process the response
-=======
 
->>>>>>> asu-azure
+        # Process the response
+
         if not response:
             logger.warning("Gemini API unable to provide a response")
             translated_text = "Translation unavailable"
         else:
-<<<<<<< Format-LLM-data
             translated_text = response.text.strip()
             logger.info(f"Received translation from Gemini API: '{translated_text}'")
         
@@ -240,19 +225,6 @@ def get_gemini_translation(
         
         return schemas.Translation(results=[translation_result])
         
-=======
-            translated_text = response.text
-
-        return {
-            "results": [
-                {
-                    "translated_name": translated_text,
-                    "translated_source": "gemini_api",
-                    "translated_uid": query.translation_query.matching_uid,
-                }
-            ]
-        }
->>>>>>> asu-azure
     except Exception as e:
         logger.error(f"Error in get_gemini_translation: {str(e)}")
         return {"results": []}
