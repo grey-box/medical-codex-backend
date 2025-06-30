@@ -3,10 +3,10 @@ import string
 
 from fastapi import UploadFile
 
-from app.algorithms.search_medications_by_levenshtein import search_medications_by_levenshtein
+from algorithms.search_medications_by_levenshtein import search_medications_by_levenshtein
 from rapidfuzz.distance import Levenshtein
-from app.config import LOGGER_NAME
-from app.func.extract_text_with_ocr import extract_text_with_ocr
+from config import LOGGER_NAME
+from func.extract_text_with_ocr import extract_text_with_ocr
 from typing import List
 
 from app.schemas import FuzzyResult, FuzzyMatching

@@ -10,9 +10,9 @@ import logging
 from fastapi import File
 from sqlalchemy.orm import Session
 
-from app.algorithms import search_medication_with_image
+from algorithms import search_medication_with_image
 
-from app.schemas import FuzzyMatching
+from schemas import FuzzyMatching
 
 
 def perform_ocr_extraction(

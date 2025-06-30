@@ -2,8 +2,8 @@ import logging
 
 from fastapi import UploadFile
 from paddleocr import PaddleOCR
-from app.config import LOGGER_NAME
-from app.func.normalize_image import normalize_image
+from config import LOGGER_NAME
+from func.normalize_image import normalize_image
 
 logger = logging.getLogger(LOGGER_NAME)
 
