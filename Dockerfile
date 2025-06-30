@@ -18,8 +18,8 @@ WORKDIR /app
 COPY requirements.txt .
 
 # Install Python dependencies
+RUN apt-get update && apt-get install -y libgl1
 RUN pip install -r requirements.txt
-RUN pip uninstall -y opencv-python
 
 # Copy the application code
 COPY ./app/ .
