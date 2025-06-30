@@ -2,7 +2,10 @@ import cv2
 import numpy as np
 import os
 
-def normalize_image(path: str, target_max_dimensions: int = 1024):
+from fastapi import UploadFile
+
+
+def normalize_image(file:UploadFile, target_max_dimensions: int = 1024):
     """
             Retrieves an image file through the path and normalizes it for OCR processing.
 
@@ -10,7 +13,7 @@ def normalize_image(path: str, target_max_dimensions: int = 1024):
             when being processed by the OCR.
 
             Args:
-                path (str): File Path To The Input Image
+                file(UploadFile): A file uploaded by the frontend through fastAPI
                 target_max_dimensions (int): Maximum dimensions of an input image. Resolution is reduced if
                     the current input exceeds this value. Defaults to 1024.
 
@@ -20,9 +23,12 @@ def normalize_image(path: str, target_max_dimensions: int = 1024):
     """
     try:
         #ensures that the file can be read as an image
-        image = cv2.imread(path, cv2.IMREAD_COLOR)
+        contents = file.file.read()
+        np_array = np.frombuffer(contents, np.uint8)
+        image = cv2.imdecode(np_array, cv2.IMREAD_COLOR)
+
         if image is None:
-            print("Failed to load image")
+            print("Failed to decode image")
             return None
 
         #set image to proper rgb values preferred by PaddleOCR
@@ -43,5 +49,5 @@ def normalize_image(path: str, target_max_dimensions: int = 1024):
         return image
 
     except Exception as e:
-        print(f"[ERROR] Exception reading image {path}: {e}")
+        print(f"[ERROR] Exception reading image {file.filename}: {e}")
         return None

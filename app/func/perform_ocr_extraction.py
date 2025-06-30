@@ -1,40 +1,25 @@
+"""
+OCR Module.
+
+This module provides functionality for performing ocr extractions and
+then performing fuzzy matching on medical terms.
+"""
+
 import logging
 
-from paddleocr import PaddleOCR
-from app.config import LOGGER_NAME
-from app.func.normalize_image import normalize_image
+from fastapi import File
+from sqlalchemy.orm import Session
 
-logger = logging.getLogger(LOGGER_NAME)
+from app.algorithms import search_medication_with_image
 
-def perform_ocr_extraction(image_path: str):
-    """
-        Extracts text from an image using PaddleOCR CPU
+from app.schemas import FuzzyMatching
 
-        Passes a normalized image into the OCR model and then returns extracted information in the form of a list
 
-        Args:
-            image_path (str): File Path To The Input Image
+def perform_ocr_extraction(
+        language: str,
+        file: File(...),
+        db: Session
+) -> FuzzyMatching:
 
-        Returns:
-            A List of text, confidence score pairs
-
-        """
-
-    ocr = PaddleOCR(
-        use_textline_orientation= False,
-        use_doc_unwarping= False,
-        use_doc_orientation_classify=False,
-    )
-
-    image = normalize_image(image_path)
-
-    #extract all text from image and save in List
-    if image is None:
-        return None
-
-    results = ocr.ocr(image)
-
-    #extract all text from image and save in List
-    results = ocr.ocr(image_path)
-    return results
-
+    search_results = search_medication_with_image.search_medication_with_image(language, file,db,0.85)
+    return search_results

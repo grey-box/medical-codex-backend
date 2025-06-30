@@ -1,26 +1,29 @@
 import logging
 import string
 
+from fastapi import UploadFile
+
 from app.algorithms.search_medications_by_levenshtein import search_medications_by_levenshtein
 from rapidfuzz.distance import Levenshtein
 from app.config import LOGGER_NAME
-from app.func.perform_ocr_extraction import perform_ocr_extraction
+from app.func.extract_text_with_ocr import extract_text_with_ocr
 from typing import List
 
-from app.schemas import FuzzyResult
+from app.schemas import FuzzyResult, FuzzyMatching
 
 logger = logging.getLogger(LOGGER_NAME)
 
 
 def search_medication_with_image(
         language: str,
+        file: UploadFile,
         medications : List[str],
         confidence_threshold: float = 0,
         max_results_per_word: int =10,
         max_distance: int = 5,
         max_results: int = 5,
 
-) -> List[FuzzyResult]:
+) -> FuzzyMatching:
     """
         Search for medications extracted with PaddleOCR using Levenshtein distance.
 
@@ -29,6 +32,7 @@ def search_medication_with_image(
 
         Args:
             language (str): Language of the input and medication names ('en', 'uk', or 'ru').
+            file (UploadFile): A file uploaded by the frontend through fastAPI
             medications (List[str]): List of medication names to search through.
             confidence_threshold (float, optional): A cutoff value between 0 and 1 which filters OCR extracted text by quality.
                 The closer this number is to 1 the more strict it is. setting this to 0 will skip the filtering process. (quality control)
@@ -39,7 +43,7 @@ def search_medication_with_image(
             max_results (int, optional): Maximum number of results to return. Defaults to 5.
 
         Returns:
-            List[FuzzyResult]: List of FuzzyResult objects matching the query within the specified max_distance.
+            FuzzyMatching: List of FuzzyResult objects matching the query within the specified max_distance.
 
         Raises:
             ValueError: If the language is invalid.
@@ -50,11 +54,11 @@ def search_medication_with_image(
             raise ValueError(f"Invalid language: {language}")
 
         #For testing purposes please insert path string into the function bellow
-        extracted_text = perform_ocr_extraction('')
+        extracted_text = extract_text_with_ocr(file)
 
         if extracted_text is None:
             logger.error(f"Invalid File Format or Image")
-            return []
+            return FuzzyMatching(results=[])
 
 
         #Discard all extracted text under a certain confidence score
@@ -112,7 +116,7 @@ def search_medication_with_image(
                 top_results.append(result)
                 seen_names.add(result.matching_name)
 
-        return top_results
+        return FuzzyMatching(results = top_results)
 
 
 
