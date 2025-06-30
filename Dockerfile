@@ -19,6 +19,7 @@ COPY requirements.txt .
 
 # Install Python dependencies
 RUN pip install -r requirements.txt
+RUN pip uninstall -y opencv-python
 
 # Copy the application code
 COPY ./app/ .
