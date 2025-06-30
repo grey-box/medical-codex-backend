@@ -34,7 +34,6 @@ async def ocr_matching_endpoint(
         ) -> schemas.FuzzyMatching:
     try:
         results = perform_ocr_extraction(source_language, file, db)
-
         return results
     except Exception as e:
         error_message = f"Error performing OCR extraction: {str(e)}"
