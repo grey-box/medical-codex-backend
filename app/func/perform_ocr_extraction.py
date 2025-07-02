@@ -31,5 +31,5 @@ def perform_ocr_extraction(
     # Get medication names (source_texts) from DB
     medications = dummy_database()
 
-    search_results = search_medication_with_image.search_medication_with_image(language, file,medications,0.85)
+    search_results = search_medication_with_image.search_medication_with_image(language, file,medications)
     return search_results

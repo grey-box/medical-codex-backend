@@ -18,7 +18,7 @@ def search_medication_with_image(
         language: str,
         file: UploadFile,
         medications : List[str],
-        confidence_threshold: float = 0,
+        confidence_threshold: float = 0.80,
         max_results_per_word: int =10,
         max_distance: int = 5,
         max_results: int = 5,
