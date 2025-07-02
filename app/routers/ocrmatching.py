@@ -33,7 +33,6 @@ async def ocr_matching_endpoint(
         db: Session = Depends(database.get_database_session),
         ) -> schemas.FuzzyMatching:
     try:
-        print("API Received Call")
         results = perform_ocr_extraction(source_language, file, db)
         return results
     except Exception as e:

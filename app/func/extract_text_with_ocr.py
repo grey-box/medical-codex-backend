@@ -39,7 +39,6 @@ def extract_text_with_ocr(file: UploadFile):
 
     #Normalize file for OCR processing
     image = normalize_image(file)
-    print("Image Normalized Successfully")
 
     if image is None:
         return None
