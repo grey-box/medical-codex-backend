@@ -93,6 +93,7 @@ def search_medication_with_image(
         )
 
         #perform fuzzy matching for each token. Record results in a list
+        print("Text extracted successfully")
         result_list: List[FuzzyResult] = []
 
         for token in tokens:
