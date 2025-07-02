@@ -74,11 +74,11 @@ def get_gemini_translation(
                 "source_language": ,
                 "translated_name": ,
                 "target_language": ,
-                "confidence": ,
+                "confidence": float,
                 "alternatives": [
                     {{
                         "text": ,
-                        "confidence": ,
+                        "confidence": float,
                         "meaning": 
                     }}
                 ],
