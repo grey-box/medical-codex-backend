@@ -4,7 +4,6 @@ import string
 from fastapi import UploadFile
 
 from algorithms.search_medications_by_levenshtein import search_medications_by_levenshtein
-from rapidfuzz.distance import Levenshtein
 from config import LOGGER_NAME
 from func.extract_text_with_ocr import extract_text_with_ocr
 from typing import List
@@ -18,7 +17,7 @@ def search_medication_with_image(
         language: str,
         file: UploadFile,
         medications : List[str],
-        confidence_threshold: float = 0.80,
+        confidence_threshold: float = 0.85,
         max_results_per_word: int =10,
         max_distance: int = 5,
         max_results: int = 5,
@@ -36,7 +35,7 @@ def search_medication_with_image(
             medications (List[str]): List of medication names to search through.
             confidence_threshold (float, optional): A cutoff value between 0 and 1 which filters OCR extracted text by quality.
                 The closer this number is to 1 the more strict it is. setting this to 0 will skip the filtering process. (quality control)
-                Defaults to 0.
+                Defaults to 0.85.
 
             max_results_per_word (int, optional): Maximum number of results for each word passed through the Levenshtein distance algorithm. Defaults to 10
             max_distance (int, optional): Maximum Levenshtein distance allowed. Defaults to 5.
@@ -83,7 +82,6 @@ def search_medication_with_image(
 
 
         #perform fuzzy matching for each token. Record results in a list
-        print("Text extracted successfully")
         result_list: List[FuzzyResult] = []
 
         for token in tokens:
@@ -94,10 +92,9 @@ def search_medication_with_image(
                 max_distance = max_distance,
                 max_results = max_results_per_word,
             )
-            print(token + ": ")
+
             for result in fuzzy_results:
                 result_list.append(result)
-                print("     " + result.matching_name + str(result.distance))
 
 
         # Sort by distance.

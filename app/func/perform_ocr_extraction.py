@@ -25,10 +25,7 @@ def perform_ocr_extraction(
         db: Session
 ) -> FuzzyMatching:
 
-    print("Beginning Search")
-    # Build a query schema to fetch unique texts
-
-    # Get medication names (source_texts) from DB
+    # Get medication names from Test DB
     medications = dummy_database()
 
     search_results = search_medication_with_image.search_medication_with_image(language, file,medications)

@@ -23,6 +23,7 @@ def extract_text_with_ocr(file: UploadFile):
 
         """
 
+    #Call OCR and pass in pre-downloaded models, language and set to CPU mode
     ocr = PaddleOCR(
         use_angle_cls=False,
         use_textline_orientation=False,
@@ -36,17 +37,13 @@ def extract_text_with_ocr(file: UploadFile):
         use_gpu=False
     )
 
+    #Normalize file for OCR processing
     image = normalize_image(file)
-    print("Image Normalized Successfully")
 
-    #extract all text from image and save in List
-    print(f"Image shape: {image.shape}, dtype: {image.dtype}, type: {type(image)}")
     if image is None:
         return None
 
     #extract all text from image and save in List
-
-    print("passing in image")
     try:
         results = ocr.ocr(image, cls=False)
         extracted_texts = []
@@ -61,6 +58,4 @@ def extract_text_with_ocr(file: UploadFile):
     except Exception as e:
         print(f"[EXCEPTION] PaddleOCR failed")
         raise
-    #print("getting results")
-    #return results
 
