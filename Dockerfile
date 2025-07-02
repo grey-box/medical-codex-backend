@@ -44,22 +44,26 @@ RUN pip install --prefer-binary -r requirements.txt
 # Pre-download PaddleOCR Models
 # ──────────────────────────────────────────────
 ENV PADDLEOCR_HOME=/root/.paddleocr/whl
-
-RUN mkdir -p /root/.paddleocr/whl/det/ch/ch_PP-OCRv3_det_infer \
-    /root/.paddleocr/whl/rec/ch/ch_PP-OCRv3_rec_infer \
-    /root/.paddleocr/whl/cls/ch_ppocr_mobile_v2.0_cls_infer && \
-    wget -O /tmp/ch_PP-OCRv3_det_infer.tar \
-    https://paddleocr.bj.bcebos.com/PP-OCRv3/chinese/ch_PP-OCRv3_det_infer.tar && \
-    tar --strip-components=1 -xvf /tmp/ch_PP-OCRv3_det_infer.tar -C /root/.paddleocr/whl/det/ch/ch_PP-OCRv3_det_infer && \
-    rm /tmp/ch_PP-OCRv3_det_infer.tar && \
-    wget -O /tmp/ch_PP-OCRv3_rec_infer.tar \
-    https://paddleocr.bj.bcebos.com/PP-OCRv3/chinese/ch_PP-OCRv3_rec_infer.tar && \
-    tar --strip-components=1 -xvf /tmp/ch_PP-OCRv3_rec_infer.tar -C /root/.paddleocr/whl/rec/ch/ch_PP-OCRv3_rec_infer && \
-    rm /tmp/ch_PP-OCRv3_rec_infer.tar && \
+RUN mkdir -p $PADDLEOCR_HOME/det/en/en_PP-OCRv3_det_infer \
+    $PADDLEOCR_HOME/rec/en/en_PP-OCRv3_rec_infer \
+    $PADDLEOCR_HOME/cls/ch_ppocr_mobile_v2.0_cls_infer && \
+    wget -O /tmp/en_PP-OCRv3_det_infer.tar \
+    https://paddleocr.bj.bcebos.com/PP-OCRv3/english/en_PP-OCRv3_det_infer.tar && \
+    tar --strip-components=1 -xvf /tmp/en_PP-OCRv3_det_infer.tar \
+    -C $PADDLEOCR_HOME/det/en/en_PP-OCRv3_det_infer && rm /tmp/en_PP-OCRv3_det_infer.tar && \
+    wget -O /tmp/en_PP-OCRv3_rec_infer.tar \
+    https://paddleocr.bj.bcebos.com/PP-OCRv3/english/en_PP-OCRv3_rec_infer.tar && \
+    tar --strip-components=1 -xvf /tmp/en_PP-OCRv3_rec_infer.tar \
+    -C $PADDLEOCR_HOME/rec/en/en_PP-OCRv3_rec_infer && rm /tmp/en_PP-OCRv3_rec_infer.tar && \
     wget -O /tmp/ch_ppocr_mobile_v2.0_cls_infer.tar \
     https://paddleocr.bj.bcebos.com/dygraph_v2.0/ch/ch_ppocr_mobile_v2.0_cls_infer.tar && \
-    tar --strip-components=1 -xvf /tmp/ch_ppocr_mobile_v2.0_cls_infer.tar -C /root/.paddleocr/whl/cls/ch_ppocr_mobile_v2.0_cls_infer && \
-    rm /tmp/ch_ppocr_mobile_v2.0_cls_infer.tar
+    tar --strip-components=1 -xvf /tmp/ch_ppocr_mobile_v2.0_cls_infer.tar \
+    -C $PADDLEOCR_HOME/cls/ch_ppocr_mobile_v2.0_cls_infer && rm /tmp/ch_ppocr_mobile_v2.0_cls_infer.tar
+
+ENV \
+    DET_MODEL_DIR=$PADDLEOCR_HOME/det/en/en_PP-OCRv3_det_infer \
+    REC_MODEL_DIR=$PADDLEOCR_HOME/rec/en/en_PP-OCRv3_rec_infer \
+    CLS_MODEL_DIR=$PADDLEOCR_HOME/cls/ch_ppocr_mobile_v2.0_cls_infer
 
 # ──────────────────────────────────────────────
 

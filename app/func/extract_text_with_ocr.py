@@ -28,11 +28,11 @@ def extract_text_with_ocr(file: UploadFile):
         use_textline_orientation=False,
         use_doc_unwarping=False,
         use_doc_orientation_classify=False,
-        lang='ch',
-        det_model_dir="/root/.paddleocr/whl/det/ch/ch_PP-OCRv3_det_infer",
-        rec_model_dir="/root/.paddleocr/whl/rec/ch/ch_PP-OCRv3_rec_infer",
+        lang='en',
+        det_model_dir="/root/.paddleocr/whl/det/en/en_PP-OCRv3_det_infer",
+        rec_model_dir="/root/.paddleocr/whl/rec/en/en_PP-OCRv3_rec_infer",
         cls_model_dir="/root/.paddleocr/whl/cls/ch_ppocr_mobile_v2.0_cls_infer",
-        enable_mkldnn=True,  # optional tech for CPU speed
+        enable_mkldnn=True,
         use_gpu=False
     )
 
