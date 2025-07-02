@@ -4,6 +4,7 @@ from fastapi import UploadFile
 from paddleocr import PaddleOCR
 from config import LOGGER_NAME
 from func.normalize_image import normalize_image
+from sqlalchemy import false
 
 logger = logging.getLogger(LOGGER_NAME)
 
@@ -28,14 +29,30 @@ def extract_text_with_ocr(file: UploadFile):
     )
 
     image = normalize_image(file)
+    print("Image Normalized Successfully")
 
     #extract all text from image and save in List
+    print(f"Image shape: {image.shape}, dtype: {image.dtype}, type: {type(image)}")
     if image is None:
         return None
 
-    results = ocr.ocr(image)
-
     #extract all text from image and save in List
-    results = ocr.ocr(file)
-    return results
+
+    print("passing in image")
+    try:
+        results = ocr.ocr(image, cls=False)
+        extracted_texts = []
+
+        for box, (text, score) in results[0]:
+            extracted_texts.append({
+                "rec_text": text,
+                "rec_score": score
+            })
+
+        return extracted_texts
+    except Exception as e:
+        print(f"[EXCEPTION] PaddleOCR failed")
+        raise
+    #print("getting results")
+    #return results
 

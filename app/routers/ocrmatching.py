@@ -18,7 +18,7 @@ from config import LOGGER_NAME
 from algorithms import search_medication_with_image
 from schemas import FuzzyMatching, FuzzyResult
 
-from app.func.perform_ocr_extraction import perform_ocr_extraction
+from func.perform_ocr_extraction import perform_ocr_extraction
 
 #Initialize router with prefix and tags for API documentation
 router= APIRouter(prefix="/ocrmatching", tags=["ocrmatching"])
@@ -33,8 +33,9 @@ async def ocr_matching_endpoint(
         db: Session = Depends(database.get_database_session),
         ) -> schemas.FuzzyMatching:
     try:
+        print("API Received Call")
         results = perform_ocr_extraction(source_language, file, db)
-        logger.info(f"Successfully performed OCR text extraction for file: {file.filename}")
+        print(f"Successfully performed OCR text extraction for file: {file.filename}")
         return results
     except Exception as e:
         error_message = f"Error performing OCR extraction: {str(e)}"

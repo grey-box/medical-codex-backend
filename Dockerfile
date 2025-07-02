@@ -1,31 +1,48 @@
 # syntax=docker/dockerfile:1
-# escape=`
-#Useful to set escape to backtick since \ is dir separator for windows.
 
-FROM python:3.12-slim
+# Use a slim Python 3.11 image
+FROM python:3.10-slim
+
+# Label for authorship
 LABEL authors="Grey-Box, François Pelletier"
 
-# Install dependancies
+# Install system dependencies
+RUN apt-get update && apt-get install -y \
+    build-essential \
+    gfortran \
+    pkg-config \
+    libopenblas-dev \
+    liblapack-dev \
+    libpq-dev \
+    curl \
+    libgl1 \
+    libglib2.0-0 \
+    libsm6 \
+    libxrender1 \
+    libxext6 \
+    git \
+    python3-dev \
+    ninja-build \
+    && apt-get clean \
+    && rm -rf /var/lib/apt/lists/*
 
-RUN apt-get -y update && apt-get -y upgrade
-
-RUN apt-get -y install build-essential postgresql-15 postgresql-contrib-15 libpq-dev gcc curl
-
-# Set the working directory
+# Set working directory
 WORKDIR /app
 
-# Copy the requirements file
+# Upgrade pip and related tools
+RUN pip install --upgrade pip setuptools wheel meson ninja pythran==0.12.2
+
+# Copy only requirements first to use Docker cache
 COPY requirements.txt .
 
 # Install Python dependencies
-RUN apt-get update && apt-get install -y libgl1
-RUN pip install -r requirements.txt
+RUN pip install --prefer-binary -r requirements.txt
 
-# Copy the application code
+# Copy the application source code
 COPY ./app/ .
 
 # Expose the application port
 EXPOSE 8080
 
-# Run the Application
+# Run the app
 CMD ["sh", "-c", "uvicorn main:app --host 0.0.0.0 --port 8080 $UVICORN_RELOAD"]

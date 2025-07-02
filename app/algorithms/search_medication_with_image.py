@@ -9,7 +9,7 @@ from config import LOGGER_NAME
 from func.extract_text_with_ocr import extract_text_with_ocr
 from typing import List
 
-from app.schemas import FuzzyResult, FuzzyMatching
+from schemas import FuzzyResult, FuzzyMatching
 
 logger = logging.getLogger(LOGGER_NAME)
 
@@ -65,16 +65,17 @@ def search_medication_with_image(
         filtered_text = []
         if confidence_threshold > 0:
             for text in extracted_text:
-                if float(text['rec_scores'][0]) > confidence_threshold:
+                if float(text['rec_score']) > confidence_threshold:
                     filtered_text.append(text)
-        else: filtered_text = extracted_text
+        else:
+            filtered_text = extracted_text
 
 
         #break down filtered text blocks into individual words and clean them by removing punctuation and numbers
         tokens = []
 
         for text in filtered_text:
-            for word in text['rec_texts']:
+            for word in text['rec_text'].split():
                 no_digit_word = ''.join(char for char in word if not char.isdigit())
                 cleaned_word = no_digit_word.translate(str.maketrans('', '', string.punctuation)).lower().split()
 
@@ -82,6 +83,7 @@ def search_medication_with_image(
 
 
         #perform fuzzy matching for each token. Record results in a list
+        print("Text extracted successfully")
         result_list: List[FuzzyResult] = []
 
         for token in tokens:
