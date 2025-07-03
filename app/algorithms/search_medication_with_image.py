@@ -1,5 +1,4 @@
 import logging
-import string
 
 from fastapi import UploadFile
 
@@ -14,6 +13,8 @@ from sqlalchemy.orm import Session
 from func.get_unique_source_texts import get_unique_source_texts
 from func.run_matching_algorithm import run_matching_algorithm
 from schemas import FuzzyQuery, FuzzyAlgorithm
+
+from func.normalize_and_filter_extracted_text import normalize_and_filter_extracted_text
 
 logger = logging.getLogger(LOGGER_NAME)
 
@@ -72,19 +73,8 @@ def search_medication_with_image(
         ]
 
 
-        #break down filtered text blocks into individual words and clean them by removing punctuation and numbers
-        tokens = []
-
-        for text in filtered_text:
-            for word in text['rec_text'].split():
-                no_digit_word = ''.join(char for char in word if not char.isdigit())
-                cleaned_words = no_digit_word.translate(str.maketrans('', '', string.punctuation)).lower().split()
-                for cleaned_word in cleaned_words:
-                    if cleaned_word.__len__() > 2:
-                        tokens.append(cleaned_word)
-
-
-                #tokens.extend(cleaned_word)
+        #Normalize and clean text, breaking them down into individual tokens
+        tokens = normalize_and_filter_extracted_text(filtered_text)
 
         #Cahce list of medications for improved efficiency
         initial_query = FuzzyQuery(
