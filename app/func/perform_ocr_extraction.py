@@ -25,8 +25,6 @@ def perform_ocr_extraction(
         db: Session
 ) -> FuzzyMatching:
 
-    # Get medication names from Test DB
-    medications = dummy_database()
 
-    search_results = search_medication_with_image.search_medication_with_image(language, file,medications)
+    search_results = search_medication_with_image.search_medication_with_image(language, file,db)
     return search_results

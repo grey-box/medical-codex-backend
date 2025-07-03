@@ -9,6 +9,11 @@ from func.extract_text_with_ocr import extract_text_with_ocr
 from typing import List
 
 from schemas import FuzzyResult, FuzzyMatching
+from sqlalchemy.orm import Session
+
+from func.get_unique_source_texts import get_unique_source_texts
+from func.run_matching_algorithm import run_matching_algorithm
+from schemas import FuzzyQuery, FuzzyAlgorithm
 
 logger = logging.getLogger(LOGGER_NAME)
 
@@ -16,7 +21,7 @@ logger = logging.getLogger(LOGGER_NAME)
 def search_medication_with_image(
         language: str,
         file: UploadFile,
-        medications : List[str],
+        db: Session,
         confidence_threshold: float = 0.85,
         max_results_per_word: int =10,
         max_distance: int = 5,
@@ -32,7 +37,7 @@ def search_medication_with_image(
         Args:
             language (str): Language of the input and medication names ('en', 'uk', or 'ru').
             file (UploadFile): A file uploaded by the frontend through fastAPI
-            medications (List[str]): List of medication names to search through.
+            db (Session): Database of medication names to search through.
             confidence_threshold (float, optional): A cutoff value between 0 and 1 which filters OCR extracted text by quality.
                 The closer this number is to 1 the more strict it is. setting this to 0 will skip the filtering process. (quality control)
                 Defaults to 0.85.
@@ -61,13 +66,10 @@ def search_medication_with_image(
 
 
         #Discard all extracted text under a certain confidence score
-        filtered_text = []
-        if confidence_threshold > 0:
-            for text in extracted_text:
-                if float(text['rec_score']) > confidence_threshold:
-                    filtered_text.append(text)
-        else:
-            filtered_text = extracted_text
+        filtered_text = [
+            text for text in extracted_text
+            if confidence_threshold == 0 or float(text['rec_score']) > confidence_threshold
+        ]
 
 
         #break down filtered text blocks into individual words and clean them by removing punctuation and numbers
@@ -76,25 +78,49 @@ def search_medication_with_image(
         for text in filtered_text:
             for word in text['rec_text'].split():
                 no_digit_word = ''.join(char for char in word if not char.isdigit())
-                cleaned_word = no_digit_word.translate(str.maketrans('', '', string.punctuation)).lower().split()
+                cleaned_words = no_digit_word.translate(str.maketrans('', '', string.punctuation)).lower().split()
+                for cleaned_word in cleaned_words:
+                    if cleaned_word.__len__() > 2:
+                        tokens.append(cleaned_word)
 
-                tokens.extend(cleaned_word)
 
+                #tokens.extend(cleaned_word)
+
+        #Cahce list of medications for improved efficiency
+        initial_query = FuzzyQuery(
+            query="",
+            source_language=language,
+            max_distance=max_distance,
+            max_results=max_results,
+        )
+        medications = get_unique_source_texts(db, initial_query)
+
+        #Setup algorithm
+        algorithm = FuzzyAlgorithm(
+            function=search_medications_by_levenshtein,
+            name="levenshtein",
+            local=True
+        )
 
         #perform fuzzy matching for each token. Record results in a list
         result_list: List[FuzzyResult] = []
 
         for token in tokens:
-            fuzzy_results = search_medications_by_levenshtein(
-                language=language,
-                query = token,
-                medications = medications,
-                max_distance = max_distance,
-                max_results = max_results_per_word,
+            query_params = FuzzyQuery(
+                query=token,
+                source_language=language,
+                max_distance=max_distance,
+                max_results=max_results_per_word,
             )
 
-            for result in fuzzy_results:
-                result_list.append(result)
+            token_results = run_matching_algorithm(
+                algorithm=algorithm,
+                db=db,
+                query_params=query_params,
+                medications=medications
+            )
+
+            result_list.extend(token_results)
 
 
         # Sort by distance.
