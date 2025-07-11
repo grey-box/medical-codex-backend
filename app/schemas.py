@@ -34,10 +34,26 @@ class TranslationQuery(BaseModel):
     target_language: str
 
 
+class Alternative(BaseModel):
+    text: str
+    confidence: float
+    meaning: str
+
+class AdditionalDetails(BaseModel):
+    domain: Optional[str] = None
+    formality: Optional[str] = None
+    examples_in_context: List[str] = []
+
 class TranslationResult(BaseModel):
     translated_name: str
     translated_source: str
     translated_uid: int
+    source_term: Optional[str] = None
+    source_language: Optional[str] = None
+    target_language: Optional[str] = None
+    confidence: Optional[float] = 0
+    alternatives: List[Alternative] = []
+    additionalDetails: Optional[AdditionalDetails] = None
 
 
 # 6 in the diagram
