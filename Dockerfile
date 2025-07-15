@@ -25,8 +25,16 @@ RUN apt-get update && apt-get install -y \
     python3-dev \
     ninja-build \
     ffmpeg \
+    clamav \
+    clamav-daemon \
+    clamav-freshclam \
     && apt-get clean \
     && rm -rf /var/lib/apt/lists/*
+
+
+
+#Update ClamAv database
+RUN freshclam
 
 # Set working directory
 WORKDIR /app
@@ -74,4 +82,4 @@ COPY ./app/ .
 EXPOSE 8080
 
 # Run app
-CMD ["sh", "-c", "uvicorn main:app --host 0.0.0.0 --port 8080 $UVICORN_RELOAD"]
+CMD ["sh", "-c", "clamd & sleep 5 && uvicorn main:app --host 0.0.0.0 --port 8080 $UVICORN_RELOAD"]
