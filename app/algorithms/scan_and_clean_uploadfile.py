@@ -1,12 +1,11 @@
 import logging
-import os
 import shutil
 import uuid
 from io import BytesIO
 
 import clamd
 from PIL import Image
-from fastapi import File, UploadFile, HTTPException
+from fastapi import UploadFile, HTTPException
 from pathlib import Path
 
 from starlette.datastructures import UploadFile as StarletteUploadFile
@@ -17,6 +16,23 @@ logger = logging.getLogger(LOGGER_NAME)
 
 
 def scan_and_clean_uploadfile(file: UploadFile) -> UploadFile:
+    """
+        OCR Module.
+        Malware Detection and File Handling
+
+        This module provides functionality for isolating, scanning, cleaning and deleting all files
+        sent to the OCR via the frontend. Its goal is to ensure that the backend codebase remains clean and malware free
+
+        Args:
+            file (UploadFile): File uploaded by the frontend to the OCR
+
+        Returns:
+            UploadFile: A cleaned file that can be processed by the OCR.
+            Returns None if the parameter file is infected or corrupted.
+
+        Raises:
+            HTTPException: If file is dangerous, corrupted or cannot be cleaned.
+    """
 
     #create isolated quarantine temp directory
     temp_dir = Path("/tmp/quarantines") / str(uuid.uuid4())
