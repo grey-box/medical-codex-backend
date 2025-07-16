@@ -20,6 +20,8 @@ from schemas import FuzzyMatching, FuzzyResult
 
 from func.perform_ocr_extraction import perform_ocr_extraction
 
+from algorithms.scan_and_clean_uploadfile import scan_and_clean_uploadfile
+
 #Initialize router with prefix and tags for API documentation
 router= APIRouter(prefix="/ocrmatching", tags=["ocrmatching"])
 
@@ -33,9 +35,15 @@ async def ocr_matching_endpoint(
         db: Session = Depends(database.get_database_session),
         ) -> schemas.FuzzyMatching:
     try:
-        results = perform_ocr_extraction(source_language, file, db)
 
-        return results
+        cleaned_file = scan_and_clean_uploadfile(file)
+        if cleaned_file is not None:
+            results = perform_ocr_extraction(source_language, cleaned_file, db)
+            return results
+
+        logger.error("Could Not Read File")
+        return None
+
     except Exception as e:
         error_message = f"Error performing OCR extraction: {str(e)}"
         logger.error(error_message)
