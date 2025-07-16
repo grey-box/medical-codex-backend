@@ -36,6 +36,26 @@ RUN apt-get update && apt-get install -y \
 #Update ClamAv database
 RUN freshclam
 
+# ──────────────────────────────────────────────
+# Configure ClamAV to use TCP, not Unix socket
+# ──────────────────────────────────────────────
+RUN echo "\
+LogSyslog yes\n\
+LogFile /var/log/clamav/clamd.log\n\
+TCPSocket 3310\n\
+TCPAddr 127.0.0.1\n\
+Foreground yes\n\
+FixStaleSocket yes\n\
+MaxConnectionQueueLength 30\n\
+ScanPE yes\n\
+ScanELF yes\n\
+ScanOLE2 yes\n\
+ScanPDF yes\n\
+ScanHTML yes\n\
+DetectPUA yes\n\
+ExitOnOOM yes\n" > /etc/clamav/clamd.conf
+
+
 # Set working directory
 WORKDIR /app
 
@@ -81,5 +101,12 @@ COPY ./app/ .
 # Expose FastAPI app port
 EXPOSE 8080
 
-# Run app
-CMD ["sh", "-c", "clamd & sleep 5 && uvicorn main:app --host 0.0.0.0 --port 8080 $UVICORN_RELOAD"]
+# Start ClamAV + wait for readiness + run FastAPI
+CMD sh -c '\
+    clamd & \
+    echo "Waiting for ClamAV to start..." && \
+    for i in $(seq 1 10); do \
+        nc -z 127.0.0.1 3310 && break || sleep 1; \
+    done && \
+    echo "ClamAV ready. Starting FastAPI." && \
+    uvicorn main:app --host 0.0.0.0 --port 8080 $UVICORN_RELOAD'
