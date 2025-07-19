@@ -65,7 +65,7 @@ def dbquery_medications(
                 SELECT 
                 id AS matching_uid,
                 source_text AS matching_name, 
-                table_name AS matching_source,
+                source_table_name AS matching_source,
                 ROW_NUMBER() OVER (ORDER BY levenshtein(lower(source_text), lower(:query))) AS row_number,
                 levenshtein(lower(source_text), lower(:query)) AS distance
                 FROM unique_translation_table
@@ -80,7 +80,7 @@ def dbquery_medications(
                 """
                 WITH matched_rows AS (SELECT id,
                                              source_text,
-                                             table_name,
+                                             source_table_name,
                                              array_dms_diff(
                                                      my_daitch_mokotoff(source_text),
                                                      my_daitch_mokotoff(:query)) AS distance
@@ -89,7 +89,7 @@ def dbquery_medications(
                                         AND my_daitch_mokotoff(source_text) && my_daitch_mokotoff(:query))
                 SELECT id                                    AS matching_uid,
                        source_text                           AS matching_name,
-                       table_name                            AS matching_source,
+                       source_table_name                            AS matching_source,
                        ROW_NUMBER() OVER (ORDER BY distance) AS row_number,
                        distance
                 FROM matched_rows

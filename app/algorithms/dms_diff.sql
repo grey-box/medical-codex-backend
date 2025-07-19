@@ -110,14 +110,14 @@ SELECT my_daitch_mokotoff('макрогол') AS dm_result_cyrillic;
 
 -- If the function works, run the original query again
 WITH matched_rows AS (SELECT source_text,
-                             table_name,
+                             source_table_name,
                              array_dms_diff(my_daitch_mokotoff(source_text), my_daitch_mokotoff('макрогол')) AS distance
                       FROM unique_translation_table
                       WHERE source_language = 'uk'
                         AND (my_daitch_mokotoff(source_text) && my_daitch_mokotoff('макрогол')))
 SELECT 0                                     AS matching_uid,
        source_text                           AS matching_name,
-       table_name                            AS matching_source,
+       source_table_name                            AS matching_source,
        ROW_NUMBER() OVER (ORDER BY distance) AS row_number,
        distance
 FROM matched_rows
