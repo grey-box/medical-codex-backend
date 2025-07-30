@@ -29,7 +29,7 @@ class UniqueTranslations(Base):
     target_language = Column(String, nullable=False)
     source_text = Column(String, nullable=False)
     target_text = Column(String, nullable=False)
-    table_name = Column(String, nullable=False)
+    source_table_name = Column(String, nullable=False)
     source_comment = Column(String, nullable=True)
     weight = Column(Integer, nullable=True)
     id = Column(Integer, primary_key=True, nullable=False, autoincrement=True)
@@ -48,7 +48,7 @@ class UniqueTranslations(Base):
             f"target_language={self.target_language}, "
             f"source_text={self.source_text}, "
             f"target_text={self.target_text}, "
-            f"table_name={self.table_name}, "
+            f"source_table_name={self.source_table_name}, "
             f"weight={self.weight},"
             f"description={self.description}\n"
             f")>"
@@ -134,15 +134,3 @@ class ServiceLogs(Base):
     def __repr__(self):
         return f"<LogEntry(id={self.id}, timestamp={self.log_timestamp}, level={self.error_level}, source={self.source}, message={self.message})>"
 
-try:
-    # This block might also be removed if tables are always created externally.
-    # However, if you want to keep the error handling for unforeseen circumstances,
-    # you can keep this try-except block, but ensure the create_all is commented out.
-    # Base.metadata.create_all(engine) # <-- REMOVE OR COMMENT OUT THIS LINE
-    pass # Add a pass statement if the try block becomes empty
-except Exception as e:
-    logger.error(f"Error creating database tables: {str(e)}")
-    raise HTTPException(
-        status_code=status.HTTP_500_INTERNAL_SERVER_ERROR,
-        detail="Failed to create database tables",
-    )
