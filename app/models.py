@@ -29,7 +29,7 @@ class UniqueTranslations(Base):
     target_language = Column(String, nullable=False)
     source_text = Column(String, nullable=False)
     target_text = Column(String, nullable=False)
-    table_name = Column(String, nullable=False)
+    source_table_name = Column(String, nullable=False)
     source_comment = Column(String, nullable=True)
     weight = Column(Integer, nullable=True)
     id = Column(Integer, primary_key=True, nullable=False, autoincrement=True)
@@ -48,7 +48,7 @@ class UniqueTranslations(Base):
             f"target_language={self.target_language}, "
             f"source_text={self.source_text}, "
             f"target_text={self.target_text}, "
-            f"table_name={self.table_name}, "
+            f"source_table_name={self.source_table_name}, "
             f"weight={self.weight},"
             f"description={self.description}\n"
             f")>"
