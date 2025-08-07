@@ -62,7 +62,7 @@ def normalize_and_filter_strings(source_strings: List[str], query: str) -> List[
         ]
         
         # Log the results
-        logger.info(status.HTTP_200_OK + f" Processed {len(normalized_strings)} strings from {len(source_strings)} source items")
+        logger.info(f"{status.HTTP_200_OK} Processed {len(normalized_strings)} strings from {len(source_strings)} source items")
         
         return normalized_strings
         

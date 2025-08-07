@@ -72,6 +72,7 @@ def filter_medications_by_distance(
             try:
                 # Calculate distance between query and medication
                 distance = distance_function(query, medication)
+                logger.info(f"Distance of {distance} between {query} and {medication}")
                 
                 # Include medication if within max_distance
                 if distance <= max_distance:

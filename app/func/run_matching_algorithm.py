@@ -59,6 +59,7 @@ def run_matching_algorithm(
     algorithm: FuzzyAlgorithm,
     db: Session,
     query_params: FuzzyQuery,
+    medications:List[str] = None
 ) -> List[FuzzyResult]:
     """
     Run the specified matching algorithm with given parameters.
@@ -76,6 +77,7 @@ def run_matching_algorithm(
         db (Session): The database session for executing queries or retrieving source texts.
         query_params (FuzzyQuery): The fuzzy matching query parameters containing the
                                   query string, source language, and matching thresholds.
+        medications (List[str]) optional: A list of cahced medication names to use for searching.
         
     Returns:
         List[FuzzyResult]: A list of matching results sorted by relevance.
@@ -101,23 +103,26 @@ def run_matching_algorithm(
     
     # Add algorithm-specific parameters based on locality
     if algorithm.local:
-        # For local algorithms, retrieve all source texts to use as the corpus
-        logger.debug(f"Retrieving source texts for local algorithm: {algorithm_name}")
-        try:
-            source_texts = get_unique_source_texts(db, query_params)
-            common_params["medications"] = source_texts
-            logger.debug(f"Retrieved {len(source_texts)} source texts for matching")
-        except Exception as e:
-            error_message = f"Failed to retrieve source texts: {str(e)}"
-            logger.error(error_message)
-            raise HTTPException(
-                status_code=status.HTTP_500_INTERNAL_SERVER_ERROR,
-                detail=error_message
-            )
+        # Use provided medications if cached
+        if medications is not None:
+            logger.debug(f"Using cached medication list for local algorithm: {algorithm_name}")
+            source_texts = medications
+        else:
+            logger.debug(f"Retrieving source texts for local algorithm: {algorithm_name}")
+            try:
+                source_texts = get_unique_source_texts(db, query_params)
+                logger.debug(f"Retrieved {len(source_texts)} source texts for matching")
+            except Exception as e:
+                error_message = f"Failed to retrieve source texts: {str(e)}"
+                logger.error(error_message)
+                raise HTTPException(
+                    status_code=status.HTTP_500_INTERNAL_SERVER_ERROR,
+                    detail=error_message
+                )
+
+        common_params["medications"] = source_texts
     else:
-        # For database algorithms, pass the database session
         logger.debug(f"Using database for algorithm: {algorithm_name}")
         common_params["db"] = db
-    
-    # Execute the algorithm with the prepared parameters
+
     return execute_algorithm(algorithm.function, **common_params)

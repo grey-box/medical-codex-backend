@@ -2,6 +2,7 @@ from fastapi import APIRouter
 
 from routers import (
     fuzzymatching,
+    ocrmatching,
     language,
     translate,
     fallback_translation,
@@ -11,6 +12,7 @@ from routers import (
 main_router = APIRouter()
 
 main_router.include_router(fuzzymatching.router)
+main_router.include_router(ocrmatching.router)
 main_router.include_router(language.router)
 main_router.include_router(translate.router)
 main_router.include_router(fallback_translation.router)
