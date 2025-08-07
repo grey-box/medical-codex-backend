@@ -243,8 +243,8 @@ def get_gemini_translation(
         
         return schemas.Translation(results=[translation_result])
         
-            translated_text = response.text.strip()
-            logger.info(f"Received translation from Gemini API: '{translated_text}'")
+        translated_text = response.text.strip()
+        logger.info(f"Received translation from Gemini API: '{translated_text}'")
         
         
         # Remove json file characters (e.g., ```json ... ```)
