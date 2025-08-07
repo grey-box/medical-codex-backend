@@ -24,6 +24,7 @@ RUN apt-get update && apt-get install -y \
     git \
     python3-dev \
     ninja-build \
+    netcat-openbsd \
     ffmpeg \
     clamav \
     clamav-daemon \
@@ -31,10 +32,6 @@ RUN apt-get update && apt-get install -y \
     && apt-get clean \
     && rm -rf /var/lib/apt/lists/*
 
-
-
-#Update ClamAv database
-RUN freshclam
 
 # ──────────────────────────────────────────────
 # Configure ClamAV to use TCP, not Unix socket
@@ -103,6 +100,7 @@ EXPOSE 8080
 
 # Start ClamAV + wait for readiness + run FastAPI
 CMD sh -c '\
+    freshclam && \
     clamd & \
     echo "Waiting for ClamAV to start..." && \
     for i in $(seq 1 10); do \
@@ -110,3 +108,4 @@ CMD sh -c '\
     done && \
     echo "ClamAV ready. Starting FastAPI." && \
     uvicorn main:app --host 0.0.0.0 --port 8080 $UVICORN_RELOAD'
+
