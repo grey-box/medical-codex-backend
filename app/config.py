@@ -74,6 +74,38 @@ class Settings(BaseSettings):
 # Create a singleton instance of settings
 settings = Settings()
 
+class FuzzySettings(BaseSettings):
+    """
+    Settings for Fuzzy Searches and OCR Searches.
+
+    This class defines all configurable settings for both fuzzy matching and OCR processes.
+
+    Attributes:
+        levenshtein_max_distance: Maximum distance for levenshtein algorithm
+        soundex_max_distance: Maximum distance for soundex algorithm
+        fuzzy_max_distance: Universal maximum distance for all matching algorithms
+        fuzzy_max_results: Maximum amount of results for fuzzy matching algorithms
+
+        ocr_confidence_threshold: A cutoff value which filters OCR extracted text by quality.
+        ocr_max_results_per_word: Maximum number of fuzzy results per extracted word
+        ocr_max_distance: Maximum Fuzzy Matching distance allowed
+        ocr_max_results: Maximum number of results returned by the OCR algorithm
+    """
+    #Fuzzy Search Settings
+    levenshtein_max_distance: int = 10
+    soundex_max_distance: int = 2
+    fuzzy_max_distance: int = 10
+    fuzzy_max_results: int = 10
+
+    #OCR settings
+    ocr_confidence_threshold: float = 0.85
+    ocr_max_results_per_word: int = 10
+    ocr_max_distance: int = 5
+    ocr_max_results: int = 5
+
+#Create a singleton of fuzzy settings
+fuzzySettings = FuzzySettings()
+
 
 class LogConfig(BaseModel):
     """
