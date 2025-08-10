@@ -67,4 +67,3 @@ paddleocr==2.6.1.3
 opencv-python-headless==4.9.0.80
 clamd~=1.0.2
 pillow~=11.2.1
-

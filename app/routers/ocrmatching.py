@@ -42,6 +42,7 @@ async def ocr_matching_endpoint(
 
         logger.error("Could Not Read File")
         return None
+
     except Exception as e:
         error_message = f"Error performing OCR extraction: {str(e)}"
         logger.error(error_message)

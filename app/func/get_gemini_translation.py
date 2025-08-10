@@ -289,7 +289,6 @@ def get_gemini_translation(
         except json.JSONDecodeError as e:
             logger.error(f"Failed to decode Gemini JSON: {e}")
             raise ValueError("Gemini output is not valid JSON")
-        
         # Create and return the translation result
         translation_result = schemas.TranslationResult(
             **parsed_result,

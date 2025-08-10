@@ -3,8 +3,8 @@ import logging
 from fastapi import UploadFile
 
 from algorithms.search_medications_by_levenshtein import search_medications_by_levenshtein
-from config import LOGGER_NAME, fuzzySettings
 
+from config import LOGGER_NAME, fuzzySettings
 from func.extract_text_with_ocr import extract_text_with_ocr
 from typing import List
 
@@ -29,7 +29,6 @@ def search_medication_with_image(
         max_distance: int = fuzzySettings.ocr_max_distance,
         max_results: int = fuzzySettings.ocr_max_results,
 
-
 ) -> FuzzyMatching:
     """
         Search for medications extracted with PaddleOCR using Levenshtein distance.
@@ -46,7 +45,6 @@ def search_medication_with_image(
             max_results_per_word (int, optional): Maximum number of results for each word passed through the Levenshtein distance algorithm.
             max_distance (int, optional): Maximum Levenshtein distance allowed.
             max_results (int, optional): Maximum number of results to return.
-
 
         Returns:
             FuzzyMatching: List of FuzzyResult objects matching the query within the specified max_distance.

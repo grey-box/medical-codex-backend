@@ -107,3 +107,4 @@ CMD sh -c '\
     done && \
     echo "ClamAV ready. Starting FastAPI." && \
     uvicorn main:app --host 0.0.0.0 --port 8080 $UVICORN_RELOAD'
+
