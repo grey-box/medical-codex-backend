@@ -68,7 +68,7 @@ ENV \
 # ──────────────────────────────────────────────
 
 # Copy the actual app code and root level files
-COPY . .
+COPY app .
 
 # Expose FastAPI app port
 EXPOSE 8080

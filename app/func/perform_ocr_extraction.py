@@ -10,7 +10,7 @@ import logging
 from fastapi import File
 from sqlalchemy.orm import Session
 
-from app.algorithms.search_medication_with_image import search_medication_with_image
+from algorithms.search_medication_with_image import search_medication_with_image
 
 from schemas import FuzzyMatching
 from config import LOGGER_NAME
