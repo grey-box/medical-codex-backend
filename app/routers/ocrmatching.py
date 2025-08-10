@@ -35,7 +35,6 @@ async def ocr_matching_endpoint(
         db: Session = Depends(database.get_database_session),
         ) -> schemas.FuzzyMatching:
     try:
-
         cleaned_file = scan_and_clean_uploadfile(file)
         if cleaned_file is not None:
             results = perform_ocr_extraction(source_language, cleaned_file, db)
@@ -43,7 +42,6 @@ async def ocr_matching_endpoint(
 
         logger.error("Could Not Read File")
         return None
-
     except Exception as e:
         error_message = f"Error performing OCR extraction: {str(e)}"
         logger.error(error_message)

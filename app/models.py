@@ -2,10 +2,19 @@ import logging
 
 from sqlalchemy import CheckConstraint, Column, DateTime, Text, func
 from sqlalchemy.types import String, Integer
+from sqlalchemy.orm import declarative_base
 
-from database import Base, engine
 from config import LOGGER_NAME
 from fastapi import status, HTTPException
+
+# Import Base and engine from database to avoid circular imports
+# This creates a circular import, so we need to handle it carefully
+try:
+    from database import Base, engine
+except ImportError:
+    # If database is not available yet, create Base locally
+    Base = declarative_base()
+    engine = None
 
 # Create all tables (REMOVE OR COMMENT OUT THIS LINE IF TABLES ARE CREATED EXTERNALLY)
 # Base.metadata.create_all(engine) # <-- REMOVE OR COMMENT OUT THIS LINE
@@ -23,7 +32,7 @@ class UniqueTranslations(Base):
     """
 
     __tablename__ = "unique_translation_table"
-
+    __table_args__ = {'extend_existing': True}
 
     source_language = Column(String, nullable=False)
     target_language = Column(String, nullable=False)
@@ -64,6 +73,7 @@ class ManualTranslations(Base):
     """
 
     __tablename__ = "manual_translation"
+    __table_args__ = {'extend_existing': True}
 
     id = Column(Integer, primary_key=True)
     term = Column(String, nullable=False)
@@ -103,8 +113,6 @@ class LanguagePairs(Base):
     source_language = Column(String, nullable=False, primary_key=True)
     target_language = Column(String, nullable=False, primary_key=True)
 
-    __table_args__ = {"autoload_with": engine}
-
     def __repr__(self) -> str:
         """
         Return a string representation of the LanguagePairs instance.
@@ -115,6 +123,23 @@ class LanguagePairs(Base):
         return (
             f"<Language(source_language={self.source_language},target_language={self.target_language})>"
         )
+    
+    @classmethod
+    def get_available_languages(cls, session):
+        """
+        Get available language pairs from the database.
+        
+        Args:
+            session: SQLAlchemy session
+            
+        Returns:
+            List of LanguagePairs instances
+        """
+        try:
+            return session.query(cls).all()
+        except Exception as e:
+            # If the view doesn't exist, return empty list
+            return []
 
 class ServiceLogs(Base):
 

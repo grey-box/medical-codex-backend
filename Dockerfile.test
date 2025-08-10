@@ -1,0 +1,45 @@
+# Dockerfile for running tests
+FROM python:3.10-slim
+
+# Set working directory
+WORKDIR /app
+
+# Install system dependencies
+RUN apt-get update && apt-get install -y \
+    build-essential \
+    gfortran \
+    pkg-config \
+    libopenblas-dev \
+    liblapack-dev \
+    libpq-dev \
+    curl \
+    wget \
+    libgl1 \
+    libglib2.0-0 \
+    libsm6 \
+    libxrender1 \
+    libxext6 \
+    git \
+    python3-dev \
+    ninja-build \
+    ffmpeg \
+    && apt-get clean \
+    && rm -rf /var/lib/apt/lists/*
+
+# Copy requirements and install Python dependencies
+COPY requirements.txt .
+RUN pip install --no-cache-dir -r requirements.txt
+RUN pip install --no-cache-dir pytest pytest-asyncio pytest-cov
+
+# Copy application code
+COPY . .
+
+# Set environment variables
+ENV PYTHONPATH=/app
+ENV TEST_MODE=true
+
+# Expose port (if needed for API tests)
+EXPOSE 8080
+
+# Default command to run tests
+CMD ["python", "-m", "pytest", "app/test/", "-v", "--tb=short", "--color=yes"]
