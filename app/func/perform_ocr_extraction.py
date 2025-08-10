@@ -15,7 +15,7 @@ from algorithms import search_medication_with_image
 from schemas import FuzzyMatching
 from config import LOGGER_NAME
 
-from dummy_database import dummy_database
+# Remove dummy_database import as it's not used in this function
 
 logger = logging.getLogger(LOGGER_NAME)
 

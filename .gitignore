@@ -177,3 +177,6 @@ codex.db
 .vscode/
 .env.local
 /*.db
+
+# Test
+test-results/

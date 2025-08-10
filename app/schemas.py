@@ -10,8 +10,8 @@ class FuzzyQuery(BaseModel):
     source_language: str
     query: str
     target_language: Optional[str] = None
-    max_distance: int = 10
-    max_results: int = 10
+    max_distance: int = Field(10, ge=1, description="Maximum distance for fuzzy matching")
+    max_results: int = Field(10, ge=1, description="Maximum number of results to return")
 
 
 class FuzzyResult(BaseModel):
