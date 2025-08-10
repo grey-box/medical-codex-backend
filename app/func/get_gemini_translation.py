@@ -263,6 +263,58 @@ def get_gemini_translation(
         
         return schemas.Translation(results=[translation_result])
         
+            translated_text = response.text.strip()
+            logger.info(f"Received translation from Gemini API: '{translated_text}'")
+        
+        
+        # Remove json file characters (e.g., ```json ... ```)
+        cleaned_output = re.sub(r"^```(?:json)?\s*|```$", "", translated_text, flags=re.IGNORECASE | re.MULTILINE).strip()
+        
+        # Parse the JSON
+        try:
+            parsed_result = json.loads(cleaned_output)
+            
+            # Pop the alternatives from the data
+            raw_alternatives = parsed_result.pop("alternatives", [])
+
+            # Build the alternatives list
+            alternatives = [schemas.Alternative(**alt) for alt in raw_alternatives]
+            
+            # Pop the additional_details from the data
+            raw_details = parsed_result.pop("additional_details", None)
+            
+            # Build the additional_details
+            additional_details = schemas.AdditionalDetails(**raw_details) if raw_details else None
+        
+        except json.JSONDecodeError as e:
+            logger.error(f"Failed to decode Gemini JSON: {e}")
+            raise ValueError("Gemini output is not valid JSON")
+        
+        # Create and return the translation result
+        translation_result = schemas.TranslationResult(
+            **parsed_result,
+            translated_source="gemini_api",
+            translated_uid=query.translation_query.matching_uid,
+            alternatives=alternatives,
+            additionalDetails=additional_details
+        )
+        
+        return schemas.Translation(results=[translation_result])
+        
+    except genai.types.generation_types.StopCandidateException as e:
+        # Handle specific Gemini API errors
+        error_message = f"Gemini API content filtered: {str(e)}"
+        logger.warning(error_message)
+        
+        # Create a result indicating the content was filtered
+        translation_result = schemas.TranslationResult(
+            translated_name="Translation filtered by content policy",
+            translated_source="gemini_api_filtered",
+            translated_uid=query.translation_query.matching_uid,
+        )
+        
+        return schemas.Translation(results=[translation_result])
+        
     except Exception as e:
         # Handle any other errors
         error_message = f"Error in Gemini translation for '{query.translation_query.matching_name}': {str(e)}"

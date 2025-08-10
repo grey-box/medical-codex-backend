@@ -1,6 +1,7 @@
 from datetime import datetime, timezone
 from typing import List, Optional, Callable
 import logging
+from config import fuzzySettings
 
 from pydantic import BaseModel, Field
 
@@ -10,8 +11,8 @@ class FuzzyQuery(BaseModel):
     source_language: str
     query: str
     target_language: Optional[str] = None
-    max_distance: int = Field(10, ge=1, description="Maximum distance for fuzzy matching")
-    max_results: int = Field(10, ge=1, description="Maximum number of results to return")
+    max_distance: int = fuzzySettings.fuzzy_max_distance
+    max_results: int = fuzzySettings.fuzzy_max_results
 
 
 class FuzzyResult(BaseModel):

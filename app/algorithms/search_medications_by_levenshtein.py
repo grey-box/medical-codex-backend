@@ -14,7 +14,7 @@ from fastapi import HTTPException, status
 
 from algorithms.filter_medications_by_distance import filter_medications_by_distance
 from algorithms.get_top_matches_by_distance import get_top_matches_by_distance
-from config import LOGGER_NAME
+from config import LOGGER_NAME, fuzzySettings
 from func.normalize_and_filter_strings import normalize_and_filter_strings
 from schemas import FuzzyResult
 
@@ -29,8 +29,8 @@ def search_medications_by_levenshtein(
     language: str,
     medications: List[str],
     query: str,
-    max_distance: int = 10,
-    max_results: int = 10,
+    max_distance: int = fuzzySettings.levenshtein_max_distance,
+    max_results: int = fuzzySettings.fuzzy_max_results,
 ) -> List[FuzzyResult]:
     """
     Search for medications using Levenshtein distance.
@@ -45,9 +45,9 @@ def search_medications_by_levenshtein(
         medications (List[str]): List of medication names to search through.
         query (str): Input string to search for.
         max_distance (int, optional): Maximum Levenshtein distance allowed.
-            Higher values allow more dissimilar matches. Defaults to 10.
+            Higher values allow more dissimilar matches.
         max_results (int, optional): Maximum number of results to return.
-            Results are sorted by distance (closest matches first). Defaults to 10.
+            Results are sorted by distance (closest matches first).
 
     Returns:
         List[FuzzyResult]: List of FuzzyResult objects matching the query
