@@ -1,0 +1,49 @@
+version: '3.8'
+
+services:
+  # Test database service (if needed for integration tests)
+  test-db:
+    image: postgres:13
+    environment:
+      POSTGRES_DB: test_codex
+      POSTGRES_USER: test_user
+      POSTGRES_PASSWORD: test_password
+    ports:
+      - "5433:5432"
+    volumes:
+      - test_db_data:/var/lib/postgresql/data
+      - ./test-init.sql:/docker-entrypoint-initdb.d/test-init.sql
+      - ../medical-codex-postgresql/unique_translation_table.csv:/docker-entrypoint-initdb.d/unique_translation_table.csv
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U test_user -d test_codex"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  # Test application service
+  test-app:
+    build:
+      context: .
+      dockerfile: Dockerfile.test
+    depends_on:
+      test-db:
+        condition: service_healthy
+    environment:
+      - DATABASE_URL=postgresql://test_user:test_password@test-db:5432/test_codex
+      - TEST_MODE=true
+      - LOG_LEVEL=ERROR
+      - GOOGLE_API_KEY=test_api_key_for_testing
+    volumes:
+      - ./test-results:/app/test-results
+      - ./unique_translation_table.csv:/docker-entrypoint-initdb.d/unique_translation_table.csv
+    working_dir: /app
+    command: >
+      sh -c "
+        echo 'Running tests...' &&
+        find /app -name 'test' -type d &&
+        python -m pytest app/test/ -v --tb=short --color=yes --junitxml=/app/test-results/junit.xml &&
+        echo 'Tests completed successfully'
+      "
+
+volumes:
+  test_db_data:

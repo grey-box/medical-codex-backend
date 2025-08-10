@@ -31,8 +31,6 @@ RUN apt-get update && apt-get install -y \
     && apt-get clean \
     && rm -rf /var/lib/apt/lists/*
 
-
-
 #Update ClamAv database
 RUN freshclam
 
@@ -54,7 +52,6 @@ ScanPDF yes\n\
 ScanHTML yes\n\
 DetectPUA yes\n\
 ExitOnOOM yes\n" > /etc/clamav/clamd.conf
-
 
 # Set working directory
 WORKDIR /app
@@ -110,3 +107,4 @@ CMD sh -c '\
     done && \
     echo "ClamAV ready. Starting FastAPI." && \
     uvicorn main:app --host 0.0.0.0 --port 8080 $UVICORN_RELOAD'
+

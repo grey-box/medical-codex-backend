@@ -16,7 +16,7 @@ from fonetika.soundex import EnglishSoundex, RussianSoundex
 
 from algorithms.filter_medications_by_distance import filter_medications_by_distance
 from algorithms.get_top_matches_by_distance import get_top_matches_by_distance
-from config import LOGGER_NAME
+from config import LOGGER_NAME, fuzzySettings
 from func.normalize_and_filter_strings import normalize_and_filter_strings
 from schemas import FuzzyResult
 
@@ -36,8 +36,8 @@ def search_medications_by_soundex(
     language: str,
     medications: List[str],
     query: str,
-    max_distance: float = 2,
-    max_results: int = 10,
+    max_distance: float = fuzzySettings.soundex_max_distance,
+    max_results: int = fuzzySettings.fuzzy_max_results,
 ) -> List[FuzzyResult]:
     """
     Search for medications using Soundex algorithm.
@@ -53,9 +53,9 @@ def search_medications_by_soundex(
         medications (List[str]): List of medication names to search through.
         query (str): Input string to search for.
         max_distance (float, optional): Maximum phonetic distance allowed.
-            Lower values require closer phonetic matches. Defaults to 2.
+            Lower values require closer phonetic matches.
         max_results (int, optional): Maximum number of results to return.
-            Results are sorted by phonetic similarity. Defaults to 10.
+            Results are sorted by phonetic similarity.
 
     Returns:
         List[FuzzyResult]: List of FuzzyResult objects matching the query
