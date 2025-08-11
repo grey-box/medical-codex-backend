@@ -109,7 +109,13 @@ def search_medication_with_image(
                 medications=medications
             )
 
-            result_list.extend(token_results)
+            #Discard an unrelated results to avoid clutter later on
+            cleaned_list: List[FuzzyResult] = []
+            for result in token_results:
+                if token.__len__() >= result.distance:
+                    cleaned_list.append(result)
+
+            result_list.extend(cleaned_list)
 
 
         # Sort by distance.
