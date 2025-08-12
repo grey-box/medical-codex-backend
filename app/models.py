@@ -7,6 +7,9 @@ from sqlalchemy.orm import declarative_base
 from config import LOGGER_NAME
 from fastapi import status, HTTPException
 
+# Import logging constants for ServiceLogs constraint
+from logging import NOTSET, INFO, WARNING, ERROR, DEBUG, CRITICAL
+
 # Import Base and engine from database to avoid circular imports
 # This creates a circular import, so we need to handle it carefully
 try:
@@ -46,7 +49,7 @@ class UniqueTranslations(Base):
 
     def __repr__(self) -> str:
         """
-        Return a string representation of the UniqueTranslationsORM instance.
+        Return a string representation of the UniqueTranslations instance.
 
         Returns:
             str: A formatted string containing the instance's attributes.
@@ -75,27 +78,27 @@ class ManualTranslations(Base):
     __tablename__ = "manual_translation"
     __table_args__ = {'extend_existing': True}
 
-    id = Column(Integer, primary_key=True)
+    id = Column(Integer, primary_key=True, nullable=False, autoincrement=True)
     term = Column(String, nullable=False)
     proposed_translation = Column(String, nullable=True)
     source_language = Column(String, nullable=False)
     target_language = Column(String, nullable=False)
     description = Column(String, nullable=True)
 
-    def __repr__(str) -> str:
+    def __repr__(self) -> str:
         """
-        Return a string representation of the UniqueTranslationsORM instance.
+        Return a string representation of the ManualTranslations instance.
 
         Returns:
             str: A formatted string containing the instance's attributes.
         """
         return (
             f"<Manual Translation("
-            f"term={str.term}, "
-            f"proposed_translation={str.proposed_translation}, "
-            f"source_language={str.source_language}, "
-            f"target_language={str.target_language}, "
-            f"description={str.description}\n"
+            f"term={self.term}, "
+            f"proposed_translation={self.proposed_translation}, "
+            f"source_language={self.source_language}, "
+            f"target_language={self.target_language}, "
+            f"description={self.description}\n"
             f")>"
         )
 
@@ -146,16 +149,15 @@ class ServiceLogs(Base):
     """Model to store log messages in the database."""
     __tablename__ = "_service_logs"
     
-    id = Column(Integer, primary_key=True, autoincrement=True)
+    id = Column(Integer, primary_key=True, nullable=False, autoincrement=True)
     log_timestamp = Column(DateTime(timezone=True), server_default=func.now())  # Auto timestamp
     error_level = Column(Integer, nullable=False)
     source = Column(String(50), nullable=False)
     message = Column(Text, nullable=False)
     
     __table_args__ = (
-        CheckConstraint("error_level IN (logging.NOTSET, logging.INFO, logging.WARNING, logging.ERROR, logging.DEBUG, logging.CRITICAL)", name="_service_logs_error_level_check"),
+        CheckConstraint(f"error_level IN ({NOTSET}, {INFO}, {WARNING}, {ERROR}, {DEBUG}, {CRITICAL})", name="_service_logs_error_level_check"),
     )
 
     def __repr__(self):
         return f"<LogEntry(id={self.id}, timestamp={self.log_timestamp}, level={self.error_level}, source={self.source}, message={self.message})>"
-
