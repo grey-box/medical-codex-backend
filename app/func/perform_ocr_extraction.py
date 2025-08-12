@@ -12,10 +12,6 @@ from sqlalchemy.orm import Session
 
 from algorithms import search_medication_with_image
 
-
-from schemas import FuzzyMatching
-from config import LOGGER_NAME
-
 logger = logging.getLogger(LOGGER_NAME)
 
 def perform_ocr_extraction(

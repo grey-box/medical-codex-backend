@@ -3,7 +3,6 @@ import logging
 from fastapi import UploadFile
 
 from algorithms.search_medications_by_levenshtein import search_medications_by_levenshtein
-
 from config import LOGGER_NAME, fuzzySettings
 from func.extract_text_with_ocr import extract_text_with_ocr
 from typing import List
@@ -110,6 +109,7 @@ def search_medication_with_image(
             )
 
             result_list.extend(token_results)
+
 
 
         # Sort by distance.
