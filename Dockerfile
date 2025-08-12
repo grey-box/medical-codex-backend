@@ -24,7 +24,6 @@ RUN apt-get update && apt-get install -y \
     git \
     python3-dev \
     ninja-build \
-    netcat-openbsd \
     ffmpeg \
     clamav \
     clamav-daemon \
@@ -32,6 +31,8 @@ RUN apt-get update && apt-get install -y \
     && apt-get clean \
     && rm -rf /var/lib/apt/lists/*
 
+#Update ClamAv database
+RUN freshclam
 
 # ──────────────────────────────────────────────
 # Configure ClamAV to use TCP, not Unix socket
@@ -51,7 +52,6 @@ ScanPDF yes\n\
 ScanHTML yes\n\
 DetectPUA yes\n\
 ExitOnOOM yes\n" > /etc/clamav/clamd.conf
-
 
 # Set working directory
 WORKDIR /app
@@ -100,7 +100,6 @@ EXPOSE 8080
 
 # Start ClamAV + wait for readiness + run FastAPI
 CMD sh -c '\
-    freshclam && \
     clamd & \
     echo "Waiting for ClamAV to start..." && \
     for i in $(seq 1 10); do \

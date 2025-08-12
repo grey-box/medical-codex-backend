@@ -41,7 +41,6 @@ def search_medication_with_image(
             db (Session): Database of medication names to search through.
             confidence_threshold (float, optional): A cutoff value between 0 and 1 which filters OCR extracted text by quality.
                 The closer this number is to 1 the more strict it is. setting this to 0 will skip the filtering process. (quality control)
-
             max_results_per_word (int, optional): Maximum number of results for each word passed through the Levenshtein distance algorithm.
             max_distance (int, optional): Maximum Levenshtein distance allowed.
             max_results (int, optional): Maximum number of results to return.
@@ -109,13 +108,8 @@ def search_medication_with_image(
                 medications=medications
             )
 
-            #Discard an unrelated results to avoid clutter later on
-            cleaned_list: List[FuzzyResult] = []
-            for result in token_results:
-                if token.__len__() >= result.distance:
-                    cleaned_list.append(result)
+            result_list.extend(token_results)
 
-            result_list.extend(cleaned_list)
 
 
         # Sort by distance.

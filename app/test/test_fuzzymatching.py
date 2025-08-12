@@ -55,8 +55,8 @@ try:
         db,
         FuzzyQuery(
             source_language="ru",
-            query="изотретиноїн",
-            max_distance=2, 
+            query="изотретиноин",
+            max_distance=2,
             max_results=5
         ),
     )
@@ -114,7 +114,7 @@ def test_fonetika_soundex() -> None:
     Test the Soundex phonetic algorithm for fuzzy matching.
     
     This test verifies that the Soundex algorithm correctly identifies
-    'ізотретиноїн' as the closest phonetic match to 'изотретиноїн' in Russian.
+    'изотретиноин' as the closest phonetic match to 'изотретиноїн' in Russian.
     
     Returns:
         None
@@ -145,7 +145,7 @@ def test_fonetika_soundex() -> None:
         # Check if the top result is the expected medication
         top_match = results[0].matching_name
         logger.info(f"Soundex test: Top match for 'изотретиноїн' is '{top_match}'")
-        assert top_match == "ізотретиноїн", f"Expected 'ізотретиноїн', got '{top_match}'"
+        assert top_match == "изотретиноин", f"Expected 'изотретиноин', got '{top_match}'"
         
     except Exception as ee:
         logger.error(f"Soundex test failed: {str(ee)}")

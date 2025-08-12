@@ -46,6 +46,26 @@ def get_gemini_translation(
     translated_text = "Translation unavailable"
     
     try:
+        # Check if we're in test mode and return mock translation
+        if os.getenv("TEST_MODE") == "true":
+            logger.info("Using mock translation for test mode")
+            source_term = query.translation_query.matching_name
+            target_language = get_full_language_name(query.target_language)
+            
+            # Create a mock translation result
+            translation_result = schemas.TranslationResult(
+                source_term=source_term,
+                source_language="en",
+                translated_name=f"Mock translation of {source_term}",
+                target_language=target_language,
+                confidence=0.9,
+                alternatives=[],
+                additional_details=None,
+                translated_source="mock_gemini",
+                translated_uid=query.translation_query.matching_uid
+            )
+            return schemas.Translation(results=[translation_result])
+        
         # Load API key from environment variables
         env_file = settings.env_file if hasattr(settings, 'env_file') else ".env"
         load_dotenv(env_file)
@@ -243,6 +263,7 @@ def get_gemini_translation(
         
         return schemas.Translation(results=[translation_result])
         
+
         translated_text = response.text.strip()
         logger.info(f"Received translation from Gemini API: '{translated_text}'")
         
@@ -269,7 +290,6 @@ def get_gemini_translation(
         except json.JSONDecodeError as e:
             logger.error(f"Failed to decode Gemini JSON: {e}")
             raise ValueError("Gemini output is not valid JSON")
-
         # Create and return the translation result
         translation_result = schemas.TranslationResult(
             **parsed_result,

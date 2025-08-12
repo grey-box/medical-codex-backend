@@ -31,12 +31,28 @@ logger = logging.getLogger(LOGGER_NAME)
 dotenv.load_dotenv()
 
 # Database configuration from environment variables
-DB_TYPE = os.getenv("DB_TYPE", "sqlite")
-DB_HOST = os.getenv("DB_HOST", "")
-DB_PORT = os.getenv("DB_PORT", "")
-DB_NAME = os.getenv("DB_NAME", "codex.db")
-DB_USER = os.getenv("DB_USER", "")
-DB_PASSWORD = os.getenv("DB_PASSWORD", "")
+# Try DATABASE_URL first, then fall back to individual variables
+DATABASE_URL = os.getenv("DATABASE_URL")
+if DATABASE_URL:
+    # Use DATABASE_URL directly, extract DB_TYPE for dialect selection
+    if "postgresql://" in DATABASE_URL:
+        DB_TYPE = "postgresql"
+    elif "sqlite://" in DATABASE_URL:
+        DB_TYPE = "sqlite"
+    elif "mysql://" in DATABASE_URL:
+        DB_TYPE = "mysql"
+    elif "mssql://" in DATABASE_URL or "sqlserver://" in DATABASE_URL:
+        DB_TYPE = "mssql"
+    else:
+        DB_TYPE = "sqlite"  # fallback
+else:
+    # Fall back to individual variables
+    DB_TYPE = os.getenv("DB_TYPE", "sqlite")
+    DB_HOST = os.getenv("DB_HOST", "")
+    DB_PORT = os.getenv("DB_PORT", "")
+    DB_NAME = os.getenv("DB_NAME", "codex.db")
+    DB_USER = os.getenv("DB_USER", "")
+    DB_PASSWORD = os.getenv("DB_PASSWORD", "")
 
 # Database dialect configuration
 DB_DIALECTS = {
@@ -67,6 +83,11 @@ def create_database_url() -> str:
     Raises:
         HTTPException: If an unsupported database type is specified.
     """
+    # If DATABASE_URL is set, use it directly
+    if DATABASE_URL:
+        return DATABASE_URL
+    
+    # Otherwise, construct from individual variables
     if DB_TYPE == "postgresql":
         return f"postgresql://{DB_USER}:{DB_PASSWORD}@{DB_HOST}:{DB_PORT}/{DB_NAME}"
     elif DB_TYPE == "sqlite":
