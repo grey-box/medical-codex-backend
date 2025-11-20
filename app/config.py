@@ -57,12 +57,24 @@ class Settings(BaseSettings):
     db_name: str = "postgres"
     db_user: str = "postgres"
     db_password: Optional[str] = None
+    postgres_db_host: Optional[str] = None
+    postgres_db_port: Optional[int] = None
+    postgres_db: Optional[str] = None
+    postgres_user: Optional[str] = None
+    postgres_password: Optional[str] = None
+    database_url: Optional[str] = None
     
     # Application settings
     fallback_translation_method: str = "gemini"
     google_api_key: Optional[str] = None
 
     uvicorn_reload: Optional[str] = None
+
+    # File scanning / ClamAV settings
+    enable_file_scanning: bool = False
+    require_file_scanning: bool = False
+    clamav_host: str = "127.0.0.1"
+    clamav_port: int = 3310
 
     class Config:
         """Configuration for environment variable loading."""

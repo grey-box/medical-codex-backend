@@ -1,13 +1,20 @@
 import logging
 import os
+from pathlib import Path
 
 from fastapi import UploadFile
 from paddleocr import PaddleOCR
+
 from config import LOGGER_NAME
 from func.normalize_image import normalize_image
-from sqlalchemy import false
 
 logger = logging.getLogger(LOGGER_NAME)
+
+def _get_model_dir(*segments: str) -> str:
+    base_dir = Path(os.environ.get("PADDLE_OCR_BASE_DIR", Path.home() / ".paddleocr"))
+    target = base_dir.joinpath(*segments)
+    target.mkdir(parents=True, exist_ok=True)
+    return str(target)
 
 def extract_text_with_ocr(file: UploadFile):
     """
@@ -24,15 +31,19 @@ def extract_text_with_ocr(file: UploadFile):
         """
 
     #Call OCR and pass in pre-downloaded models, language and set to CPU mode
+    det_model_dir = _get_model_dir("whl", "det", "en", "en_PP-OCRv3_det_infer")
+    rec_model_dir = _get_model_dir("whl", "rec", "en", "en_PP-OCRv3_rec_infer")
+    cls_model_dir = _get_model_dir("whl", "cls", "ch_ppocr_mobile_v2.0_cls_infer")
+
     ocr = PaddleOCR(
         use_angle_cls=False,
         use_textline_orientation=False,
         use_doc_unwarping=False,
         use_doc_orientation_classify=False,
         lang='en',
-        det_model_dir="/root/.paddleocr/whl/det/en/en_PP-OCRv3_det_infer",
-        rec_model_dir="/root/.paddleocr/whl/rec/en/en_PP-OCRv3_rec_infer",
-        cls_model_dir="/root/.paddleocr/whl/cls/ch_ppocr_mobile_v2.0_cls_infer",
+        det_model_dir=det_model_dir,
+        rec_model_dir=rec_model_dir,
+        cls_model_dir=cls_model_dir,
         enable_mkldnn=True,
         use_gpu=False
     )
@@ -58,4 +69,3 @@ def extract_text_with_ocr(file: UploadFile):
     except Exception as e:
         print(f"[EXCEPTION] PaddleOCR failed")
         raise
-
