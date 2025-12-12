@@ -39,13 +39,14 @@ Local Setup (Step-by-Step)
 
 1. Clone the Repo
 
-   - git clone https://github.com/YourUsername/codex-translation-api.git
-   - cd codex-transaltion-api
+   - git clone https://github.com/YourUsername/medical-codex-backend.git
+   - cd medical-codex-backend
 
 2. Create and Activate Virtual Enviornment
 
    - python3 -m venv venv
    - source venv/bin/activate (for mac)
+   - venv\Scripts\activate (for windows)
 
 3. Install Dependencies
 
