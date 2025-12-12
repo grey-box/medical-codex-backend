@@ -1,0 +1,93 @@
+{
+    "language": {
+        "code": "fr",
+        "name": "French"
+    },
+    "terms": [
+        {
+            "canonical": "Ibuprofen",
+            "entries": [
+                {"translation": "ibuprofène", "country": "FR", "brand": "Advil" },
+                {"translation": "ibuprofène", "country": "BE", "brand": "Nurofen" },
+                {"translation": "ibuprofène", "country": "CA", "brand": "Advil" }
+            ]
+        },
+        {
+            "canonical": "Paracetamol",
+            "entries": [
+                {"translation": "acétaminophène", "country": "FR", "brand": "Tylenol" },
+                {"translation": "paracétamol", "country": "BE", "brand": "Calpol" },
+                {"translation": "acétaminophène", "country": "CA", "brand": "Tylenol" }
+            ]
+        },
+        {
+            "canonical": "Amoxicillin",
+            "entries": [
+                {"translation": "amoxicilline", "country": "FR", "brand": "Amoxil" },
+                {"translation": "amoxicilline", "country": "BE", "brand": "Amoxil" },
+                {"translation": "amoxicilline", "country": "CA", "brand": "Amoxil" }
+            ]
+        },
+        {
+            "canonical": "Naproxen",
+            "entries": [
+                {"translation": "naproxène", "country": "FR", "brand": "Aleve" },
+                {"translation": "naproxène", "country": "BE", "brand": "Naprosyn" },
+                {"translation": "naproxène", "country": "CA", "brand": "Aleve" }
+          ]
+        },
+        {
+            "canonical": "Cetirizine",
+            "entries": [
+                {"translation": "cétirizine", "country": "FR", "brand": "Zyrtec" },
+                {"translation": "cétirizine", "country": "BE", "brand": "Zirtek" },
+                {"translation": "cétirizine", "country": "CA", "brand": "Reactine" }
+            ]
+        },
+        {
+            "canonical": "Loratadine",
+            "entries": [
+                {"translation": "loratadine", "country": "FR", "brand": "Claritin" },
+                {"translation": "loratadine", "country": "BE", "brand": "Clarityn" },
+                {"translation": "loratadine", "country": "CA", "brand": "Claritin" }
+          ]
+        },
+        {
+            "canonical": "Diphenhydramine",
+            "entries": [
+                {"translation": "diphenhydramine", "country": "FR", "brand": "Benadryl" },
+                {"translation": "diphenhydramine", "country": "BE", "brand": "Night Nurse" },
+                {"translation": "diphenhydramine",  "country":  "CA", "brand": "Benadryl"  }
+            ]
+        },
+        {
+            "canonical": "Omeprazole",
+            "entries": [
+                {"translation": "oméprazole", "country": "FR", "brand": "Prilosec" },
+                {"translation": "oméprazole", "country": "BE", "brand": "Mopral" },
+                {"translation": "oméprazole", "country": "CA", "brand": "Prilosec" }
+            ]
+        },
+        {  
+            "canonical": "Metformin",
+            "entries": [
+                {"translation": "metformine", "country": "FR", "brand": "Glucophage" },
+                {"translation": "metformine", "country": "BE", "brand": "Glucophage" },
+                {"translation": "metformine", "country": "CA", "brand": "Glucophage" }
+            ]
+        },
+        {
+            "canonical": "Aspirin",
+            "entries": [
+                {"translation": "aspirine", "country": "FR", "brand": "Aspirine" },
+                {"translation": "aspirine", "country": "BE", "brand": "Aspirine" },
+                {"translation": "aspirine", "country": "CA", "brand": "Aspirine" }
+            ]
+        },
+        {
+            "canonical": "Albuterol",
+            "entries": [
+            ]
+        }
+    ]
+}

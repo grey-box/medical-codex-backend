@@ -1,0 +1,96 @@
+{
+    "language": {
+        "code": "en",
+        "name": "English"
+    },
+    "terms": [
+        {
+            "canonical": "Ibuprofen",
+            "entries": [
+                {"translation": "ibuprofen", "country": "US", "brand": "Advil" },
+                {"translation": "ibuprofen", "country": "GB", "brand": "Nurofen" },
+                {"translation": "ibuprofen", "country": "CA", "brand": "Advil" }
+            ]
+        },
+        {
+            "canonical": "Paracetamol",
+            "entries": [
+                {"translation": "acetaminophen", "country": "US", "brand": "Tylenol" },
+                {"translation": "paracetamol", "country": "GB", "brand": "Calpol" },
+                {"translation": "acetaminophen", "country": "CA", "brand": "Tylenol" }
+            ]
+        },
+        {
+            "canonical": "Amoxicillin",
+            "entries": [
+                {"translation": "amoxicillin", "country": "US", "brand": "Amoxil" },
+                {"translation": "amoxicillin", "country": "GB", "brand": "Amoxil" },
+                {"translation": "amoxicillin", "country": "CA", "brand": "Amoxil" }
+            ]
+        },
+        {
+            "canonical": "Naproxen",
+            "entries": [
+                {"translation": "naproxen", "country": "US", "brand": "Aleve" },
+                {"translation": "naproxen", "country": "GB", "brand": "Naprosyn" },
+                {"translation": "naproxen", "country": "CA", "brand": "Aleve" }
+          ]
+        },
+        {
+            "canonical": "Cetirizine",
+            "entries": [
+                {"translation": "cetirizine", "country": "US", "brand": "Zyrtec" },
+                {"translation": "cetirizine", "country": "GB", "brand": "Zirtek" },
+                {"translation": "cetirizine", "country": "CA", "brand": "Reactine" }
+          ]
+        },
+        {
+          "canonical": "Loratadine",
+          "entries": [
+            {"translation": "loratadine", "country": "US", "brand": "Claritin" },
+            {"translation": "loratadine", "country": "GB", "brand": "Clarityn" },
+            {"translation": "loratadine", "country": "CA", "brand": "Claritin" }
+          ]
+        },
+        {
+          "canonical": "Diphenhydramine",
+          "entries": [
+            {"translation": "diphenhydramine", "country": "US", "brand": "Benadryl" },
+            {"translation": "diphenhydramine", "country": "GB", "brand": "Night Nurse" },
+            {"translation": "diphenhydramine", "country": "CA", "brand": "Benadryl" }
+          ]
+        },
+        {
+      "canonical": "Omeprazole",
+      "entries": [
+        { "translation": "omeprazole", "country": "US", "brand": "Prilosec" },
+        { "translation": "omeprazole", "country": "GB", "brand": "Losec" },
+        { "translation": "omeprazole", "country": "CA", "brand": "Losec" }
+      ]
+    },
+        {
+            "canonical": "Aspirin",
+            "entries": [
+                {"translation": "aspirin", "country": "US", "brand": "Bayer" },
+                {"translation": "aspirin", "country": "GB", "brand": "Aspirin" },
+                {"translation": "aspirin", "country": "CA", "brand": "Aspirin" }
+            ]
+        },
+        {
+            "canonical": "Metformin",
+            "entries": [
+                {"translation": "metformin", "country": "US", "brand": "Glucophage" },
+                {"translation": "metformin", "country": "GB", "brand": "Glucophage" },
+                {"translation": "metformin", "country": "CA", "brand": "Glucophage" }
+            ]
+        },
+        {
+            "canonical": "Albuterol",
+            "entries": [
+                {"translation": "albuterol", "country": "US", "brand": "Ventolin" },
+                {"translation": "salbutamol", "country": "GB", "brand": "Ventolin" },
+                {"translation": "salbutamol", "country": "CA", "brand": "Ventolin" }
+            ]
+        }
+  ]
+}

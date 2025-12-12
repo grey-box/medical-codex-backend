@@ -1,0 +1,71 @@
+{
+    "language": {
+        "code": "uk",
+        "name": "Ukrainian"
+    },
+    "terms": [
+        {
+            "canonical": "Ibuprofen",
+            "entries": [
+                {"translation": "Ібупрофен", "country": "UA", "brand": "Ібуфен"},
+                {"translation": "Ibuprofen", "country": "PL", "brand": "Ibufen"}
+            ]
+        },
+        {
+            "canonical": "Paracetamol",
+            "entries": [
+                {"translation": "Парацетамол", "country": "UA", "brand": "Панадол"},
+                {"translation": "Paracetamol", "country": "PL", "brand": "Apap"}
+            ]
+        },
+        {
+            "canonical": "Amoxicillin",
+            "entries": [
+                {"translation": "Амоксицилін", "country": "UA", "brand": "Амоксиклав"},
+                {"translation": "Amoksycylina", "country": "PL", "brand": "Amoksiklav"}
+            ]
+        },
+        {
+            "canonical": "Naproxen",
+            "entries": [
+                {"translation": "Напроксен", "country": "UA", "brand": "Налгезин"},
+                {"translation": "Naproksen", "country": "PL", "brand": "Naproxen"}
+            ]
+        },
+        {
+            "canonical": "Cetirizine",
+            "entries": [
+                {"translation": "Цетиризин", "country": "UA", "brand": "Зіртек"},
+                {"translation": "Cetyryzyna", "country": "PL", "brand": "Zyrtec"}
+            ]
+        },
+        {
+            "canonical": "Loratadine",
+            "entries": [
+                {"translation": "Лоратадин", "country": "UA", "brand": "Кларитин"},
+                {"translation": "Loratadyna", "country": "PL", "brand": "Clarityn"}
+            ]
+        },
+        {
+            "canonical": "Metformin",
+            "entries": [
+                {"translation": "Метформін", "country": "UA", "brand": "Глюкофаж"},
+                {"translation": "Metformina", "country": "PL", "brand": "Glucophage"}
+            ]
+        },
+        {
+            "canonical": "Omeprazole",
+            "entries": [
+                {"translation": "Омепразол", "country": "UA", "brand": "Омез"},
+                {"translation": "Omeprazol", "country": "PL", "brand": "Omez"}
+            ]
+        },
+        {
+            "canonical": "Aspirin",
+            "entries": [
+                {"translation": "Аспірин", "country": "UA", "brand": "Аспірин"},
+                {"translation": "Aspiryna", "country": "PL", "brand": "Aspirin"}
+            ]
+        }
+    ]
+}

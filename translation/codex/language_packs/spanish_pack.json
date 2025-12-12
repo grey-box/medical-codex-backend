@@ -1,0 +1,62 @@
+{
+    "language": {
+        "code": "es",
+        "name": "Spanish"
+    },
+    "terms": [
+        {
+            "canonical": "Ibuprofen",
+            "entries": [
+                {"translation": "Ibuprofeno","country": "ES","brand": "Neobrufen"}
+            ]
+        },
+        {
+            "canonical": "Paracetamol",
+            "entries": [
+                {"translation": "Paracetamol","country": "ES","brand": "Gelocatil"}
+            ]
+        },
+        {
+            "canonical": "Amoxicillin",
+            "entries": [
+                {"translation": "Amoxicilina","country": "ES","brand": "Clamoxyl"}
+            ]
+        },
+        {
+            "canonical": "Naproxen",
+            "entries": [
+                {"translation": "Naproxeno","country": "ES","brand": "Apranax"}
+            ]
+        },
+        {
+            "canonical": "Cetirizine",
+            "entries": [
+                {"translation": "Cetirizina","country": "ES","brand": "Zirtec"} 
+            ]
+        },
+        {
+            "canonical": "Loratadine",
+            "entries": [
+                {"translation": "Loratadina","country": "ES","brand": "Clarityne"}
+            ]
+        },
+        {
+            "canonical": "Metformin",
+            "entries": [
+                {"translation": "Metformina","country": "ES","brand": "Glucophage"}
+            ]
+        },
+        {
+            "canonical": "Omeprazole",
+            "entries": [
+                {"translation": "Omeprazol","country": "ES","brand": "Losec"}
+            ]
+        },
+        {
+            "canonical": "Aspirin",
+            "entries": [
+                {"translation": "Aspirina","country": "ES","brand": "Aspirina Bayer"}
+            ]
+        }
+    ]
+}

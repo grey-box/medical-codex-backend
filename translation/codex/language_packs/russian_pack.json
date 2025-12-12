@@ -1,0 +1,68 @@
+{
+    "language": {
+        "code": "ru",
+        "name": "Russian"
+    },
+    "terms": [
+        {
+            "canonical": "Ibuprofen",
+            "entries": [
+                {"translation": "Ибупрофен", "country": "RU", "brand": "Нурофен"}
+            ]
+        },
+        {
+            "canonical": "Paracetamol",
+            "entries": [
+                {"translation": "Парацетамол", "country": "RU", "brand": "Панадол"}            
+            ]
+        },
+        {
+            "canonical": "Amoxicillin",
+            "entries": [
+                {"translation": "Амоксициллин", "country": "RU", "brand": "Амоксиклав"}
+            ]
+        },
+        {
+            "canonical": "Naproxen",
+            "entries": [
+                {"translation": "Напроксен", "country": "RU", "brand": "Налгезин"}
+            ]
+        },
+        {
+            "canonical": "Cetirizine",
+            "entries": [
+                {"translation": "Цетиризин", "country": "RU", "brand": "Зиртек"}
+            ]
+        },
+        {
+            "canonical": "Loratadine",
+            "entries": [
+                {"translation": "Лоратадин", "country": "RU", "brand": "Кларитин"}
+            ]
+        },
+        {
+            "canonical": "Metformin",
+            "entries": [
+                {"translation": "Метформин", "country": "RU", "brand": "Глюкофаж"}
+            ]
+        },
+        {
+            "canonical": "Omeprazole",
+            "entries": [
+                {"translation": "Омепразол", "country": "RU", "brand": "Омез"}
+            ]
+        },
+        {
+            "canonical": "Aspirin",
+            "entries": [
+                {"translation": "Аспирин", "country": "RU", "brand": "Аспирин"}
+            ]
+        },
+        {
+            "canonical": "Albuterol",
+            "entries": [
+                {"translation": "Альбутерол", "country": "RU", "brand": "Вентолин"}
+            ]
+        }
+    ]
+}
