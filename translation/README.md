@@ -36,44 +36,57 @@ Have the following installed:
 ---
 
 Local Setup (Step-by-Step)
+The setup steps below apply to both macOS and Windows, with minor differences noted where applicable.
 
-1. Clone the Repo
-
-   - git clone https://github.com/YourUsername/medical-codex-backend.git
-   - cd medical-codex-backend
+1. Download the Repo
 
 2. Create and Activate Virtual Enviornment
-
-   - python3 -m venv venv
-   - source venv/bin/activate (for mac)
-   - venv\Scripts\activate (for windows)
+   - macOS/ Linux
+     - python3 -m venv venv
+     - source venv/bin/activate
+   - Windows (Command Prompt) - (Make sure you're in the command prompt, not powershell)
+     - python -m venv venv 
+     - venv\Scripts\activate 
 
 3. Install Dependencies
-
    - pip install -r requirements.txt
 
 4. Create Your .env File in your project folder
-
-   - NEO4J_URI=bolt://localhost:7687
+   - NEO4J_URI=bolt://127.0.0.1:7687
    - NEO4J_USER=neo4j
    - NEO4J_PASSWORD=yourpassword
    - (Make sure to not commit .env, it's personal to you).
 
 5. Set Up Neo4j Database
-
+   - Download Neo4j Desktop
    - Open Neo4j Desktop
    - Create a new local database
    - Set the password (the same one inside your .env)
    - Start the database
+   - Select "Query" (in the tools section)
+   - Select "connect to instance", select your database, then click "connect" to view your database
    - Install the APOC plugin (for future fuzzy matching)
-
-6. Run streamlit dashboard front end
-
+   - If it does not allow you to connect to your database and an error shows up, delete the database and create it again and follow from "create a new local database" and the database should connect.
+     
+7. Run streamlit dashboard front end
    - pip install streamlit
    - streamlit run ./streamlit_app.py
    - running on python3.11.xx here
 
-7. Project Structure:
+8. Demo / POC Data Setup
+   - Codex does not ship with a pre-populated database. Before using the CLI or Streamlit frontend, the Neo4j database must be populated with demo language-pack      data.
+   - Populate Demo Data via Streamlit
+     - Ensure Neo4j Desktop is running and .env is configured correctly
+     - Start the Streanlit frontend:
+       - streamlit run ./streamlit_app.py
+       - When you're in the front end, click on the language pack loader section on the left of the screen.
+       - From there, copy the path of a language pack from the languagepack/ folder:
+         - ex: C:\....\language_packs\english_pack.json
+       - Click "Import Language Pack" button and the data from the json file should be uploaded to your database.
+     - Check your Neo4j database to see if new nodes and relationships were added
+     - From there you can start translating terms
+
+9. Project Structure:
    - codex/
      - api/
        - __init__.py
@@ -98,7 +111,44 @@ Local Setup (Step-by-Step)
      - README.md # Setting up environment
      - streamlit_app.py          # Streamlit frontend (demo UI)
      - requirments.txt           # Python dependencies
-       
+
+10. Language Pack JSON Schema
+    - Language packs define how medical terms are represented across languages, countries, and brands.
+    - Each JSON file represents one language pack.
+    - Structure:
+{
+  "language": {
+    "code": "en",
+    "name": "English"
+  },
+  "terms": [
+    {
+      "canonical": "Paracetamol",
+      "entries": [
+        { 
+          "translation": "acetaminophen",
+          "country": "US",
+          "brand": "Tylenol"
+        }
+      ]
+    }
+  ]
+}
+
+   - Field Definitions:
+     - canonical:
+       - A system-level medical concept identifier. It represents what the drug is, independent of language, country, or naming convention. All translations and brands map back to this concept.
+     - translation:
+       - The locally used generic or common name for the canonical concept in a specific country and language context.
+       - Even within the same language (e.g., English), medical terminology can differ by country.
+       - Example:
+         - United States -> acetaminophen
+         - United Kingdom -> paracetamol
+       - These refer to the same drug, but follow different offical naming standards (USAN vs. INN).
+     - brand:
+       - A country-specific commercial product name
+     - country:
+       - ISO-style country code where translation/brand applies. 
 ---
 
 Notes
@@ -106,3 +156,15 @@ Notes
 - Translated terms are used as entry points, not database keys
 - Designed for offline or local-first usage
 - Intended for academic and demonstration purposes
+
+Cross-Platform Notes (Windows and macOS)
+Codex has been smoke tested on both **macOS** and **Windows** environments.
+
+The core application logic, Neo4j setup, demo data loading, and language pack ingestion behave the same across platforms. The primary differences between macOS and Windows are limited to environment startup details, such as virtual environment activation and shell behavior.
+
+Platform-specific notes:
+- On Windows, it is recommended to run the project using Command Prompt rather than PowerShell to avoid execution policy issues.
+- JSON language packs are explicitly read using UTF-8 encoding to ensure compatibility with non-Latin scripts (e.g., Russian, Ukrainian) on Windows.
+- Neo4j Desktop configuration and database population steps are identical on both platforms.
+
+With these considerations, Codex can be set up and run consistently on macOS and Windows.
