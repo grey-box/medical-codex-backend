@@ -181,7 +181,7 @@ def sync_translation_data(term: str):
 # Loads a language pack from a JSON file into Neo4j
 # Supports bulk insertion of translations and optional brands
 def load_language_pack(path_to_json):
-    with open(path_to_json, "r") as file:
+    with open(path_to_json, "r", encoding="utf-8") as file:
         pack = json.load(file)
 
     lang_code = pack["language"]["code"]
