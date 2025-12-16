@@ -173,3 +173,16 @@ Platform-specific notes:
 - Neo4j Desktop configuration and database population steps are identical on both platforms.
 
 With these considerations, Codex can be set up and run consistently on macOS and Windows.
+
+References 
+- World Health Organization (WHO). International Nonproprietary Names (INN).
+https://www.who.int/teams/health-product-policy-and-standards/inn
+- United States Adopted Names (USAN) Council.
+https://www.usancouncil.org/
+- U.S. Food & Drug Administration (FDA). Drug Label Database.
+https://www.accessdata.fda.gov/scripts/cder/daf/
+- National Health Service (UK). Paracetamol.
+https://www.nhs.uk/medicines/paracetamol/
+
+These references support the distinction between canonical medical concepts and country-specific terminology (e.g., USAN vs. INN naming conventions).
+
