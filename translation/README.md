@@ -52,9 +52,14 @@ The setup steps below apply to both macOS and Windows, with minor differences no
    - pip install -r requirements.txt
 
 4. Create Your .env File in your project folder
-   - NEO4J_URI=bolt://127.0.0.1:7687
-   - NEO4J_USER=neo4j
-   - NEO4J_PASSWORD=yourpassword
+   - A default enviorment file is provided: .env.example
+   - Copy it to create your local enviorment file:
+   - macOS / Linux:
+     - cp .env.example .env
+   - Windows (Command Prompt)
+     - copy .env.example .env
+   - (You can also just create a .env file and just copy and paste the contents of the .env example)
+   - Then update values as needed for your local Neo4j Desktop instance.
    - (Make sure to not commit .env, it's personal to you).
 
 5. Set Up Neo4j Database
@@ -68,12 +73,12 @@ The setup steps below apply to both macOS and Windows, with minor differences no
    - Install the APOC plugin (for future fuzzy matching)
    - If it does not allow you to connect to your database and an error shows up, delete the database and create it again and follow from "create a new local database" and the database should connect.
      
-7. Run streamlit dashboard front end
+6. Run streamlit dashboard front end
    - pip install streamlit
    - streamlit run ./streamlit_app.py
    - running on python3.11.xx here
 
-8. Demo / POC Data Setup
+7. Demo / POC Data Setup
    - Codex does not ship with a pre-populated database. Before using the CLI or Streamlit frontend, the Neo4j database must be populated with demo language-pack      data.
    - Populate Demo Data via Streamlit
      - Ensure Neo4j Desktop is running and .env is configured correctly
@@ -86,7 +91,7 @@ The setup steps below apply to both macOS and Windows, with minor differences no
      - Check your Neo4j database to see if new nodes and relationships were added
      - From there you can start translating terms
 
-9. Project Structure:
+8. Project Structure:
    - codex/
      - api/
        - __init__.py
@@ -112,7 +117,7 @@ The setup steps below apply to both macOS and Windows, with minor differences no
      - streamlit_app.py          # Streamlit frontend (demo UI)
      - requirments.txt           # Python dependencies
 
-10. Language Pack JSON Schema
+9. Language Pack JSON Schema
     - Language packs define how medical terms are represented across languages, countries, and brands.
     - Each JSON file represents one language pack.
     - Structure:
